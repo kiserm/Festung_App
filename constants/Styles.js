@@ -54,12 +54,11 @@ const styles = StyleSheet.create({
     },
     anyButtonText: {
       fontSize: hp("3%"),
-      fontWeight: 'bold',
       color: 'white',
       lineHeight: hp("4%"),
-      alignSelf: 'center',
+      fontWeight: 'normal',
+      textAlign: 'center'
     },
-
 });
 
 // always export the variables, function and classes for inter document use

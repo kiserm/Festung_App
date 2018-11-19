@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image,Text,View,TouchableHighlight,StyleSheet,Linking} from 'react-native';
+import {Image,Text,View,TouchableHighlight,Linking} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 
 export default class HomeScreen extends React.Component {
@@ -33,6 +33,7 @@ export default class HomeScreen extends React.Component {
           {/* Set a button to get to the next page where you can find the quizzes, self customized button with
               component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
           <TouchableHighlight onPress={() => this.props.navigation.navigate('UserForm')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+              {/*use NumberOfLines to say how much lines the text should take*/}
               <Text style={styles.anyButtonText} numberOfLines={1}>
                 Starte dein Abenteuer!
               </Text>
