@@ -36,26 +36,30 @@ const styles = StyleSheet.create({
       alignSelf: 'center',
       fontWeight: 'bold',
       marginHorizontal: wp("7%"),
+      marginTop: hp("2%"),
     },
     homeButtonContainer: {
       flex: 1,
       backgroundColor: '#fff',
     },
     anyButtonStyle: {
-      alignSelf: 'center',
-      marginHorizontal: wp("5%"),
-      marginBottom: wp("20%"),
-      backgroundColor: '#60646d',
-      borderColor: '#60646d',
-      borderWidth: wp("3%"),
-      borderRadius: wp("7%")       
+      backgroundColor: 'rgba(96,100,109, 1)',
+      borderRadius: hp("1%"),
+      borderColor: 'rgba(96,100,109, 1)',
+      borderWidth: hp("1%"),
+      marginBottom: hp("5%"),
+      alignSelf: 'stretch',
+      justifyContent: 'center',
+      marginHorizontal: wp("5%")
     },
     anyButtonText: {
-      color: '#ffffff',
-      fontSize: hp("35%"),
-      marginHorizontal: wp("10%"),
-      marginBottom: hp("35%")
-    }
+      fontSize: hp("3%"),
+      fontWeight: 'bold',
+      color: 'white',
+      lineHeight: hp("4%"),
+      alignSelf: 'center',
+    },
+
 });
 
 // always export the variables, function and classes for inter document use

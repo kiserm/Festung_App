@@ -31,6 +31,7 @@ const NavigationStack = createStackNavigator(
       headerTintColor: '#rgba(96,100,109, 1)',
       headerTitleStyle: {
         fontWeight: 'normal',
+        alignSelf: 'center'
       }
     }
   }
