@@ -1,5 +1,6 @@
 import React from 'react';
-import {Image,StyleSheet,Text,View,TouchableHighlight,Button,Linking,TextInput} from 'react-native';
+import {Text,View,Button,TextInput,Keyboard} from 'react-native';
+import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 
 
 export default class UserFormScreen extends React.Component {
@@ -18,7 +19,7 @@ export default class UserFormScreen extends React.Component {
 
   render() {   
     return (
-      <View style={styles.wholeScreen}>
+      <View style={styles.anyWholeScreen}>
         <View style={styles.titleView}>
           <Text style={styles.questionText}>
             Wie heisst Du?
@@ -38,54 +39,3 @@ export default class UserFormScreen extends React.Component {
     );
   }
 }
-
-/* the styles list */
-const styles = StyleSheet.create({
-  wholeScreen: {
-    backgroundColor: '#fff',
-  },
-  titleView: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-    marginTop: 50,
-  },
-  titleText: {
-    fontSize: 35,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 45,
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  questionText: {
-    fontSize: 25,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 30,
-    textAlign: 'center',
-    fontWeight: 'bold',
-    marginTop: 50,
-  },
-  toQuizButton: {
-    fontSize: 5,
-    color: '#fff',
-    textAlign: 'center',
-    fontWeight: 'bold',
-    marginTop: 50,
-    marginLeft: 40,
-    marginRight: 40,
-    marginBottom: 500,
-    backgroundColor: 'rgba(96,100,109, 1)',
-    borderColor: 'rgba(96,100,109, 1)',
-    borderWidth: 2,
-    borderRadius: 10,       
-  },
-  textInput:{
-    width: 200, 
-    height: 44, 
-    padding: 8, 
-    borderWidth: 2,
-    borderColor: 'rgba(96,100,109, 1)', 
-    borderRadius: 10, 
-    textAlign: 'center', 
-    marginVertical: 10,
-  }
-});

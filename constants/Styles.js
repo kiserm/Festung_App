@@ -6,6 +6,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /* the styles list for the whole app, this is only done for a good organisation and for reusing code in the app development */
 const styles = StyleSheet.create({
+    // HomeScreenStyles
     anyWholeScreen: {
       backgroundColor: '#fff',
       width: wp("100%"),
@@ -59,6 +60,85 @@ const styles = StyleSheet.create({
       fontWeight: 'normal',
       textAlign: 'center'
     },
+    // UserFormScreenStyles is useless as far as I know, because I would not ask them their Names...
+    /*
+    titleView: {
+      alignItems: 'center',
+      marginHorizontal: 50,
+      marginTop: 50,
+    },
+    titleText: {
+      fontSize: 35,
+      color: 'rgba(96,100,109, 1)',
+      lineHeight: 45,
+      textAlign: 'center',
+      fontWeight: 'bold',
+    },
+    questionText: {
+      fontSize: 25,
+      color: 'rgba(96,100,109, 1)',
+      lineHeight: 30,
+      textAlign: 'center',
+      fontWeight: 'bold',
+      marginTop: 50,
+    },
+    toQuizButton: {
+      fontSize: 5,
+      color: '#fff',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      marginTop: 50,
+      marginLeft: 40,
+      marginRight: 40,
+      marginBottom: 500,
+      backgroundColor: 'rgba(96,100,109, 1)',
+      borderColor: 'rgba(96,100,109, 1)',
+      borderWidth: 2,
+      borderRadius: 10,       
+    },
+    textInput:{
+      width: 200, 
+      height: 44, 
+      padding: 8, 
+      borderWidth: 2,
+      borderColor: 'rgba(96,100,109, 1)', 
+      borderRadius: 10, 
+      textAlign: 'center', 
+      marginVertical: 10,
+    },
+    */
+   //HowToScreenStyles
+   anyTitleTextContainer:{
+     flex: 1,
+   },
+   anyTitleTextFormat: {
+    fontSize: hp("7%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("8%"),
+    textAlign: 'left',
+    fontWeight: 'bold',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("2%"),
+   },
+   HowToTextContainer:{
+    flex: 6,
+    marginVertical: hp("3%"),
+   },
+   anyTextFormat:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'justify',
+    marginBottom: hp("4%"),
+    marginHorizontal: wp("7%"),
+   },
+   anyTextFormatAndroid:{
+    backgroundColor: 'blue', 
+   },
+   HowToButtonContainer:{
+     flex: 1
+   },
 });
 
 // always export the variables, function and classes for inter document use

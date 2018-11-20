@@ -32,7 +32,7 @@ export default class HomeScreen extends React.Component {
         <View style={styles.homeButtonContainer}>
           {/* Set a button to get to the next page where you can find the quizzes, self customized button with
               component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('UserForm')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
               {/*use NumberOfLines to say how much lines the text should take*/}
               <Text style={styles.anyButtonText} numberOfLines={1}>
                 Starte dein Abenteuer!
