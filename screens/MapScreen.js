@@ -3,10 +3,10 @@ import {Image,StyleSheet,Text,View,TouchableHighlight,Button,Linking,TextInput} 
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 
 
-export default class HistoryScreen extends React.Component {
+export default class MapScreen extends React.Component {
       // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
       static navigationOptions = {
-        title: "Station 1",    
+        title: "MapScreen",    
       };
     
       render() {
@@ -16,7 +16,7 @@ export default class HistoryScreen extends React.Component {
             {/*Set the title of the Screen*/}        
             <View style={styles.anyTitleTextContainer}>
               <Text style={styles.anyTitleTextFormat}>
-                Station 1
+                Übersichtsplan
               </Text>
             </View>     
             
@@ -32,7 +32,7 @@ export default class HistoryScreen extends React.Component {
               <TouchableHighlight onPress={() => this.props.navigation.navigate('History')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                   {/*use NumberOfLines to say how much lines the text should take*/}
                   <Text style={styles.anyButtonText} numberOfLines={1}>
-                    zu Posten 2!
+                    Back!
                   </Text>
               </TouchableHighlight>
             </View>

@@ -7,7 +7,7 @@ import { widthPercentageToDP } from 'react-native-responsive-screen';
 export default class HowToScreen extends React.Component {
     // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     static navigationOptions = {
-    title: "So gehts's!",
+    title: "HowToScreen",
   };
 
   render() {
@@ -43,7 +43,7 @@ export default class HowToScreen extends React.Component {
               <View style={styles.HowToButtonContainer}>
                 {/* Set a button to get to the next page where you can find the quizzes, self customized button with
                     component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('History')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('StationOne')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                     {/*use NumberOfLines to say how much lines the text should take*/}
                     <Text style={styles.anyButtonText} numberOfLines={1}>
                       Auf Los geht's Los!

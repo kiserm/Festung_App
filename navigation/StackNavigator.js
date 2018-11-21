@@ -15,8 +15,11 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import HomeScreen from '../screens/HomeScreen';
 import UserFormScreen from '../screens/UserFormScreen';
 import HowToScreen from '../screens/HowToScreen';
-import HistoryScreen from '../screens/HistoryScreen';
 import StationOneScreen from '../screens/StationOneScreen';
+import HintScreen from '../screens/HintScreen';
+import MapScreen from '../screens/MapScreen';
+
+// used for the tab navigation bar
 import styles from '../constants/Styles';
 
 // here we create the StackNavigator. Every screen we want to Navigate to, needs to be
@@ -27,36 +30,42 @@ const NavigationStack = createStackNavigator(
     Home:  HomeScreen,
     UserForm: UserFormScreen,
     HowTo: HowToScreen,
-    History: HistoryScreen,
-    StationOne: StationOneScreen    
+    StationOne: StationOneScreen, 
+    Hint: HintScreen,
+    Map: MapScreen
   },
   {
     // here we say on which screen the app should start
     initialRouteName: 'Home',
     // here we can design the Navigation Tab Bar at the top for all screens
-    navigationOptions: { 
+    navigationOptions: ({ navigation }) => {
+      return {
         headerStyle: {
         backgroundColor: '#fff',
-      },
-      headerTintColor: 'rgba(96,100,109, 1)', 
-      headerTitleStyle: {
+        },
+        headerTintColor: 'rgba(96,100,109, 1)', 
+        headerTitleStyle: {
         fontWeight: 'normal',
         textAlign: 'center',
         flex:1,
         color: '#fff', // such that we do not see the title of the current page 
-      },
-      headerRight: (<View style={styles.headerButtonContainer}>
+        },
+        headerRight: (<View style={styles.headerButtonContainer}>
           {/* This is the first button when looking from the left.*/}
-          <TouchableHighlight onPress={() => alert('kukuuu!')} style={styles.navigationBarIcons}>
+          <TouchableHighlight onPress={() => navigation.navigate('Hint',{originScreenName: navigation.getActiveRouteName})} style={styles.navigationBarIcons}>
             <IconEntypo name="light-bulb" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
           </TouchableHighlight>
           {/* This is the second button when looking from the left.*/}
-          <TouchableHighlight onPress={() => alert('This is the map!')} style={styles.navigationBarIcons}>
+          <TouchableHighlight onPress={() => navigation.navigate('Map')} style={styles.navigationBarIcons}>
             <IconEntypo name="map" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
-          </TouchableHighlight>
-          
+          </TouchableHighlight>          
         </View>
-      ),    
+        ),
+        headerBackTitle: null,  // if the title is more than 4 letters, the fallbacktitle will be by default
+                                // 'back' but i do not want this so i set it to null such that the label is 
+                                // no longer shown on android as well as on iOS  
+          
+      }
     }
   }
 );
