@@ -5,7 +5,8 @@ import styles from '../constants/Styles'; // for design purpose, import the styl
 export default class HomeScreen extends React.Component {
   // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
   static navigationOptions = {
-    title: 'Home',    
+    title: 'Home', 
+    header: null
   };
 
   render() {

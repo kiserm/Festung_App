@@ -142,6 +142,14 @@ const styles = StyleSheet.create({
    HowToButtonContainer:{
      flex: 1
    },
+   // navigationBarIcons style
+   headerButtonContainer:{
+    flex: 1, 
+    flexDirection: 'row', // makes that we have two icons horizontally listed
+    alignItems: 'center', //makes that the icon is centered
+    marginHorizontal: wp("4%"),
+    justifyContent: 'space-between'
+   },
 });
 
 // always export the variables, function and classes for inter document use

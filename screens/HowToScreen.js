@@ -4,11 +4,10 @@ import styles from '../constants/Styles'; // for design purpose, import the styl
 import { ScrollView } from 'react-native-gesture-handler';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 
-
 export default class HowToScreen extends React.Component {
     // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     static navigationOptions = {
-    title: "So gehts's!",    
+    title: "So gehts's!",
   };
 
   render() {
