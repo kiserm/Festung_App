@@ -147,9 +147,11 @@ const styles = StyleSheet.create({
     flex: 1, 
     flexDirection: 'row', // makes that we have two icons horizontally listed
     alignItems: 'center', //makes that the icon is centered
-    marginHorizontal: wp("4%"),
-    justifyContent: 'space-between'
+    marginHorizontal: wp("3%"),
    },
+   navigationBarIcons:{
+    marginHorizontal: wp("2%"),
+   }
 });
 
 // always export the variables, function and classes for inter document use

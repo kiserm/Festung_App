@@ -38,19 +38,20 @@ const NavigationStack = createStackNavigator(
         headerStyle: {
         backgroundColor: '#fff',
       },
-      headerTintColor: 'rgba(96,100,109, 1)',
+      headerTintColor: 'rgba(96,100,109, 1)', 
       headerTitleStyle: {
         fontWeight: 'normal',
         textAlign: 'center',
-        flex:1
+        flex:1,
+        color: '#fff', // such that we do not see the title of the current page 
       },
       headerRight: (<View style={styles.headerButtonContainer}>
           {/* This is the first button when looking from the left.*/}
-          <TouchableHighlight onPress={() => alert('kukuuu!')} title="Hint-Icon">
+          <TouchableHighlight onPress={() => alert('kukuuu!')} style={styles.navigationBarIcons}>
             <IconEntypo name="light-bulb" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
           </TouchableHighlight>
           {/* This is the second button when looking from the left.*/}
-          <TouchableHighlight onPress={() => alert('This is the map!')} title="Map-Icon">
+          <TouchableHighlight onPress={() => alert('This is the map!')} style={styles.navigationBarIcons}>
             <IconEntypo name="map" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
           </TouchableHighlight>
           
