@@ -2,6 +2,7 @@ import React from 'react';
 import {Image,Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import { ScrollView } from 'react-native-gesture-handler';
+import { widthPercentageToDP } from 'react-native-responsive-screen';
 
 
 export default class HowToScreen extends React.Component {
@@ -23,16 +24,16 @@ export default class HowToScreen extends React.Component {
               </View>  
               
               <View style={styles.HowToTextContainer}>
-                  <ScrollView>
+                  <ScrollView showsVerticalScrollIndicator={true}>
                       <Text style={styles.anyTextFormat}>
                           Oben rechts siehst Du eine Karte. Drücke darauf und Du siehst 
                           den Übersichtsplan der Festung Fürigen. Anhand des Plans kannst Du die nächste
-                          Rätselstation finden. {"\n"}
+                          Rätselstation finden. {"\n"} {"\n"}
       
                           Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst
                           hast, kannst Du am Ende einen Preis abholen. Falls Dir ein paar Fehler unterlaufen 
                           sollten, musst Du nicht traurig sein. Denn es gibt für jeden, der sich in das Abenteuer 
-                          gestürzt hat, eine kleine Belohnung. {"\n"}
+                          gestürzt hat, eine kleine Belohnung. {"\n"} {"\n"}
       
                           Falls Du mal nicht mehr weiter weisst, kannst Du das Fragezeichen oben rechts berühren und die
                           schlauen Füchse Finja und Dario werden Dir den einen oder anderen Tipp verraten.
@@ -66,21 +67,23 @@ export default class HowToScreen extends React.Component {
               </View>  
               
               <View style={styles.HowToTextContainer}>
-                  <ScrollView>
-                  <Text></Text>
-                    <WebView source={{ html: "<html><body style='text-align: justify, backgroundColor:red;'>"+
+                  <ScrollView contentContainerStyle={{marginRight:widthPercentageToDP("2%")}}>
+                    {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}
+                    <WebView source={{ html: "<html><p style='text-align: justify; color:rgba(96,100,109, 1); font-size:6vw;'>"+
                     "Oben rechts siehst Du eine Karte. Drücke darauf und Du siehst "+
-                    "den Übersichtsplan der Festung Fürigen. Anhand des Plans kannst Du die nächste"+
-                    "Rätselstation finden. {'\n'}"+
+                    "den Übersichtsplan der Festung Fürigen. Anhand des Plans kannst Du die nächste "+
+                    "Rätselstation finden. <br> <br>"+
 
-                    "Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst"+
+                    "Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst "+
                     "hast, kannst Du am Ende einen Preis abholen. Falls Dir ein paar Fehler unterlaufen "+
                     "sollten, musst Du nicht traurig sein. Denn es gibt für jeden, der sich in das Abenteuer "+
-                    "gestürzt hat, eine kleine Belohnung. {'\n'}"+
+                    "gestürzt hat, eine kleine Belohnung. <br> <br>"+
 
                     "Falls Du mal nicht mehr weiter weisst, kannst Du das Fragezeichen oben rechts berühren und die"+
                     "schlauen Füchse Finja und Dario werden Dir den einen oder anderen Tipp verraten. "+
-                    "</body></html>"}} style={styles.anyTextFormatAndroid}/>
+                    "</p></html>"}} 
+                    style={styles.anyTextFormatAndroid}
+                    />
                   </ScrollView>
               </View>
       

@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
       color: 'white',
       lineHeight: hp("4%"),
       fontWeight: 'normal',
-      textAlign: 'center'
+      textAlign: 'center',
+      justifyContent:'center'
     },
     // UserFormScreenStyles is useless as far as I know, because I would not ask them their Names...
     /*
@@ -134,7 +135,9 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("7%"),
    },
    anyTextFormatAndroid:{
-    backgroundColor: 'blue', 
+    width: wp("89%"),
+    height: hp("60%"),
+    alignSelf: 'center',
    },
    HowToButtonContainer:{
      flex: 1
