@@ -6,7 +6,8 @@ import styles from '../constants/Styles'; // for design purpose, import the styl
 export default class OverviewScreen extends React.Component {
       // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
       static navigationOptions = {
-        title: "OverviewScreen",    
+        title: "OverviewScreen",
+        header: null,
       };
       
       render() {

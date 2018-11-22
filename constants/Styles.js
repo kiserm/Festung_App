@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
    //overviewScreen styles
    overviewTopContainer: {
     flex:4,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: hp("3%")
   },
    overviewMiddleContainer: {
     flex: 16, 
