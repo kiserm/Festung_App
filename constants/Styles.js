@@ -6,61 +6,6 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /* the styles list for the whole app, this is only done for a good organisation and for reusing code in the app development */
 const styles = StyleSheet.create({
-    // HomeScreenStyles
-    anyWholeScreen: {
-      backgroundColor: '#fff',
-      width: wp("100%"),
-      height: hp("100%"),
-      flex: 1,
-      flexDirection: 'column'
-    },
-    homeImageContainer: {
-      flex: 3,
-    },
-    homeImageStyle: {
-      width: wp("40%"),
-      height: hp("30%"),
-      marginTop: hp("7%"),
-      marginBottom: hp("10%"),
-      marginHorizontal: wp("15%"),
-      resizeMode: 'contain',
-      alignSelf: 'center'
-    },
-    homeTitleTextContainer: {
-      flex: 3,
-    },
-    homeTitleTextFormat: {
-      fontSize: hp("7%"),
-      color: 'rgba(96,100,109, 1)',
-      lineHeight: hp("8%"),
-      textAlign: 'center',
-      alignSelf: 'center',
-      fontWeight: 'bold',
-      marginHorizontal: wp("7%"),
-      marginTop: hp("2%"),
-    },
-    homeButtonContainer: {
-      flex: 1,
-      backgroundColor: '#fff',
-    },
-    anyButtonStyle: {
-      backgroundColor: 'rgba(96,100,109, 1)',
-      borderRadius: hp("1%"),
-      borderColor: 'rgba(96,100,109, 1)',
-      borderWidth: hp("1%"),
-      marginBottom: hp("5%"),
-      alignSelf: 'stretch',
-      justifyContent: 'center',
-      marginHorizontal: wp("5%")
-    },
-    anyButtonText: {
-      fontSize: hp("3%"),
-      color: 'white',
-      lineHeight: hp("4%"),
-      fontWeight: 'normal',
-      textAlign: 'center',
-      justifyContent:'center'
-    },
     // UserFormScreenStyles is useless as far as I know, because I would not ask them their Names...
     /*
     titleView: {
@@ -108,6 +53,61 @@ const styles = StyleSheet.create({
       marginVertical: 10,
     },
     */
+    // HomeScreenStyles
+    anyWholeScreen: {
+      backgroundColor: '#fff',
+      width: wp("100%"),
+      height: hp("100%"),
+      flex: 1,
+      flexDirection: 'column'
+    },
+    homeImageContainer: {
+      flex: 4,
+    },
+    homeImageStyle: {
+      width: wp("60%"),
+      height: hp("50%"),
+      marginVertical: hp("5%"),
+      marginHorizontal: wp("15%"),
+      resizeMode: 'contain',
+      alignSelf: 'center',
+      justifyContent: 'center'
+    },
+    homeTitleTextContainer: {
+      flex: 3,
+    },
+    homeTitleTextFormat: {
+      fontSize: hp("7%"),
+      color: 'rgba(96,100,109, 1)',
+      lineHeight: hp("8%"),
+      textAlign: 'center',
+      alignSelf: 'center',
+      fontWeight: 'bold',
+      marginHorizontal: wp("7%"),
+      marginTop: hp("2%"),
+    },
+    homeButtonContainer: {
+      flex: 1,
+      backgroundColor: '#fff',
+    },
+    anyButtonStyle: {
+      backgroundColor: 'rgba(96,100,109, 1)',
+      borderRadius: hp("1%"),
+      borderColor: 'rgba(96,100,109, 1)',
+      borderWidth: hp("1%"),
+      marginBottom: hp("3%"),
+      alignSelf: 'stretch',
+      justifyContent: 'center',
+      marginHorizontal: wp("5%")
+    },
+    anyButtonText: {
+      fontSize: hp("3%"),
+      color: 'white',
+      lineHeight: hp("4%"),
+      fontWeight: 'normal',
+      textAlign: 'center',
+      justifyContent:'center'
+    },
    //HowToScreenStyles
    anyTitleTextContainer:{
      flex: 1,
@@ -146,28 +146,46 @@ const styles = StyleSheet.create({
    headerButtonContainer:{
     flex: 1, 
     flexDirection: 'row', // makes that we have two icons horizontally listed
-    alignItems: 'center', //makes that the icon is centered
+    alignItems: 'center', //makes that the icon is centered vertically -> cross axis
     marginHorizontal: wp("3%"),
    },
    navigationBarIcons:{
     marginHorizontal: wp("2%"),
    },
    //overviewScreen styles
-   overviewScrollContainer: {
-    flex: 8, 
-    marginVertical: hp("5%"),
+   overviewTopContainer: {
+    flex:4,
+    justifyContent: 'center'
+  },
+   overviewMiddleContainer: {
+    flex: 16, 
+    paddingVertical: hp("5%"),
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#fff',  
    },
-   overviewButtonStyle: {
+   overviewBottomContainer:{
+    flex: 3, 
+    flexDirection:'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly'
+  },
+  overviewRowButtonContainer: {
+    flex:1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  overviewButtonStyle: {
     backgroundColor: 'rgba(96,100,109, 1)',
     borderRadius: hp("1%"),
     borderColor: 'rgba(96,100,109, 1)',
     borderWidth: hp("1%"),
-    alignSelf: 'stretch',
     justifyContent: 'center',
-    marginHorizontal: wp("5%"),
-    marginVertical: hp("2%"),
+    paddingHorizontal: wp("2%"),
+    marginVertical: hp("1%"),
+    marginHorizontal: wp("2%"),
+    width: wp("40%")
   },
   overviewButtonText: {
     fontSize: hp("3%"),
@@ -177,10 +195,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent:'center'
   },
-  overviewBackButtonContainer:{
-    flex: 1, 
-    marginBottom: hp("5%"),
-  }
 });
 
 // always export the variables, function and classes for inter document use
