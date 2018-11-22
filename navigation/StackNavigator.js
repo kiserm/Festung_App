@@ -50,13 +50,31 @@ const NavigationStack = createStackNavigator(
         flex:1,
         color: '#fff', // such that we do not see the title of the current page 
         },
-        headerRight: (<View style={styles.headerButtonContainer}>
+        headerRight: ( <View style={styles.headerButtonContainer}>
           {/* This is the first button when looking from the left.*/}
-          <TouchableHighlight onPress={() => navigation.navigate('Hint',{originScreenName: navigation.getActiveRouteName})} style={styles.navigationBarIcons}>
+          <TouchableHighlight onPress={() => {
+                                                // if we are already in the Hint Menue, goBack if the light bulb is touched again
+                                                if(navigation.state.routeName==='Hint'){
+                                                  navigation.goBack()
+                                                } 
+                                                else{
+                                                  navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
+                                                }
+                                              }
+                                      } style={styles.navigationBarIcons}>
             <IconEntypo name="light-bulb" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
           </TouchableHighlight>
           {/* This is the second button when looking from the left.*/}
-          <TouchableHighlight onPress={() => navigation.navigate('Map')} style={styles.navigationBarIcons}>
+          <TouchableHighlight onPress={() => {
+                                                // if we are already in the Map Menue, goBack if the map icon is touched again
+                                                if(navigation.state.routeName==='Map'){
+                                                  navigation.goBack()
+                                                } 
+                                                else{
+                                                  navigation.navigate('Map')
+                                                }
+                                              }
+                                        } style={styles.navigationBarIcons}>
             <IconEntypo name="map" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
           </TouchableHighlight>          
         </View>

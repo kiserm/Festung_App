@@ -2,7 +2,7 @@ import React from 'react';
 import {Image,Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import { ScrollView } from 'react-native-gesture-handler';
-import { widthPercentageToDP } from 'react-native-responsive-screen';
+import { widthPercentageToDP as wp} from 'react-native-responsive-screen';
 
 export default class HowToScreen extends React.Component {
     // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
@@ -66,7 +66,7 @@ export default class HowToScreen extends React.Component {
               </View>  
               
               <View style={styles.HowToTextContainer}>
-                  <ScrollView contentContainerStyle={{marginRight:widthPercentageToDP("2%")}}>
+                  <ScrollView contentContainerStyle={{marginRight:wp("2%")}}>
                     {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}
                     <WebView source={{ html: "<html><p style='text-align: justify; color:rgba(96,100,109, 1); font-size:6vw;'>"+
                     "Oben rechts siehst Du eine Karte. Drücke darauf und Du siehst "+

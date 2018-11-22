@@ -10,7 +10,7 @@ export default class HintScreen extends React.Component {
       };
     
       render() {
-        if(this.props.getParam('originScreenName')==="HowToScreen"){
+        if(this.props.navigation.getParam('originScreenName')==="HowTo"){
           return (      
             <View style={styles.anyWholeScreen}>
               
@@ -23,7 +23,7 @@ export default class HintScreen extends React.Component {
               
               <View style={styles.HowToTextContainer}>
                   <Text style={styles.anyTextFormat}>
-                      
+                      Es hat geklappt!
                   </Text>
               </View>
       
@@ -48,13 +48,13 @@ export default class HintScreen extends React.Component {
               {/*Set the title of the Screen*/}        
               <View style={styles.anyTitleTextContainer}>
                 <Text style={styles.anyTitleTextFormat}>
-                  Schade, not yet
+                  Tipps von Finja und Dario
                 </Text>
               </View>     
               
               <View style={styles.HowToTextContainer}>
                   <Text style={styles.anyTextFormat}>
-                      
+                      Es hat nicht geklappt von howTo screen aus!
                   </Text>
               </View>
       
