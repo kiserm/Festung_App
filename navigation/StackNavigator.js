@@ -85,7 +85,7 @@ const NavigationStack = createStackNavigator(
                           <TouchableHighlight onPress={() => {
                                                                   // if we are already in the Hint Menue, goBack if the light bulb is touched again
                                                                   if(navigation.state.routeName==='Overview'){
-                                                                    navigation.goBack()
+                                                                      navigation.goBack();  
                                                                   } 
                                                                   else{
                                                                     navigation.navigate('Overview',{originScreenName: navigation.state.routeName})

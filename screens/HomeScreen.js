@@ -17,7 +17,7 @@ export default class HomeScreen extends React.Component {
         <View style={styles.homeImageContainer}>
           <TouchableHighlight onPress={()=>{ Linking.openURL('http://www.nidwaldner-museum.ch/')}}>
             <Image
-              source={require('../assets/images/nidwaldner-museum-logo.jpg')}
+              source={require('../assets/images/icon.png')}
               style={styles.homeImageStyle}
             />
           </TouchableHighlight>
