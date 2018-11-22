@@ -1,11 +1,12 @@
 // import the StackNavigator to be able to switch between screens by putting the 
 // screens on to the stack and if you go back, then the last screen pops from the stack
 import { createStackNavigator } from 'react-navigation';
-import {View,Button,TouchableHighlight} from 'react-native';
+import {View,TouchableHighlight} from 'react-native';
 import React from 'react';
 
 // for the navigation bar: here you can find the whole directory https://oblador.github.io/react-native-vector-icons/
 import IconEntypo from 'react-native-vector-icons/Entypo'; 
+import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // to be able to have a proper design on every platform, I downloaded this package from 
 // this website: https://www.npmjs.com/package/react-native-responsive-screen
@@ -15,9 +16,24 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import HomeScreen from '../screens/HomeScreen';
 import UserFormScreen from '../screens/UserFormScreen';
 import HowToScreen from '../screens/HowToScreen';
-import StationOneScreen from '../screens/StationOneScreen';
 import HintScreen from '../screens/HintScreen';
 import MapScreen from '../screens/MapScreen';
+import Station1Screen from '../screens/Station1Screen';
+import Station2Screen from '../screens/Station2Screen';
+import Station3Screen from '../screens/Station3Screen';
+import Station4Screen from '../screens/Station4Screen';
+import Station5Screen from '../screens/Station5Screen';
+import Station6Screen from '../screens/Station6Screen';
+import Station7Screen from '../screens/Station7Screen';
+import Station8Screen from '../screens/Station8Screen';
+import Station9Screen from '../screens/Station9Screen';
+import Station10Screen from '../screens/Station10Screen';
+import Station11Screen from '../screens/Station11Screen';
+import Station12Screen from '../screens/Station12Screen';
+import ResultScreen from '../screens/ResultScreen';
+import CertificateScreen from '../screens/CertificateScreen';
+import OverviewScreen from '../screens/OverviewScreen';
+
 
 // used for the tab navigation bar
 import styles from '../constants/Styles';
@@ -30,9 +46,23 @@ const NavigationStack = createStackNavigator(
     Home:  HomeScreen,
     UserForm: UserFormScreen,
     HowTo: HowToScreen,
-    StationOne: StationOneScreen, 
     Hint: HintScreen,
-    Map: MapScreen
+    Map: MapScreen,
+    Overview: OverviewScreen,
+    Station1: Station1Screen, 
+    Station2: Station2Screen, 
+    Station3: Station3Screen, 
+    Station4: Station4Screen, 
+    Station5: Station5Screen, 
+    Station6: Station6Screen, 
+    Station7: Station7Screen, 
+    Station8: Station8Screen, 
+    Station9: Station9Screen, 
+    Station10: Station10Screen, 
+    Station11: Station11Screen, 
+    Station12: Station12Screen, 
+    Result: ResultScreen,
+    Certificate: CertificateScreen,
   },
   {
     // here we say on which screen the app should start
@@ -51,38 +81,50 @@ const NavigationStack = createStackNavigator(
         color: '#fff', // such that we do not see the title of the current page 
         },
         headerRight: ( <View style={styles.headerButtonContainer}>
-          {/* This is the first button when looking from the left.*/}
-          <TouchableHighlight onPress={() => {
-                                                // if we are already in the Hint Menue, goBack if the light bulb is touched again
-                                                if(navigation.state.routeName==='Hint'){
-                                                  navigation.goBack()
-                                                } 
-                                                else{
-                                                  navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
-                                                }
-                                              }
-                                      } style={styles.navigationBarIcons}>
-            <IconEntypo name="light-bulb" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
-          </TouchableHighlight>
-          {/* This is the second button when looking from the left.*/}
-          <TouchableHighlight onPress={() => {
-                                                // if we are already in the Map Menue, goBack if the map icon is touched again
-                                                if(navigation.state.routeName==='Map'){
-                                                  navigation.goBack()
-                                                } 
-                                                else{
-                                                  navigation.navigate('Map')
-                                                }
-                                              }
-                                        } style={styles.navigationBarIcons}>
-            <IconEntypo name="map" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
-          </TouchableHighlight>          
-        </View>
-        ),
+                          {/* This is the first button when looking from the left.*/}
+                          <TouchableHighlight onPress={() => {
+                                                                  // if we are already in the Hint Menue, goBack if the light bulb is touched again
+                                                                  if(navigation.state.routeName==='Overview'){
+                                                                    navigation.goBack()
+                                                                  } 
+                                                                  else{
+                                                                    navigation.navigate('Overview',{originScreenName: navigation.state.routeName})
+                                                                  }
+                                                                }
+                                                        } style={styles.navigationBarIcons}>
+                              <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
+                            </TouchableHighlight>
+                            {/* This is the second button when looking from the left.*/}
+                            <TouchableHighlight onPress={() => {
+                                                                  // if we are already in the Hint Menue, goBack if the light bulb is touched again
+                                                                  if(navigation.state.routeName==='Hint'){
+                                                                    navigation.goBack()
+                                                                  } 
+                                                                  else{
+                                                                    navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
+                                                                  }
+                                                                }
+                                                        } style={styles.navigationBarIcons}>
+                              <IconEntypo name="light-bulb" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
+                            </TouchableHighlight>
+                            {/* This is the third button when looking from the left.*/}
+                            <TouchableHighlight onPress={() => {
+                                                                  // if we are already in the Map Menue, goBack if the map icon is touched again
+                                                                  if(navigation.state.routeName==='Map'){
+                                                                    navigation.goBack()
+                                                                  } 
+                                                                  else{
+                                                                    navigation.navigate('Map')
+                                                                  }
+                                                                }
+                                                          } style={styles.navigationBarIcons}>
+                              <IconEntypo name="map" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
+                            </TouchableHighlight>          
+                          </View>
+                        ),
         headerBackTitle: null,  // if the title is more than 4 letters, the fallbacktitle will be by default
                                 // 'back' but i do not want this so i set it to null such that the label is 
                                 // no longer shown on android as well as on iOS  
-          
       }
     }
   }

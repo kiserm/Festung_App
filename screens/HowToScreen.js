@@ -34,7 +34,7 @@ export default class HowToScreen extends React.Component {
                           sollten, musst Du nicht traurig sein. Denn es gibt für jeden, der sich in das Abenteuer 
                           gestürzt hat, eine kleine Belohnung. {"\n"} {"\n"}
       
-                          Falls Du mal nicht mehr weiter weisst, kannst Du das Fragezeichen oben rechts berühren und die
+                          Falls Du mal nicht mehr weiter weisst, kannst Du die Glühbirne oben rechts berühren und die
                           schlauen Füchse Finja und Dario werden Dir den einen oder anderen Tipp verraten.
                       </Text>
                   </ScrollView>
@@ -43,7 +43,7 @@ export default class HowToScreen extends React.Component {
               <View style={styles.HowToButtonContainer}>
                 {/* Set a button to get to the next page where you can find the quizzes, self customized button with
                     component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('StationOne')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                     {/*use NumberOfLines to say how much lines the text should take*/}
                     <Text style={styles.anyButtonText} numberOfLines={1}>
                       Auf Los geht's Los!
@@ -78,7 +78,7 @@ export default class HowToScreen extends React.Component {
                     "sollten, musst Du nicht traurig sein. Denn es gibt für jeden, der sich in das Abenteuer "+
                     "gestürzt hat, eine kleine Belohnung. <br> <br>"+
 
-                    "Falls Du mal nicht mehr weiter weisst, kannst Du das Fragezeichen oben rechts berühren und die"+
+                    "Falls Du mal nicht mehr weiter weisst, kannst Du die Glühbirne oben rechts berühren und die"+
                     "schlauen Füchse Finja und Dario werden Dir den einen oder anderen Tipp verraten. "+
                     "</p></html>"}} 
                     style={styles.anyTextFormatAndroid}
@@ -89,7 +89,7 @@ export default class HowToScreen extends React.Component {
               <View style={styles.HowToButtonContainer}>
                 {/* Set a button to get to the next page where you can find the quizzes, self customized button with
                     component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('StationOne')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                     {/*use NumberOfLines to say how much lines the text should take*/}
                     <Text style={styles.anyButtonText} numberOfLines={1}>
                       Auf Los geht's Los!

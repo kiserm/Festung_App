@@ -3,10 +3,10 @@ import {Image,StyleSheet,Text,View,TouchableHighlight,Button,Linking,TextInput} 
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 
 
-export default class StationOneScreen extends React.Component {
+export default class Station12Screen extends React.Component {
       // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
       static navigationOptions = {
-        title: "StationOneScreen",    
+        title: "Station12Screen",    
       };
     
       render() {
@@ -16,7 +16,7 @@ export default class StationOneScreen extends React.Component {
             {/*Set the title of the Screen*/}        
             <View style={styles.anyTitleTextContainer}>
               <Text style={styles.anyTitleTextFormat}>
-                Station 1
+                Station 12
               </Text>
             </View>     
             
@@ -29,10 +29,10 @@ export default class StationOneScreen extends React.Component {
             <View style={styles.HowToButtonContainer}>
               {/* Set a button to get to the next page where you can find the quizzes, self customized button with
                   component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('History')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                   {/*use NumberOfLines to say how much lines the text should take*/}
                   <Text style={styles.anyButtonText} numberOfLines={1}>
-                    zu Posten 2!
+                    Finde heraus wie gut du warst!
                   </Text>
               </TouchableHighlight>
             </View>

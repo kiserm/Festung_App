@@ -151,7 +151,36 @@ const styles = StyleSheet.create({
    },
    navigationBarIcons:{
     marginHorizontal: wp("2%"),
-   }
+   },
+   //overviewScreen styles
+   overviewScrollContainer: {
+    flex: 8, 
+    marginVertical: hp("5%"),
+    alignItems: 'center',
+    justifyContent: 'center',
+   },
+   overviewButtonStyle: {
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("5%"),
+    marginVertical: hp("2%"),
+  },
+  overviewButtonText: {
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center'
+  },
+  overviewBackButtonContainer:{
+    flex: 1, 
+    marginBottom: hp("5%"),
+  }
 });
 
 // always export the variables, function and classes for inter document use
