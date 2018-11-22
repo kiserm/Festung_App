@@ -1,13 +1,14 @@
 import React from 'react';
-import {Image,StyleSheet,Text,View,TouchableHighlight,Button,Linking,TextInput} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import {Text,View,TouchableHighlight} from 'react-native';
+import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 
 
 export default class MapScreen extends React.Component {
       // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
       static navigationOptions = {
         title: "MapScreen",
-        header: null,   
+        header: null,  // do not show the header, else there is a problem for the hint screen because then we do not
+                       // know from which screen we are coming hence we would have the wrong hint rendered 
       };
     
       render() {
@@ -15,25 +16,24 @@ export default class MapScreen extends React.Component {
           <View style={styles.anyWholeScreen}>
             
             {/*Set the title of the Screen*/}        
-            <View style={styles.anyTitleTextContainer}>
-              <Text style={styles.anyTitleTextFormat}>
-                Übersichtsplan
+            <View style={styles.mapTitleTextContainer}>
+              <Text style={styles.mapTitleTextFormat} numberOfLines={2}>
+                Plan der{"\n"}Festung
               </Text>
             </View>     
-            
-            <View style={styles.HowToTextContainer}>
-                <Text style={styles.anyTextFormat}>
-                    
+
+            {/*Set the map image in here*/}                    
+            <View style={styles.mapTextContainer}>
+                <Text style={styles.mapTextFormat}>
+                    Hier kommt das Bild
                 </Text>
             </View>
-    
-            <View style={styles.HowToButtonContainer}>
-              {/* Set a button to get to the next page where you can find the quizzes, self customized button with
-                  component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
+
+            {/*Set the navigation to go back since no header in Map*/}    
+            <View style={styles.mapBottomContainer}>
               <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-                  {/*use NumberOfLines to say how much lines the text should take*/}
                   <Text style={styles.anyButtonText} numberOfLines={1}>
-                    Back!
+                    Zurück!
                   </Text>
               </TouchableHighlight>
             </View>

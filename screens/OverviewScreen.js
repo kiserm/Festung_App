@@ -1,13 +1,14 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,ScrollView} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 
 
 export default class OverviewScreen extends React.Component {
       // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
       static navigationOptions = {
         title: "OverviewScreen",
-        header: null,
+        header: null, // do not show the header, else there is a problem for the hint screen because then we do not
+                      // know from which screen we are coming hence we would have the wrong hint rendered
       };
       
       render() {
@@ -16,12 +17,14 @@ export default class OverviewScreen extends React.Component {
             
             {/*Set the title of the Screen*/}        
             <View style={styles.overviewTopContainer}>
-              <Text style={styles.anyTitleTextFormat}>
+              <Text style={styles.overviewTitleTextFormat}>
                 Übersicht
               </Text>
             </View>     
             
-            {/*show the overview table with state 'done,toDo' for every station*/}        
+            {/*--------------------------------------------TODO-------------------------------------------------*/}  
+            {/*            if a question is answered, make the tag with the answer given as param               */}   
+            {/*show the overview table with state 'done,toDo' for every station*/}       
             <View style={styles.overviewMiddleContainer}>
             
                 <ScrollView>
@@ -187,6 +190,7 @@ export default class OverviewScreen extends React.Component {
                 </ScrollView>
             </View>
 
+            {/*show at the bottom two buttons, one to get back and one to submit your answers*/}        
             <View style={styles.overviewBottomContainer}>
                 <View style={styles.overviewRowButtonContainer}>
                     <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
@@ -194,6 +198,8 @@ export default class OverviewScreen extends React.Component {
                             Zurück!
                         </Text>
                     </TouchableHighlight>
+                    {/*--------------------------------------------TODO-------------------------------------------------*/}  
+                    {/*  if not all questions has been answert, make an alert and do not go to the submit screen        */}              
                     <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                         <Text style={styles.overviewButtonText} numberOfLines={1}>
                             Abgabe!

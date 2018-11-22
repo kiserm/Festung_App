@@ -6,54 +6,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /* the styles list for the whole app, this is only done for a good organisation and for reusing code in the app development */
 const styles = StyleSheet.create({
-    // UserFormScreenStyles is useless as far as I know, because I would not ask them their Names...
-    /*
-    titleView: {
-      alignItems: 'center',
-      marginHorizontal: 50,
-      marginTop: 50,
-    },
-    titleText: {
-      fontSize: 35,
-      color: 'rgba(96,100,109, 1)',
-      lineHeight: 45,
-      textAlign: 'center',
-      fontWeight: 'bold',
-    },
-    questionText: {
-      fontSize: 25,
-      color: 'rgba(96,100,109, 1)',
-      lineHeight: 30,
-      textAlign: 'center',
-      fontWeight: 'bold',
-      marginTop: 50,
-    },
-    toQuizButton: {
-      fontSize: 5,
-      color: '#fff',
-      textAlign: 'center',
-      fontWeight: 'bold',
-      marginTop: 50,
-      marginLeft: 40,
-      marginRight: 40,
-      marginBottom: 500,
-      backgroundColor: 'rgba(96,100,109, 1)',
-      borderColor: 'rgba(96,100,109, 1)',
-      borderWidth: 2,
-      borderRadius: 10,       
-    },
-    textInput:{
-      width: 200, 
-      height: 44, 
-      padding: 8, 
-      borderWidth: 2,
-      borderColor: 'rgba(96,100,109, 1)', 
-      borderRadius: 10, 
-      textAlign: 'center', 
-      marginVertical: 10,
-    },
-    */
-    // HomeScreenStyles
+    //anyStyles for reusability
     anyWholeScreen: {
       backgroundColor: '#fff',
       width: wp("100%"),
@@ -61,6 +14,35 @@ const styles = StyleSheet.create({
       flex: 1,
       flexDirection: 'column'
     },
+    anyButtonStyle: {
+      backgroundColor: 'rgba(96,100,109, 1)',
+      borderRadius: hp("1%"),
+      borderColor: 'rgba(96,100,109, 1)',
+      borderWidth: hp("1%"),
+      marginBottom: hp("3%"),
+      alignSelf: 'stretch',
+      justifyContent: 'center',
+      marginHorizontal: wp("5%")
+    },
+    anyButtonText: {
+      fontSize: hp("3%"),
+      color: 'white',
+      lineHeight: hp("4%"),
+      fontWeight: 'normal',
+      textAlign: 'center',
+      justifyContent:'center'
+    },
+    anyTitleTextFormat:{
+      fontSize: hp("7%"),
+      color: 'rgba(96,100,109, 1)',
+      lineHeight: hp("8%"),
+      textAlign: 'left',
+      fontWeight: 'bold',
+      marginHorizontal: wp("7%"),
+      marginTop: hp("2%"),
+    },
+
+    // HomeScreenStyles    
     homeImageContainer: {
       flex: 4,
     },
@@ -90,29 +72,21 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
     },
-    anyButtonStyle: {
-      backgroundColor: 'rgba(96,100,109, 1)',
-      borderRadius: hp("1%"),
-      borderColor: 'rgba(96,100,109, 1)',
-      borderWidth: hp("1%"),
-      marginBottom: hp("3%"),
-      alignSelf: 'stretch',
-      justifyContent: 'center',
-      marginHorizontal: wp("5%")
-    },
-    anyButtonText: {
-      fontSize: hp("3%"),
-      color: 'white',
-      lineHeight: hp("4%"),
-      fontWeight: 'normal',
-      textAlign: 'center',
-      justifyContent:'center'
-    },
+
    //HowToScreenStyles
-   anyTitleTextContainer:{
+   howToTitleTextContainer:{
      flex: 1,
+     marginTop: hp("3%"),
+     justifyContent: 'center'
    },
-   anyTitleTextFormat: {
+   howToTextContainer:{
+    flex: 6,
+    marginVertical: hp("3%"),
+   },
+   howToButtonContainer:{
+    flex: 1
+  },
+  howToTitleTextFormat: {
     fontSize: hp("7%"),
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("8%"),
@@ -121,11 +95,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("7%"),
     marginTop: hp("2%"),
    },
-   HowToTextContainer:{
-    flex: 6,
-    marginVertical: hp("3%"),
-   },
-   anyTextFormat:{
+   howToTextFormat:{
     fontSize: hp("3%"),
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
@@ -134,14 +104,12 @@ const styles = StyleSheet.create({
     marginBottom: hp("4%"),
     marginHorizontal: wp("7%"),
    },
-   anyTextFormatAndroid:{
+   howToTextFormatAndroid:{
     width: wp("89%"),
     height: hp("60%"),
     alignSelf: 'center',
    },
-   HowToButtonContainer:{
-     flex: 1
-   },
+   
    // navigationBarIcons style
    headerButtonContainer:{
     flex: 1, 
@@ -152,6 +120,7 @@ const styles = StyleSheet.create({
    navigationBarIcons:{
     marginHorizontal: wp("2%"),
    },
+
    //overviewScreen styles
    overviewTopContainer: {
     flex:4,
@@ -177,6 +146,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  overviewTitleTextFormat:{
+    fontSize: hp("7%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("8%"),
+    textAlign: 'left',
+    fontWeight: 'bold',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("2%"),
+  },
   overviewButtonStyle: {
     backgroundColor: 'rgba(96,100,109, 1)',
     borderRadius: hp("1%"),
@@ -196,6 +174,103 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent:'center'
   },
+
+  // HintScreen Styles
+  hintTitleTextContainer: {
+    flex: 3,
+    marginTop: hp("3%"),
+  },
+  hintTextContainer:{
+    flex: 3,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  hintBottomContainer: {
+    flex: 1,
+    alignItems: 'center'
+  },
+  hintTitleTextFormat: {
+    fontSize: hp("7%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("8%"),
+    textAlign: 'left',
+    fontWeight: 'bold',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("2%"),
+  },
+  hintTextFormat:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'justify',
+    marginBottom: hp("4%"),
+    marginHorizontal: wp("7%"),
+  },
+
+  // MapScreen styles
+  mapTitleTextContainer:{
+    flex:4,
+    marginTop: hp("3%"),
+  },
+  mapTextContainer: {
+    flex: 8,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  mapBottomContainer: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  mapTitleTextFormat:{
+    fontSize: hp("7%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("8%"),
+    textAlign: 'left',
+    fontWeight: 'bold',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("2%"),
+  },
+  mapTextFormat:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'justify',
+    marginBottom: hp("4%"),
+    marginHorizontal: wp("7%"),
+  },
+
+  // resultScreen styles
+  resultTitleTextContainer:{
+    flex:1,
+    alignItems: 'center',
+    marginTop: hp("3%"),
+  },
+  resultTextContainer:{
+    flex:3,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  resultBottomContainer:{
+    flex:1,
+    alignItems: 'center',
+  },
+  resultRowButtonContainer:{
+    flex:1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  //certificateScreen styles
+  certificateTitleTextContainer:{
+    flex:1,
+    alignItems: 'center',
+    marginTop: hp("3%"),
+  },
+
 });
 
 // always export the variables, function and classes for inter document use

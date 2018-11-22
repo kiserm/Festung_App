@@ -1,6 +1,6 @@
 import React from 'react';
-import {Image,Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import {Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
+import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import { ScrollView } from 'react-native-gesture-handler';
 import { widthPercentageToDP as wp} from 'react-native-responsive-screen';
 
@@ -11,20 +11,22 @@ export default class HowToScreen extends React.Component {
   };
 
   render() {
+    // differ between iOS and Android since on Android the textAlign:justify is only available through the workaround over a webview
     if(Platform.OS === 'ios') {
         return (      
             <View style={styles.anyWholeScreen}>
               
               {/*Set the title of the Screen*/}        
-              <View style={styles.anyTitleTextContainer}>
-                <Text style={styles.anyTitleTextFormat}>
+              <View style={styles.howToTitleTextContainer}>
+                <Text style={styles.howToTitleTextFormat}>
                   So geht's!
                 </Text>
               </View>  
-              
-              <View style={styles.HowToTextContainer}>
+
+              {/*Do a scrollview for the text in iOS*/}   
+              <View style={styles.howToTextContainer}>
                   <ScrollView showsVerticalScrollIndicator={true}>
-                      <Text style={styles.anyTextFormat}>
+                      <Text style={styles.howToTextFormat}>
                           Oben rechts siehst Du eine Karte. Drücke darauf und Du siehst 
                           den Übersichtsplan der Festung Fürigen. Anhand des Plans kannst Du die nächste
                           Rätselstation finden. {"\n"} {"\n"}
@@ -39,12 +41,10 @@ export default class HowToScreen extends React.Component {
                       </Text>
                   </ScrollView>
               </View>
-      
-              <View style={styles.HowToButtonContainer}>
-                {/* Set a button to get to the next page where you can find the quizzes, self customized button with
-                    component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
+
+              {/*The button to get to the start of the quiz*/}   
+              <View style={styles.howToButtonContainer}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-                    {/*use NumberOfLines to say how much lines the text should take*/}
                     <Text style={styles.anyButtonText} numberOfLines={1}>
                       Auf Los geht's Los!
                     </Text>
@@ -59,13 +59,14 @@ export default class HowToScreen extends React.Component {
             <View style={styles.anyWholeScreen}>
               
               {/*Set the title of the Screen*/}        
-              <View style={styles.anyTitleTextContainer}>
-                <Text style={styles.anyTitleTextFormat}>
+              <View style={styles.howToTitleTextContainer}>
+                <Text style={styles.howToTitleTextFormat}>
                   So geht's!
                 </Text>
               </View>  
-              
-              <View style={styles.HowToTextContainer}>
+                         
+              {/*Do a scrollview for the text in android*/}   
+              <View style={styles.howToTextContainer}>
                   <ScrollView contentContainerStyle={{marginRight:wp("2%")}}>
                     {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}
                     <WebView source={{ html: "<html><p style='text-align: justify; color:rgba(96,100,109, 1); font-size:6vw;'>"+
@@ -81,16 +82,14 @@ export default class HowToScreen extends React.Component {
                     "Falls Du mal nicht mehr weiter weisst, kannst Du die Glühbirne oben rechts berühren und die"+
                     "schlauen Füchse Finja und Dario werden Dir den einen oder anderen Tipp verraten. "+
                     "</p></html>"}} 
-                    style={styles.anyTextFormatAndroid}
+                    style={styles.howToTextFormatAndroid}
                     />
                   </ScrollView>
               </View>
-      
-              <View style={styles.HowToButtonContainer}>
-                {/* Set a button to get to the next page where you can find the quizzes, self customized button with
-                    component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
+
+              {/*The button to get to the start of the quiz*/}   
+              <View style={styles.howToButtonContainer}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-                    {/*use NumberOfLines to say how much lines the text should take*/}
                     <Text style={styles.anyButtonText} numberOfLines={1}>
                       Auf Los geht's Los!
                     </Text>

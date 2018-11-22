@@ -15,7 +15,7 @@ export default class CertificateScreen extends React.Component {
           <View style={styles.anyWholeScreen}>
             
             {/*Set the title of the Screen*/}        
-            <View style={styles.anyTitleTextContainer}>
+            <View style={styles.certificateTitleTextContainer}>
               <Text style={styles.anyTitleTextFormat}>
                 Deine Auszeichnung!
               </Text>

@@ -1,6 +1,6 @@
 import React from 'react';
-import {Image,StyleSheet,Text,View,TouchableHighlight,Button,Linking,TextInput} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import {Text,View,TouchableHighlight} from 'react-native';
+import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constanst/Styles.js
 
 
 export default class ResultScreen extends React.Component {
@@ -15,40 +15,33 @@ export default class ResultScreen extends React.Component {
           <View style={styles.anyWholeScreen}>
             
             {/*Set the title of the Screen*/}        
-            <View style={styles.anyTitleTextContainer}>
+            <View style={styles.resultTitleTextContainer}>
               <Text style={styles.anyTitleTextFormat}>
                 Dein Resultat
               </Text>
             </View>     
             
-            <View style={styles.HowToTextContainer}>
+            <View style={styles.resultTextContainer}>
                 <Text style={styles.anyTextFormat}>
-                    
+                    12 von 12 Suuuuper!!!
                 </Text>
             </View>
-    
-            <View style={styles.HowToButtonContainer}>
-              {/* Set a button to get to the next page where you can find the quizzes, self customized button with
-                  component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
-              <TouchableHighlight onPress={() => this.props.navigation.navigate('Certificate')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-                  {/*use NumberOfLines to say how much lines the text should take*/}
-                  <Text style={styles.anyButtonText} numberOfLines={1}>
-                    zum Zertifikat
-                  </Text>
-              </TouchableHighlight>
-            </View>
-
-                          <View style={styles.HowToButtonContainer}>
-                {/* Set a button to get to the next page where you can find the quizzes, self customized button with
-                    component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
-                <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-                    {/*use NumberOfLines to say how much lines the text should take*/}
+          
+            <View style={styles.resultBottomContainer}>
+              <View style={styles.resultRowButtonContainer}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Certificate')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                     <Text style={styles.anyButtonText} numberOfLines={1}>
-                      Back!
+                      zum Zertifikat
+                    </Text>
+                </TouchableHighlight>
+                <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+                    <Text style={styles.anyButtonText} numberOfLines={1}>
+                      Zurück!
                     </Text>
                 </TouchableHighlight>
               </View>
-    
+            </View>
+
           </View>
         );
       }

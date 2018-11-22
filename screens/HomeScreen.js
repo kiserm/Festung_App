@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image,Text,View,TouchableHighlight,Linking} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 
 export default class HomeScreen extends React.Component {
   // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js

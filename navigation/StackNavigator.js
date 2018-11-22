@@ -14,7 +14,6 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 // import all screens in the order in which they appear in the app
 import HomeScreen from '../screens/HomeScreen';
-import UserFormScreen from '../screens/UserFormScreen';
 import HowToScreen from '../screens/HowToScreen';
 import HintScreen from '../screens/HintScreen';
 import MapScreen from '../screens/MapScreen';
@@ -44,7 +43,6 @@ const NavigationStack = createStackNavigator(
   {
     // the convention is that we navigate to the screens, but the screen names are without the suffix 'screen'
     Home:  HomeScreen,
-    UserForm: UserFormScreen,
     HowTo: HowToScreen,
     Hint: HintScreen,
     Map: MapScreen,

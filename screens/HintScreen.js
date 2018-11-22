@@ -1,13 +1,14 @@
 import React from 'react';
-import {Image,StyleSheet,Text,View,TouchableHighlight,Button,Linking,TextInput} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import {Text,View,TouchableHighlight} from 'react-native';
+import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 
 
 export default class HintScreen extends React.Component {
     // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     static navigationOptions = {
       title: "HintScreen", 
-      header: null  
+      header: null,  // do not show the header, else there is a problem for the hint screen because then we do not
+                     // know from which screen we are coming hence we would have the wrong hint rendered
     };
   
     render() {
@@ -15,25 +16,25 @@ export default class HintScreen extends React.Component {
           <View style={styles.anyWholeScreen}>
             
             {/*Set the title of the Screen*/}        
-            <View style={styles.anyTitleTextContainer}>
-              <Text style={styles.anyTitleTextFormat}>
-                Tipps von Finja und Dario
+            <View style={styles.hintTitleTextContainer}>
+              <Text style={styles.hintTitleTextFormat} numberOfLines={2}>
+                Tipps von Finja {"\n"}und Dario
               </Text>
-            </View>     
-            
-            <View style={styles.HowToTextContainer}>
-                <Text style={styles.anyTextFormat}>
-                    Es hat geklappt! Du kommst von {this.props.navigation.getParam('originScreenName')}
+            </View>   
+
+            {/*give the hint according to the screen you are coming*/}   
+            <View style={styles.hintTextContainer}>
+                <Text style={styles.hintTextFormat}>
+                    Du kommst von dieser Station {this.props.navigation.getParam('originScreenName')}! {"\n"}
+                    Du hast Dir einen Tipp verdient.
                 </Text>
             </View>
-    
-            <View style={styles.HowToButtonContainer}>
-              {/* Set a button to get to the next page where you can find the quizzes, self customized button with
-                  component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
+
+            {/*give the back navigation since we do not have a header*/}     
+            <View style={styles.hintBottomContainer}>
               <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-                  {/*use NumberOfLines to say how much lines the text should take*/}
                   <Text style={styles.anyButtonText} numberOfLines={1}>
-                    Back!
+                    Zurück zur Frage!
                   </Text>
               </TouchableHighlight>
             </View>
