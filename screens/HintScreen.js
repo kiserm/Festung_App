@@ -10,7 +10,12 @@ export default class HintScreen extends React.Component {
       header: null,  // do not show the header, else there is a problem for the hint screen because then we do not
                      // know from which screen we are coming hence we would have the wrong hint rendered
     };
-  
+
+    constructor(props) {
+      super(props);
+      this.state = { originScreenName: this.props.navigation.getParam('originScreenName') };
+    }
+
     render() {
         return (      
           <View style={styles.anyWholeScreen}>
@@ -29,13 +34,50 @@ export default class HintScreen extends React.Component {
               </View>
             </View>
 
-
             {/*give the hint according to the screen you are coming*/}   
             <View style={styles.hintMiddleContainer}>
-                <Text style={styles.hintTextFormat}>
-                    Du kommst von dieser Station {this.props.navigation.getParam('originScreenName')}! {"\n"}
-                    Du hast Dir einen Tipp verdient.
+              <View style={styles.hintSubtitleContainer}>
+                <Text style={styles.hintSubtitleFormat}>
+                  {/*give the hint subtitle according to the screen you are coming*/}   
+                  {(() => {
+                            switch(this.state.originScreenName) {
+                              case 'HowTo':
+                                return "Tipp zur Einführung";
+                              case 'Station1':
+                                return "Tipp zur Station 1";
+                              case 'Station2':
+                               return "Tipp zur Station 2";
+                              case 'Station3':
+                               return "Tipp zur Station 3";
+                              case 'Station4':
+                               return "Tipp zur Station 4";
+                              case 'Station5':
+                               return "Tipp zur Station 5";
+                              case 'Station6':
+                               return "Tipp zur Station 6";
+                              case 'Station7':
+                               return "Tipp zur Station 7";
+                              case 'Station8':
+                               return "Tipp zur Station 8";
+                              case 'Station9':
+                               return "Tipp zur Station 9";
+                              case 'Station10':
+                               return "Tipp zur Station 10";
+                              case 'Station11':
+                               return "Tipp zur Station 11";
+                              case 'Station12':
+                               return "Tipp zur Station 12";
+                              default:
+                                return null;
+                            }
+                          })()}
                 </Text>
+              </View>
+              <View style={styles.hintTextContainer}>
+                <Text style={styles.hintTextFormat}>
+                  Du hast Dir einen Tipp verdient.
+                </Text>
+              </View>
             </View>
 
             {/*give the back navigation since we do not have a header*/}     

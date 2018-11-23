@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
 
   // HintScreen Styles
   hintTopContainer:{
-    flex: 3,
+    flex: 2.5,
     marginTop: hp("3%"),
     flexDirection: 'row',
   },
@@ -188,7 +188,26 @@ const styles = StyleSheet.create({
   hintMiddleContainer:{
     flex: 7,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'flex-start'
+  },
+  hintSubtitleContainer:{
+    flex:1,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+  },
+  hintTextContainer:{
+    flex:8,
+    alignItems: 'flex-start',
+    justifyContent:'flex-start'
+  },
+  hintSubtitleFormat:{
+    fontSize: hp("4%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginBottom: hp("1%"),
+    marginHorizontal: wp("7%"),
   },
   hintImageContainer:{
     flex: 1,
@@ -212,7 +231,7 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
     fontWeight: 'normal',
-    textAlign: 'justify',
+    textAlign: 'center',
     marginBottom: hp("4%"),
     marginHorizontal: wp("7%"),
   },
