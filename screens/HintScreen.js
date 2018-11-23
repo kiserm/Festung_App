@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 
 
@@ -15,15 +15,23 @@ export default class HintScreen extends React.Component {
         return (      
           <View style={styles.anyWholeScreen}>
             
-            {/*Set the title of the Screen*/}        
-            <View style={styles.hintTitleTextContainer}>
-              <Text style={styles.hintTitleTextFormat} numberOfLines={2}>
-                Tipps von Finja {"\n"}und Dario
-              </Text>
-            </View>   
+            <View style={styles.hintTopContainer}>
+              {/*Set the title of the Screen*/}        
+              <View style={styles.hintTitleTextContainer}>
+                <Text style={styles.hintTitleTextFormat} numberOfLines={2}>
+                  Schlau wie {"\n"}der Fuchs
+                </Text>
+              </View> 
+
+              {/*Put the image of the clever fox in the right upper corner*/}
+              <View style={styles.hintImageContainer}>
+                <Image source={require('../assets/images/foxGivesHint.png')} style={styles.hintImageStyle}/>
+              </View>
+            </View>
+
 
             {/*give the hint according to the screen you are coming*/}   
-            <View style={styles.hintTextContainer}>
+            <View style={styles.hintMiddleContainer}>
                 <Text style={styles.hintTextFormat}>
                     Du kommst von dieser Station {this.props.navigation.getParam('originScreenName')}! {"\n"}
                     Du hast Dir einen Tipp verdient.

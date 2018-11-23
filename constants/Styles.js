@@ -176,14 +176,23 @@ const styles = StyleSheet.create({
   },
 
   // HintScreen Styles
-  hintTitleTextContainer: {
+  hintTopContainer:{
     flex: 3,
     marginTop: hp("3%"),
+    flexDirection: 'row',
   },
-  hintTextContainer:{
-    flex: 3,
+  hintTitleTextContainer: {
+    flex: 5,
+    alignItems: 'flex-start'
+  },
+  hintMiddleContainer:{
+    flex: 7,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  hintImageContainer:{
+    flex: 1,
+    alignItems: 'flex-end'
   },
   hintBottomContainer: {
     flex: 1,
@@ -206,6 +215,13 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
     marginBottom: hp("4%"),
     marginHorizontal: wp("7%"),
+  },
+  hintImageStyle:{
+    width: wp("30%"),
+    height: hp("20%"),
+    resizeMode: 'contain',
+    alignSelf: 'flex-end',
+    justifyContent: 'center'
   },
 
   // MapScreen styles
