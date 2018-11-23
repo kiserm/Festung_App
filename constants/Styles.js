@@ -252,7 +252,8 @@ const styles = StyleSheet.create({
     flex: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red',
+    width: wp("100%"),
+    backgroundColor: '#fff'
   },
   mapBottomContainer: {
     flex: 1,
@@ -275,9 +276,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
   },
+  mapScrollViewStyle:{
+    flex:1,
+    alignSelf: 'center',
+    justifyContent: 'center',
+  },
   mapWebViewStyle:{
     alignSelf: 'center',
     justifyContent: 'center',
+    width: wp("100%"),
+    height: hp("70%"),
   },
   mapButtonStyle:{
     backgroundColor: 'rgba(96,100,109, 1)',

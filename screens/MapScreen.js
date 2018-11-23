@@ -3,6 +3,7 @@ import {Text,View,TouchableHighlight,Image, Platform} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import { ScrollView, WebView } from 'react-native-gesture-handler';
 
+
 export default class MapScreen extends React.Component {
       // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
       static navigationOptions = {
@@ -26,7 +27,12 @@ export default class MapScreen extends React.Component {
 
               {/*Set the map image with zoom capabilities in here*/}                    
               <View style={styles.mapMiddleContainer}>
-                <ScrollView centerContent={true} maximumZoomScale={5} minimumZoomScale={0.5}>
+                <ScrollView scrollEnabled={true}
+                            centerContent={true} 
+                            maximumZoomScale={4}
+                            minimumZoomScale={0.5} 
+                            automaticallyAdjustContentInsets={true}
+                            contentContainerStyle={styles.mapScrollViewStyle}>
                   <Image source={require('../assets/images/planFestung.png')} style={styles.mapImageStyle}/>
                 </ScrollView>
               </View>
@@ -56,7 +62,11 @@ export default class MapScreen extends React.Component {
 
                 {/*Set the map image with zoom capabilities in here*/}                    
                 <View style={styles.mapMiddleContainer}>
-                  {/*<WebView source={require('../assets/images/planFestung.png')}/>*/}
+                  <WebView source={require('../constants/MapWebView.html')} 
+                            scalesPageToFit={true} 
+                            style={styles.mapWebViewStyle}
+                            automaticallyAdjustContentInsets={true}
+                            />
                 </View>
 
               {/*Set the navigation to go back since no header in Map*/}    
