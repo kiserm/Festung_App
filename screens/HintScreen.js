@@ -71,7 +71,7 @@ export default class HintScreen extends React.Component {
                               default:
                                 return null;
                             }
-                          })()}
+                          })}
                 </Text>
               </View>
               <View style={styles.hintTextContainer}>

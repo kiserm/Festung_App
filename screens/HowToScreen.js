@@ -2,7 +2,6 @@ import React from 'react';
 import {Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import { ScrollView } from 'react-native-gesture-handler';
-import { widthPercentageToDP as wp} from 'react-native-responsive-screen';
 
 export default class HowToScreen extends React.Component {
     // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js

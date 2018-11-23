@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,ScrollView} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
+import AnswerSheet from '../constants/AnswerSheet';
 
 
 export default class OverviewScreen extends React.Component {
@@ -37,8 +38,16 @@ export default class OverviewScreen extends React.Component {
                         </TouchableHighlight>
 
                         <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Erledigt!
+                            <Text style={styles.overviewButtonText}>
+                                {(() => {
+                                            if(AnswerSheet.getAnswer(1) === ''){
+                                                return 'StillToDo';
+                                            }
+                                            else{
+                                                return 'Done';
+                                            }                                
+                                        }
+                                )}   
                             </Text>
                         </TouchableHighlight>
                     </View>
