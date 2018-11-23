@@ -245,18 +245,19 @@ const styles = StyleSheet.create({
 
   // MapScreen styles
   mapTitleTextContainer:{
-    flex:4,
+    flex:2.3,
     marginTop: hp("3%"),
   },
-  mapTextContainer: {
+  mapMiddleContainer: {
     flex: 8,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: 'red',
   },
   mapBottomContainer: {
-    flex: 2,
+    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   mapTitleTextFormat:{
     fontSize: hp("7%"),
@@ -267,14 +268,26 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("7%"),
     marginTop: hp("2%"),
   },
-  mapTextFormat:{
-    fontSize: hp("3%"),
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: hp("4%"),
-    fontWeight: 'normal',
-    textAlign: 'justify',
-    marginBottom: hp("4%"),
-    marginHorizontal: wp("7%"),
+  mapImageStyle:{
+    width: wp("100%"),
+    height: hp("70%"),
+    resizeMode: 'contain',
+    alignSelf: 'center',
+    justifyContent: 'center',
+  },
+  mapWebViewStyle:{
+    alignSelf: 'center',
+    justifyContent: 'center',
+  },
+  mapButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("5%"),
+    marginVertical: hp("1%"),
   },
 
   // resultScreen styles

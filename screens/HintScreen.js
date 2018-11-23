@@ -38,7 +38,8 @@ export default class HintScreen extends React.Component {
             <View style={styles.hintMiddleContainer}>
               <View style={styles.hintSubtitleContainer}>
                 <Text style={styles.hintSubtitleFormat}>
-                  {/*give the hint subtitle according to the screen you are coming*/}   
+                  {/*give the hint subtitle according to the screen you are coming*/} 
+                  {/* Syntax from https://www.robinwieruch.de/conditional-rendering-react/ */}  
                   {(() => {
                             switch(this.state.originScreenName) {
                               case 'HowTo':
