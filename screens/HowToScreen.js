@@ -67,7 +67,6 @@ export default class HowToScreen extends React.Component {
                          
               {/*Do a scrollview for the text in android*/}   
               <View style={styles.howToTextContainer}>
-                  <ScrollView contentContainerStyle={{marginRight:wp("2%")}}>
                     {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}
                     <WebView source={{ html: "<html><p style='text-align: justify; color:rgba(96,100,109, 1); font-size:6vw;'>"+
                     "Oben rechts siehst Du eine Karte. Drücke darauf und Du siehst "+
@@ -84,7 +83,6 @@ export default class HowToScreen extends React.Component {
                     "</p></html>"}} 
                     style={styles.howToTextFormatAndroid}
                     />
-                  </ScrollView>
               </View>
 
               {/*The button to get to the start of the quiz*/}   
