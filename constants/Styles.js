@@ -4,9 +4,16 @@ import {StyleSheet} from 'react-native'; // we need this for using CSS like desi
 // this website: https://www.npmjs.com/package/react-native-responsive-screen
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-/* the styles list for the whole app, this is only done for a good organisation and for reusing code in the app development */
+
+
+/**
+ * IDEA:
+ * the styles list for the whole app, this is only done for a good organisation and for reusing code in the app development
+ */
 const styles = StyleSheet.create({
+  
     //anyStyles for reusability
+    // -----------------------------------------------------------------------------------------------------------------
     anyWholeScreen: {
       backgroundColor: '#fff',
       width: wp("100%"),
@@ -22,7 +29,7 @@ const styles = StyleSheet.create({
       marginBottom: hp("3%"),
       alignSelf: 'stretch',
       justifyContent: 'center',
-      marginHorizontal: wp("5%")
+      marginHorizontal: wp("5%"),
     },
     anyButtonText: {
       fontSize: hp("3%"),
@@ -43,6 +50,7 @@ const styles = StyleSheet.create({
     },
 
     // HomeScreenStyles    
+    // -----------------------------------------------------------------------------------------------------------------
     homeImageContainer: {
       flex: 4,
     },
@@ -74,6 +82,7 @@ const styles = StyleSheet.create({
     },
 
    //HowToScreenStyles
+   // -----------------------------------------------------------------------------------------------------------------
    howToTitleTextContainer:{
      flex: 1,
      marginTop: hp("3%"),
@@ -111,6 +120,7 @@ const styles = StyleSheet.create({
    },
    
    // navigationBarIcons style
+   // -----------------------------------------------------------------------------------------------------------------
    headerButtonContainer:{
     flex: 1, 
     flexDirection: 'row', // makes that we have two icons horizontally listed
@@ -122,6 +132,7 @@ const styles = StyleSheet.create({
    },
 
    //overviewScreen styles
+   // -----------------------------------------------------------------------------------------------------------------
    overviewTopContainer: {
     flex:4,
     justifyContent: 'center',
@@ -166,6 +177,28 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     width: wp("40%")
   },
+  overviewButtonStyleDone:{
+    backgroundColor: 'rgba(31, 116, 48, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(31, 116, 48, 1)',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    paddingHorizontal: wp("2%"),
+    marginVertical: hp("1%"),
+    marginHorizontal: wp("2%"),
+    width: wp("40%")
+  },
+  overviewButtonStyleNotSubmitable:{
+    backgroundColor: 'rgb(211, 211, 211)',
+    borderColor: 'rgb(211, 211, 211)',
+    borderRadius: hp("1%"),
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    paddingHorizontal: wp("2%"),
+    marginVertical: hp("1%"),
+    marginHorizontal: wp("2%"),
+    width: wp("40%")
+  },
   overviewButtonText: {
     fontSize: hp("3%"),
     color: 'white',
@@ -176,6 +209,7 @@ const styles = StyleSheet.create({
   },
 
   // HintScreen Styles
+  // -----------------------------------------------------------------------------------------------------------------
   hintTopContainer:{
     flex: 2.5,
     marginTop: hp("3%"),
@@ -244,6 +278,7 @@ const styles = StyleSheet.create({
   },
 
   // MapScreen styles
+  // -----------------------------------------------------------------------------------------------------------------
   mapTitleTextContainer:{
     flex:2.3,
     marginTop: hp("3%"),
@@ -298,7 +333,8 @@ const styles = StyleSheet.create({
     marginVertical: hp("1%"),
   },
 
-  // resultScreen styles
+  // resultScreen styles 
+  // -----------------------------------------------------------------------------------------------------------------
   resultTitleTextContainer:{
     flex:1,
     alignItems: 'center',
@@ -321,12 +357,109 @@ const styles = StyleSheet.create({
   },
 
   //certificateScreen styles
+  // -----------------------------------------------------------------------------------------------------------------
   certificateTitleTextContainer:{
     flex:1,
     alignItems: 'center',
     marginTop: hp("3%"),
   },
 
+  // station 12 style
+  // -----------------------------------------------------------------------------------------------------------------
+  station12ButtonStyleDone:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    marginBottom: hp("3%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("5%"),
+  },
+  station12ButtonStyleNotSubmitable:{
+    backgroundColor: 'rgb(211, 211, 211)',
+    borderColor: 'rgb(211, 211, 211)',
+    borderRadius: hp("1%"),
+    borderWidth: hp("1%"),
+    marginBottom: hp("3%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("5%")
+  },
+  station12ButtonText: {
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center'
+  },
+  station12SubmitButtonContainer:{
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  // stations style
+  // -----------------------------------------------------------------------------------------------------------------
+  chosenButtonStyle:{
+    backgroundColor: 'white',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    flex:1
+  },
+  unchosenButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    flex:1,
+    alignItems:'center'
+  },
+  chosenButtonText:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center'
+  },
+  stationTitleTextContainer:{
+    flex: 2,
+  },
+  stationTextContainer:{
+    flex: 6,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  stationAnswerContainer:{
+    flex: 3
+  },
+  stationAnswerVerticalContainer:{
+    flex:1,
+    flexDirection: 'row',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
+  stationRowContainer:{
+    flex:1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
+  stationBottomNextContainer:{
+    flex:0.8,
+    flexDirection: 'row',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
 });
 
 // always export the variables, function and classes for inter document use

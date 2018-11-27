@@ -1,6 +1,17 @@
 import React from 'react';
 
+/**
+ * IDEA:
+ * This class carries all the answers the user has given. Furthermore you can 
+ * get and set the answers with two functions.
+ */
 export class AnswerSheetClass extends React.Component{
+
+    /**
+     * IDEA:
+     * this variable holds all answers given by the user. They can be modified with the 
+     * setAnswer() function and can be read with the getAnswer() function
+     */
     Answers = {
                 Station1: '',
                 Station2: '',
@@ -16,7 +27,11 @@ export class AnswerSheetClass extends React.Component{
                 Station12: '',
             };
     
-    // this function is here to be able reading out the answer everytime and from everywhere in the app
+    /**
+     * IDEA: 
+     * this function is here to be able reading out the answer everytime and from everywhere in the app
+     * @param {stationNumber is a integer between 1 and the number of Stations in the quiz} StationNumber 
+     */
     getAnswer(StationNumber){
         switch(StationNumber){
             case 1:
@@ -48,7 +63,11 @@ export class AnswerSheetClass extends React.Component{
         }
     }
 
-    // this function is here to be able settin the answers everytime and from everywhere in the app
+    
+    /**
+     * IDEA:
+     * this function is here to be able settin the answers everytime and from everywhere in the app 
+     */
     setAnswer(StationNumber,Answer){
         switch(StationNumber){
             case 1:
@@ -93,6 +112,10 @@ export class AnswerSheetClass extends React.Component{
     }
 }
 
+/**
+ * IDEA:
+ * Make an instance of this class such that we can export this for an easier access from all screens.
+ */
 const AnswerSheet = new AnswerSheetClass();
 
 export default AnswerSheet;
