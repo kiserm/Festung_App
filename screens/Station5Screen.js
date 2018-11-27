@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image,StyleSheet,Text,View,TouchableHighlight,Button,Linking,TextInput} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
-import AnswerSheet from '../constants/AnswerSheet';
 
 import AnswerSheet from '../constants/AnswerSheet';
 import IconEntypo from 'react-native-vector-icons/Entypo'
@@ -17,7 +16,7 @@ export default class Station5Screen extends React.Component {
  
       constructor(props) {
         super(props);
-        this.state = { chosenAnswerStation1: '' };
+        this.state = { chosenAnswerStation5: '' };
       };
     
       render() {
@@ -27,7 +26,7 @@ export default class Station5Screen extends React.Component {
             {/*Set the title of the Screen*/}        
             <View style={styles.stationTitleTextContainer}>
               <Text style={styles.anyTitleTextFormat}>
-                Station 1
+                Station 5
               </Text>
             </View>     
             
@@ -39,15 +38,15 @@ export default class Station5Screen extends React.Component {
 
             <View style={styles.stationAnswerVerticalContainer}>
               <View style={styles.stationRowContainer}>
-                <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'A'), this.setState({chosenAnswerStation1: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation1==='A' && styles.chosenButtonStyle]}>
-                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='A' && styles.chosenButtonText]} numberOfLines={1}>
+                <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(5,'A'), this.setState({chosenAnswerStation5: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation5==='A' && styles.chosenButtonStyle]}>
+                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation5==='A' && styles.chosenButtonText]} numberOfLines={1}>
                       A
                     </Text>
                 </TouchableHighlight>
               </View>
               <View style={styles.stationRowContainer}>
-                <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'B'), this.setState({chosenAnswerStation1: 'B'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation1==='B' && styles.chosenButtonStyle]}>
-                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='B' && styles.chosenButtonText]} numberOfLines={1}>
+                <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(5,'B'), this.setState({chosenAnswerStation5: 'B'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation5==='B' && styles.chosenButtonStyle]}>
+                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation5==='B' && styles.chosenButtonText]} numberOfLines={1}>
                       B
                     </Text>
                 </TouchableHighlight>
@@ -56,15 +55,15 @@ export default class Station5Screen extends React.Component {
 
             <View style={styles.stationAnswerVerticalContainer}>
               <View style={styles.stationRowContainer}>
-                <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'C'), this.setState({chosenAnswerStation1: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation1==='C' && styles.chosenButtonStyle]}>
-                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='C' && styles.chosenButtonText]} numberOfLines={1}>
+                <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(5,'C'), this.setState({chosenAnswerStation5: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation5==='C' && styles.chosenButtonStyle]}>
+                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation5==='C' && styles.chosenButtonText]} numberOfLines={1}>
                       C
                     </Text>
                 </TouchableHighlight>
               </View>
               <View style={styles.stationRowContainer}>
-                <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'D'), this.setState({chosenAnswerStation1: 'D'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation1==='D' && styles.chosenButtonStyle]}>
-                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='D' && styles.chosenButtonText]} numberOfLines={1}>
+                <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(5,'D'), this.setState({chosenAnswerStation5: 'D'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation5==='D' && styles.chosenButtonStyle]}>
+                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation5==='D' && styles.chosenButtonText]} numberOfLines={1}>
                       D
                     </Text>
                 </TouchableHighlight>
@@ -73,7 +72,7 @@ export default class Station5Screen extends React.Component {
 
             <View style={styles.stationBottomNextContainer}>
               <View style={styles.stationRowContainer}>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station4')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
                     <Text style={styles.anyButtonText} numberOfLines={1}>
                       <IconEntypo name="arrow-bold-left" size={hp("3%")} color="white"/>
                     </Text>
@@ -82,7 +81,7 @@ export default class Station5Screen extends React.Component {
               <View style={styles.stationRowContainer}/>
               <View style={styles.stationRowContainer}/>
               <View style={styles.stationRowContainer}>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station2')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station6')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
                     <IconEntypo name="arrow-bold-right" size={hp("3%")} color="white"/>
                 </TouchableHighlight>
               </View>

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image,StyleSheet,Text,View,TouchableHighlight,Button,Linking,TextInput} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
-import AnswerSheet from '../constants/AnswerSheet';
 
 import AnswerSheet from '../constants/AnswerSheet';
 import IconEntypo from 'react-native-vector-icons/Entypo'

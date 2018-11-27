@@ -4,7 +4,6 @@ import styles from '../constants/Styles'; // for design purpose, import the styl
 import AnswerSheet from '../constants/AnswerSheet';
 
 
-import AnswerSheet from '../constants/AnswerSheet';
 import IconEntypo from 'react-native-vector-icons/Entypo'
 // to be able to have a proper design on every platform, I downloaded this package from 
 // this website: https://www.npmjs.com/package/react-native-responsive-screen

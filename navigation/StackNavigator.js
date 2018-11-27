@@ -27,8 +27,6 @@ import Station7Screen from '../screens/Station7Screen';
 import Station8Screen from '../screens/Station8Screen';
 import Station9Screen from '../screens/Station9Screen';
 import Station10Screen from '../screens/Station10Screen';
-import Station11Screen from '../screens/Station11Screen';
-import Station12Screen from '../screens/Station12Screen';
 import ResultScreen from '../screens/ResultScreen';
 import CertificateScreen from '../screens/CertificateScreen';
 import OverviewScreen from '../screens/OverviewScreen';
@@ -57,8 +55,6 @@ const NavigationStack = createStackNavigator(
     Station8: Station8Screen, 
     Station9: Station9Screen, 
     Station10: Station10Screen, 
-    Station11: Station11Screen, 
-    Station12: Station12Screen, 
     Result: ResultScreen,
     Certificate: CertificateScreen,
   },
@@ -81,30 +77,32 @@ const NavigationStack = createStackNavigator(
         headerRight: ( <View style={styles.headerButtonContainer}>
                           {/* This is the first button when looking from the left.*/}
                           <TouchableHighlight onPress={() => {
+                                                              navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
+                                                            }
+                                                    } style={styles.navigationBarIcons}>
+                            <IconEntypo name="light-bulb" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
+                          </TouchableHighlight>
+                          {/* This is the second button when looking from the left.*/}
+                          <TouchableHighlight onPress={() => {
+                                                              navigation.navigate('Map',{originScreenName: navigation.state.routeName})
+                                                            }
+                                                    } style={styles.navigationBarIcons}>
+                            <IconEntypo name="map" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
+                          </TouchableHighlight>          
+                        </View>
+                      ),
+        headerBackTitle: null,  // if the title is more than 4 letters, the fallbacktitle will be by default
+                                // 'back' but i do not want this so i set it to null such that the label is 
+                                // no longer shown on android as well as on iOS 
+        headerLeft: (<View style={styles.headerButtonContainer}>
+                          <TouchableHighlight onPress={() => {
                                                                 navigation.navigate('Overview',{originScreenName: navigation.state.routeName})
                                                               }
                                                       } style={styles.navigationBarIcons}>
                               <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
                             </TouchableHighlight>
-                            {/* This is the second button when looking from the left.*/}
-                            <TouchableHighlight onPress={() => {
-                                                                navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
-                                                              }
-                                                      } style={styles.navigationBarIcons}>
-                              <IconEntypo name="light-bulb" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
-                            </TouchableHighlight>
-                            {/* This is the third button when looking from the left.*/}
-                            <TouchableHighlight onPress={() => {
-                                                                navigation.navigate('Map',{originScreenName: navigation.state.routeName})
-                                                              }
-                                                      } style={styles.navigationBarIcons}>
-                              <IconEntypo name="map" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
-                            </TouchableHighlight>          
-                          </View>
-                        ),
-        headerBackTitle: null,  // if the title is more than 4 letters, the fallbacktitle will be by default
-                                // 'back' but i do not want this so i set it to null such that the label is 
-                                // no longer shown on android as well as on iOS  
+                      </View>
+                    ), 
       }
     }
   }

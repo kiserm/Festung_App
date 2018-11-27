@@ -128,24 +128,6 @@ export default class OverviewScreen extends React.Component {
                         {this.showDoneOrTodoButton(10)}
                     </View>
 
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station11')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 11
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(11)}
-                    </View>
-                    
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station12')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 12
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(12)}
-                    </View>
-
                 </ScrollView>
             </View>
 
@@ -204,7 +186,7 @@ export default class OverviewScreen extends React.Component {
      * returns false.
      */
     testAllTasksDone(){
-        for(i=0;i<12;++i){
+        for(i=1;i<=10;++i){
             if(AnswerSheet.getAnswer(i) === ''){
                 return false;
             }
