@@ -25,8 +25,27 @@ export class AnswerSheetClass extends React.Component{
                 Station10: '',
                 Station11: '',
                 Station12: '',
-            };
+    };
     
+    /**
+     * IDEA:
+     * this variable holds all solutions to the quizzes to be able to make a result screen
+     */
+    RightAnswers = {
+        Station1: 'A',
+        Station2: 'B',
+        Station3: 'D',
+        Station4: 'C',
+        Station5: 'A',
+        Station6: 'B',
+        Station7: 'C',
+        Station8: 'D',
+        Station9: 'D',
+        Station10: 'A',
+        Station11: 'C',
+        Station12: 'B',
+    };
+
     /**
      * IDEA: 
      * this function is here to be able reading out the answer everytime and from everywhere in the app

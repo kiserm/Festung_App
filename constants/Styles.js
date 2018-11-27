@@ -460,6 +460,17 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
+  station10NotSubmittableButtonStyle:{
+    backgroundColor: 'rgb(211, 211, 211)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgb(211, 211, 211)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    flex:1,
+    alignItems:'center'
+  },
 });
 
 // always export the variables, function and classes for inter document use

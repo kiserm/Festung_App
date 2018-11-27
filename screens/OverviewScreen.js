@@ -162,15 +162,15 @@ export default class OverviewScreen extends React.Component {
             return (
             <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                 <Text style={styles.overviewButtonText}>
-                    StillToDo
+                    zur Frage
                 </Text>
             </TouchableHighlight>
             );
         }
         else{
             return(
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} style={styles.overviewButtonStyleDone}>
-                    <Text style={styles.overviewButtonText}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} style={styles.chosenButtonStyle}>
+                    <Text style={styles.chosenButtonText}>
                         {AnswerSheet.getAnswer(stationNumber)}
                     </Text>
                 </TouchableHighlight>
