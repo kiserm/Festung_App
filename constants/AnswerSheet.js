@@ -23,8 +23,6 @@ export class AnswerSheetClass extends React.Component{
                 Station8: '',
                 Station9: '',
                 Station10: '',
-                Station11: '',
-                Station12: '',
     };
     
     /**
@@ -32,18 +30,16 @@ export class AnswerSheetClass extends React.Component{
      * this variable holds all solutions to the quizzes to be able to make a result screen
      */
     RightAnswers = {
-        Station1: 'A',
-        Station2: 'B',
+        Station1: 'D',
+        Station2: 'D',
         Station3: 'D',
-        Station4: 'C',
-        Station5: 'A',
-        Station6: 'B',
-        Station7: 'C',
+        Station4: 'D',
+        Station5: 'D',
+        Station6: 'D',
+        Station7: 'D',
         Station8: 'D',
         Station9: 'D',
-        Station10: 'A',
-        Station11: 'C',
-        Station12: 'B',
+        Station10: 'D',
     };
 
     /**
@@ -73,14 +69,10 @@ export class AnswerSheetClass extends React.Component{
                 return this.Answers.Station9;
             case 10:
                 return this.Answers.Station10;
-            case 11:
-                return this.Answers.Station11;
-            case 12:
-                return this.Answers.Station12;
             default:
                 return 'This stationnumber does not exist!'
         }
-    }
+    };
 
     
     /**
@@ -119,16 +111,52 @@ export class AnswerSheetClass extends React.Component{
             case 10:
                 this.Answers.Station10=Answer;
                 break;
-            case 11:
-                this.Answers.Station11=Answer;
-                break;
-            case 12:
-                this.Answers.Station12=Answer;
-                break;
             default:
                 return 'This stationnumber does not exist!'
         }
-    }
+    };
+
+    /**
+     * IDEA: 
+     * this function is here to be able reading out the right answer everytime and from everywhere in the app
+     * @param {stationNumber is a integer between 1 and the number of Stations in the quiz} StationNumber 
+     */
+    getRightAnswer(StationNumber){
+        switch(StationNumber){
+            case 1:
+                return this.RightAnswers.Station1;
+            case 2:
+                return this.RightAnswers.Station2;
+            case 3:
+                return this.RightAnswers.Station3;
+            case 4:
+                return this.RightAnswers.Station4;
+            case 5:
+                return this.RightAnswers.Station5;
+            case 6:
+                return this.RightAnswers.Station6;
+            case 7:
+                return this.RightAnswers.Station7;
+            case 8:
+                return this.RightAnswers.Station8;
+            case 9:
+                return this.RightAnswers.Station9;
+            case 10:
+                return this.RightAnswers.Station10;
+            default:
+                return 'This stationnumber does not exist!'
+        }
+    };
+
+    numberOfRightAnswers = 0;
+
+    setNumberOfRightAnswers(nora){
+        this.numberOfRightAnswers = nora;
+    };
+
+    getNumberOfRightAnswers(){
+        return this.numberOfRightAnswers;
+    };
 }
 
 /**

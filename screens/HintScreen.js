@@ -54,7 +54,7 @@ export default class HintScreen extends React.Component {
           <View style={styles.hintBottomContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                 <Text style={styles.anyButtonText} numberOfLines={1}>
-                  Zurück zur Frage!
+                  Zurück
                 </Text>
             </TouchableHighlight>
           </View>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight,ScrollView} from 'react-native';
+import {Text,View,TouchableHighlight,ScrollView,Alert} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import AnswerSheet from '../constants/AnswerSheet';  // to get access to the users given answers
 
@@ -26,7 +26,7 @@ export default class OverviewScreen extends React.Component {
             {/*Set the title of the Screen*/}        
             <View style={styles.overviewTopContainer}>
                 <Text style={styles.overviewTitleTextFormat}>
-                Übersicht
+                    Übersicht
                 </Text>
             </View>     
 
@@ -37,7 +37,7 @@ export default class OverviewScreen extends React.Component {
                 <ScrollView>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Certificate')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 1
                             </Text>
@@ -48,7 +48,7 @@ export default class OverviewScreen extends React.Component {
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station2')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 2
                             </Text>
@@ -137,7 +137,7 @@ export default class OverviewScreen extends React.Component {
                 <View style={styles.overviewRowButtonContainer}>
                     <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                         <Text style={styles.overviewButtonText} numberOfLines={1}>
-                            Zurück!
+                            Zurück
                         </Text>
                     </TouchableHighlight>
                     
@@ -169,7 +169,7 @@ export default class OverviewScreen extends React.Component {
         }
         else{
             return(
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} style={styles.chosenButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} style={styles.overviewButtonStyleDone}>
                     <Text style={styles.chosenButtonText}>
                         {AnswerSheet.getAnswer(stationNumber)}
                     </Text>
@@ -206,16 +206,16 @@ export default class OverviewScreen extends React.Component {
             return (           
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                     <Text style={styles.overviewButtonText} numberOfLines={1}>
-                        Abgabe!
+                        Abgabe
                     </Text>
                 </TouchableHighlight>
             );
         }
         else{
             return(
-                <TouchableHighlight onPress={() => alert("Mache zuerst alle Aufgaben!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
+                <TouchableHighlight onPress={() => Alert.alert('Achtung',"Mache zuerst alle Aufgaben!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                     <Text style={styles.overviewButtonText} numberOfLines={1}>
-                        Abgabe!
+                        Abgabe
                     </Text>
                 </TouchableHighlight>
             );

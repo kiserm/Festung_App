@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
       lineHeight: hp("8%"),
       textAlign: 'left',
       fontWeight: 'bold',
-      marginHorizontal: wp("7%"),
+      marginHorizontal: wp("5%"),
       marginTop: hp("2%"),
     },
 
@@ -178,9 +178,9 @@ const styles = StyleSheet.create({
     width: wp("40%")
   },
   overviewButtonStyleDone:{
-    backgroundColor: 'rgba(31, 116, 48, 1)',
+    backgroundColor: 'white',
     borderRadius: hp("1%"),
-    borderColor: 'rgba(31, 116, 48, 1)',
+    borderColor: 'rgba(96,100,109, 1)',
     borderWidth: hp("1%"),
     justifyContent: 'center',
     paddingHorizontal: wp("2%"),
@@ -336,32 +336,113 @@ const styles = StyleSheet.create({
   // resultScreen styles 
   // -----------------------------------------------------------------------------------------------------------------
   resultTitleTextContainer:{
-    flex:1,
+    flex:2,
     alignItems: 'center',
-    marginTop: hp("3%"),
+    marginTop: hp("6%"),
   },
-  resultTextContainer:{
-    flex:3,
+  resultMiddleTextContainer:{
+    flex:1,
     alignItems: 'center',
     justifyContent: 'center'
   },
   resultBottomContainer:{
-    flex:1,
+    flex:0.8,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   resultRowButtonContainer:{
     flex:1,
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
+  resultMiddleContainer:{
+    flex:8,
+    alignItems: 'center',
     justifyContent: 'center'
   },
-
+  resultMiddleTitleContainer:{
+    flex:0.6,
+  },
+  resultIconContainer:{
+    flex:4,
+    alignItems: 'center',
+  },
+  resultMiddleText:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    marginBottom: hp("2%"),
+    marginHorizontal: wp("7%"),
+  },
+  resultMiddleTextBold:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: hp("2%"),
+    marginHorizontal: wp("7%"),
+  },
+  resultSubtitleTextFormat:{
+    fontSize: hp("4%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginBottom: hp("1%"),
+    marginHorizontal: wp("7%"),
+  },
+  resultIconStyle:{
+    flex: 1,
+    alignSelf: 'center',
+    justifyContent: 'flex-start',
+  },
+  resultButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("7%"),
+    flex:1,
+    alignItems:'center',
+  },
   //certificateScreen styles
   // -----------------------------------------------------------------------------------------------------------------
   certificateTitleTextContainer:{
-    flex:1,
+    flex:2,
     alignItems: 'center',
     marginTop: hp("3%"),
+  },
+  certificateBottomContainer:{
+    flex:6,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  certificateImageContainer:{
+    flex:2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  certificateBottomTextContainer:{
+    flex: 1,
+    alignItems: 'center',
+    marginBottom: hp("3%"),
+  },
+  certificateBottomTextFormat:{
+    fontSize: hp("4%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("5%"),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: hp("2%"),
+    marginHorizontal: wp("7%"),
   },
 
   // station 12 style
@@ -406,9 +487,11 @@ const styles = StyleSheet.create({
     borderRadius: hp("1%"),
     borderColor: 'rgba(96,100,109, 1)',
     borderWidth: hp("1%"),
+    alignSelf: 'stretch',
     justifyContent: 'center',
     marginHorizontal: wp("2%"),
-    flex:1
+    flex: 1,
+    alignItems:'center',
   },
   unchosenButtonStyle:{
     backgroundColor: 'rgba(96,100,109, 1)',
@@ -419,7 +502,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginHorizontal: wp("2%"),
     flex:1,
-    alignItems:'center'
+    alignItems:'center',
   },
   chosenButtonText:{
     fontSize: hp("3%"),
