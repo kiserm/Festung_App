@@ -561,6 +561,15 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems:'center'
   },
+  stationTextFormat:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    textAlign: 'left',
+    fontWeight: 'normal',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("3%"),
+  },
 });
 
 // always export the variables, function and classes for inter document use

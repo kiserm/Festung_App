@@ -33,22 +33,24 @@ export default class Station1Screen extends React.Component {
             </View>     
             
             <View style={styles.stationTextContainer}>
-                <Text style={styles.anyTextFormat}>
-                  Dies ist eine Testfrage. Wähle A,B,C oder D.
+                <Text style={styles.stationTextFormat}>
+                  Dies ist eine Testfrage. {"\n"}
+                  Was hat Präsident Obama bei seiner Wahl getragen?
+                  Wähle A,B,C oder D.
                 </Text>
             </View>
 
             <View style={styles.stationAnswerVerticalContainer}>
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'A'), this.setState({chosenAnswerStation1: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation1==='A' && styles.chosenButtonStyle]}>
-                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='A' && styles.chosenButtonText]} numberOfLines={1}>
+                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='A' && styles.chosenButtonText]} >
                       A
                     </Text>
                 </TouchableHighlight>
               </View>
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'B'), this.setState({chosenAnswerStation1: 'B'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation1==='B' && styles.chosenButtonStyle]}>
-                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='B' && styles.chosenButtonText]} numberOfLines={1}>
+                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='B' && styles.chosenButtonText]}>
                       B
                     </Text>
                 </TouchableHighlight>
@@ -58,14 +60,14 @@ export default class Station1Screen extends React.Component {
             <View style={styles.stationAnswerVerticalContainer}>
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'C'), this.setState({chosenAnswerStation1: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation1==='C' && styles.chosenButtonStyle]}>
-                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='C' && styles.chosenButtonText]} numberOfLines={1}>
+                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='C' && styles.chosenButtonText]}>
                       C
                     </Text>
                 </TouchableHighlight>
               </View>
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'D'), this.setState({chosenAnswerStation1: 'D'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.unchosenButtonStyle, this.state.chosenAnswerStation1==='D' && styles.chosenButtonStyle]}>
-                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='D' && styles.chosenButtonText]} numberOfLines={1}>
+                    <Text style={[styles.anyButtonText, this.state.chosenAnswerStation1==='D' && styles.chosenButtonText]}>
                       D
                     </Text>
                 </TouchableHighlight>
@@ -75,9 +77,7 @@ export default class Station1Screen extends React.Component {
             <View style={styles.stationBottomNextContainer}>
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                    <Text style={styles.anyButtonText} numberOfLines={1}>
                       <IconEntypo name="arrow-bold-left" size={hp("3%")} color="white"/>
-                    </Text>
                 </TouchableHighlight>
               </View>
               <View style={styles.stationRowContainer}/>
