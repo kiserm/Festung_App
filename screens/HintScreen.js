@@ -45,7 +45,9 @@ export default class HintScreen extends React.Component {
             </View>
             <View style={styles.hintTextContainer}>
               <Text style={styles.hintTextFormat}>
-                Du hast Dir einen Tipp verdient.
+                Du hast Dir einen Tipp verdient. {"\n"} 
+                Und dieser lautet wie folgt:{"\n"}
+                Du bist schlau!                
               </Text>
             </View>
           </View>

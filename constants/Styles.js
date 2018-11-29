@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
       lineHeight: hp("8%"),
       textAlign: 'left',
       fontWeight: 'bold',
-      marginHorizontal: wp("5%"),
-      marginTop: hp("2%"),
+      marginHorizontal: wp("7%"),
+      marginTop: hp("3%"),
     },
 
     // HomeScreenStyles    
@@ -231,8 +231,6 @@ const styles = StyleSheet.create({
   },
   hintTextContainer:{
     flex:8,
-    alignItems: 'flex-start',
-    justifyContent:'flex-start'
   },
   hintSubtitleFormat:{
     fontSize: hp("4%"),
@@ -265,7 +263,7 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
     fontWeight: 'normal',
-    textAlign: 'center',
+    textAlign: 'left',
     marginBottom: hp("4%"),
     marginHorizontal: wp("7%"),
   },
@@ -417,8 +415,7 @@ const styles = StyleSheet.create({
   // -----------------------------------------------------------------------------------------------------------------
   certificateTitleTextContainer:{
     flex:2,
-    alignItems: 'center',
-    marginTop: hp("3%"),
+    marginTop: hp("5%"),
   },
   certificateBottomContainer:{
     flex:6,
@@ -434,6 +431,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     marginBottom: hp("3%"),
+    justifyContent: 'center',
   },
   certificateBottomTextFormat:{
     fontSize: hp("4%"),
@@ -443,6 +441,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: hp("2%"),
     marginHorizontal: wp("7%"),
+  },
+  certificateTitleTextFormat:{
+    fontSize: hp("7%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("8%"),
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("3%"),
   },
 
   // station 12 style

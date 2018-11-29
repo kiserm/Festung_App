@@ -21,8 +21,8 @@ export default class CertificateScreen extends React.Component {
             
             {/*Set the title of the Screen*/}        
             <View style={styles.certificateTitleTextContainer}>
-              <Text style={styles.anyTitleTextFormat} numberOfLines={2}>
-                Deine {"\n"}Auszeichnung
+              <Text style={styles.certificateTitleTextFormat} numberOfLines={2}>
+                Dein {"\n"}Zertifikat
               </Text>
             </View>     
 
