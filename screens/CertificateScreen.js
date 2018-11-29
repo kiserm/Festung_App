@@ -82,32 +82,36 @@ export default class CertificateScreen extends React.Component {
           );
         }
         else if(AnswerSheet.getNumberOfRightAnswers() === 10){
-          <View style={styles.certificateBottomContainer}>
-            <View style={styles.certificateImageContainer}>
-              <TouchableHighlight style={styles.resultIconStyle}>
-                  <IconFontAwesome5 name="award" size={hp("40%")} color="goldenrod"/>
-              </TouchableHighlight>
+          return (
+            <View style={styles.certificateBottomContainer}>
+              <View style={styles.certificateImageContainer}>
+                <TouchableHighlight style={styles.resultIconStyle}>
+                    <IconFontAwesome5 name="award" size={hp("40%")} color="goldenrod"/>
+                </TouchableHighlight>
+              </View>
+              <View style={styles.certificateBottomTextContainer}>
+                <Text style={styles.certificateBottomTextFormat}>
+                    Du bist ein offizieller Festung Fürigen Experte!
+                </Text>
+              </View>
             </View>
-            <View style={styles.certificateBottomTextContainer}>
-              <Text style={styles.certificateBottomTextFormat}>
-                  Du bist ein offizieller Festung Fürigen Experte!
-              </Text>
-            </View>
-          </View>
+          );
         }
         else{
-          <View style={styles.certificateBottomContainer}>
-            <View style={styles.certificateImageContainer}>
-              <TouchableHighlight style={styles.resultIconStyle}>
-                  <IconFontAwesome5 name="award" size={hp("40%")} color="rgba(96,100,109, 1)"/>
-              </TouchableHighlight>
+          return(
+            <View style={styles.certificateBottomContainer}>
+              <View style={styles.certificateImageContainer}>
+                <TouchableHighlight style={styles.resultIconStyle}>
+                    <IconFontAwesome5 name="award" size={hp("40%")} color="rgba(96,100,109, 1)"/>
+                </TouchableHighlight>
+              </View>
+              <View style={styles.certificateBottomTextContainer}>
+                <Text style={styles.certificateBottomTextFormat}>
+                    Error
+                </Text>
+              </View>
             </View>
-            <View style={styles.certificateBottomTextContainer}>
-              <Text style={styles.certificateBottomTextFormat}>
-                  Error
-              </Text>
-            </View>
-          </View>
+          );
         }
     }
 }

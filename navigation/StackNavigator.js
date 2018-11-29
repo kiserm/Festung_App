@@ -30,6 +30,7 @@ import Station10Screen from '../screens/Station10Screen';
 import ResultScreen from '../screens/ResultScreen';
 import CertificateScreen from '../screens/CertificateScreen';
 import OverviewScreen from '../screens/OverviewScreen';
+import TutorialScreen from '../screens/TutorialScreen';
 
 
 // used for the tab navigation bar
@@ -42,6 +43,7 @@ const NavigationStack = createStackNavigator(
     // the convention is that we navigate to the screens, but the screen names are without the suffix 'screen'
     Home:  HomeScreen,
     HowTo: HowToScreen,
+    Tutorial: TutorialScreen,
     Hint: HintScreen,
     Map: MapScreen,
     Overview: OverviewScreen,

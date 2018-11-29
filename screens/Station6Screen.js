@@ -31,7 +31,7 @@ export default class Station6Screen extends React.Component {
             </View>     
             
             <View style={styles.stationTextContainer}>
-                <Text style={styles.anyTextFormat}>
+                <Text style={styles.stationTextFormat}>
                   Dies ist eine Testfrage. Wähle A,B,C oder D.
                 </Text>
             </View>

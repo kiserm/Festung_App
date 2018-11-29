@@ -37,7 +37,7 @@ export default class OverviewScreen extends React.Component {
                 <ScrollView>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Certificate')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 1
                             </Text>
@@ -48,7 +48,7 @@ export default class OverviewScreen extends React.Component {
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station2')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 2
                             </Text>
@@ -169,7 +169,7 @@ export default class OverviewScreen extends React.Component {
         }
         else{
             return(
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} style={styles.overviewButtonStyleDone}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="white" style={styles.overviewButtonStyleDone}>
                     <Text style={styles.chosenButtonText}>
                         {AnswerSheet.getAnswer(stationNumber)}
                     </Text>

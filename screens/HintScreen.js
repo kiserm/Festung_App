@@ -47,7 +47,7 @@ export default class HintScreen extends React.Component {
               <Text style={styles.hintTextFormat}>
                 Du hast Dir einen Tipp verdient. {"\n"} 
                 Und dieser lautet wie folgt:{"\n"}
-                Du bist schlau!                
+                {this.showSpecificHint()}                
               </Text>
             </View>
           </View>
@@ -93,6 +93,39 @@ export default class HintScreen extends React.Component {
         return "Tipp zur Station 11";
       case 'Station12':
         return "Tipp zur Station 12";
+      default:
+        return null;
+    };
+  }
+
+  showSpecificHint (){
+    switch(this.state.originScreenName) {
+      case 'HowTo':
+        return "Hier steht der Tipp zur Einführung";
+      case 'Station1':
+        return "Hier steht der Tipp zur Station 1";
+      case 'Station2':
+        return "Hier steht der Tipp zur Station 2";
+      case 'Station3':
+        return "Hier steht der Tipp zur Station 3";
+      case 'Station4':
+        return "Hier steht der Tipp zur Station 4";
+      case 'Station5':
+        return "Hier steht der Tipp zur Station 5";
+      case 'Station6':
+        return "Hier steht der Tipp zur Station 6";
+      case 'Station7':
+        return "Hier steht der Tipp zur Station 7";
+      case 'Station8':
+        return "Hier steht der Tipp zur Station 8";
+      case 'Station9':
+        return "Hier steht der Tipp zur Station 9";
+      case 'Station10':
+        return "Hier steht der Tipp zur Station 10";
+      case 'Station11':
+        return "Hier steht der Tipp zur Station 11";
+      case 'Station12':
+        return "Hier steht der Tipp zur Station 12";
       default:
         return null;
     };
