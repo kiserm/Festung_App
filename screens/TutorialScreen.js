@@ -143,16 +143,16 @@ export default class TutorialScreen extends Component {
                                         this.props.navigation.navigate('Station1');
                                     });
 
-                                },3000);
+                                },5000);
                             });
 
-                        },3000);
+                        },5000);
                     });
 
-                },3000);                
+                },5000);                
             });
 
-        },1000);
+        },5000);
     };
 
     render() {
