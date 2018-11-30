@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'; // we need this for using CSS like design patterns
+import {StyleSheet, Platform} from 'react-native'; // we need this for using CSS like design patterns
 
 // to be able to have a proper design on every platform, I downloaded this package from 
 // this website: https://www.npmjs.com/package/react-native-responsive-screen
@@ -605,17 +605,17 @@ const styles = StyleSheet.create({
   },
   tutorialArrowOverviewContainer:{
     flex:1,
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(1,1,1,0)',
     alignSelf: 'stretch', // horizontally -> need this for the absolute position in the child element
   },
   tutorialArrowHintContainer:{
     flex:1,
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(1,1,1,0)',
     alignSelf: 'stretch', // horizontally -> need this for the absolute position in the child element
   },
   tutorialArrowMapContainer:{
     flex:1,
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(1,1,1,0)',
     alignSelf: 'stretch', // horizontally -> need this for the absolute position in the child element
   },
   tutorialOverviewArrowSytle:{
@@ -628,7 +628,7 @@ const styles = StyleSheet.create({
     flex: 1,
     position: "absolute", 
     bottom: 0, 
-    right: -wp('0.5%')
+    right: Platform.OS === 'ios' ? -wp('0.5%') : -wp('1%'),    
   },
   tutorialMapArrowSytle:{
     flex: 1,
