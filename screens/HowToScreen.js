@@ -7,6 +7,7 @@ export default class HowToScreen extends React.Component {
     // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     static navigationOptions = {
     title: "HowToScreen",
+    header: null,
   };
 
   render() {
@@ -43,7 +44,7 @@ export default class HowToScreen extends React.Component {
 
               {/*The button to get to the start of the quiz*/}   
               <View style={styles.howToButtonContainer}>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                     <Text style={styles.anyButtonText} numberOfLines={1}>
                       Auf Los geht's Los!
                     </Text>
@@ -86,7 +87,7 @@ export default class HowToScreen extends React.Component {
 
               {/*The button to get to the start of the quiz*/}   
               <View style={styles.howToButtonContainer}>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                     <Text style={styles.anyButtonText} numberOfLines={1}>
                       Auf Los geht's Los!
                     </Text>

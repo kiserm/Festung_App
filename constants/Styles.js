@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
    // -----------------------------------------------------------------------------------------------------------------
    howToTitleTextContainer:{
      flex: 1,
-     marginTop: hp("3%"),
+     marginTop: hp("6%"),
      justifyContent: 'center'
    },
    howToTextContainer:{
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   hintMiddleContainer:{
-    flex: 7,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'flex-start'
   },
@@ -569,6 +569,72 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     marginHorizontal: wp("7%"),
     marginTop: hp("3%"),
+  },
+
+  // TutorialScreenStyles    
+  // ----------------------------------------------------------------------------------------------------------------- 
+  tutorialBackground:{
+    flex: 8,
+    flexDirection:'row',
+  },
+  tutorialTitleTextFormat:{
+    fontSize: hp("7%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("8%"),
+    textAlign: 'left',
+    alignSelf: 'center',
+    fontWeight: 'bold',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("2%"),
+  },
+  tutorialTitleContainer:{
+    flex:1,
+    alignItems: 'center'
+  },
+  tutorialBottom1Container:{
+    flex:1.5,
+    backgroundColor: 'white',
+  },
+  tutorialBottom2Container:{
+    flex:7.7,
+    backgroundColor: 'white',
+  },
+  tutorialBottom3Container:{
+    flex:1.5,
+    backgroundColor: 'white',
+  },
+  tutorialArrowOverviewContainer:{
+    flex:1,
+    backgroundColor: 'white',
+    alignSelf: 'center', // horizontally -> need this for the absolute position in the child element
+  },
+  tutorialArrowHintContainer:{
+    flex:1,
+    backgroundColor: 'white',
+    alignSelf: 'flex-end', // horizontally -> need this for the absolute position in the child element
+  },
+  tutorialArrowMapContainer:{
+    flex:1,
+    backgroundColor: 'white',
+    alignSelf: 'stretch', // horizontally -> need this for the absolute position in the child element
+  },
+  tutorialOverviewArrowSytle:{
+    flex: 1,
+    position: "absolute", 
+    bottom: 0,
+    right: -wp("6.6%")
+  },
+  tutorialHintArrowStyle:{
+    flex: 1,
+    position: "absolute", 
+    bottom: 0, 
+    right: -wp('4.4%')
+  },
+  tutorialMapArrowSytle:{
+    flex: 1,
+    position: "absolute", 
+    bottom: 0,
+    left: -wp("3.2%")
   },
 });
 
