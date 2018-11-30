@@ -606,12 +606,12 @@ const styles = StyleSheet.create({
   tutorialArrowOverviewContainer:{
     flex:1,
     backgroundColor: 'white',
-    alignSelf: 'center', // horizontally -> need this for the absolute position in the child element
+    alignSelf: 'stretch', // horizontally -> need this for the absolute position in the child element
   },
   tutorialArrowHintContainer:{
     flex:1,
     backgroundColor: 'white',
-    alignSelf: 'flex-end', // horizontally -> need this for the absolute position in the child element
+    alignSelf: 'stretch', // horizontally -> need this for the absolute position in the child element
   },
   tutorialArrowMapContainer:{
     flex:1,
@@ -622,19 +622,19 @@ const styles = StyleSheet.create({
     flex: 1,
     position: "absolute", 
     bottom: 0,
-    right: -wp("6.6%")
+    right: -wp("0.5%")
   },
   tutorialHintArrowStyle:{
     flex: 1,
     position: "absolute", 
     bottom: 0, 
-    right: -wp('4.4%')
+    right: -wp('0.5%')
   },
   tutorialMapArrowSytle:{
     flex: 1,
     position: "absolute", 
     bottom: 0,
-    left: -wp("3.2%")
+    left: -wp("3.4%")
   },
 });
 

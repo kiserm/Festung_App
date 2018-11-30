@@ -33,6 +33,7 @@ export default class TutorialScreen extends Component {
                     duration: 1000,       
                 }
             ),
+            /*
             Animated.timing(
                 this.animatedMapArrowOpacity,
                 {
@@ -40,6 +41,7 @@ export default class TutorialScreen extends Component {
                     duration: 1000,
                 }
             ),
+            */
             Animated.timing(
                 this.animatedHintArrow,
                 {
@@ -47,6 +49,7 @@ export default class TutorialScreen extends Component {
                     duration: 1000,       
                 }
             ),
+            /*
             Animated.timing(
                 this.animatedHintArrowOpacity,
                 {
@@ -54,6 +57,7 @@ export default class TutorialScreen extends Component {
                     duration: 1000,
                 }
             ),
+            */
             Animated.timing(
                 this.animatedOverviewArrow,
                 {
@@ -61,13 +65,15 @@ export default class TutorialScreen extends Component {
                     duration: 1000,       
                 }
             ),
+            /*
             Animated.timing(
                 this.animatedOverviewArrowOpacity,
                 {
                     toValue:0,
                     duration: 1000,
                 }
-            ),            
+            ), 
+            */           
         ]).start();
     }
 
