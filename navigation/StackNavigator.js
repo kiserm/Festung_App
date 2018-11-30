@@ -67,7 +67,8 @@ const NavigationStack = createStackNavigator(
     navigationOptions: ({ navigation }) => {
       return {
         headerStyle: {
-        backgroundColor: '#fff',
+          backgroundColor: '#fff',
+          height: hp("7%"),
         },
         headerTintColor: 'rgba(96,100,109, 1)', 
         headerTitleStyle: {
@@ -82,14 +83,14 @@ const NavigationStack = createStackNavigator(
                                                               navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
                                                             }
                                                     } style={styles.navigationBarIcons}>
-                            <IconEntypo name="light-bulb" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
+                            <IconEntypo name="light-bulb" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                           </TouchableHighlight>
                           {/* This is the second button when looking from the left.*/}
                           <TouchableHighlight onPress={() => {
                                                               navigation.navigate('Map',{originScreenName: navigation.state.routeName})
                                                             }
                                                     } style={styles.navigationBarIcons}>
-                            <IconEntypo name="map" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
+                            <IconEntypo name="map" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                           </TouchableHighlight>          
                         </View>
                       ),
@@ -101,7 +102,7 @@ const NavigationStack = createStackNavigator(
                                                                 navigation.navigate('Overview',{originScreenName: navigation.state.routeName})
                                                               }
                                                       } style={styles.navigationBarIcons}>
-                              <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("3.5%")} color="rgba(96,100,109, 1)"/>
+                              <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                             </TouchableHighlight>
                       </View>
                     ), 
