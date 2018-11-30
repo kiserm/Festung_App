@@ -4,6 +4,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import { ScrollView, WebView } from 'react-native-gesture-handler';
+import { Easing } from 'react-native-reanimated';
 
 // workaround to have the arrows stopping in front of the header
 const {StatusBarManager} = NativeModules;
@@ -28,11 +29,22 @@ export default class TutorialScreen extends Component {
         this.animatedHintArrowOpacity = new Animated.Value(0),
         this.animatedOverviewArrowOpacity = new Animated.Value(0)
 
+        // info text opacity controller
+        this.animatedTutorialInfoTextOpacity = new Animated.Value(1)
+
     };
 
     componentDidMount(){
+        setTimeout(()=>{
             // first show map arrow and slide it upwards
             Animated.sequence([
+                Animated.timing(
+                    this.animatedTutorialInfoTextOpacity,
+                    {
+                        toValue:   0,
+                        duration: 1000,       
+                    }
+                ),
                 Animated.timing(
                     this.animatedMapArrowOpacity,
                     {
@@ -40,11 +52,12 @@ export default class TutorialScreen extends Component {
                         duration: 1000,       
                     }
                 ),
-                Animated.timing(
+                Animated.spring(
                     this.animatedMapArrow,
                     {
                         toValue:   -hp('89.1%') + STATUSBAR_HEIGHT + NAVIGATIONHEADER_HEIGHT,
-                        duration: 1000,       
+                        friction: 5.5,
+                        tension: 10,
                     }
                 )
             ]).start();
@@ -54,7 +67,7 @@ export default class TutorialScreen extends Component {
                 this.setState({screenView: 2});
                 setTimeout(()=>{
                     this.setState({screenView:1});
-                    // if you are back, fade the arrow and show second arrow and then go up
+                    // if you are back, fade the map arrow and show hint arrow and then go up
                     Animated.sequence([
                         Animated.timing(
                             this.animatedMapArrowOpacity,
@@ -70,12 +83,12 @@ export default class TutorialScreen extends Component {
                                 duration: 1000,       
                             }
                         ),
-                        Animated.timing(
+                        Animated.spring(
                             this.animatedHintArrow,
                             {
-                                toValue: -hp('89.1%') + STATUSBAR_HEIGHT + NAVIGATIONHEADER_HEIGHT,
-                                duration: 1000,       
-                            }
+                                toValue: -hp('29.3%') + STATUSBAR_HEIGHT + NAVIGATIONHEADER_HEIGHT,
+                                friction: 5.5,
+                                tension: 10,                            }
                         ),
                     ]).start();
 
@@ -101,12 +114,12 @@ export default class TutorialScreen extends Component {
                                         duration: 1000,       
                                     }
                                 ),
-                                Animated.timing(
+                                Animated.spring(
                                     this.animatedOverviewArrow,
                                     {
                                         toValue: -hp('89.1%') + STATUSBAR_HEIGHT + NAVIGATIONHEADER_HEIGHT,
-                                        duration: 1000,       
-                                    }
+                                        friction: 5.5,
+                                        tension: 10,                                    }
                                 ),
                             ]).start();
 
@@ -124,6 +137,12 @@ export default class TutorialScreen extends Component {
                                             duration: 1000,
                                         }
                                     ).start();
+
+                                    // LEVEL 4: go to the station 1 screen to start the quiz
+                                    InteractionManager.runAfterInteractions(()=>{
+                                        this.props.navigation.navigate('Station1');
+                                    });
+
                                 },3000);
                             });
 
@@ -132,6 +151,8 @@ export default class TutorialScreen extends Component {
 
                 },3000);                
             });
+
+        },1000);
     };
 
     render() {
@@ -141,7 +162,9 @@ export default class TutorialScreen extends Component {
         const animatedMapArrowOpacityStyle = {opacity: this.animatedMapArrowOpacity};
         const animatedHintArrowOpacityStyle = {opacity: this.animatedHintArrowOpacity};
         const animatedOverviewArrowOpacityStyle = {opacity: this.animatedOverviewArrowOpacity};
+        const animatedTutorialInfoTextOpacityStyle = {opacity: this.animatedTutorialInfoTextOpacity};
 
+        // show tutorial screen
         if(this.state.screenView === 1){
             return (
                 <View style={styles.anyWholeScreen}>
@@ -164,6 +187,9 @@ export default class TutorialScreen extends Component {
                             <Animated.View style={[styles.tutorialArrowHintContainer, animatedHintArrowStyle, animatedHintArrowOpacityStyle]}>
                                 <IconEntypo name='arrow-long-up' size={hp('10%')} color='#C92732' style={styles.tutorialHintArrowStyle}/>
                             </Animated.View>
+                            <Animated.Text style={[styles.tutorialInfoTextFormat, animatedTutorialInfoTextOpacityStyle]}>
+                                Dieses Tutorial zeigt Ihnen eine kurze Übersicht über die Funktionen.
+                            </Animated.Text>
                         </View>
     
                         <View style={styles.tutorialBottom3Container}>

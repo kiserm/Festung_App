@@ -636,6 +636,17 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: -wp("3.4%")
   },
+  tutorialInfoTextFormat:{
+    fontSize: hp("4%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("6%"),
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginBottom: hp("30%"),
+    marginHorizontal: wp("7%"),
+    alignSelf: 'center',
+    justifyContent: 'center'
+  },
 });
 
 // always export the variables, function and classes for inter document use
