@@ -59,25 +59,19 @@ export default class TutorialScreen2 extends React.Component {
 
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial3')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                    <Text style={styles.anyButtonText}>
-                            Zurück
-                    </Text>
+                    <Text style={styles.anyButtonText}> Zurück </Text>
                 </TouchableHighlight>
               </View>
 
              <View style={styles.tutorialRowMiddleContainer}>
                 <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                    <Text style={styles.anyButtonText}>
-                      3 / 3
-                    </Text>
+                    <Text style={styles.anyButtonText}> 3 / 3 </Text>
                 </TouchableHighlight>
               </View>
 
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial5')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                      <Text style={styles.anyButtonText}>
-                            Weiter
-                      </Text>
+                      <Text style={styles.anyButtonText}>Weiter </Text>
                 </TouchableHighlight>
               </View>
 

@@ -58,9 +58,7 @@ export default class TutorialScreen1 extends React.Component {
 
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                    <Text style={styles.anyButtonText}>
-                            Zurück
-                    </Text>
+                  <Text style={styles.anyButtonText}> Zurück </Text> 
                 </TouchableHighlight>
               </View>
 

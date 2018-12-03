@@ -699,6 +699,34 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("0.1%"),
     marginBottom: hp("1%"),
   },
+  tutorialButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    flex:1,
+    alignItems:'center',
+  },
+  tutorialButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center',
+    flexWrap: 'wrap',
+  },
+  tutorialRowButtonStyle:{
+    flex:1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
 });
 
 // always export the variables, function and classes for inter document use

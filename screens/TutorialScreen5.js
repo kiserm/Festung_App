@@ -14,18 +14,18 @@ export default class TutorialScreen5 extends React.Component {
     title:'TutorialScreen5',
     headerLeft:(<View style={styles.headerButtonContainer}>
                   <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
-                    <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("5%")} color="#C92732"/>
+                    <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                   </TouchableHighlight>
                 </View>
     ),
     headerRight: ( <View style={styles.headerButtonContainer}>
                       {/* This is the first button when looking from the left.*/}
                       <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
-                        <IconEntypo name="light-bulb" size={hp("5%")} color="#C92732"/>
+                        <IconEntypo name="light-bulb" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                       </TouchableHighlight>
                       {/* This is the second button when looking from the left.*/}
                       <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
-                        <IconEntypo name="map" size={hp("5%")} color="#C92732"/>
+                        <IconEntypo name="map" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                       </TouchableHighlight>          
                     </View>
     ),
@@ -48,7 +48,7 @@ export default class TutorialScreen5 extends React.Component {
             </View>
             <View style={styles.tutorialTextContainer}>
                 <Text style={styles.stationTextFormat}>
-                  Du hast das Tutorial geschafft. Nun wünscht das Nidwaldner Museum viel Spass
+                  Du hast das Tutorial geschafft. Nun wünscht Dir das Nidwaldner Museum viel Spass
                   beim Lösen der spannenden Aufgaben!
                 </Text>
             </View>
@@ -57,9 +57,7 @@ export default class TutorialScreen5 extends React.Component {
 
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                      <Text style={styles.anyButtonText}>
-                            Los gehts mit dem Abenteuer!
-                      </Text>
+                      <Text style={styles.anyButtonText}>     Los gehts!     </Text>
                 </TouchableHighlight>
               </View>
 

@@ -24,7 +24,7 @@ export default class TutorialScreen3 extends React.Component {
                         <IconEntypo name="light-bulb" size={hp("5%")} color="#C92732"/>
                       </TouchableHighlight>
                       {/* This is the second button when looking from the left.*/}
-                      <TouchableHighlight onPress={() => {navigation.navigate('Map')}} style={styles.navigationBarIcons}>
+                      <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
                         <IconEntypo name="map" size={hp("2%")} color="rgba(96,100,109, 1)"/>
                       </TouchableHighlight>          
                     </View>
@@ -59,17 +59,13 @@ export default class TutorialScreen3 extends React.Component {
 
               <View style={styles.stationRowContainer}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial2')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                    <Text style={styles.anyButtonText}>
-                            Zurück
-                    </Text>
+                    <Text style={styles.anyButtonText}> Zurück </Text>
                 </TouchableHighlight>
               </View>
 
              <View style={styles.tutorialRowMiddleContainer}>
                 <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                    <Text style={styles.anyButtonText}>
-                      2 / 3
-                    </Text>
+                    <Text style={styles.anyButtonText}> 2 / 3 </Text>
                 </TouchableHighlight>
               </View>
 

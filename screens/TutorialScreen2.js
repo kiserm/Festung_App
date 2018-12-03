@@ -58,27 +58,21 @@ export default class TutorialScreen4 extends React.Component {
 
             <View style={styles.tutorialBottomContainer}>
 
-              <View style={styles.stationRowContainer}>
+              <View style={styles.tutorialRowButtonStyle}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                    <Text style={styles.anyButtonText}>
-                            Zurück
-                    </Text>
+                    <Text style={styles.anyButtonText}> Zurück </Text>
                 </TouchableHighlight>
               </View>
 
-             <View style={styles.tutorialRowMiddleContainer}>
+             <View style={styles.tutorialRowButtonStyle}>
                 <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                    <Text style={styles.anyButtonText}>
-                      1 / 3
-                    </Text>
+                    <Text style={styles.anyButtonText}> 1 / 3 </Text> 
                 </TouchableHighlight>
               </View>
 
-              <View style={styles.stationRowContainer}>
+              <View style={styles.tutorialRowButtonStyle}>
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial3')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                      <Text style={styles.anyButtonText}>
-                            Weiter
-                      </Text>
+                      <Text style={styles.anyButtonText}>Weiter</Text>
                 </TouchableHighlight>
               </View>
 

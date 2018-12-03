@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,ScrollView,Alert} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
-import AnswerSheet from '../constants/AnswerSheet';  // to get access to the users given answers
 
 
 /**
@@ -44,11 +43,11 @@ export default class OverviewScreen extends React.Component {
                             </Text>
                         </TouchableHighlight>
 
-<TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                <Text style={styles.overviewButtonText}>
-                    zur Frage
-                </Text>
-            </TouchableHighlight>                        
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>                        
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
@@ -57,25 +56,25 @@ export default class OverviewScreen extends React.Component {
                                 Station 2
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                <Text style={styles.overviewButtonText}>
-                    zur Frage
-                </Text>
-            </TouchableHighlight>                   
-             </View>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>                   
+                    </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                    <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                                 <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 3
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                <Text style={styles.overviewButtonText}>
-                    zur Frage
-                </Text>
-            </TouchableHighlight>
-                                </View>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    </View>
 
                     <View style={styles.overviewRowButtonContainer}>
                         <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
@@ -83,89 +82,90 @@ export default class OverviewScreen extends React.Component {
                                 Station 4
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="white" style={styles.overviewButtonStyleDone}>
-                    <Text style={styles.chosenButtonText}>
-                        B
-                    </Text>
-                </TouchableHighlight>
-                                    </View>
+                        <TouchableHighlight onPress={() => {}} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.chosenButtonText}>
+                                B
+                            </Text>
+                        </TouchableHighlight>
+                    </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                    <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 5
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="white" style={styles.overviewButtonStyleDone}>
-                    <Text style={styles.chosenButtonText}>
-D
-                    </Text>
-                </TouchableHighlight>
-                                    </View>
+                        <TouchableHighlight onPress={() => {}} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.chosenButtonText}>
+                                D
+                            </Text>
+                        </TouchableHighlight>
+                    </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                    <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 6
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                <Text style={styles.overviewButtonText}>
-                    zur Frage
-                </Text>
-            </TouchableHighlight>
-                                </View>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                    <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 7
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                <Text style={styles.overviewButtonText}>
-                    zur Frage
-                </Text>
-            </TouchableHighlight>
-                                </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                    <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 8
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="white" style={styles.overviewButtonStyleDone}>
-                    <Text style={styles.chosenButtonText}>
-C 
-                   </Text>
-                </TouchableHighlight>
-                                    </View>
+                    </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                    <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 8
+                                </Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight onPress={() => {}} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.chosenButtonText}>
+                                C 
+                            </Text>
+                        </TouchableHighlight>
+                    </View>
+
+                    <View style={styles.overviewRowButtonContainer}>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 9
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                <Text style={styles.overviewButtonText}>
-                    zur Frage
-                </Text>
-            </TouchableHighlight>
-                                </View>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    </View>
                     
                     <View style={styles.overviewRowButtonContainer}>
-                    <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 10
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                <Text style={styles.overviewButtonText}>
-                    zur Frage
-                </Text>
-            </TouchableHighlight>                    </View>
+                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    </View>
 
                 </ScrollView>
             </View>
