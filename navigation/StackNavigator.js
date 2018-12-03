@@ -1,7 +1,7 @@
 // import the StackNavigator to be able to switch between screens by putting the 
 // screens on to the stack and if you go back, then the last screen pops from the stack
 import { createStackNavigator } from 'react-navigation';
-import {View,TouchableHighlight} from 'react-native';
+import {View,TouchableHighlight,NativeModules} from 'react-native';
 import React from 'react';
 
 // for the navigation bar: here you can find the whole directory https://oblador.github.io/react-native-vector-icons/
@@ -30,11 +30,19 @@ import Station10Screen from '../screens/Station10Screen';
 import ResultScreen from '../screens/ResultScreen';
 import CertificateScreen from '../screens/CertificateScreen';
 import OverviewScreen from '../screens/OverviewScreen';
-import TutorialScreen from '../screens/TutorialScreen';
+import OverviewTutorialScreen from '../screens/OverviewTutorialScreen';
+import TutorialScreen1 from '../screens/TutorialScreen1';
+import TutorialScreen2 from '../screens/TutorialScreen2';
+import TutorialScreen3 from '../screens/TutorialScreen3';
+import TutorialScreen4 from '../screens/TutorialScreen4';
+import TutorialScreen5 from '../screens/TutorialScreen5';
+
 
 
 // used for the tab navigation bar
 import styles from '../constants/Styles';
+
+
 
 // here we create the StackNavigator. Every screen we want to Navigate to, needs to be
 // in this definition, else the screen is not accessible
@@ -43,10 +51,15 @@ const NavigationStack = createStackNavigator(
     // the convention is that we navigate to the screens, but the screen names are without the suffix 'screen'
     Home:  HomeScreen,
     HowTo: HowToScreen,
-    Tutorial: TutorialScreen,
+    Tutorial1: TutorialScreen1,
+    Tutorial2: TutorialScreen2,
+    Tutorial3: TutorialScreen3,
+    Tutorial4: TutorialScreen4,
+    Tutorial5: TutorialScreen5,
     Hint: HintScreen,
     Map: MapScreen,
     Overview: OverviewScreen,
+    OverviewTutorial: OverviewTutorialScreen,
     Station1: Station1Screen, 
     Station2: Station2Screen, 
     Station3: Station3Screen, 

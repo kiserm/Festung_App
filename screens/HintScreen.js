@@ -67,8 +67,8 @@ export default class HintScreen extends React.Component {
 
   showSubtitle (){
     switch(this.state.originScreenName) {
-      case 'HowTo':
-        return "Tipp zur Einführung";
+      case 'Tutorial3':
+        return "Tipp zum Tutorial";
       case 'Station1':
         return "Tipp zur Station 1";
       case 'Station2':
@@ -100,8 +100,8 @@ export default class HintScreen extends React.Component {
 
   showSpecificHint (){
     switch(this.state.originScreenName) {
-      case 'HowTo':
-        return "Hier steht der Tipp zur Einführung";
+      case 'Tutorial3':
+        return "Du hast das gut gemacht! Hier würde dann der Tipp zur Aufgabe stehen!";
       case 'Station1':
         return "Hier steht der Tipp zur Station 1";
       case 'Station2':

@@ -18,6 +18,7 @@ export default class OverviewScreen extends React.Component {
     header: null, // do not show the header, else there is a problem for the hint screen because then we do not
                     // know from which screen we are coming hence we would have the wrong hint rendered
     };
+    
 
     render() {
         return (      

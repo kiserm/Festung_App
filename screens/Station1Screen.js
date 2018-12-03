@@ -9,7 +9,6 @@ import IconEntypo from 'react-native-vector-icons/Entypo'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
-
 export default class Station1Screen extends React.Component {
       // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
       static navigationOptions = {
@@ -18,7 +17,7 @@ export default class Station1Screen extends React.Component {
 
       constructor(props) {
         super(props);
-        this.state = { chosenAnswerStation1: '' };
+        this.state = { chosenAnswerStation1: AnswerSheet.getAnswer(1) };
       };
     
       render() {

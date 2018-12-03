@@ -44,9 +44,9 @@ export default class HowToScreen extends React.Component {
 
               {/*The button to get to the start of the quiz*/}   
               <View style={styles.howToButtonContainer}>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                     <Text style={styles.anyButtonText} numberOfLines={1}>
-                      Auf Los geht's Los!
+                      zum Tutorial
                     </Text>
                 </TouchableHighlight>
               </View>
@@ -87,9 +87,9 @@ export default class HowToScreen extends React.Component {
 
               {/*The button to get to the start of the quiz*/}   
               <View style={styles.howToButtonContainer}>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
                     <Text style={styles.anyButtonText} numberOfLines={1}>
-                      Auf Los geht's Los!
+                      zum Tutorial
                     </Text>
                 </TouchableHighlight>
               </View>

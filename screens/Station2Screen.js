@@ -19,7 +19,7 @@ export default class Station2Screen extends React.Component {
       
       constructor(props) {
         super(props);
-        this.state = { chosenAnswerStation2: '' };
+        this.state = { chosenAnswerStation2: AnswerSheet.getAnswer(2) };
       };
     
       render() {

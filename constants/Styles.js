@@ -1,4 +1,4 @@
-import {StyleSheet, Platform} from 'react-native'; // we need this for using CSS like design patterns
+import {StyleSheet, Platform, NativeModules} from 'react-native'; // we need this for using CSS like design patterns
 
 // to be able to have a proper design on every platform, I downloaded this package from 
 // this website: https://www.npmjs.com/package/react-native-responsive-screen
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
       fontSize: hp("7%"),
       color: 'rgba(96,100,109, 1)',
       lineHeight: hp("8%"),
-      textAlign: 'left',
+      textAlign: 'center',
       fontWeight: 'bold',
       marginHorizontal: wp("7%"),
       marginTop: hp("3%"),
@@ -544,6 +544,14 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
+  stationRowMiddleContainer:{
+    flex:0.7,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
   stationBottomNextContainer:{
     flex:0.8,
     flexDirection: 'row',
@@ -582,18 +590,31 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("8%"),
     textAlign: 'left',
-    alignSelf: 'center',
     fontWeight: 'bold',
     marginHorizontal: wp("7%"),
-    marginTop: hp("2%"),
+    marginTop: hp("5%"),
   },
-  tutorialTitleContainer:{
+  tutorialTitleTextContainer:{
+    flex:2,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end'
+  },
+  tutorialSubtitleContainer:{
     flex:1,
-    alignItems: 'center'
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
   },
-  tutorialBottom1Container:{
-    flex:1.5,
-    backgroundColor: 'white',
+  tutorialTextContainer:{
+    flex:4,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  
+  tutorialBottomContainer:{
+    flex:0.7,
+    flexDirection: 'row',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
   },
   tutorialBottom2Container:{
     flex:7.7,
@@ -618,36 +639,73 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(1,1,1,0)',
     alignSelf: 'stretch', // horizontally -> need this for the absolute position in the child element
   },
-  tutorialOverviewArrowSytle:{
-    flex: 1,
-    position: "absolute", 
-    bottom: 0,
-    right: -wp("0.5%")
+  tutorialSubtitleTextFormat:{
+    fontSize: hp("4%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: hp("1%"),
+    marginHorizontal: wp("7%"),
   },
   tutorialHintArrowStyle:{
     flex: 1,
     position: "absolute", 
-    bottom: 0, 
-    right: Platform.OS === 'ios' ? -wp('0.5%') : -wp('1%'),    
+    top: DISTANCETOTHETOP, 
+    right: Platform.OS === 'ios' ? wp('16%') : wp('15%'),
+    zIndex: 100,
   },
-  tutorialMapArrowSytle:{
+  tutorialHintAloneArrowStyle:{
     flex: 1,
     position: "absolute", 
-    bottom: 0,
-    left: -wp("3.4%")
+    top: DISTANCETOTHETOP, 
+    right: Platform.OS === 'ios' ? wp('11.5%') : wp('10.5%'),
+    zIndex: 100,
+  },
+  tutorialMapArrowStyle:{
+    flex: 1,
+    position: "absolute", 
+    top: DISTANCETOTHETOP, 
+    right: Platform.OS === 'ios' ? wp('3.5%') : wp('3%'),
+    zIndex: 100,    
+  },
+  tutorialOverviewArrowStyle:{
+    flex: 1,
+    position: "absolute", 
+    top: DISTANCETOTHETOP,
+    left: wp("4%"),
+    zIndex: 100,
   },
   tutorialInfoTextFormat:{
     fontSize: hp("4%"),
     color: 'rgba(96,100,109, 1)',
-    lineHeight: hp("6%"),
-    fontWeight: 'bold',
-    textAlign: 'left',
-    marginBottom: hp("30%"),
+    lineHeight: hp("5%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    marginBottom: hp("10%"),
     marginHorizontal: wp("7%"),
     alignSelf: 'center',
     justifyContent: 'center'
+  },
+  tutorialMapTitleTextContainer:{
+    flex:3,
+    marginTop: hp("2%"),
+  },
+  tutorialRowMiddleContainer:{
+    flex:0.8,
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("0.1%"),
+    marginBottom: hp("1%"),
   },
 });
 
 // always export the variables, function and classes for inter document use
 export default styles;
+
+// workaround to have the arrows stopping in front of the header
+const {StatusBarManager} = NativeModules;
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? hp("1%") : StatusBarManager.HEIGHT - hp("0.7%");
+const NAVIGATIONHEADER_HEIGHT = hp("7%"); // from ../navigation/StackNavigator/headerstyle.height
+const DISTANCETOTHETOP = NAVIGATIONHEADER_HEIGHT + STATUSBAR_HEIGHT;

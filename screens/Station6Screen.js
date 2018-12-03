@@ -16,7 +16,7 @@ export default class Station6Screen extends React.Component {
 
       constructor(props) {
         super(props);
-        this.state = { chosenAnswerStation6: '' };
+        this.state = { chosenAnswerStation6: AnswerSheet.getAnswer(6) };
       };
     
       render() {

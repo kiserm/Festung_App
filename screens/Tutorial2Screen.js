@@ -15,7 +15,13 @@ export default class TutorialScreen extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { screenView : 1 };
+        this.state = { 
+            screenView : 'TutorialScreen', 
+            tutorialText: 'Lehn Dich zurück, dieses Tutorial zeigt Dir '+
+                            'in 20 Sekunden eine kurze Übersicht über die Funktionen, '+
+                            'die Du beim Lösen der Aufgaben nutzen kannst. \n\n\n'+
+                            'Schritt 1 von 5', 
+        };
       };
 
     componentWillMount(){
@@ -42,7 +48,7 @@ export default class TutorialScreen extends Component {
                     this.animatedTutorialInfoTextOpacity,
                     {
                         toValue:   0,
-                        duration: 1000,       
+                        duration: 500,       
                     }
                 ),
                 Animated.timing(
@@ -64,9 +70,11 @@ export default class TutorialScreen extends Component {
 
             // LEVEL 1: go to mapview for three seconds, then go back and put hint arrow up
             InteractionManager.runAfterInteractions(() => {
-                this.setState({screenView: 2});
+                this.setState({screenView: 'MapScreen'});
+                this.setState({tutorialText: 'Dieser Knopf zeigt Dir jederzeit ein zoombarer Übersichtsplan der Festung, '+
+                                            'mit dem Du dich in der Ausstellung orientieren kannst.'});
                 setTimeout(()=>{
-                    this.setState({screenView:1});
+                    this.setState({screenView:'TutorialScreen'});
                     // if you are back, fade the map arrow and show hint arrow and then go up
                     Animated.sequence([
                         Animated.timing(
@@ -88,16 +96,17 @@ export default class TutorialScreen extends Component {
                             {
                                 toValue: -hp('29.3%') + STATUSBAR_HEIGHT + NAVIGATIONHEADER_HEIGHT,
                                 friction: 5.5,
-                                tension: 10,                            }
+                                tension: 10,                        
+                            }
                         ),
                     ]).start();
 
                     // LEVEL 2: go to hint screen and put third arrow up
                     InteractionManager.runAfterInteractions(()=>{
                         //go to the hint screen
-                        this.setState({screenView: 3});
+                        this.setState({screenView: 'HintScreen'});
                         setTimeout(()=>{
-                            this.setState({screenView:1});
+                            this.setState({screenView: 'TutorialScreen'});
                             // if you are back, fade the arrow and show third arrow and then go up
                             Animated.sequence([
                                 Animated.timing(
@@ -126,9 +135,9 @@ export default class TutorialScreen extends Component {
                             // LEVEL 3: go to overview screen and fade third arrow
                             InteractionManager.runAfterInteractions(()=>{
                                 // go to overview screen
-                                this.setState({screenView: 4});
+                                this.setState({screenView: 'OverviewScreen'});
                                 setTimeout(()=>{
-                                    this.setState({screenView:1});
+                                    this.setState({screenView: 'TutorialScreen'});
                                     // if you are back, fade the last arrow and TODO show finish button
                                     Animated.timing(
                                         this.animatedOverviewArrowOpacity,
@@ -165,7 +174,7 @@ export default class TutorialScreen extends Component {
         const animatedTutorialInfoTextOpacityStyle = {opacity: this.animatedTutorialInfoTextOpacity};
 
         // show tutorial screen
-        if(this.state.screenView === 1){
+        if(this.state.screenView === 'TutorialScreen'){
             return (
                 <View style={styles.anyWholeScreen}>
                     
@@ -188,7 +197,7 @@ export default class TutorialScreen extends Component {
                                 <IconEntypo name='arrow-long-up' size={hp('10%')} color='#C92732' style={styles.tutorialHintArrowStyle}/>
                             </Animated.View>
                             <Animated.Text style={[styles.tutorialInfoTextFormat, animatedTutorialInfoTextOpacityStyle]}>
-                                Dieses Tutorial zeigt Ihnen eine kurze Übersicht über die Funktionen.
+                                {this.state.tutorialText}
                             </Animated.Text>
                         </View>
     
@@ -203,7 +212,7 @@ export default class TutorialScreen extends Component {
             );
         }
         // show map screen
-        else if (this.state.screenView===2){
+        else if (this.state.screenView=== 'MapScreen'){
 
             // differ between iOS and Android since on Android the scrollview is not implemented and we need to make a workaround on the webview
             if(Platform.OS === 'ios') {
@@ -246,7 +255,7 @@ export default class TutorialScreen extends Component {
                 <View style={styles.anyWholeScreen}>
                     
                     {/*Set the title of the Screen*/}        
-                    <View style={styles.mapTitleTextContainer}>
+                    <View style={styles.tutorialMapTitleTextContainer}>
                     <Text style={styles.mapTitleTextFormat} numberOfLines={2}>
                         Plan der{"\n"}Festung
                     </Text>
@@ -275,7 +284,7 @@ export default class TutorialScreen extends Component {
             }
         }
         // show hint screen
-        else if(this.state.screenView===3){
+        else if(this.state.screenView=== 'HintScreen'){
             return (      
                 <View style={styles.anyWholeScreen}>                  
                     <View style={styles.hintTopContainer}>
