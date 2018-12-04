@@ -51,7 +51,7 @@ export default class TutorialScreen3 extends React.Component {
         {/* explain the specific icon */}        
         <View style={styles.tutorialTextContainer}>
             <Text style={styles.tutorialTextFormat}>
-              Drücke auf das <Text style={{color:'#C92732',fontWeight:'bold'}}>rote</Text> Symbol oben am Bildschirm und Du kriegst einen Tipp zu der Aufgabe, die Du gerade am lösen bist.
+              Drücke auf die <Text style={{color:'#C92732',fontWeight:'bold'}}>rote Glühlampe</Text> oben am Bildschirm und Du kriegst einen Tipp zu der Aufgabe, die Du gerade am lösen bist.
             </Text>
         </View>
 

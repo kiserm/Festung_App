@@ -50,7 +50,7 @@ export default class TutorialScreen4 extends React.Component {
         {/* explain the specific icon */}        
         <View style={styles.tutorialTextContainer}>
             <Text style={styles.tutorialTextFormat}>
-              Drücke auf das <Text style={{color:'#C92732',fontWeight:'bold'}}>rote</Text> Symbol oben am Bildschirm und es öffnet sich der Übersichtsplan der Festung Fürigen, der Dir als Orientierungshilfe dienen sollte.
+              Drücke auf die <Text style={{color:'#C92732',fontWeight:'bold'}}>rote Karte</Text> oben am Bildschirm und es öffnet sich der Übersichtsplan der Festung Fürigen, der Dir als Orientierungshilfe dienen sollte.
             </Text>
         </View>
 

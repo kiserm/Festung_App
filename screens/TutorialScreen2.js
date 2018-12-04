@@ -44,7 +44,7 @@ export default class TutorialScreen2 extends React.Component {
         {/* explain the specific icon */}        
         <View style={styles.tutorialTextContainer}>
             <Text style={styles.tutorialTextFormat}>
-              Drücke auf das <Text style={{color:'#C92732',fontWeight:'bold'}}>rote</Text> Symbol oben am Bildschirm und es öffnet sich eine Übersicht über alle Aufgaben.
+              Drücke auf die <Text style={{color:'#C92732',fontWeight:'bold'}}>rote Liste</Text> oben am Bildschirm und es öffnet sich eine Übersicht über alle Aufgaben.
             </Text>
         </View>
 
