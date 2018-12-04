@@ -6,7 +6,7 @@ export default class HomeScreen extends React.Component {
   // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
   static navigationOptions = {
     title: 'HomeScreen', 
-    header: null
+    header: null, // do not show the navigation header bar because of design reasons
   };
 
   render() {
@@ -30,11 +30,10 @@ export default class HomeScreen extends React.Component {
           </Text>
         </View>     
         
+        {/* Set a button to get to the next page where you can find the quiz.*/}
         <View style={styles.homeButtonContainer}>
-          {/* Set a button to get to the next page where you can find the quizzes, self customized button with
-              component TouchableOpacity from https://facebook.github.io/react-native/docs/touchableopacity */}
           <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-              {/*use NumberOfLines to say how much lines the text should take*/}
+              {/*use NumberOfLines to say how much lines the text inside the button should have*/}
               <Text style={styles.anyButtonText} numberOfLines={1}>
                 Starte dein Abenteuer!
               </Text>
