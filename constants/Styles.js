@@ -247,8 +247,8 @@ const styles = StyleSheet.create({
   // HintScreen Styles
   // -----------------------------------------------------------------------------------------------------------------
   hintTopContainer:{
-    flex: 2.5,
-    marginTop: hp("3%"),
+    flex: 1.5,
+    marginTop: Platform.OS === 'ios' ? hp("3%") : hp("5%"),
     flexDirection: 'row',
   },
   hintTitleTextContainer: {
@@ -256,17 +256,18 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   hintMiddleContainer:{
-    flex: 1,
+    flex: 5,
     justifyContent: 'center',
     alignItems: 'flex-start'
   },
   hintSubtitleContainer:{
-    flex:1,
+    flex:1.5,
     alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-end',
   },
   hintTextContainer:{
     flex:8,
+    justifyContent: 'center'
   },
   hintSubtitleFormat:{
     fontSize: hp("4%"),
@@ -282,7 +283,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end'
   },
   hintBottomContainer: {
-    flex: 1,
+    flex: 0.7,
     alignItems: 'center'
   },
   hintTitleTextFormat: {
@@ -309,6 +310,24 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     alignSelf: 'flex-end',
     justifyContent: 'center'
+  },
+  hintButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    marginBottom: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("5%"),
+  },
+  hintButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center'
   },
 
   // MapScreen styles

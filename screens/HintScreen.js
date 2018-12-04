@@ -47,8 +47,6 @@ export default class HintScreen extends React.Component {
           </View>
           <View style={styles.hintTextContainer}>
             <Text style={styles.hintTextFormat}>
-              Du hast Dir einen Tipp verdient. {"\n"} 
-              Und dieser lautet wie folgt:{"\n"}
               {this.showSpecificHint()}                
             </Text>
           </View>
@@ -56,8 +54,8 @@ export default class HintScreen extends React.Component {
 
         {/*give the back navigation since we do not have a header*/}     
         <View style={styles.hintBottomContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-              <Text style={styles.anyButtonText} numberOfLines={1}> zurück </Text>
+          <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.hintButtonStyle}>
+              <Text style={styles.hintButtonText} numberOfLines={1}> Zurück </Text>
           </TouchableHighlight>
         </View>
 
@@ -109,7 +107,7 @@ export default class HintScreen extends React.Component {
   showSpecificHint (){
     switch(this.state.originScreenName) {
       case 'Tutorial3':
-        return "Du hast das gut gemacht! Hier würde dann der Tipp zur Aufgabe stehen!";
+        return 'Super ! Du hast das gut gemacht! Hier würde dann der Tipp zur Aufgabe stehen! Drücke unten auf "Zurück", um mit dem Tutorial weiterzufahren.';
       case 'Station1':
         return "Hier steht der Tipp zur Station 1";
       case 'Station2':
