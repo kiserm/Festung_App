@@ -12,6 +12,7 @@ export default class TutorialScreen2 extends React.Component {
   // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
   static navigationOptions = ({navigation}) => ({
     title:'TutorialScreen2',
+    // show the map icon in red and bigger than the others, such that the user gets an intuition which button gets explained
     headerLeft:(<View style={styles.headerButtonContainer}>
                   <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
                     <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("2%")} color="rgba(96,100,109, 1)"/>

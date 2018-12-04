@@ -1,14 +1,14 @@
 import React from 'react';
 import {Text,View,TouchableHighlight} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
-
 import AnswerSheet from '../constants/AnswerSheet';
-import IconEntypo from 'react-native-vector-icons/Entypo'
-// to be able to have a proper design on every platform, I downloaded this package from 
-// this website: https://www.npmjs.com/package/react-native-responsive-screen
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import IconEntypo from 'react-native-vector-icons/Entypo';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
 
-
+/**
+ * IDEA:
+ * 
+ */
 export default class Station1Screen extends React.Component {
       // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
       static navigationOptions = {
