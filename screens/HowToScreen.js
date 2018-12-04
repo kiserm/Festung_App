@@ -100,8 +100,8 @@ export default class HowToScreen extends React.Component {
     if(this.props.navigation.getParam('tutorialFlag') === 'true'){
       return (
         <View style={styles.howToButtonContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-            <Text style={styles.anyButtonText} numberOfLines={1}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+            <Text style={styles.howToButtonText} numberOfLines={1}>
               zur Station 1
             </Text>
           </TouchableHighlight>
@@ -111,8 +111,8 @@ export default class HowToScreen extends React.Component {
     else{
       return(
         <View style={styles.howToButtonContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-              <Text style={styles.anyButtonText} numberOfLines={1}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+              <Text style={styles.howToButtonText} numberOfLines={1}>
                 zum Tutorial
               </Text>
           </TouchableHighlight>

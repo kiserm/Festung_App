@@ -80,6 +80,24 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
     },
+    homeButtonStyle:{
+      backgroundColor: 'rgba(96,100,109, 1)',
+      borderRadius: hp("1%"),
+      borderColor: 'rgba(96,100,109, 1)',
+      borderWidth: hp("1%"),
+      marginBottom: hp("3%"),
+      alignSelf: 'stretch',
+      justifyContent: 'center',
+      marginHorizontal: wp("5%"),
+    },
+    homeButtonText:{
+      fontSize: hp("3%"),
+      color: 'white',
+      lineHeight: hp("4%"),
+      fontWeight: 'normal',
+      textAlign: 'center',
+      justifyContent:'center',
+    },
 
    //HowToScreenStyles
    // -----------------------------------------------------------------------------------------------------------------
@@ -117,6 +135,24 @@ const styles = StyleSheet.create({
     width: wp("89%"),
     height: hp("60%"),
     alignSelf: 'center',
+   },
+   howToButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    marginBottom: hp("3%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("5%"),
+   },
+   howToButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center'
    },
    
    // navigationBarIcons style
