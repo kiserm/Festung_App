@@ -7,6 +7,10 @@ import IconEntypo from 'react-native-vector-icons/Entypo'
 // this website: https://www.npmjs.com/package/react-native-responsive-screen
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
+/**
+ * IDEA:
+ * this screen shows the 10th and last task of the quiz
+ */
 export default class Station10Screen extends React.Component {
   // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
   static navigationOptions = {

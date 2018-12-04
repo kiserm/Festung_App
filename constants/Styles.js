@@ -577,6 +577,15 @@ const styles = StyleSheet.create({
   stationTitleTextContainer:{
     flex: 2,
   },
+  stationTitleTextFormat:{
+    fontSize: hp("7%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("8%"),
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("3%"),
+  },
   stationTextContainer:{
     flex: 6,
     alignItems: 'center',
@@ -598,6 +607,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
+  },
+  stationButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'right',
+    justifyContent:'center',
+    alignSelf:'center',
+    flex:4,
+  },
+  stationButtonLetter:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    justifyContent:'center',
+    alignSelf:'center',
+    flex:1,
   },
   stationRowMiddleContainer:{
     flex:0.7,
