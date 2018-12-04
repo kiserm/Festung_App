@@ -10,8 +10,8 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
  * this screen should introduce the user to the overview screen. explain what it is and where the button can be found
  */
 export default class TutorialScreen2 extends React.Component {
-  // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
   static navigationOptions = ({navigation}) => ({
+    // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     title:'TutorialScreen2',
     // show the overview icon in red and bigger than the others, such that the user gets an intuition which button gets explained
     headerLeft:(<View style={styles.headerButtonContainer}>

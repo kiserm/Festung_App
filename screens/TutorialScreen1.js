@@ -10,8 +10,8 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
  * this screen should give a short idea what the tutorial is about and how long it takes to get through
  */
 export default class TutorialScreen1 extends React.Component {
-  // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
   static navigationOptions = () => ({
+    // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     title:'TutorialScreen1',
     // show all icons on the header left and right such that we can put numbers under the icons. no functionality yet, because it is only
     // the start of the tutorial. otherwise i have a problem with the navigation

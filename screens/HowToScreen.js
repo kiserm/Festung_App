@@ -3,16 +3,14 @@ import {Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import { ScrollView } from 'react-native-gesture-handler';
 
-
 /**
  * IDEA:
  * This screen should inform the user what the quiz is all about, how the whole process work and what 
  * he or she has to do to get a reward at the end of the quiz.
  */
 export default class HowToScreen extends React.Component {
-    // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     static navigationOptions = {
-    title: "HowToScreen",
+    title: "HowToScreen",    // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     header: null, // do not show the navigation header, because the functions should not be available yet
   };
 
