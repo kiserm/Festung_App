@@ -53,7 +53,7 @@ export default class TutorialScreen2 extends React.Component {
 
         {/* explain the specific icon */}        
         <View style={styles.tutorialTextContainer}>
-            <Text style={styles.tutorialInfoTextFormat}>
+            <Text style={styles.tutorialTextFormat}>
               Wenn Du auf obiges rotes Symbol drückst, öffnet sich eine Übersicht über alle Aufgaben.
               Dazu kannst Du sehen, welche Aufgaben Du noch lösen musst und was für Antworten Du bisher
               gegeben hast. Weiter kannst Du ausserhalb des Tutorials direkt zu einer beliebigen Aufgabe navigieren.

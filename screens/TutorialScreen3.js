@@ -54,7 +54,7 @@ export default class TutorialScreen3 extends React.Component {
 
         {/* explain the specific icon */}        
         <View style={styles.tutorialTextContainer}>
-            <Text style={styles.stationTextFormat}>
+            <Text style={styles.tutorialTextFormat}>
               Wenn Du auf obiges rotes Symbol drückst, kriegst Du einen Tipp zu der Aufgabe, die Du gerade
               am lösen bist.
             </Text>

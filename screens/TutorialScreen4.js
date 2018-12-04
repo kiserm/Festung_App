@@ -53,7 +53,7 @@ export default class TutorialScreen4 extends React.Component {
 
         {/* explain the specific icon */}        
         <View style={styles.tutorialTextContainer}>
-            <Text style={styles.stationTextFormat}>
+            <Text style={styles.tutorialTextFormat}>
               Wenn Du auf obiges rotes Symbol drückst, öffnet sich der Übersichtsplan der Festung Fürigen, der Dir
               als Orientierungshilfe dienen sollte.
             </Text>
