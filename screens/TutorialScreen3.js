@@ -56,19 +56,19 @@ export default class TutorialScreen3 extends React.Component {
 
         {/* put three buttons at the bottom, back, how far i am in the tutorial and forward*/}
         <View style={styles.tutorialBottomContainer}>
-          <View style={styles.stationRowContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial2')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                <Text style={styles.anyButtonText}> Zurück </Text>
+          <View style={styles.tutorialRowBottomContainer}>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial2')} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
+                <Text style={styles.tutorialButtonText}> Zurück </Text>
             </TouchableHighlight>
           </View>
           <View style={styles.tutorialRowMiddleContainer}>
-            <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                <Text style={styles.anyButtonText}> 3 / 5 </Text>
+            <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
+                <Text style={styles.tutorialButtonText}> 3 / 5 </Text>
             </TouchableHighlight>
           </View>
-          <View style={styles.stationRowContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial4')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                  <Text style={styles.anyButtonText}> Weiter </Text>
+          <View style={styles.tutorialRowBottomContainer}>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial4')} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
+                  <Text style={styles.tutorialButtonText}> Weiter </Text>
             </TouchableHighlight>
           </View>
         </View>           

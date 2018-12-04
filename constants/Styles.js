@@ -644,21 +644,20 @@ const styles = StyleSheet.create({
     flex:4,
     alignItems: 'center',
     justifyContent: 'flex-start',
-  },
-  
+  },  
   tutorialBottomContainer:{
     flex:0.7,
     flexDirection: 'row',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
-  tutorialBottom2Container:{
-    flex:7.7,
-    backgroundColor: 'white',
-  },
-  tutorialBottom3Container:{
-    flex:1.5,
-    backgroundColor: 'white',
+  tutorialRowContainer:{
+    flex:1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
   },
   tutorialArrowOverviewContainer:{
     flex:1,
@@ -755,7 +754,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     flexWrap: 'wrap',
   },
-  tutorialRowButtonStyle:{
+  tutorialRowBottomContainer:{
     flex:1,
     flexDirection: 'row',
     alignItems: 'center',
@@ -771,6 +770,25 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     marginHorizontal: wp("7%"),
     marginTop: hp("3%"),
+  },
+  tutorialButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("2%"),
+    flex:1,
+    alignItems:'center',
+  },
+  tutorialButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center',
   },
 });
 

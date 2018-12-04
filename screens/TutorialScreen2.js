@@ -49,19 +49,19 @@ export default class TutorialScreen2 extends React.Component {
 
         {/* put three buttons at the bottom, back, how far i am in the tutorial and forward*/}
         <View style={styles.tutorialBottomContainer}>
-          <View style={styles.tutorialRowButtonStyle}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                <Text style={styles.anyButtonText}> Zurück </Text>
+          <View style={styles.tutorialRowBottomContainer}>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
+                <Text style={styles.tutorialButtonText}> Zurück </Text>
             </TouchableHighlight>
           </View>
-          <View style={styles.tutorialRowButtonStyle}>
-            <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                <Text style={styles.anyButtonText}> 2 / 5 </Text> 
+          <View style={styles.tutorialRowBottomContainer}>
+            <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
+                <Text style={styles.tutorialButtonText}> 2 / 5 </Text> 
             </TouchableHighlight>
           </View>
-          <View style={styles.tutorialRowButtonStyle}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial3')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                  <Text style={styles.anyButtonText}> Weiter </Text>
+          <View style={styles.tutorialRowBottomContainer}>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial3')} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
+                  <Text style={styles.tutorialButtonText}> Weiter </Text>
             </TouchableHighlight>
           </View>
         </View>
