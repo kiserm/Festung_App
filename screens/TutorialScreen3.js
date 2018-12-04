@@ -55,6 +55,7 @@ export default class TutorialScreen3 extends React.Component {
                 </Text>
             </View>
 
+            {/* put three buttons at the bottom, back, how far i am in the tutorial and forward*/}
             <View style={styles.tutorialBottomContainer}>
 
               <View style={styles.stationRowContainer}>
