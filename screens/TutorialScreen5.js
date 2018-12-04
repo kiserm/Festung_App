@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text,View,TouchableHighlight} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import AnswerSheet from '../constants/AnswerSheet';
 
 /* this are only for he imports for the numbers to the icons, since we do not display them due to simplicity, the import statements are commented
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -33,7 +34,9 @@ export default class TutorialScreen5 extends React.Component {
 
         {/*Set the subtitle of the Screen*/} 
         <View style={styles.tutorialSubtitleContainer}>
-          <Text style={styles.tutorialSubtitleTextFormat}/>
+          <Text style={styles.tutorialSubtitleTextFormat}>
+            Schritt 5 von 5
+          </Text>
         </View>
 
         {/* say thank you and lead to the quiz */}        
@@ -44,7 +47,7 @@ export default class TutorialScreen5 extends React.Component {
             </Text>
         </View>
       
-        {/* show the button to start the quiz */}
+        {/* show the button to start the quiz, if pressed set the tutorialDone flag to true */}
         <View style={styles.tutorialBottomContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>

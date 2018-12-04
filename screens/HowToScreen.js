@@ -23,7 +23,7 @@ export default class HowToScreen extends React.Component {
           {/*Set the title of the Screen*/}        
           <View style={styles.howToTitleTextContainer}>
             <Text style={styles.howToTitleTextFormat}>
-              So geht's!
+              So geht's! 
             </Text>
           </View>  
 
@@ -46,14 +46,8 @@ export default class HowToScreen extends React.Component {
               </ScrollView>
           </View>
 
-          {/*The button to get to the tutorial of the quiz*/}   
-          <View style={styles.howToButtonContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-                <Text style={styles.anyButtonText} numberOfLines={1}>
-                  zum Tutorial
-                </Text>
-            </TouchableHighlight>
-          </View>
+          {/* show the right button depending if we still need to do the tutorial or not*/}   
+          {this.toStationOrToTutorialButton()}
   
         </View>
       );
@@ -89,15 +83,39 @@ export default class HowToScreen extends React.Component {
                 />
           </View>
 
-          {/*The button to get to the tutorial of the quiz*/}   
-          <View style={styles.howToButtonContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
-                <Text style={styles.anyButtonText} numberOfLines={1}>
-                  zum Tutorial
-                </Text>
-            </TouchableHighlight>
-          </View>
+          {/* show the right button depending if we still need to do the tutorial or not*/}   
+          {this.toStationOrToTutorialButton()}
     
+        </View>
+      );
+    }
+  }
+
+  /**
+   * IDEA:
+   * if the tutorialDone flag is true, the tutorial was already made and we navigate to the station 1 directly,
+   * else we go through the tutorial
+   */
+  toStationOrToTutorialButton(){
+    if(this.props.navigation.getParam('tutorialFlag') === 'true'){
+      return (
+        <View style={styles.howToButtonContainer}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+            <Text style={styles.anyButtonText} numberOfLines={1}>
+              zur Station 1
+            </Text>
+          </TouchableHighlight>
+        </View>
+      );
+    }
+    else{
+      return(
+        <View style={styles.howToButtonContainer}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.anyButtonStyle}>
+              <Text style={styles.anyButtonText} numberOfLines={1}>
+                zum Tutorial
+              </Text>
+          </TouchableHighlight>
         </View>
       );
     }

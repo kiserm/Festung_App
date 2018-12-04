@@ -181,9 +181,9 @@ export default class OverviewScreen extends React.Component {
                     </TouchableHighlight>
                     
                     <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
-                    <Text style={styles.overviewButtonText} numberOfLines={1}>
-                        Abgabe
-                    </Text>
+                        <Text style={styles.overviewButtonText} numberOfLines={1}>
+                            Abgabe
+                        </Text>
                 </TouchableHighlight>
 
                 </View>

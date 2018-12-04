@@ -75,7 +75,7 @@ export default class Station1Screen extends React.Component {
 
             <View style={styles.stationBottomNextContainer}>
               <View style={styles.stationRowContainer}>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo',{tutorialFlag: 'true'})} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
                       <IconEntypo name="arrow-bold-left" size={hp("3%")} color="white"/>
                 </TouchableHighlight>
               </View>
