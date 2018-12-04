@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight, TouchableWithoutFeedback} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconEntypo from 'react-native-vector-icons/Entypo';
@@ -18,15 +18,16 @@ export default class TutorialScreen3 extends React.Component {
     headerLeft: null,
     headerRight: ( <View style={styles.headerButtonContainer}>
                       {/* This is the first button when looking from the left.*/}
-                      <TouchableHighlight onPress={() => {navigation.navigate('Hint',{originScreenName: navigation.state.routeName})}} style={styles.navigationBarIcons}>
-                        <IconEntypo name="light-bulb" size={hp("5%")} color="#C92732"/>
-                      </TouchableHighlight>
+                      <TouchableWithoutFeedback onPress={() => {navigation.navigate('Hint',{originScreenName: navigation.state.routeName})}} style={styles.navigationBarIcons}>
+                        <IconEntypo name="light-bulb" size={hp("7%")} color="#C92732"/>
+                      </TouchableWithoutFeedback>
                       {/* This is the second button when looking from the left. make it white such that the user does not see it */}
-                      <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
-                        <IconEntypo name="map" size={hp("2%")} color="white"/>
-                      </TouchableHighlight>          
+                      <TouchableWithoutFeedback onPress={() => {}} style={styles.navigationBarIcons}>
+                        <IconEntypo name="map" size={hp("7%")} color="white"/>
+                      </TouchableWithoutFeedback>          
                     </View>
     ),
+    headerStyle:{height:hp("9%")},
   });
     
   render() {

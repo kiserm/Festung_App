@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,TouchableWithoutFeedback} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from  this website: https://www.npmjs.com/package/react-native-responsive-screen
@@ -14,12 +14,13 @@ export default class TutorialScreen2 extends React.Component {
     title:'TutorialScreen2',
     // show only the overview icon in red, such that the user knows right away which button to press
     headerLeft:(<View style={styles.headerButtonContainer}>
-                  <TouchableHighlight onPress={() => {navigation.navigate('OverviewTutorial')}} style={styles.navigationBarIcons}>
-                    <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("6%")} color="#C92732"/>
-                  </TouchableHighlight>
+                  <TouchableWithoutFeedback onPress={() => {navigation.navigate('OverviewTutorial')}} style={styles.navigationBarIcons}>
+                    <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("7%")} color="#C92732"/>
+                  </TouchableWithoutFeedback>
                 </View>
     ),
     headerRight: null,
+    headerStyle:{height:hp("9%")},
   });
     
   render() {
