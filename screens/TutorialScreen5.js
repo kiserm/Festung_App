@@ -38,7 +38,7 @@ export default class TutorialScreen5 extends React.Component {
 
         {/* say thank you and lead to the quiz */}        
         <View style={styles.tutorialTextContainer}>
-            <Text style={styles.stationTextFormat}>
+            <Text style={styles.tutorialTextFormat}>
               Du hast das Tutorial geschafft. Nun wünscht Dir das Nidwaldner Museum viel Spass
               beim Lösen der spannenden Aufgaben!
             </Text>

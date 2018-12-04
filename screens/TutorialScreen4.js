@@ -14,16 +14,11 @@ export default class TutorialScreen4 extends React.Component {
     // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     title:'TutorialScreen4',
     // show the map icon in red and bigger than the others, such that the user gets an intuition which button gets explained
-    headerLeft:(<View style={styles.headerButtonContainer}>
-                  <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
-                    <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("2%")} color="rgba(96,100,109, 1)"/>
-                  </TouchableHighlight>
-                </View>
-    ),
+    headerLeft: null,
     headerRight: ( <View style={styles.headerButtonContainer}>
-                      {/* This is the first button when looking from the left.*/}
+                      {/* This is the first button when looking from the left. make it white that the user can not see it*/}
                       <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
-                        <IconEntypo name="light-bulb" size={hp("2%")} color="rgba(96,100,109, 1)"/>
+                        <IconEntypo name="light-bulb" size={hp("2%")} color="white"/>
                       </TouchableHighlight>
                       {/* This is the second button when looking from the left.*/}
                       <TouchableHighlight onPress={() => {navigation.navigate('Map')}} style={styles.navigationBarIcons}>
@@ -47,15 +42,14 @@ export default class TutorialScreen4 extends React.Component {
         {/*Set the subtitle of the Screen*/}           
         <View style={styles.tutorialSubtitleContainer}>
           <Text style={styles.tutorialSubtitleTextFormat}>
-            Schritt 3 von 3
+            Schritt 4 von 5
           </Text>
         </View>
 
         {/* explain the specific icon */}        
         <View style={styles.tutorialTextContainer}>
             <Text style={styles.tutorialTextFormat}>
-              Wenn Du auf obiges rotes Symbol drückst, öffnet sich der Übersichtsplan der Festung Fürigen, der Dir
-              als Orientierungshilfe dienen sollte.
+              Drücke auf das <Text style={{color:'#C92732',fontWeight:'bold'}}>rote</Text> Symbol oben am Bildschirm und es öffnet sich der Übersichtsplan der Festung Fürigen, der Dir als Orientierungshilfe dienen sollte.
             </Text>
         </View>
 
@@ -68,18 +62,15 @@ export default class TutorialScreen4 extends React.Component {
           </View>
           <View style={styles.tutorialRowMiddleContainer}>
             <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                <Text style={styles.anyButtonText}> 3 / 3 </Text>
+                <Text style={styles.anyButtonText}> 4 / 5 </Text>
             </TouchableHighlight>
           </View>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial5')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                  <Text style={styles.anyButtonText}>Weiter </Text>
+                  <Text style={styles.anyButtonText}> Weiter </Text>
             </TouchableHighlight>
           </View>
         </View>
-
-        {/* put a number icon below the explained icon, such that the user gets attention on the specific icon */}
-        <IconMaterialCommunityIcons name='numeric-3-box' size={hp('7%')} color='#C92732' style={styles.tutorialMapArrowStyle}/>        
 
       </View>
     );

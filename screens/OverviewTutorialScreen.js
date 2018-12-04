@@ -37,13 +37,13 @@ export default class OverviewScreen extends React.Component {
                 <ScrollView>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 1
                             </Text>
                         </TouchableHighlight>
 
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText}>
                                 zur Frage
                             </Text>
@@ -51,12 +51,12 @@ export default class OverviewScreen extends React.Component {
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 2
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText}>
                                 zur Frage
                             </Text>
@@ -64,12 +64,12 @@ export default class OverviewScreen extends React.Component {
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                                 <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 3
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText}>
                                 zur Frage
                             </Text>
@@ -77,38 +77,38 @@ export default class OverviewScreen extends React.Component {
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 4
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="white" style={styles.overviewButtonStyleDone}>
-                            <Text style={styles.chosenButtonText}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="white" style={styles.overviewButtonStyleNotSubmitable}>
+                            <Text style={styles.overviewButtonText}>
                                 B
                             </Text>
                         </TouchableHighlight>
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 5
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="white" style={styles.overviewButtonStyleDone}>
-                            <Text style={styles.chosenButtonText}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="white" style={styles.overviewButtonStyleNotSubmitable}>
+                            <Text style={styles.overviewButtonText}>
                                 D
                             </Text>
                         </TouchableHighlight>
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 6
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText}>
                                 zur Frage
                             </Text>
@@ -116,12 +116,12 @@ export default class OverviewScreen extends React.Component {
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 7
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText}>
                                 zur Frage
                             </Text>
@@ -129,25 +129,25 @@ export default class OverviewScreen extends React.Component {
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                                 <Text style={styles.overviewButtonText} numberOfLines={1}>
                                     Station 8
                                 </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="white" style={styles.overviewButtonStyleDone}>
-                            <Text style={styles.chosenButtonText}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="white" style={styles.overviewButtonStyleNotSubmitable}>
+                            <Text style={styles.overviewButtonText}>
                                 C 
                             </Text>
                         </TouchableHighlight>
                     </View>
 
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 9
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText}>
                                 zur Frage
                             </Text>
@@ -155,12 +155,12 @@ export default class OverviewScreen extends React.Component {
                     </View>
                     
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Station 10
                             </Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={() => {}} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                             <Text style={styles.overviewButtonText}>
                                 zur Frage
                             </Text>
@@ -176,11 +176,11 @@ export default class OverviewScreen extends React.Component {
                 <View style={styles.overviewRowButtonContainer}>
                     <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                         <Text style={styles.overviewButtonText} numberOfLines={1}>
-                            Zurück
+                            zurück
                         </Text>
                     </TouchableHighlight>
                     
-                    <TouchableHighlight onPress={() => Alert.alert('Achtung',"Mache zuerst alle Aufgaben!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
+                    <TouchableHighlight onPress={() => Alert.alert('Achtung',"Klicke unten auf zurück!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
                     <Text style={styles.overviewButtonText} numberOfLines={1}>
                         Abgabe
                     </Text>

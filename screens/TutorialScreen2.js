@@ -2,7 +2,6 @@ import React from 'react';
 import {Text,View,TouchableHighlight} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import IconEntypo from 'react-native-vector-icons/Entypo';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from  this website: https://www.npmjs.com/package/react-native-responsive-screen
 
 /**
@@ -13,24 +12,14 @@ export default class TutorialScreen2 extends React.Component {
   static navigationOptions = ({navigation}) => ({
     // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     title:'TutorialScreen2',
-    // show the overview icon in red and bigger than the others, such that the user gets an intuition which button gets explained
+    // show only the overview icon in red, such that the user knows right away which button to press
     headerLeft:(<View style={styles.headerButtonContainer}>
                   <TouchableHighlight onPress={() => {navigation.navigate('OverviewTutorial')}} style={styles.navigationBarIcons}>
-                    <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("5%")} color="#C92732"/>
+                    <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("6%")} color="#C92732"/>
                   </TouchableHighlight>
                 </View>
     ),
-    headerRight: ( <View style={styles.headerButtonContainer}>
-                      {/* This is the first button when looking from the left.*/}
-                      <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
-                        <IconEntypo name="light-bulb" size={hp("2%")} color="rgba(96,100,109, 1)"/>
-                      </TouchableHighlight>
-                      {/* This is the second button when looking from the left.*/}
-                      <TouchableHighlight onPress={() => {}} style={styles.navigationBarIcons}>
-                        <IconEntypo name="map" size={hp("2%")} color="rgba(96,100,109, 1)"/>
-                      </TouchableHighlight>          
-                    </View>
-    ),
+    headerRight: null,
   });
     
   render() {
@@ -47,16 +36,14 @@ export default class TutorialScreen2 extends React.Component {
         {/*Set the subtitle of the Screen*/}         
         <View style={styles.tutorialSubtitleContainer}>
           <Text style={styles.tutorialSubtitleTextFormat}>
-            Schritt 1 von 3
+            Schritt 2 von 5
           </Text>
         </View>
 
         {/* explain the specific icon */}        
         <View style={styles.tutorialTextContainer}>
             <Text style={styles.tutorialTextFormat}>
-              Wenn Du auf obiges rotes Symbol drückst, öffnet sich eine Übersicht über alle Aufgaben.
-              Dazu kannst Du sehen, welche Aufgaben Du noch lösen musst und was für Antworten Du bisher
-              gegeben hast. Weiter kannst Du ausserhalb des Tutorials direkt zu einer beliebigen Aufgabe navigieren.
+              Drücke auf das <Text style={{color:'#C92732',fontWeight:'bold'}}>rote</Text> Symbol oben am Bildschirm und es öffnet sich eine Übersicht über alle Aufgaben.
             </Text>
         </View>
 
@@ -69,18 +56,15 @@ export default class TutorialScreen2 extends React.Component {
           </View>
           <View style={styles.tutorialRowButtonStyle}>
             <TouchableHighlight onPress={()=>{}} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                <Text style={styles.anyButtonText}> 1 / 3 </Text> 
+                <Text style={styles.anyButtonText}> 2 / 5 </Text> 
             </TouchableHighlight>
           </View>
           <View style={styles.tutorialRowButtonStyle}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial3')} underlayColor="rgba(96,100,109, 1)" style={styles.unchosenButtonStyle}>
-                  <Text style={styles.anyButtonText}>Weiter</Text>
+                  <Text style={styles.anyButtonText}> Weiter </Text>
             </TouchableHighlight>
           </View>
         </View>
-
-        {/* put a number icon below the explained icon, such that the user gets attention on the specific icon */}
-        <IconMaterialCommunityIcons name='numeric-1-box' size={hp('7%')} color='#C92732' style={styles.tutorialOverviewArrowStyle}/>
 
       </View>
     );
