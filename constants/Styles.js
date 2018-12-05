@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     },
     homeTitleTextContainer: {
       flex: 3,
+      justifyContent:'center'
     },
     homeTitleTextFormat: {
       fontSize: hp("7%"),
@@ -79,13 +80,15 @@ const styles = StyleSheet.create({
     homeButtonContainer: {
       flex: 1,
       backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
     },
     homeButtonStyle:{
       backgroundColor: 'rgba(96,100,109, 1)',
       borderRadius: hp("1%"),
       borderColor: 'rgba(96,100,109, 1)',
       borderWidth: hp("1%"),
-      marginBottom: hp("3%"),
+      marginBottom: hp("2%"),
       alignSelf: 'stretch',
       justifyContent: 'center',
       marginHorizontal: wp("5%"),
@@ -111,7 +114,9 @@ const styles = StyleSheet.create({
     marginVertical: hp("3%"),
    },
    howToButtonContainer:{
-    flex: 1
+    flex: 0.93,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
   howToTitleTextFormat: {
     fontSize: hp("7%"),
@@ -141,7 +146,7 @@ const styles = StyleSheet.create({
     borderRadius: hp("1%"),
     borderColor: 'rgba(96,100,109, 1)',
     borderWidth: hp("1%"),
-    marginBottom: hp("3%"),
+    marginBottom: hp("2%"),
     alignSelf: 'stretch',
     justifyContent: 'center',
     marginHorizontal: wp("5%"),
@@ -544,7 +549,7 @@ const styles = StyleSheet.create({
 
   // stations style
   // -----------------------------------------------------------------------------------------------------------------
-  chosenButtonStyle:{
+  stationChosenButtonStyle:{
     backgroundColor: 'white',
     borderRadius: hp("1%"),
     borderColor: 'rgba(96,100,109, 1)',
@@ -555,7 +560,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems:'center',
   },
-  unchosenButtonStyle:{
+  stationUnchosenButtonStyle:{
     backgroundColor: 'rgba(96,100,109, 1)',
     borderRadius: hp("1%"),
     borderColor: 'rgba(96,100,109, 1)',
@@ -566,7 +571,7 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems:'center',
   },
-  chosenButtonText:{
+  stationChosenButtonText:{
     fontSize: hp("3%"),
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
@@ -575,7 +580,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     paddingHorizontal: wp("1%"),
   },
-  chosenButtonLetter:{
+  stationChosenButtonLetter:{
     fontSize: hp("3%"),
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
@@ -622,7 +627,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("0.5%"),
     marginBottom: hp("0.5%"),
   },
-  stationButtonText:{
+  stationUnchosenButtonText:{
     fontSize: hp("3%"),
     color: 'white',
     lineHeight: hp("4%"),
@@ -633,7 +638,7 @@ const styles = StyleSheet.create({
     flex:4,
     paddingHorizontal: wp("1%")
   },
-  stationButtonLetter:{
+  stationUnchosenButtonLetter:{
     fontSize: hp("3%"),
     color: 'white',
     lineHeight: hp("4%"),
