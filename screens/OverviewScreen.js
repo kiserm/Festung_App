@@ -12,140 +12,121 @@ import AnswerSheet from '../constants/AnswerSheet';  // to get access to the use
  * this overview screen.
  */
 export default class OverviewScreen extends React.Component {
-    // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     static navigationOptions = {
-    title: "OverviewScreen",
+    title: "OverviewScreen", // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     header: null, // do not show the header, else there is a problem for the hint screen because then we do not
                     // know from which screen we are coming hence we would have the wrong hint rendered
     };
     
-
     render() {
         return (      
             <View style={styles.anyWholeScreen}>
             
-            {/*Set the title of the Screen*/}        
-            <View style={styles.overviewTopContainer}>
-                <Text style={styles.overviewTitleTextFormat}>
-                    Übersicht
-                </Text>
-            </View>     
+                {/*Set the title of the Screen*/}        
+                <View style={styles.overviewTopContainer}>
+                    <Text style={styles.overviewTitleTextFormat}>
+                        Übersicht
+                    </Text>
+                </View>     
 
-            {/* this section shows the buttons of the different stations and their state solved/unsolved. Moreover
-                the user can scroll up and down due to the ScrollView */}     
-            <View style={styles.overviewMiddleContainer}>
-            
-                <ScrollView>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 1
-                            </Text>
-                        </TouchableHighlight>
-
-                        {this.showDoneOrTodoButton(1)}
-                        
-                    </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station2')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 2
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(2)}
-                    </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station3')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 3
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(3)}
-                    </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station4')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 4
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(4)}
-                    </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station5')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 5
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(5)}
-                    </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station6')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 6
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(6)}
-                    </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station7')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 7
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(7)}
-                    </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station8')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 8
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(8)}
-                    </View>
-
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station9')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 9
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(9)}
-                    </View>
-                    
-                    <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station10')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                            <Text style={styles.overviewButtonText} numberOfLines={1}>
-                                Station 10
-                            </Text>
-                        </TouchableHighlight>
-                        {this.showDoneOrTodoButton(10)}
-                    </View>
-
-                </ScrollView>
-            </View>
-
-            {/* show at the bottom two buttons, one to get back and one to submit your answers if and only if all quizzes
-                has ben solved. */}        
-            <View style={styles.overviewBottomContainer}>
-                <View style={styles.overviewRowButtonContainer}>
-                    <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                        <Text style={styles.overviewButtonText} numberOfLines={1}>
-                            Zurück
-                        </Text>
-                    </TouchableHighlight>
-                    
-                    {this.showSubmitButton()}
-
+                {/* this section shows the buttons of the different stations and their state solved/unsolved. Moreover
+                    the user can scroll up and down due to the ScrollView */}     
+                <View style={styles.overviewMiddleContainer}>                
+                    <ScrollView>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 1
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(1)}                            
+                        </View>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station2')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 2
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(2)}
+                        </View>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station3')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 3
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(3)}
+                        </View>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station4')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 4
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(4)}
+                        </View>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station5')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 5
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(5)}
+                        </View>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station6')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 6
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(6)}
+                        </View>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station7')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 7
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(7)}
+                        </View>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station8')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 8
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(8)}
+                        </View>
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station9')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 9
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(9)}
+                        </View>                        
+                        <View style={styles.overviewRowButtonContainer}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station10')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                                <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                    Station 10
+                                </Text>
+                            </TouchableHighlight>
+                            {this.showDoneOrTodoButton(10)}
+                        </View>
+                    </ScrollView>
                 </View>
-            </View>
+
+                {/* show at the bottom two buttons, one to get back and one to submit your answers if and only if all quizzes has ben solved. */}        
+                <View style={styles.overviewBottomContainer}>
+                    <View style={styles.overviewRowButtonContainer}>
+                        <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText} numberOfLines={1}>
+                                Zurück
+                            </Text>
+                        </TouchableHighlight>                        
+                        {this.showSubmitButton()}
+                    </View>
+                </View>
 
             </View>
         );
@@ -161,11 +142,11 @@ export default class OverviewScreen extends React.Component {
     showDoneOrTodoButton(stationNumber){
         if(AnswerSheet.getAnswer(stationNumber) === ''){
             return (
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                <Text style={styles.overviewButtonText}>
-                    zur Frage
-                </Text>
-            </TouchableHighlight>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                    <Text style={styles.overviewButtonText}>
+                        zur Frage
+                    </Text>
+                </TouchableHighlight>
             );
         }
         else{
@@ -174,11 +155,9 @@ export default class OverviewScreen extends React.Component {
                     <Text style={styles.overviewChosenButtonText}>
                         {AnswerSheet.getAnswer(stationNumber)}
                     </Text>
-                </TouchableHighlight>
-                
+                </TouchableHighlight>                
             );
-        }
-        
+        }        
     }
 
     /**
