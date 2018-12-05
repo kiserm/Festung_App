@@ -462,6 +462,7 @@ const styles = StyleSheet.create({
   resultIconContainer:{
     flex:4,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   resultMiddleText:{
     fontSize: hp("3%"),
