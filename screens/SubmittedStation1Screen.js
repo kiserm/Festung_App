@@ -155,9 +155,9 @@ export default class SubmittedStation1Screen extends React.Component {
         </View>
 
         {/* button to navigate back to the result sheet */}        
-        <View style={styles.stationBottomNextContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.mapButtonStyle}>
-                <Text style={styles.mapButtonText} numberOfLines={1}>
+        <View style={styles.submitStationBottomContainer}>
+            <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.SubmitStationBackButtonStyle}>
+                <Text style={styles.stationUnchosenButtonText} numberOfLines={1}>
                   Zurück
                 </Text>
             </TouchableHighlight>

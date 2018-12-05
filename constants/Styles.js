@@ -961,6 +961,24 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent:'center',
   },
+
+  // submitStation styles
+  // --------------------------------------------------------------------------------------------------------------------------
+  SubmitStationBackButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignSelf: 'center',
+    justifyContent: 'center',
+    width: wp("90%"),
+    marginVertical: hp("1%"),
+  },
+  submitStationBottomContainer:{
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 // always export the variables, function and classes for inter document use
