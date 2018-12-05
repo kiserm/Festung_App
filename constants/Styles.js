@@ -621,7 +621,7 @@ const styles = StyleSheet.create({
     flex: 1.5,
     alignItems: 'flex-start',
     justifyContent: 'center',
-    paddingHorizontal: wp("8.5%"),
+    paddingHorizontal: wp("9.5%"),
   },
   stationTitleTextFormat:{
     fontSize: Platform.OS === 'ios' ? hp("6.4%") : hp("7%"),
@@ -740,10 +740,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },  
-  tutorialBottomContainer:{
-    flex:0.7,
+  tutorial2To4BottomContainer:{
+    flex:0.65,
     flexDirection: 'row',
-    marginHorizontal: wp("2%"),
+    marginHorizontal: wp("1%"),
+    marginBottom: hp("1%"),
+  },
+  tutorial1And5BottomContainer:{
+    flex:0.55,
+    flexDirection: 'row',
+    marginHorizontal: wp("1%"),
     marginBottom: hp("1%"),
   },
   tutorialRowContainer:{
@@ -751,7 +757,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: wp("2%"),
+    marginHorizontal: wp("1%"),
     marginBottom: hp("1%"),
   },
   tutorialArrowOverviewContainer:{
@@ -836,7 +842,7 @@ const styles = StyleSheet.create({
     borderWidth: hp("1%"),
     alignSelf: 'stretch',
     justifyContent: 'center',
-    marginHorizontal: wp("2%"),
+    marginHorizontal: wp("1%"),
     flex:1,
     alignItems:'center',
   },
@@ -854,7 +860,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: wp("2%"),
+    marginHorizontal: wp("1%"),
     marginBottom: hp("1%"),
   },
   tutorialTextFormat:{
@@ -865,17 +871,6 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     marginHorizontal: wp("7%"),
     marginTop: hp("3%"),
-  },
-  tutorialButtonStyle:{
-    backgroundColor: 'rgba(96,100,109, 1)',
-    borderRadius: hp("1%"),
-    borderColor: 'rgba(96,100,109, 1)',
-    borderWidth: hp("1%"),
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-    marginHorizontal: wp("2%"),
-    flex:1,
-    alignItems:'center',
   },
   tutorialButtonText:{
     fontSize: hp("3%"),

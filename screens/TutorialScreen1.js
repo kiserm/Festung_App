@@ -45,7 +45,7 @@ export default class TutorialScreen1 extends React.Component {
         </View>
 
         {/* put three buttons at the bottom, back, how far i am in the tutorial and forward*/}
-        <View style={styles.tutorialBottomContainer}>
+        <View style={styles.tutorial1And5BottomContainer}>
           <View style={styles.tutorialRowContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo')} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
               <Text style={styles.tutorialButtonText}> Zurück </Text> 

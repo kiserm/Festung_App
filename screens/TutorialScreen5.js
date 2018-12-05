@@ -48,8 +48,8 @@ export default class TutorialScreen5 extends React.Component {
         </View>
       
         {/* show the button to start the quiz, if pressed set the tutorialDone flag to true */}
-        <View style={styles.tutorialBottomContainer}>
-          <View style={styles.tutorialRowBottomContainer}>
+        <View style={styles.tutorial1And5BottomContainer}>
+          <View style={styles.tutorialRowContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
                   <Text style={styles.tutorialButtonText}>     Los gehts!     </Text>
             </TouchableHighlight>
