@@ -96,14 +96,14 @@ const NavigationStack = createStackNavigator(
                           <TouchableHighlight onPress={() => {
                                                               navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
                                                             }
-                                                    } style={styles.navigationBarIcons}>
+                                                    } style={styles.headerBarIcons}>
                             <IconEntypo name="light-bulb" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                           </TouchableHighlight>
                           {/* This is the second button when looking from the left.*/}
                           <TouchableHighlight onPress={() => {
                                                               navigation.navigate('Map',{originScreenName: navigation.state.routeName})
                                                             }
-                                                    } style={styles.navigationBarIcons}>
+                                                    } style={styles.headerBarIcons}>
                             <IconEntypo name="map" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                           </TouchableHighlight>          
                         </View>
@@ -113,7 +113,7 @@ const NavigationStack = createStackNavigator(
                           <TouchableHighlight onPress={() => {
                                                                 navigation.navigate('Overview',{originScreenName: navigation.state.routeName})
                                                               }
-                                                      } style={styles.navigationBarIcons}>
+                                                      } style={styles.headerBarIcons}>
                               <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                             </TouchableHighlight>
                       </View>

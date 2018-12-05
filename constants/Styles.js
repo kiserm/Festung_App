@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     alignItems: 'center', //makes that the icon is centered vertically -> cross axis
     marginHorizontal: wp("3%"),
    },
-   navigationBarIcons:{
+   headerBarIcons:{
     marginHorizontal: wp("2%"),
    },
 
