@@ -27,15 +27,15 @@ export default class SubmittedStation1Screen extends React.Component {
       <View style={styles.anyWholeScreen}>
         
         {/*Set the title of the Screen*/}        
-        <View style={styles.stationTitleTextContainer}>
-          <Text style={styles.stationTitleTextFormat}>
+        <View style={styles.submittedStationTitleTextContainer}>
+          <Text style={styles.submittedStationTitleTextFormat}>
             Station 1
           </Text>
         </View>     
         
         {/* write your question text here*/}        
-        <View style={styles.stationTextContainer}>
-            <Text style={styles.stationTextFormat}>
+        <View style={styles.submittedStationTextContainer}>
+            <Text style={styles.submittedStationTextFormat}>
               Dies ist eine Testfrage. {"\n"}
               Wie viel Einwohner hat die Stadt Luzern?
             </Text>
@@ -45,53 +45,53 @@ export default class SubmittedStation1Screen extends React.Component {
               A: ...         B: ...
               C: ...         D: ...
         */}   
-        <View style={styles.stationAnswerVerticalContainer}>
-          <View style={styles.stationRowContainer}>
+        <View style={styles.submittedStationAnswerVerticalContainer}>
+          <View style={styles.submittedStationRowContainer}>
           <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
-                style={[styles.stationUnchosenButtonStyle, 
-                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.stationChosenAndRightButtonStyle,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.stationChosenButtonStyle,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='A') && styles.stationUnchosenAndRightButtonStyle,
+                style={[styles.submittedStationUnchosenButtonStyle, 
+                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.submittedStationChosenAndRightButtonStyle,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.submittedStationChosenButtonStyle,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='A') && styles.submittedStationUnchosenAndRightButtonStyle,
                             ]}>
             <View style={{flex:1,flexDirection:'row'}}>
-                <Text style={[styles.stationUnchosenButtonLetter, 
-                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.stationChosenButtonLetter,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.stationChosenButtonLetter,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='A') && styles.stationUnchosenButtonLetter,
+                <Text style={[styles.submittedStationUnchosenButtonLetter, 
+                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.submittedStationChosenButtonLetter,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.submittedStationChosenButtonLetter,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='A') && styles.submittedStationUnchosenButtonLetter,
                             ]}>
                   A:
                 </Text>
-                <Text style={[styles.stationUnchosenButtonText, 
-                            (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.stationChosenButtonText,
-                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.stationChosenButtonText,
-                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='A') && styles.stationUnchosenButtonText,
+                <Text style={[styles.submittedStationUnchosenButtonText, 
+                            (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.submittedStationChosenButtonText,
+                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.submittedStationChosenButtonText,
+                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='A') && styles.submittedStationUnchosenButtonText,
                             ]}>
                     89'005
                 </Text>
               </View>
             </TouchableHighlight>
           </View>
-          <View style={styles.stationRowContainer}>
+          <View style={styles.submittedStationRowContainer}>
           <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
-                style={[styles.stationUnchosenButtonStyle, 
-                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.stationChosenAndRightButtonStyle,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.stationChosenButtonStyle,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='B') && styles.stationUnchosenAndRightButtonStyle,
+                style={[styles.submittedStationUnchosenButtonStyle, 
+                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.submittedStationChosenAndRightButtonStyle,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.submittedStationChosenButtonStyle,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='B') && styles.submittedStationUnchosenAndRightButtonStyle,
                             ]}>
             <View style={{flex:1,flexDirection:'row'}}>
-                <Text style={[styles.stationUnchosenButtonLetter, 
-                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.stationChosenButtonLetter,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.stationChosenButtonLetter,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='B') && styles.stationUnchosenButtonLetter,
+                <Text style={[styles.submittedStationUnchosenButtonLetter, 
+                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.submittedStationChosenButtonLetter,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.submittedStationChosenButtonLetter,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='B') && styles.submittedStationUnchosenButtonLetter,
                             ]}>
                   B:
                 </Text>
-                <Text style={[styles.stationUnchosenButtonText, 
-                            (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.stationChosenButtonText,
-                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.stationChosenButtonText,
-                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='B') && styles.stationUnchosenButtonText,
+                <Text style={[styles.submittedStationUnchosenButtonText, 
+                            (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.submittedStationChosenButtonText,
+                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.submittedStationChosenButtonText,
+                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='B') && styles.submittedStationUnchosenButtonText,
                             ]}>
                     103'005
                 </Text>
@@ -99,53 +99,53 @@ export default class SubmittedStation1Screen extends React.Component {
             </TouchableHighlight>
           </View>
         </View>
-        <View style={styles.stationAnswerVerticalContainer}>
-          <View style={styles.stationRowContainer}>
+        <View style={styles.submittedStationAnswerVerticalContainer}>
+          <View style={styles.submittedStationRowContainer}>
           <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
-                style={[styles.stationUnchosenButtonStyle, 
-                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.stationChosenAndRightButtonStyle,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.stationChosenButtonStyle,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='C') && styles.stationUnchosenAndRightButtonStyle,
+                style={[styles.submittedStationUnchosenButtonStyle, 
+                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.submittedStationChosenAndRightButtonStyle,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.submittedStationChosenButtonStyle,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='C') && styles.submittedStationUnchosenAndRightButtonStyle,
                             ]}>
               <View style={{flex:1,flexDirection:'row'}}>
-                <Text style={[styles.stationUnchosenButtonLetter, 
-                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.stationChosenButtonLetter,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.stationChosenButtonLetter,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='C') && styles.stationUnchosenButtonLetter,
+                <Text style={[styles.submittedStationUnchosenButtonLetter, 
+                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.submittedStationChosenButtonLetter,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.submittedStationChosenButtonLetter,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='C') && styles.submittedStationUnchosenButtonLetter,
                             ]} >
                   C:
                 </Text>
-                <Text style={[styles.stationUnchosenButtonText, 
-                            (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.stationChosenButtonText,
-                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.stationChosenButtonText,
-                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='C') && styles.stationUnchosenButtonText,
+                <Text style={[styles.submittedStationUnchosenButtonText, 
+                            (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.submittedStationChosenButtonText,
+                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.submittedStationChosenButtonText,
+                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='C') && styles.submittedStationUnchosenButtonText,
                             ]} >
                   56'005
                 </Text>
               </View>
             </TouchableHighlight>
           </View>
-          <View style={styles.stationRowContainer}>
+          <View style={styles.submittedStationRowContainer}>
             <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
-                style={[styles.stationUnchosenButtonStyle, 
-                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.stationChosenAndRightButtonStyle,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.stationChosenButtonStyle,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='D') && styles.stationUnchosenAndRightButtonStyle,
+                style={[styles.submittedStationUnchosenButtonStyle, 
+                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.submittedStationChosenAndRightButtonStyle,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.submittedStationChosenButtonStyle,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='D') && styles.submittedStationUnchosenAndRightButtonStyle,
                             ]}>
               <View style={{flex:1,flexDirection:'row'}}>
-                <Text style={[styles.stationUnchosenButtonLetter, 
-                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.stationChosenButtonLetter,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.stationChosenButtonLetter,
-                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='D') && styles.stationUnchosenButtonLetter,
+                <Text style={[styles.submittedStationUnchosenButtonLetter, 
+                                (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.submittedStationChosenButtonLetter,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.submittedStationChosenButtonLetter,
+                                (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='D') && styles.submittedStationUnchosenButtonLetter,
                             ]} >
                   D:
                 </Text>
-                <Text style={[styles.stationUnchosenButtonText, 
-                            (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.stationChosenButtonText,
-                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.stationChosenButtonText,
-                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='D') && styles.stationUnchosenButtonText,
+                <Text style={[styles.submittedStationUnchosenButtonText, 
+                            (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.submittedStationChosenButtonText,
+                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.submittedStationChosenButtonText,
+                            (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='D') && styles.submittedStationUnchosenButtonText,
                             ]} >
                     81’592
                 </Text>
@@ -157,7 +157,7 @@ export default class SubmittedStation1Screen extends React.Component {
         {/* button to navigate back to the result sheet */}        
         <View style={styles.submitStationBottomContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.SubmitStationBackButtonStyle}>
-                <Text style={styles.stationUnchosenButtonText} numberOfLines={1}>
+                <Text style={styles.submittedStationUnchosenButtonText} numberOfLines={1}>
                   Zurück
                 </Text>
             </TouchableHighlight>
