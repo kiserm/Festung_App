@@ -551,7 +551,7 @@ const styles = StyleSheet.create({
     borderWidth: hp("1%"),
     alignSelf: 'stretch',
     justifyContent: 'center',
-    marginHorizontal: wp("2%"),
+    marginHorizontal: wp("1%"),
     flex: 1,
     alignItems:'center',
   },
@@ -562,7 +562,7 @@ const styles = StyleSheet.create({
     borderWidth: hp("1%"),
     alignSelf: 'stretch',
     justifyContent: 'center',
-    marginHorizontal: wp("2%"),
+    marginHorizontal: wp("1%"),
     flex:1,
     alignItems:'center',
   },
@@ -571,14 +571,28 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
     fontWeight: 'normal',
-    textAlign: 'center',
-    justifyContent:'center'
+    textAlign: 'right',
+    justifyContent:'center',
+    paddingHorizontal: wp("1%"),
+  },
+  chosenButtonLetter:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    justifyContent:'center',
+    alignSelf:'center',
+    flex:1,
+    paddingHorizontal: wp("1%"),
   },
   stationTitleTextContainer:{
-    flex: 2,
+    flex: 1.5,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingHorizontal: wp("8.5%"),
   },
   stationTitleTextFormat:{
-    fontSize: hp("7%"),
+    fontSize: Platform.OS === 'ios' ? hp("6.4%") : hp("7%"),
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("8%"),
     textAlign: 'center',
@@ -588,14 +602,14 @@ const styles = StyleSheet.create({
   },
   stationTextContainer:{
     flex: 6,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
   },
   stationAnswerContainer:{
     flex: 3
   },
   stationAnswerVerticalContainer:{
-    flex:1,
+    flex:0.7,
     flexDirection: 'row',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
@@ -605,8 +619,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: wp("2%"),
-    marginBottom: hp("1%"),
+    marginHorizontal: wp("0.5%"),
+    marginBottom: hp("0.5%"),
   },
   stationButtonText:{
     fontSize: hp("3%"),
@@ -617,6 +631,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignSelf:'center',
     flex:4,
+    paddingHorizontal: wp("1%")
   },
   stationButtonLetter:{
     fontSize: hp("3%"),
@@ -626,6 +641,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignSelf:'center',
     flex:1,
+    paddingHorizontal: wp("1%")
   },
   stationRowMiddleContainer:{
     flex:0.7,
@@ -636,7 +652,7 @@ const styles = StyleSheet.create({
     marginBottom: hp("1%"),
   },
   stationBottomNextContainer:{
-    flex:0.8,
+    flex:0.7,
     flexDirection: 'row',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
