@@ -73,7 +73,6 @@ export class AnswerSheetClass extends React.Component{
                 return 'This stationnumber does not exist!'
         }
     };
-
     
     /**
      * IDEA:
@@ -148,12 +147,25 @@ export class AnswerSheetClass extends React.Component{
         }
     };
 
+    /**
+     * IDEA:
+     * this variable is here to save the number of right answers given by the user
+     */
     numberOfRightAnswers = 0;
 
+    /**
+     * IDEA:
+     * set method for the variable 'numberOfRightAnswers'
+     * @param {integer which is the number of right answers given by the user} nora 
+     */
     setNumberOfRightAnswers(nora){
         this.numberOfRightAnswers = nora;
     };
 
+    /**
+     * IDEA:
+     * get method for the variable 'numberOfRightAnswers'
+     */
     getNumberOfRightAnswers(){
         return this.numberOfRightAnswers;
     };
@@ -161,8 +173,9 @@ export class AnswerSheetClass extends React.Component{
 
 /**
  * IDEA:
- * Make an instance of this class such that we can export this for an easier access from all screens.
+ * Make an instance of this class such that we can export this for an easier access from all screens without creating always an instance to get access to the methods and values
  */
 const AnswerSheet = new AnswerSheetClass();
 
+// export this instance to reuse the methods from other classes and files
 export default AnswerSheet;

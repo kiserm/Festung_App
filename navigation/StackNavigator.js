@@ -37,18 +37,18 @@ import TutorialScreen3 from '../screens/TutorialScreen3';
 import TutorialScreen4 from '../screens/TutorialScreen4';
 import TutorialScreen5 from '../screens/TutorialScreen5';
 
-
-
-// used for the tab navigation bar
+// used to custom the tab navigation bar
 import styles from '../constants/Styles';
 
-
-
-// here we create the StackNavigator. Every screen we want to Navigate to, needs to be
-// in this definition, else the screen is not accessible
+/**
+ * IDEA:
+ * here we create the StackNavigator. Every screen we want to Navigate to, needs to be
+ * in this definition, else the screen is not accessible
+ */
 const NavigationStack = createStackNavigator(
+  // the convention is that we navigate to the screens, but the screen names are without the suffix 'screen'. for example
+  // we want to navigate to the HomeScreen we write: this.props.navigation.navigate('Home')
   {
-    // the convention is that we navigate to the screens, but the screen names are without the suffix 'screen'
     Home:  HomeScreen,
     HowTo: HowToScreen,
     Tutorial1: TutorialScreen1,
@@ -76,7 +76,7 @@ const NavigationStack = createStackNavigator(
   {
     // here we say on which screen the app should start
     initialRouteName: 'Home',
-    // here we can design the Navigation Tab Bar at the top for all screens
+    // here we can design the Navigation Tab Bar at the top for all screens. however we could overwrite it in the screen files if we want to
     navigationOptions: ({ navigation }) => {
       return {
         headerStyle: {
@@ -90,6 +90,7 @@ const NavigationStack = createStackNavigator(
         flex:1,
         color: '#fff', // such that we do not see the title of the current page 
         },
+        // put two icons in the right header: mapIcon onpress to the mapScreen and hintIcon onpress to the hintScreen
         headerRight: ( <View style={styles.headerButtonContainer}>
                           {/* This is the first button when looking from the left.*/}
                           <TouchableHighlight onPress={() => {
@@ -107,9 +108,7 @@ const NavigationStack = createStackNavigator(
                           </TouchableHighlight>          
                         </View>
                       ),
-        headerBackTitle: null,  // if the title is more than 4 letters, the fallbacktitle will be by default
-                                // 'back' but i do not want this so i set it to null such that the label is 
-                                // no longer shown on android as well as on iOS 
+        // put the overview icon in the left header. onpress we get to the overview screen
         headerLeft: (<View style={styles.headerButtonContainer}>
                           <TouchableHighlight onPress={() => {
                                                                 navigation.navigate('Overview',{originScreenName: navigation.state.routeName})
@@ -119,6 +118,9 @@ const NavigationStack = createStackNavigator(
                             </TouchableHighlight>
                       </View>
                     ), 
+        headerBackTitle: null,  // if the title is more than 4 letters, the fallbacktitle will be by default
+                                // 'back' but i do not want this so i set it to null such that the label is 
+                                // no longer shown on android as well as on iOS         
       }
     }
   }

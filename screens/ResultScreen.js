@@ -22,7 +22,7 @@ export default class ResultScreen extends React.Component {
         
         {/*Set the title of the Screen*/}        
         <View style={styles.resultTitleTextContainer}>
-          <Text style={styles.anyTitleTextFormat}>
+          <Text style={styles.resultTitleTextFormat}>
             Dein Resultat
           </Text>
         </View>   
@@ -57,7 +57,7 @@ export default class ResultScreen extends React.Component {
         <View style={styles.resultBottomContainer}>
           <View style={styles.resultRowButtonContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate('Certificate')} underlayColor="rgba(96,100,109, 1)" style={styles.resultButtonStyle}>
-                <Text style={styles.anyButtonText} numberOfLines={1}>
+                <Text style={styles.resultButtonText} numberOfLines={1}>
                   zum Zertifikat
                 </Text>
             </TouchableHighlight>
@@ -82,5 +82,5 @@ export default class ResultScreen extends React.Component {
     AnswerSheet.setNumberOfRightAnswers(rightAnswers);
     return rightAnswers;
   };
-    
+
 }

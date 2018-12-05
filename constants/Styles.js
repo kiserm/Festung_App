@@ -1,14 +1,15 @@
-import {StyleSheet, Platform, NativeModules} from 'react-native'; // we need this for using CSS like design patterns
+import {StyleSheet, Platform, NativeModules} from 'react-native'; // we need this for using CSS like design patterns 
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
 
-// to be able to have a proper design on every platform, I downloaded this package from 
-// this website: https://www.npmjs.com/package/react-native-responsive-screen
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-
-
+// workaround to have the arrows stopping in front of the header
+const {StatusBarManager} = NativeModules;
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? hp("1%") : StatusBarManager.HEIGHT - hp("0.7%");
+const NAVIGATIONHEADER_HEIGHT = hp("7%"); // from ../navigation/StackNavigator/headerstyle.height
+const DISTANCETOTHETOP = NAVIGATIONHEADER_HEIGHT + STATUSBAR_HEIGHT;
 
 /**
  * IDEA:
- * the styles list for the whole app, this is only done for a good organisation and for reusing code in the app development
+ * the complete styles list for the whole app, this is only done for a good organisation
  */
 const styles = StyleSheet.create({
   
@@ -507,6 +508,24 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems:'center',
   },
+  resultTitleTextFormat:{
+    fontSize: hp("7%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("8%"),
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginHorizontal: wp("7%"),
+    marginTop: hp("3%"),
+  },
+  resultButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center'
+  },
+
   //certificateScreen styles
   // -----------------------------------------------------------------------------------------------------------------
   certificateTitleTextContainer:{
@@ -547,40 +566,10 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("7%"),
     marginTop: hp("3%"),
   },
-
-  // station 12 style
-  // -----------------------------------------------------------------------------------------------------------------
-  station12ButtonStyleDone:{
-    backgroundColor: 'rgba(96,100,109, 1)',
-    borderRadius: hp("1%"),
-    borderColor: 'rgba(96,100,109, 1)',
-    borderWidth: hp("1%"),
-    marginBottom: hp("3%"),
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-    marginHorizontal: wp("5%"),
-  },
-  station12ButtonStyleNotSubmitable:{
-    backgroundColor: 'rgb(211, 211, 211)',
-    borderColor: 'rgb(211, 211, 211)',
-    borderRadius: hp("1%"),
-    borderWidth: hp("1%"),
-    marginBottom: hp("3%"),
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-    marginHorizontal: wp("5%")
-  },
-  station12ButtonText: {
-    fontSize: hp("3%"),
-    color: 'white',
-    lineHeight: hp("4%"),
-    fontWeight: 'normal',
-    textAlign: 'center',
-    justifyContent:'center'
-  },
-  station12SubmitButtonContainer:{
-    alignItems: 'center',
-    justifyContent: 'center',
+  certificateIconStyle:{
+    flex: 1,
+    alignSelf: 'center',
+    justifyContent: 'flex-start',
   },
 
   // stations style
@@ -893,9 +882,3 @@ const styles = StyleSheet.create({
 
 // always export the variables, function and classes for inter document use
 export default styles;
-
-// workaround to have the arrows stopping in front of the header
-const {StatusBarManager} = NativeModules;
-const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? hp("1%") : StatusBarManager.HEIGHT - hp("0.7%");
-const NAVIGATIONHEADER_HEIGHT = hp("7%"); // from ../navigation/StackNavigator/headerstyle.height
-const DISTANCETOTHETOP = NAVIGATIONHEADER_HEIGHT + STATUSBAR_HEIGHT;

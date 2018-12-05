@@ -43,7 +43,7 @@ export default class CertificateScreen extends React.Component {
       return (
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.resultIconStyle}>
+            <TouchableHighlight style={styles.certificateIconStyle}>
                 <IconFontAwesome5 name="award" size={hp("40%")} color="darkgreen"/>
             </TouchableHighlight>
           </View>
@@ -59,7 +59,7 @@ export default class CertificateScreen extends React.Component {
       return (
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.resultIconStyle}>
+            <TouchableHighlight style={styles.certificateIconStyle}>
                 <IconFontAwesome5 name="award" size={hp("40%")} color="rgb(165, 113, 100)"/>
             </TouchableHighlight>
           </View>
@@ -75,7 +75,7 @@ export default class CertificateScreen extends React.Component {
       return (
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.resultIconStyle}>
+            <TouchableHighlight style={styles.certificateIconStyle}>
                 <IconFontAwesome5 name="award" size={hp("40%")} color="silver"/>
             </TouchableHighlight>
           </View>
@@ -91,7 +91,7 @@ export default class CertificateScreen extends React.Component {
       return (
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.resultIconStyle}>
+            <TouchableHighlight style={styles.certificateIconStyle}>
                 <IconFontAwesome5 name="award" size={hp("40%")} color="goldenrod"/>
             </TouchableHighlight>
           </View>
@@ -107,7 +107,7 @@ export default class CertificateScreen extends React.Component {
       return(
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.resultIconStyle}>
+            <TouchableHighlight style={styles.certificateIconStyle}>
                 <IconFontAwesome5 name="award" size={hp("40%")} color="rgba(96,100,109, 1)"/>
             </TouchableHighlight>
           </View>
