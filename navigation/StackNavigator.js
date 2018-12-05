@@ -36,6 +36,17 @@ import TutorialScreen2 from '../screens/TutorialScreen2';
 import TutorialScreen3 from '../screens/TutorialScreen3';
 import TutorialScreen4 from '../screens/TutorialScreen4';
 import TutorialScreen5 from '../screens/TutorialScreen5';
+import SubmittedStation1Screen from '../screens/SubmittedStation1Screen';
+import SubmittedStation2Screen from '../screens/SubmittedStation2Screen';
+import SubmittedStation3Screen from '../screens/SubmittedStation3Screen';
+import SubmittedStation4Screen from '../screens/SubmittedStation4Screen';
+import SubmittedStation5Screen from '../screens/SubmittedStation5Screen';
+import SubmittedStation6Screen from '../screens/SubmittedStation6Screen';
+import SubmittedStation7Screen from '../screens/SubmittedStation7Screen';
+import SubmittedStation8Screen from '../screens/SubmittedStation8Screen';
+import SubmittedStation9Screen from '../screens/SubmittedStation9Screen';
+import SubmittedStation10Screen from '../screens/SubmittedStation10Screen';
+
 
 // used to custom the tab navigation bar
 import styles from '../constants/Styles';
@@ -72,6 +83,7 @@ const NavigationStack = createStackNavigator(
     Station10: Station10Screen, 
     Result: ResultScreen,
     Certificate: CertificateScreen,
+    SubmittedStation1: SubmittedStation1Screen,
   },
   {
     // here we say on which screen the app should start
