@@ -248,6 +248,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent:'center'
   },
+  overviewChosenButtonText:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center',
+  },
 
   // HintScreen Styles
   // -----------------------------------------------------------------------------------------------------------------

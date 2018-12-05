@@ -7,7 +7,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /**
  * IDEA:
- * this screen shows the first task of the quiz
+ * this screen shows the 7th task of the quiz
  */
 export default class Station7Screen extends React.Component {
   static navigationOptions = {

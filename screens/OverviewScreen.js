@@ -171,7 +171,7 @@ export default class OverviewScreen extends React.Component {
         else{
             return(
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="white" style={styles.overviewButtonStyleDone}>
-                    <Text style={styles.chosenButtonText}>
+                    <Text style={styles.overviewChosenButtonText}>
                         {AnswerSheet.getAnswer(stationNumber)}
                     </Text>
                 </TouchableHighlight>
