@@ -975,9 +975,11 @@ const styles = StyleSheet.create({
     marginVertical: hp("1%"),
   },
   submitStationBottomContainer:{
-    flex: 1,
+    flex: 0.6,
     alignItems: 'center',
     justifyContent: 'center',
+    marginBottom: hp("1%"),
+    marginHorizontal: wp("2.5%")
   },
   submittedStationChosenButtonStyle:{
     backgroundColor: 'white',
@@ -1133,6 +1135,16 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     marginHorizontal: wp("7%"),
     marginTop: hp("3%"),
+  },
+  submittedStationBackButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    textAlign: 'center',
+    fontWeight: 'normal',
+    marginHorizontal: wp("7%"),
+    alignSelf: 'center',
+    justifyContent:'center'
   },
 });
 
