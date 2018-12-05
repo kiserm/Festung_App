@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     width: wp("40%")
   },
-  overviewButtonStyleNotSubmitable:{
+  overviewButtonToDoStyleNotSubmitable:{
     backgroundColor: 'rgb(211, 211, 211)',
     borderColor: 'rgb(211, 211, 211)',
     borderRadius: hp("1%"),
@@ -239,6 +239,25 @@ const styles = StyleSheet.create({
     marginVertical: hp("1%"),
     marginHorizontal: wp("2%"),
     width: wp("40%")
+  },
+  overviewButtonDoneStyleNotSubmitable:{
+    backgroundColor: 'white',
+    borderRadius: hp("1%"),
+    borderColor: 'rgb(211, 211, 211)',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    paddingHorizontal: wp("2%"),
+    marginVertical: hp("1%"),
+    marginHorizontal: wp("2%"),
+    width: wp("40%")
+  },
+  overviewButtonDoneTextNotSubmittable:{
+    fontSize: hp("3%"),
+    color: 'rgb(211, 211, 211)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center'
   },
   overviewButtonText: {
     fontSize: hp("3%"),

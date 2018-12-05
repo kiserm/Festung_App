@@ -214,7 +214,7 @@ export default class OverviewScreen extends React.Component {
         }
         else{
             return(
-                <TouchableHighlight onPress={() => Alert.alert('Achtung',"Mache zuerst alle Aufgaben!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonStyleNotSubmitable}>
+                <TouchableHighlight onPress={() => Alert.alert('Achtung',"Mache zuerst alle Aufgaben!")} underlayColor="rgb(211, 211, 211)" style={styles.overviewButtonToDoStyleNotSubmitable}>
                     <Text style={styles.overviewButtonText} numberOfLines={1}>
                         Abgabe
                     </Text>
