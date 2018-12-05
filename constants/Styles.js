@@ -430,14 +430,14 @@ const styles = StyleSheet.create({
   // resultScreen styles 
   // -----------------------------------------------------------------------------------------------------------------
   resultTitleTextContainer:{
-    flex:2,
+    flex:1.5,
     alignItems: 'center',
     marginTop: hp("6%"),
   },
   resultMiddleTextContainer:{
     flex:1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   resultBottomContainer:{
     flex:0.8,
@@ -455,7 +455,7 @@ const styles = StyleSheet.create({
   resultMiddleContainer:{
     flex:8,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   resultMiddleTitleContainer:{
     flex:0.6,
@@ -471,8 +471,8 @@ const styles = StyleSheet.create({
     lineHeight: hp("4%"),
     fontWeight: 'normal',
     textAlign: 'center',
-    marginBottom: hp("2%"),
-    marginHorizontal: wp("7%"),
+    marginVertical: hp("1%"),
+    marginHorizontal: wp("5%"),
   },
   resultMiddleTextBold:{
     fontSize: hp("3%"),
@@ -517,10 +517,71 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("7%"),
     marginTop: hp("3%"),
   },
+  resultCompareContainer:{
+    flex:1,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    width: wp("90%"),
+    height: hp("9%"),
+    marginVertical: hp("0.2%"),
+  },
+  resultStationButtonStyle:{
+    flex: 2.5,
+    marginHorizontal: wp("2%"),
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    alignSelf:'center',
+  },
+  resultArrowButtonStyle:{
+    flex: 1.2,
+    marginHorizontal: wp("2%"),
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    alignSelf:'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  resultAnswerButtonStyle:{
+    flex: 0.7,
+    marginHorizontal: wp("1%"),
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    alignSelf:'center',
+  },
+  resultRightAnswerButtonStyle:{
+    flex: 0.7,
+    marginHorizontal: wp("1%"),
+    backgroundColor: 'green',
+    borderRadius: hp("1%"),
+    borderColor: 'green',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    alignSelf:'center',
+  },
+  resultWrongAnswerButtonStyle:{
+    flex: 0.7,
+    marginHorizontal: wp("1%"),
+    backgroundColor: '#C92732',
+    borderRadius: hp("1%"),
+    borderColor: '#C92732',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    alignSelf:'center',
+  },
   resultButtonText:{
-    fontSize: hp("3%"),
+    fontSize: hp("3.5%"),
     color: 'white',
-    lineHeight: hp("4%"),
+    lineHeight: hp("5%"),
     fontWeight: 'normal',
     textAlign: 'center',
     justifyContent:'center'
