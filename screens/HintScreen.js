@@ -136,5 +136,4 @@ export default class HintScreen extends React.Component {
         return null;
     };
   }
-
 }

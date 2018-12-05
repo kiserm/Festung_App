@@ -42,7 +42,7 @@ export default class MapScreen extends React.Component {
           {/*Set the navigation to go back since no header in Map*/}    
           <View style={styles.mapBottomContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.mapButtonStyle}>
-                <Text style={styles.anyButtonText} numberOfLines={1}>
+                <Text style={styles.mapButtonText} numberOfLines={1}>
                   Zurück
                 </Text>
             </TouchableHighlight>
@@ -74,7 +74,7 @@ export default class MapScreen extends React.Component {
           {/*Set the navigation to go back since no header in Map*/}    
           <View style={styles.mapBottomContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.mapButtonStyle}>
-                <Text style={styles.anyButtonText} numberOfLines={1}>
+                <Text style={styles.mapButtonText} numberOfLines={1}>
                   Zurück
                 </Text>
             </TouchableHighlight>

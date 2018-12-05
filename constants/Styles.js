@@ -417,6 +417,14 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("5%"),
     marginVertical: hp("1%"),
   },
+  mapButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    justifyContent:'center'
+  },
 
   // resultScreen styles 
   // -----------------------------------------------------------------------------------------------------------------
@@ -611,7 +619,7 @@ const styles = StyleSheet.create({
     fontSize: hp("3%"),
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
-    fontWeight: 'normal',
+    fontWeight: 'bold',
     justifyContent:'center',
     alignSelf:'center',
     flex:1,
@@ -669,7 +677,7 @@ const styles = StyleSheet.create({
     fontSize: hp("3%"),
     color: 'white',
     lineHeight: hp("4%"),
-    fontWeight: 'normal',
+    fontWeight: 'bold',
     justifyContent:'center',
     alignSelf:'center',
     flex:1,
