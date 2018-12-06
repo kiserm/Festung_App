@@ -37,8 +37,7 @@ export default class SubmittedStation2Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.submittedStationTextContainer}>
             <Text style={styles.submittedStationTextFormat}>
-              Dies ist eine Testfrage. {"\n"}
-              Wie viel Einwohner hat die Stadt Luzern?
+              Welche Hausnummer hat das Winkelriedhaus an der Engelbergerstrasse in Stans?
             </Text>
         </View>
 
@@ -68,7 +67,7 @@ export default class SubmittedStation2Screen extends React.Component {
                             (this.state.chosenAnswerStation2!=this.state.rightAnswerStation2 && this.state.chosenAnswerStation2==='A') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation2!=this.state.rightAnswerStation2 && this.state.rightAnswerStation2==='A') && styles.submittedStationUnchosenButtonText,
                             ]}>
-                    89'005
+                    53a
                 </Text>
               </View>
             </TouchableHighlight>
@@ -94,7 +93,7 @@ export default class SubmittedStation2Screen extends React.Component {
                             (this.state.chosenAnswerStation2!=this.state.rightAnswerStation2 && this.state.chosenAnswerStation2==='B') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation2!=this.state.rightAnswerStation2 && this.state.rightAnswerStation2==='B') && styles.submittedStationUnchosenButtonText,
                             ]}>
-                    103'005
+                    64b
                 </Text>
               </View>
             </TouchableHighlight>
@@ -122,7 +121,7 @@ export default class SubmittedStation2Screen extends React.Component {
                             (this.state.chosenAnswerStation2!=this.state.rightAnswerStation2 && this.state.chosenAnswerStation2==='C') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation2!=this.state.rightAnswerStation2 && this.state.rightAnswerStation2==='C') && styles.submittedStationUnchosenButtonText,
                             ]} >
-                  56'005
+                  51
                 </Text>
               </View>
             </TouchableHighlight>
@@ -148,7 +147,7 @@ export default class SubmittedStation2Screen extends React.Component {
                             (this.state.chosenAnswerStation2!=this.state.rightAnswerStation2 && this.state.chosenAnswerStation2==='D') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation2!=this.state.rightAnswerStation2 && this.state.rightAnswerStation2==='D') && styles.submittedStationUnchosenButtonText,
                             ]} >
-                    81’592
+                    54a
                 </Text>
               </View>
             </TouchableHighlight>

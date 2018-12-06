@@ -34,8 +34,7 @@ export default class Station2Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.stationTextContainer}>
             <Text style={styles.stationTextFormat}>
-              Dies ist eine Testfrage. {"\n"}
-              Wie viel Einwohner hat die Stadt Luzern?
+            Welche Hausnummer hat das Winkelriedhaus an der Engelbergerstrasse in Stans?
             </Text>
         </View>
 
@@ -51,7 +50,7 @@ export default class Station2Screen extends React.Component {
                   A:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation2==='A' && styles.stationChosenButtonText]} >
-                  89'005
+                53a
                 </Text>
               </View>
             </TouchableHighlight>
@@ -63,7 +62,7 @@ export default class Station2Screen extends React.Component {
                   B:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation2==='B' && styles.stationChosenButtonText]} >
-                  203'005
+                64b
                 </Text>
               </View>
             </TouchableHighlight>
@@ -77,7 +76,7 @@ export default class Station2Screen extends React.Component {
                   C:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation2==='C' && styles.stationChosenButtonText]} >
-                  56'005
+                51
                 </Text>
               </View>
             </TouchableHighlight>
@@ -89,7 +88,7 @@ export default class Station2Screen extends React.Component {
                   D:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation2==='D' && styles.stationChosenButtonText]} >
-                  82’592
+                54a
                 </Text>
               </View>
             </TouchableHighlight>
