@@ -985,7 +985,7 @@ const styles = StyleSheet.create({
   submittedStationChosenButtonStyle:{
     backgroundColor: 'white',
     borderRadius: hp("1%"),
-    borderColor: 'rgba(96,100,109, 1)',
+    borderColor: 'rgb(211, 211, 211)',
     borderWidth: hp("1%"),
     alignSelf: 'stretch',
     justifyContent: 'center',
@@ -1005,6 +1005,17 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   submittedStationUnchosenButtonStyle:{
+    backgroundColor: 'rgb(211, 211, 211)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgb(211, 211, 211)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("1%"),
+    flex:1,
+    alignItems:'center',
+  },
+  submittedStationBackButtonStyle:{
     backgroundColor: 'rgba(96,100,109, 1)',
     borderRadius: hp("1%"),
     borderColor: 'rgba(96,100,109, 1)',
@@ -1016,7 +1027,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   submittedStationUnchosenAndRightButtonStyle:{
-    backgroundColor: 'rgba(96,100,109, 1)',
+    backgroundColor: 'rgb(211, 211, 211)',
     borderRadius: hp("1%"),
     borderColor: 'green',
     borderWidth: hp("1%"),
@@ -1028,7 +1039,7 @@ const styles = StyleSheet.create({
   },
   submittedStationChosenButtonText:{
     fontSize: hp("3%"),
-    color: 'rgba(96,100,109, 1)',
+    color: 'rgb(211, 211, 211)',
     lineHeight: hp("4%"),
     fontWeight: 'normal',
     textAlign: 'right',
@@ -1037,7 +1048,7 @@ const styles = StyleSheet.create({
   },
   submittedStationChosenButtonLetter:{
     fontSize: hp("3%"),
-    color: 'rgba(96,100,109, 1)',
+    color: 'rgb(211, 211, 211)',
     lineHeight: hp("4%"),
     fontWeight: 'bold',
     justifyContent:'center',
@@ -1053,7 +1064,7 @@ const styles = StyleSheet.create({
   },
   submittedStationTitleTextFormat:{
     fontSize: Platform.OS === 'ios' ? hp("6.4%") : hp("7%"),
-    color: 'rgba(96,100,109, 1)',
+    color: 'rgb(211, 211, 211)',
     lineHeight: hp("8%"),
     textAlign: 'center',
     fontWeight: 'bold',
@@ -1130,7 +1141,7 @@ const styles = StyleSheet.create({
   },
   submittedStationTextFormat:{
     fontSize: hp("3%"),
-    color: 'rgba(96,100,109, 1)',
+    color: 'rgb(211, 211, 211)',
     lineHeight: hp("4%"),
     textAlign: 'left',
     fontWeight: 'normal',
