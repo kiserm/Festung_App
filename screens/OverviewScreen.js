@@ -34,7 +34,7 @@ export default class OverviewScreen extends React.Component {
                 <View style={styles.overviewMiddleContainer}>                
                     <ScrollView>
                         <View style={styles.overviewRowButtonContainer}>
-                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                                 <Text style={styles.overviewButtonText} numberOfLines={1}>
                                     Station 1
                                 </Text>

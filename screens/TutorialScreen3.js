@@ -72,7 +72,9 @@ export default class TutorialScreen3 extends React.Component {
                   <Text style={styles.tutorialButtonText}> Weiter </Text>
             </TouchableHighlight>
           </View>
-        </View>           
+        </View>  
+
+        <IconMaterialCommunityIcons name='arrow-up-bold' size={hp('10%')} color='#C92732' style={styles.tutorialHintArrowStyle}/>         
 
       </View>
     );

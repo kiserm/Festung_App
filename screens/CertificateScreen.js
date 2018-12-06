@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
-import IconFontAwesome5 from 'react-native-vector-icons/Feather';
+import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 /**
@@ -23,7 +23,7 @@ export default class CertificateScreen extends React.Component {
         {/*Set the title of the Screen*/}        
         <View style={styles.certificateTitleTextContainer}>
           <Text style={styles.certificateTitleTextFormat} numberOfLines={2}>
-            Dein {"\n"}Zertifikat
+            Dein Festung{"\n"}Fürigen Grad
           </Text>
         </View>     
 
@@ -43,14 +43,12 @@ export default class CertificateScreen extends React.Component {
       return (
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconFontAwesome5 name="award" size={hp("40%")} color="darkgreen"/>
+            <TouchableHighlight style={styles.certificateIconStyle} underlayColor='red'>
+            <IconMaterialCommunityIcons name="certificate" size={hp("33%")} color="rgb(0, 153, 0)"/>         
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomTextFormat}>
-                Leider haben Sie noch den Status eines Anfängers in der Festung Fürigen!
-            </Text>
+            <Text style={styles.certificateBottomTextFormat}>Soldat </Text>
           </View>
         </View>
       );
@@ -60,13 +58,11 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
             <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconFontAwesome5 name="award" size={hp("40%")} color="rgb(165, 113, 100)"/>
+                <IconMaterialCommunityIcons name="certificate" size={hp("35%")} color="rgb(165, 113, 100)"/>
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomTextFormat}>
-                Du bist ein fortgeschrittener Festung Fürigen Kenner!
-            </Text>
+            <Text style={styles.certificateBottomTextFormat}>Wachtmeister </Text>
           </View>
         </View>
       );
@@ -76,13 +72,11 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
             <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconFontAwesome5 name="award" size={hp("40%")} color="silver"/>
+                <IconMaterialCommunityIcons name="certificate" size={hp("35%")} color="silver"/>
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomTextFormat}>
-              Du bist ein schlauer und kompetenter Gast der Festung Fürigen!
-            </Text>
+            <Text style={styles.certificateBottomTextFormat}>Hauptfeldweibel </Text>
           </View>
         </View>            
       );
@@ -92,13 +86,11 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
             <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconFontAwesome5 name="award" size={hp("40%")} color="goldenrod"/>
+                <IconMaterialCommunityIcons name="certificate" size={hp("35%")} color="goldenrod"/>
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomTextFormat}>
-                Du bist ein offizieller Festung Fürigen Experte!
-            </Text>
+            <Text style={styles.certificateBottomTextFormat}>Oberstleutnant </Text>
           </View>
         </View>
       );
@@ -108,7 +100,7 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
             <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconFontAwesome5 name="award" size={hp("40%")} color="rgba(96,100,109, 1)"/>
+                <IconMaterialCommunityIcons name="award" size={hp("35%")} color="rgba(96,100,109, 1)"/>
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>

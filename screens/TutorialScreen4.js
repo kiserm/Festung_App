@@ -73,6 +73,8 @@ export default class TutorialScreen4 extends React.Component {
           </View>
         </View>
 
+        <IconMaterialCommunityIcons name='arrow-up-bold' size={hp('10%')} color='#C92732' style={styles.tutorialMapArrowStyle}/>
+
       </View>
     );
   }          

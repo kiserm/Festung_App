@@ -66,6 +66,8 @@ export default class TutorialScreen2 extends React.Component {
             </TouchableHighlight>
           </View>
         </View>
+      
+        <IconMaterialCommunityIcons name='arrow-up-bold' size={hp('10%')} color='#C92732' style={styles.tutorialOverviewArrowStyle}/>
 
       </View>
     );

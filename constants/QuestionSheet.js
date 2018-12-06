@@ -13,16 +13,16 @@ export class QuestionSheetClass extends React.Component{
      * automatically adjusted in the StationScreens and SubmittedStationScreens
      */
     Questions = {
-                Station1: 'Wie viel Einwohner hat die Stadt Luzern? (Stand 2017)',
-                Station2: 'Wie hiess die erste Bundesrätin der Schweiz?',
-                Station3: 'Was ist die Hauptstadt von Indonesien?',
-                Station4: 'Wie viel Centimeter sind ein Zoll?',
-                Station5: 'Was ergibt (5+2)*2-9*2+32/8-(5-11)?',
-                Station6: 'Bei welcher Sportart gibt es eine "spanische Eröffnung"?',
-                Station7: 'Wann wurde der erste Gotthard Eisenbahntunnel eröffnet?',
-                Station8: 'Wie gross war / ist der grösste Mensch aller Zeiten gewachsen?',
-                Station9: 'Wie viel Germanys Next Topmodel Staffeln gibt es? (Stand Dezember 2018)',
-                Station10: 'Wie viel Teslas wurden im Jahr 2017 verkauft?',
+                Station1: 'Wie viel Einwohner hat die Stadt Luzern? (Stand 2017) ',
+                Station2: 'Wie hiess die erste Bundesrätin der Schweiz zum Nachnamen? ',
+                Station3: 'Was ist die Hauptstadt von Indonesien? ',
+                Station4: 'Wie viel Centimeter sind ein Zoll? ',
+                Station5: 'Was ergibt (5+2)*2-9*2+32/8-(5-11)? ',
+                Station6: 'Bei welcher Sportart gibt es eine "spanische Eröffnung"? ',
+                Station7: 'Wann wurde der erste Gotthard Eisenbahntunnel eröffnet? ',
+                Station8: 'Wie gross war / ist der grösste Mensch aller Zeiten gewachsen? ',
+                Station9: 'Wie viel Germanys Next Topmodel Staffeln gibt es? (Stand Dezember 2018) ',
+                Station10: 'Wie viel Teslas wurden im Jahr 2017 verkauft? ',
     };
     
     /**
@@ -31,9 +31,9 @@ export class QuestionSheetClass extends React.Component{
      */
     AnswersA = {
         Station1: "81'592",
-        Station2: 'Elisabeth Kopp',
+        Station2: 'Kopp',
         Station3: 'Bangkok',
-        Station4: '1.4cm',
+        Station4: '1.43cm',
         Station5: '20',
         Station6: 'Golf',
         Station7: '1903',
@@ -48,9 +48,9 @@ export class QuestionSheetClass extends React.Component{
      */
     AnswersB = {
         Station1: "56'250",
-        Station2: 'Micheline Calmy-Rey',
+        Station2: 'Calmy-Rey',
         Station3: 'Taipeh',
-        Station4: '1.6cm',
+        Station4: '1.65cm',
         Station5: '8',
         Station6: 'Cricket',
         Station7: '1882',
@@ -65,7 +65,7 @@ export class QuestionSheetClass extends React.Component{
      */
     AnswersC = {
         Station1: "103'207",
-        Station2: 'Ruth Dreifuss',
+        Station2: 'Dreifuss',
         Station3: 'Jakarta',
         Station4: '2.54cm',
         Station5: '11.25',
@@ -82,9 +82,9 @@ export class QuestionSheetClass extends React.Component{
      */
     AnswersD = {
         Station1: "152'729",
-        Station2: 'Ruth Metzler',
+        Station2: 'Metzler',
         Station3: 'Kingston',
-        Station4: '6.1cm',
+        Station4: '6.37cm',
         Station5: '6',
         Station6: 'Schach',
         Station7: '1856',

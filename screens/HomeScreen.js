@@ -36,7 +36,7 @@ export default class HomeScreen extends React.Component {
         
         {/* Set a button to get to the next page where you can find the quiz.*/}
         <View style={styles.homeButtonContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1',{tutorialFlag:'false'})} underlayColor="rgba(96,100,109, 1)" style={styles.homeButtonStyle}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Certificate',{tutorialFlag:'false'})} underlayColor="rgba(96,100,109, 1)" style={styles.homeButtonStyle}>
               {/*use NumberOfLines to say how much lines the text inside the button should have*/}
               <Text style={styles.homeButtonText} numberOfLines={1}>
                 Starte dein Abenteuer!

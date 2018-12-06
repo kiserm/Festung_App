@@ -3,8 +3,8 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 // workaround to have the arrows stopping in front of the header
 const {StatusBarManager} = NativeModules;
-const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? hp("1%") : StatusBarManager.HEIGHT - hp("0.7%");
-const NAVIGATIONHEADER_HEIGHT = hp("7%"); // from ../navigation/StackNavigator/headerstyle.height
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? hp("1%") : StatusBarManager.HEIGHT - hp("3.3%");
+const NAVIGATIONHEADER_HEIGHT = -hp("2%"); // from ../navigation/StackNavigator/headerstyle.height
 const DISTANCETOTHETOP = NAVIGATIONHEADER_HEIGHT + STATUSBAR_HEIGHT;
 
 /**
@@ -607,7 +607,7 @@ const styles = StyleSheet.create({
   certificateBottomTextContainer:{
     flex: 1,
     alignItems: 'center',
-    marginBottom: hp("3%"),
+    marginBottom: hp("1%"),
     justifyContent: 'center',
   },
   certificateBottomTextFormat:{
@@ -631,7 +631,7 @@ const styles = StyleSheet.create({
   certificateIconStyle:{
     flex: 1,
     alignSelf: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
   },
 
   // stations style
@@ -869,29 +869,22 @@ const styles = StyleSheet.create({
   tutorialHintArrowStyle:{
     flex: 1,
     position: "absolute", 
-    top: DISTANCETOTHETOP, 
-    right: Platform.OS === 'ios' ? wp('16%') : wp('15%'),
-    zIndex: 100,
-  },
-  tutorialHintAloneArrowStyle:{
-    flex: 1,
-    position: "absolute", 
-    top: DISTANCETOTHETOP, 
-    right: Platform.OS === 'ios' ? wp('11.5%') : wp('10.5%'),
+    top: Platform.OS=='ios'?-hp("1.5%"):-hp("1.7%"), 
+    right: Platform.OS === 'ios' ? wp('12.5%') : wp('11.5%'),
     zIndex: 100,
   },
   tutorialMapArrowStyle:{
     flex: 1,
     position: "absolute", 
-    top: DISTANCETOTHETOP, 
-    right: Platform.OS === 'ios' ? wp('3.5%') : wp('3%'),
+    top: Platform.OS=='ios'?-hp("1.5%"):-hp("1.7%"), 
+    right: Platform.OS === 'ios' ? wp('1%') : wp('1%'),
     zIndex: 100,    
   },
   tutorialOverviewArrowStyle:{
     flex: 1,
     position: "absolute", 
-    top: DISTANCETOTHETOP,
-    left: wp("4%"),
+    top: Platform.OS=='ios'?-hp("1.5%"):-hp("1.7%"),
+    left: wp("1.2%"),
     zIndex: 100,
   },
   tutorialInfoTextFormat:{
