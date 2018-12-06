@@ -2,6 +2,7 @@ import React from 'react';
 import {Text,View,TouchableHighlight} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
+import QuestionSheet from '../constants/QuestionSheet';
 
 
 /**
