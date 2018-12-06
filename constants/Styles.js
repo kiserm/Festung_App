@@ -106,13 +106,15 @@ const styles = StyleSheet.create({
    //HowToScreenStyles
    // -----------------------------------------------------------------------------------------------------------------
    howToTitleTextContainer:{
-     flex: 1,
-     marginTop: hp("6%"),
-     justifyContent: 'center'
+     flex: 3,
+     marginTop: hp("7%"),
+     justifyContent: 'flex-start',
    },
    howToTextContainer:{
     flex: 6,
     marginVertical: hp("3%"),
+    alignItems:'center',
+    justifyContent:'center',
    },
    howToButtonContainer:{
     flex: 0.93,
@@ -724,8 +726,9 @@ const styles = StyleSheet.create({
   },
   stationTextContainer:{
     flex: 6,
-    alignItems: 'flex-start',
-    justifyContent: 'center',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    flexWrap:'wrap',
   },
   stationAnswerContainer:{
     flex: 3
@@ -788,7 +791,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginHorizontal: wp("2%"),
     flex:1,
-    alignItems:'center'
+    alignItems:'center',
   },
   stationTextFormat:{
     fontSize: hp("3%"),
@@ -796,8 +799,12 @@ const styles = StyleSheet.create({
     lineHeight: hp("4%"),
     textAlign: 'left',
     fontWeight: 'normal',
-    marginHorizontal: wp("7%"),
+    marginHorizontal: wp("5%"),
     marginTop: hp("3%"),
+    alignSelf: 'center',
+    flex:1,
+    flexWrap:'wrap',
+    justifyContent:'center',
   },
 
   // TutorialScreenStyles    

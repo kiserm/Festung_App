@@ -17,11 +17,11 @@ export class QuestionSheetClass extends React.Component{
                 Station2: 'Wie hiess die erste Bundesrätin der Schweiz zum Nachnamen? ',
                 Station3: 'Was ist die Hauptstadt von Indonesien? ',
                 Station4: 'Wie viel Centimeter sind ein Zoll? ',
-                Station5: 'Was ergibt (5+2)*2-9*2+32/8-(5-11)? ',
+                Station5: 'Was ergibt \n(5+2)*2-9*2+32/8-(5-11)? ',
                 Station6: 'Bei welcher Sportart gibt es eine "spanische Eröffnung"? ',
                 Station7: 'Wann wurde der erste Gotthard Eisenbahntunnel eröffnet? ',
                 Station8: 'Wie gross war / ist der grösste Mensch aller Zeiten gewachsen? ',
-                Station9: 'Wie viel Germanys Next Topmodel Staffeln gibt es? (Stand Dezember 2018) ',
+                Station9: 'Wie viel Germanys Next Topmodel Staffeln gab es bis im Dezember 2018?',
                 Station10: 'Wie viel Teslas wurden im Jahr 2017 verkauft? ',
     };
     
