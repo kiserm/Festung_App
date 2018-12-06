@@ -1060,11 +1060,12 @@ const styles = StyleSheet.create({
     flex: 1.5,
     alignItems: 'flex-start',
     justifyContent: 'center',
-    paddingHorizontal: wp("9.5%"),
+    paddingHorizontal: wp("0%"),
+    marginTop: hp("7%"),
   },
   submittedStationTitleTextFormat:{
     fontSize: Platform.OS === 'ios' ? hp("6.4%") : hp("7%"),
-    color: 'rgb(211, 211, 211)',
+    color: 'rgba(96,100,109, 1)',
     lineHeight: hp("8%"),
     textAlign: 'center',
     fontWeight: 'bold',
@@ -1141,7 +1142,7 @@ const styles = StyleSheet.create({
   },
   submittedStationTextFormat:{
     fontSize: hp("3%"),
-    color: 'rgb(211, 211, 211)',
+    color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
     textAlign: 'left',
     fontWeight: 'normal',
@@ -1157,6 +1158,38 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("7%"),
     alignSelf: 'center',
     justifyContent:'center'
+  },
+  submittedStationStampContainer:{
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    top: hp("27%"),
+    width: wp("100%"),
+    height: hp("28%"),
+    transform: [{rotate: '-45deg'}],
+    zIndex: 100,
+    borderColor: 'rgba(0,0,0,0.2)',
+    borderWidth: wp("4%"),
+    flex:1,
+    flexDirection:'row',
+  },
+  submittedStationStampTextWrong:{
+    flex:1,
+    color: 'rgba(201,39,50,0.2)',
+    fontSize: hp("13%"),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    alignSelf: 'center',
+  },
+  submittedStationStampTextRight:{
+    flex:1,
+    color: 'rgba(0,153,0,0.2)',
+    fontSize: hp("13%"),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    alignSelf: 'center',
+
   },
 });
 

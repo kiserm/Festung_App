@@ -84,6 +84,7 @@ const NavigationStack = createStackNavigator(
     Result: ResultScreen,
     Certificate: CertificateScreen,
     SubmittedStation1: SubmittedStation1Screen,
+    SubmittedStation2: SubmittedStation2Screen,
   },
   {
     // here we say on which screen the app should start

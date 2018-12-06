@@ -11,6 +11,7 @@ import AnswerSheet from '../constants/AnswerSheet';
 export default class SubmittedStation1Screen extends React.Component {
   static navigationOptions = {
     title: "SubmittedStation1Screen", // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js   
+    header: null,
   };
 
   // read out the given answer of the answersheet file to be able to show the chosen button in another design
@@ -161,7 +162,26 @@ export default class SubmittedStation1Screen extends React.Component {
             </TouchableHighlight>
         </View>
 
+        {this.showStamp()}
+
       </View>
     );
-  }          
+  }
+  
+  showStamp(){
+    if(AnswerSheet.getAnswer(1)===AnswerSheet.getRightAnswer(1)){
+      return (
+        <View style={styles.submittedStationStampContainer}>
+          <Text style={styles.submittedStationStampTextRight} numberOfLines={1}>Richtig!</Text>
+        </View>
+      );
+    }
+    else{
+      return (
+        <View style={styles.submittedStationStampContainer}>
+          <Text style={styles.submittedStationStampTextWrong} numberOfLines={1}>Falsch!</Text>
+        </View>
+      );
+    }
+  }
 }
