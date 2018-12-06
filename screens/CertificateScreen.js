@@ -50,6 +50,9 @@ export default class CertificateScreen extends React.Component {
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>Soldat </Text>
           </View>
+          <View style={styles.certificateBottomTextContainer}>
+            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine Überraschung. </Text>
+          </View>
         </View>
       );
     }
@@ -58,11 +61,14 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
             <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconMaterialCommunityIcons name="certificate" size={hp("35%")} color="rgb(165, 113, 100)"/>
+                <IconMaterialCommunityIcons name="certificate" size={hp("33%")} color="rgb(165, 113, 100)"/>
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>Wachtmeister </Text>
+          </View>
+          <View style={styles.certificateBottomTextContainer}>
+            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine Überraschung. </Text>
           </View>
         </View>
       );
@@ -72,11 +78,14 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
             <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconMaterialCommunityIcons name="certificate" size={hp("35%")} color="silver"/>
+                <IconMaterialCommunityIcons name="certificate" size={hp("33%")} color="silver"/>
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>Hauptfeldweibel </Text>
+          </View>
+          <View style={styles.certificateBottomTextContainer}>
+            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine Überraschung. </Text>
           </View>
         </View>            
       );
@@ -86,12 +95,16 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
             <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconMaterialCommunityIcons name="certificate" size={hp("35%")} color="goldenrod"/>
+                <IconMaterialCommunityIcons name="certificate" size={hp("33%")} color="goldenrod"/>
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>Oberstleutnant </Text>
           </View>
+          <View style={styles.certificateBottomTextContainer}>
+            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine Überraschung. </Text>
+          </View>
+
         </View>
       );
     }
@@ -100,7 +113,7 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <View style={styles.certificateImageContainer}>
             <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconMaterialCommunityIcons name="award" size={hp("35%")} color="rgba(96,100,109, 1)"/>
+                <IconMaterialCommunityIcons name="award" size={hp("33%")} color="rgba(96,100,109, 1)"/>
             </TouchableHighlight>
           </View>
           <View style={styles.certificateBottomTextContainer}>

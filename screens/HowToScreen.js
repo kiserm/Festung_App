@@ -31,17 +31,10 @@ export default class HowToScreen extends React.Component {
           <View style={styles.howToTextContainer}>
               <ScrollView showsVerticalScrollIndicator={true}>
                   <Text style={styles.howToTextFormat}>
-                      Oben rechts siehst Du eine Karte. Drücke darauf und Du siehst 
-                      den Übersichtsplan der Festung Fürigen. Anhand des Plans kannst Du die nächste
-                      Rätselstation finden. {"\n"} {"\n"}
-  
                       Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst
                       hast, kannst Du am Ende einen Preis abholen. Falls Dir ein paar Fehler unterlaufen 
                       sollten, musst Du nicht traurig sein. Denn es gibt für jeden, der sich in das Abenteuer 
-                      gestürzt hat, eine kleine Belohnung. {"\n"} {"\n"}
-  
-                      Falls Du mal nicht mehr weiter weisst, kannst Du die Glühbirne oben rechts berühren und die
-                      schlauen Füchse Finja und Dario werden Dir den einen oder anderen Tipp verraten.
+                      gestürzt hat, eine kleine Belohnung.
                   </Text>
               </ScrollView>
           </View>
@@ -67,17 +60,12 @@ export default class HowToScreen extends React.Component {
           <View style={styles.howToTextContainer}>
                 {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}
                 <WebView source={{ html: "<html><p style='text-align: justify; color:rgba(96,100,109, 1); font-size:6vw;'>"+
-                "Oben rechts siehst Du eine Karte. Drücke darauf und Du siehst "+
-                "den Übersichtsplan der Festung Fürigen. Anhand des Plans kannst Du die nächste "+
-                "Rätselstation finden. <br> <br>"+
 
                 "Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst "+
                 "hast, kannst Du am Ende einen Preis abholen. Falls Dir ein paar Fehler unterlaufen "+
                 "sollten, musst Du nicht traurig sein. Denn es gibt für jeden, der sich in das Abenteuer "+
-                "gestürzt hat, eine kleine Belohnung. <br> <br>"+
+                "gestürzt hat, eine kleine Belohnung."+
 
-                "Falls Du mal nicht mehr weiter weisst, kannst Du die Glühbirne oben rechts berühren und die"+
-                "schlauen Füchse Finja und Dario werden Dir den einen oder anderen Tipp verraten. "+
                 "</p></html>"}} 
                 style={styles.howToTextFormatAndroid}
                 />
