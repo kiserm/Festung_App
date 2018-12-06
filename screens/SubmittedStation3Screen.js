@@ -67,7 +67,7 @@ export default class SubmittedStation3Screen extends React.Component {
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.chosenAnswerStation3==='A') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.rightAnswerStation3==='A') && styles.submittedStationUnchosenButtonText,
                             ]}>
-                  Krippe
+                  {QuestionSheet.getAnswerA(3)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -93,7 +93,7 @@ export default class SubmittedStation3Screen extends React.Component {
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.chosenAnswerStation3==='B') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.rightAnswerStation3==='B') && styles.submittedStationUnchosenButtonText,
                             ]}>
-                    103'005
+                  {QuestionSheet.getAnswerB(3)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -121,7 +121,7 @@ export default class SubmittedStation3Screen extends React.Component {
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.chosenAnswerStation3==='C') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.rightAnswerStation3==='C') && styles.submittedStationUnchosenButtonText,
                             ]} >
-                  56'005
+                  {QuestionSheet.getAnswerC(3)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -147,7 +147,7 @@ export default class SubmittedStation3Screen extends React.Component {
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.chosenAnswerStation3==='D') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.rightAnswerStation3==='D') && styles.submittedStationUnchosenButtonText,
                             ]} >
-                    81’592
+                  {QuestionSheet.getAnswerD(3)}
                 </Text>
               </View>
             </TouchableHighlight>

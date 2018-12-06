@@ -67,7 +67,7 @@ export default class SubmittedStation5Screen extends React.Component {
                             (this.state.chosenAnswerStation5!=this.state.rightAnswerStation5 && this.state.chosenAnswerStation5==='A') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation5!=this.state.rightAnswerStation5 && this.state.rightAnswerStation5==='A') && styles.submittedStationUnchosenButtonText,
                             ]}>
-                    89'005
+                  {QuestionSheet.getAnswerA(5)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -93,7 +93,7 @@ export default class SubmittedStation5Screen extends React.Component {
                             (this.state.chosenAnswerStation5!=this.state.rightAnswerStation5 && this.state.chosenAnswerStation5==='B') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation5!=this.state.rightAnswerStation5 && this.state.rightAnswerStation5==='B') && styles.submittedStationUnchosenButtonText,
                             ]}>
-                    105'005
+                  {QuestionSheet.getAnswerB(5)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -121,7 +121,7 @@ export default class SubmittedStation5Screen extends React.Component {
                             (this.state.chosenAnswerStation5!=this.state.rightAnswerStation5 && this.state.chosenAnswerStation5==='C') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation5!=this.state.rightAnswerStation5 && this.state.rightAnswerStation5==='C') && styles.submittedStationUnchosenButtonText,
                             ]} >
-                  56'005
+                  {QuestionSheet.getAnswerC(5)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -147,7 +147,7 @@ export default class SubmittedStation5Screen extends React.Component {
                             (this.state.chosenAnswerStation5!=this.state.rightAnswerStation5 && this.state.chosenAnswerStation5==='D') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation5!=this.state.rightAnswerStation5 && this.state.rightAnswerStation5==='D') && styles.submittedStationUnchosenButtonText,
                             ]} >
-                    81’592
+                  {QuestionSheet.getAnswerD(5)}
                 </Text>
               </View>
             </TouchableHighlight>
