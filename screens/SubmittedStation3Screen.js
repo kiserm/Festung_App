@@ -6,7 +6,7 @@ import AnswerSheet from '../constants/AnswerSheet';
 
 /**
  * IDEA:
- * this screen shows the first task of the quiz with solution
+ * this screen shows the third task of the quiz with solution
  */
 export default class SubmittedStation3Screen extends React.Component {
   static navigationOptions = {
