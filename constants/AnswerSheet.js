@@ -30,15 +30,15 @@ export class AnswerSheetClass extends React.Component{
      * this variable holds all solutions to the quizzes to be able to make a result screen
      */
     RightAnswers = {
-        Station1: 'D',
-        Station2: 'D',
-        Station3: 'D',
-        Station4: 'D',
+        Station1: 'A',
+        Station2: 'A',
+        Station3: 'C',
+        Station4: 'C',
         Station5: 'D',
         Station6: 'D',
-        Station7: 'D',
-        Station8: 'D',
-        Station9: 'D',
+        Station7: 'B',
+        Station8: 'B',
+        Station9: 'C',
         Station10: 'D',
     };
 

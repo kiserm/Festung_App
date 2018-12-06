@@ -13,16 +13,16 @@ export class QuestionSheetClass extends React.Component{
      * automatically adjusted in the StationScreens and SubmittedStationScreens
      */
     Questions = {
-                Station1: 'Wie viel Einwohner hat die Stadt Luzern?',
-                Station2: '',
-                Station3: '',
-                Station4: '',
-                Station5: '',
-                Station6: '',
-                Station7: '',
-                Station8: '',
-                Station9: '',
-                Station10: '',
+                Station1: 'Wie viel Einwohner hat die Stadt Luzern? (Stand 2017)',
+                Station2: 'Wie hiess die erste Bundesrätin der Schweiz?',
+                Station3: 'Was ist die Hauptstadt von Indonesien?',
+                Station4: 'Wie viel Centimeter sind ein Zoll?',
+                Station5: 'Was ergibt (5+2)*2-9*2+32/8-(5-11)?',
+                Station6: 'Bei welcher Sportart gibt es eine "spanische Eröffnung"?',
+                Station7: 'Wann wurde der erste Gotthard Eisenbahntunnel eröffnet?',
+                Station8: 'Wie gross war / ist der grösste Mensch aller Zeiten gewachsen?',
+                Station9: 'Wie viel Germanys Next Topmodel Staffeln gibt es? (Stand Dezember 2018)',
+                Station10: 'Wie viel Teslas wurden im Jahr 2017 verkauft?',
     };
     
     /**
@@ -30,16 +30,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for A
      */
     AnswersA = {
-        Station1: "56'002",
-        Station2: '',
-        Station3: '',
-        Station4: '',
-        Station5: '',
-        Station6: '',
-        Station7: '',
-        Station8: '',
-        Station9: '',
-        Station10: '',
+        Station1: "81'592",
+        Station2: 'Elisabeth Kopp',
+        Station3: 'Bangkok',
+        Station4: '1.4cm',
+        Station5: '20',
+        Station6: 'Golf',
+        Station7: '1903',
+        Station8: '252cm',
+        Station9: '10',
+        Station10: "35'899",
     };
 
     /**
@@ -47,16 +47,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for B
      */
     AnswersB = {
-        Station1: "76'002",
-        Station2: '',
-        Station3: '',
-        Station4: '',
-        Station5: '',
-        Station6: '',
-        Station7: '',
-        Station8: '',
-        Station9: '',
-        Station10: '',
+        Station1: "56'250",
+        Station2: 'Micheline Calmy-Rey',
+        Station3: 'Taipeh',
+        Station4: '1.6cm',
+        Station5: '8',
+        Station6: 'Cricket',
+        Station7: '1882',
+        Station8: '272cm',
+        Station9: '7',
+        Station10: "721'985",
     };
 
     /**
@@ -64,16 +64,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for C
      */
     AnswersC = {
-        Station1: "85'022",
-        Station2: '',
-        Station3: '',
-        Station4: '',
-        Station5: '',
-        Station6: '',
-        Station7: '',
-        Station8: '',
-        Station9: '',
-        Station10: '',
+        Station1: "103'207",
+        Station2: 'Ruth Dreifuss',
+        Station3: 'Jakarta',
+        Station4: '2.54cm',
+        Station5: '11.25',
+        Station6: 'Polo',
+        Station7: '1913',
+        Station8: '247cm',
+        Station9: '13',
+        Station10: "1'001'582",
     };
 
     /**
@@ -81,16 +81,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for D
      */
     AnswersD = {
-        Station1: "81’592",
-        Station2: '',
-        Station3: '',
-        Station4: '',
-        Station5: '',
-        Station6: '',
-        Station7: '',
-        Station8: '',
-        Station9: '',
-        Station10: '',
+        Station1: "152'729",
+        Station2: 'Ruth Metzler',
+        Station3: 'Kingston',
+        Station4: '6.1cm',
+        Station5: '6',
+        Station6: 'Schach',
+        Station7: '1856',
+        Station8: '280cm',
+        Station9: '20',
+        Station10: "101'312",
     };
 
     /**
