@@ -162,12 +162,18 @@ export default class SubmittedStation1Screen extends React.Component {
             </TouchableHighlight>
         </View>
 
+        {/* show a stamp such that the user sees right away if his or her answer was right or not */}        
         {this.showStamp()}
 
       </View>
     );
   }
   
+  /**
+   * IDEA:
+   * this method shows a stamp with the text Richtig! in green if the answer given by the user was correct, 
+   * else a red stamp shows up with the text Falsch!
+   */
   showStamp(){
     if(AnswerSheet.getAnswer(1)===AnswerSheet.getRightAnswer(1)){
       return (
