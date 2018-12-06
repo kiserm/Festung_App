@@ -37,8 +37,7 @@ export default class SubmittedStation3Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.submittedStationTextContainer}>
             <Text style={styles.submittedStationTextFormat}>
-              Dies ist eine Testfrage. {"\n"}
-              Wie viel Einwohner hat die Stadt Luzern?
+            {QuestionSheet.getQuestion(3)}
             </Text>
         </View>
 
@@ -68,7 +67,7 @@ export default class SubmittedStation3Screen extends React.Component {
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.chosenAnswerStation3==='A') && styles.submittedStationChosenButtonText,
                             (this.state.chosenAnswerStation3!=this.state.rightAnswerStation3 && this.state.rightAnswerStation3==='A') && styles.submittedStationUnchosenButtonText,
                             ]}>
-                    89'005
+                  Krippe
                 </Text>
               </View>
             </TouchableHighlight>

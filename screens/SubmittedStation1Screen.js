@@ -37,7 +37,7 @@ export default class SubmittedStation1Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.submittedStationTextContainer}>
             <Text style={styles.submittedStationTextFormat}>
-              Wie viel Einwohner hat die Stadt Luzern?
+            {QuestionSheet.getQuestion(1)}
             </Text>
         </View>
 

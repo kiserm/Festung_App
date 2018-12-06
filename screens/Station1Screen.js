@@ -2,6 +2,7 @@ import React from 'react';
 import {Text,View,TouchableHighlight} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
+import QuestionSheet from '../constants/QuestionSheet';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
 
@@ -34,7 +35,7 @@ export default class Station1Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.stationTextContainer}>
             <Text style={styles.stationTextFormat}>
-              Wie viel Einwohner hat die Stadt Luzern?
+              {QuestionSheet.getQuestion(1)}
             </Text>
         </View>
 
@@ -50,7 +51,7 @@ export default class Station1Screen extends React.Component {
                   A:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation1==='A' && styles.stationChosenButtonText]} >
-                  89'005
+                  {QuestionSheet.getAnswerA(1)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -62,7 +63,7 @@ export default class Station1Screen extends React.Component {
                   B:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation1==='B' && styles.stationChosenButtonText]} >
-                  103'005
+                {QuestionSheet.getAnswerB(1)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -76,7 +77,7 @@ export default class Station1Screen extends React.Component {
                   C:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation1==='C' && styles.stationChosenButtonText]} >
-                  56'005
+                {QuestionSheet.getAnswerC(1)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -88,7 +89,7 @@ export default class Station1Screen extends React.Component {
                   D:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation1==='D' && styles.stationChosenButtonText]} >
-                  81’592
+                {QuestionSheet.getAnswerD(1)}
                 </Text>
               </View>
             </TouchableHighlight>

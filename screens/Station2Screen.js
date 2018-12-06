@@ -34,7 +34,7 @@ export default class Station2Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.stationTextContainer}>
             <Text style={styles.stationTextFormat}>
-            Welche Hausnummer hat das Winkelriedhaus an der Engelbergerstrasse in Stans?
+            {QuestionSheet.getQuestion(2)}
             </Text>
         </View>
 

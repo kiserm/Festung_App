@@ -34,8 +34,8 @@ export default class Station5Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.stationTextContainer}>
             <Text style={styles.stationTextFormat}>
-              Dies ist eine Testfrage. {"\n"}
-              Wie viel Einwohner hat die Stadt Luzern?
+            {QuestionSheet.getQuestion(5)}
+
             </Text>
         </View>
 

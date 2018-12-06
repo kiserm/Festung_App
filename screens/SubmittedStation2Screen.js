@@ -37,7 +37,7 @@ export default class SubmittedStation2Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.submittedStationTextContainer}>
             <Text style={styles.submittedStationTextFormat}>
-              Welche Hausnummer hat das Winkelriedhaus an der Engelbergerstrasse in Stans?
+            {QuestionSheet.getQuestion(2)}
             </Text>
         </View>
 

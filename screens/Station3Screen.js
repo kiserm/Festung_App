@@ -34,8 +34,7 @@ export default class Station3Screen extends React.Component {
         {/* write your question text here*/}        
         <View style={styles.stationTextContainer}>
             <Text style={styles.stationTextFormat}>
-              Dies ist eine Testfrage. {"\n"}
-              Wie viel Einwohner hat die Stadt Luzern?
+            {QuestionSheet.getQuestion(3)}
             </Text>
         </View>
 
@@ -51,7 +50,7 @@ export default class Station3Screen extends React.Component {
                   A:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation3==='A' && styles.stationChosenButtonText]} >
-                  89'005
+                  Krippe
                 </Text>
               </View>
             </TouchableHighlight>
@@ -63,7 +62,7 @@ export default class Station3Screen extends React.Component {
                   B:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation3==='B' && styles.stationChosenButtonText]} >
-                  303'005
+                  Salzmagazin
                 </Text>
               </View>
             </TouchableHighlight>
@@ -77,7 +76,7 @@ export default class Station3Screen extends React.Component {
                   C:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation3==='C' && styles.stationChosenButtonText]} >
-                  56'005
+                  Velolüüti
                 </Text>
               </View>
             </TouchableHighlight>
@@ -89,7 +88,7 @@ export default class Station3Screen extends React.Component {
                   D:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation3==='D' && styles.stationChosenButtonText]} >
-                  83’593
+                  Garette
                 </Text>
               </View>
             </TouchableHighlight>
