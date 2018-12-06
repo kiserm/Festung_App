@@ -50,7 +50,7 @@ export default class Station3Screen extends React.Component {
                   A:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation3==='A' && styles.stationChosenButtonText]} >
-                  Krippe
+                {QuestionSheet.getAnswerA(3)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -62,7 +62,7 @@ export default class Station3Screen extends React.Component {
                   B:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation3==='B' && styles.stationChosenButtonText]} >
-                  Salzmagazin
+                {QuestionSheet.getAnswerB(3)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -76,7 +76,7 @@ export default class Station3Screen extends React.Component {
                   C:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation3==='C' && styles.stationChosenButtonText]} >
-                  Velolüüti
+                {QuestionSheet.getAnswerC(3)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -88,7 +88,7 @@ export default class Station3Screen extends React.Component {
                   D:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation3==='D' && styles.stationChosenButtonText]} >
-                  Garette
+                {QuestionSheet.getAnswerD(3)}
                 </Text>
               </View>
             </TouchableHighlight>

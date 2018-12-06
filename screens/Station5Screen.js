@@ -51,7 +51,7 @@ export default class Station5Screen extends React.Component {
                   A:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation5==='A' && styles.stationChosenButtonText]} >
-                  89'005
+                {QuestionSheet.getAnswerA(5)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -63,7 +63,7 @@ export default class Station5Screen extends React.Component {
                   B:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation5==='B' && styles.stationChosenButtonText]} >
-                  503'005
+                {QuestionSheet.getAnswerB(5)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -77,7 +77,7 @@ export default class Station5Screen extends React.Component {
                   C:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation5==='C' && styles.stationChosenButtonText]} >
-                  56'005
+                {QuestionSheet.getAnswerC(5)}
                 </Text>
               </View>
             </TouchableHighlight>
@@ -89,7 +89,7 @@ export default class Station5Screen extends React.Component {
                   D:
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation5==='D' && styles.stationChosenButtonText]} >
-                  85’595
+                {QuestionSheet.getAnswerD(5)}
                 </Text>
               </View>
             </TouchableHighlight>
