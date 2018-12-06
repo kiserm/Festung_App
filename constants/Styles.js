@@ -436,7 +436,8 @@ const styles = StyleSheet.create({
   },
   resultMiddleTextContainer:{
     flex:1,
-    alignItems: 'center',
+    alignItems: 'stretch',
+    alignSelf: 'stretch',
     justifyContent: 'center',
   },
   resultBottomContainer:{

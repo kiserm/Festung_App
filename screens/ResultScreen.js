@@ -44,9 +44,7 @@ export default class ResultScreen extends React.Component {
             </ScrollView>
           </View>
           <View style={styles.resultMiddleTextContainer}>
-              <Text style={styles.resultMiddleText}>
-                  Du hast <Text style={styles.resultMiddleTextBold}>{this.numberOfRightAnswers()}</Text> von <Text style={styles.resultMiddleTextBold}>10</Text> Aufgaben {"\n"}richtig beantwortet.
-              </Text>
+              <Text style={styles.resultMiddleText}> Du hast <Text style={styles.resultMiddleTextBold}>{this.numberOfRightAnswers()}</Text> von <Text style={styles.resultMiddleTextBold}>10</Text> Aufgaben {"\n"} richtig beantwortet. </Text>
           </View>
         </View>
 
