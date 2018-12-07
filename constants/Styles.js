@@ -116,8 +116,8 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
    },
-   howToButtonContainer:{
-    flex: 0.93,
+   howToBottomContainer:{
+    flex: 3,
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
@@ -149,10 +149,19 @@ const styles = StyleSheet.create({
     borderRadius: hp("1%"),
     borderColor: 'rgba(96,100,109, 1)',
     borderWidth: hp("1%"),
-    marginBottom: hp("2%"),
     alignSelf: 'stretch',
     justifyContent: 'center',
     marginHorizontal: wp("5%"),
+    flex:1,
+   },
+   howToButtonAudioStyle:{
+    backgroundColor: 'white',
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    marginBottom: hp("2%"),
+    alignSelf: 'center',
+    justifyContent: 'center',
+    marginHorizontal: wp("11%"),
    },
    howToButtonText:{
     fontSize: hp("3%"),
@@ -161,6 +170,17 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     textAlign: 'center',
     justifyContent:'center'
+   },
+   howToAudioContainer:{
+     flex:2,
+     flexDirection: 'row',
+     justifyContent: 'space-evenly',
+   },
+   howToNextScreenContainer:{
+    flex:1,
+    alignSelf:'stretch',
+    justifyContent:'center',
+    marginBottom: hp("2%"),
    },
    
    // navigationBarIcons style

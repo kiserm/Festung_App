@@ -3,6 +3,11 @@ import {Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import { ScrollView } from 'react-native-gesture-handler';
 
+import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Constants, Audio } from 'expo';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from  this website: https://www.npmjs.com/package/react-native-responsive-screen
+
+
 /**
  * IDEA:
  * This screen should inform the user what the quiz is all about, how the whole process work and what 
@@ -13,6 +18,38 @@ export default class HowToScreen extends React.Component {
     title: "HowToScreen",    // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     header: null, // do not show the navigation header, because the functions should not be available yet
   };
+
+  constructor(props) {
+    super(props);
+    this.howToTextSound = new Audio.Sound();
+    this.state = {
+      audioIsPaused : false,
+    }
+  };
+
+  async componentWillMount(){
+    await this.howToTextSound.loadAsync(require('../assets/sounds/abc.mp3'));
+  }
+
+  async playFunction(){ 
+    if(this.state.audioIsPaused){
+      this.setState({audioIsPaused:false});
+      await this.howToTextSound.playAsync();
+    }   
+    else{
+      await this.howToTextSound.replayAsync();
+    }
+  }
+
+  async pauseFunction(){
+    await this.howToTextSound.pauseAsync();
+    this.setState({audioIsPaused:true});
+  }
+
+  async stopFunction(){
+    await this.howToTextSound.stopAsync();
+  }
+
 
   render() {
     // differ between iOS and Android since on Android the textAlign:justify is only available through the workaround over a webview
@@ -45,7 +82,7 @@ export default class HowToScreen extends React.Component {
         </View>
       );
     } 
-    else{
+    else {
       return (      
         <View style={styles.anyWholeScreen}>
             
@@ -87,7 +124,7 @@ export default class HowToScreen extends React.Component {
   toStationOrToTutorialButton(){
     if(this.props.navigation.getParam('tutorialFlag') === 'true'){
       return (
-        <View style={styles.howToButtonContainer}>
+        <View style={styles.howToBottomContainer}>
           <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1')} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
             <Text style={styles.howToButtonText} numberOfLines={1}>
               zur Station 1
@@ -98,12 +135,25 @@ export default class HowToScreen extends React.Component {
     }
     else{
       return(
-        <View style={styles.howToButtonContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial1')} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+        <View style={styles.howToBottomContainer}>
+          <View style={styles.howToAudioContainer}>
+            <TouchableHighlight onPress={() => {this.playFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+              <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => {this.pauseFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+              <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => {this.stopFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+              <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
+            </TouchableHighlight>
+          </View>
+          <View style={styles.howToNextScreenContainer}>
+            <TouchableHighlight onPress={() => {this.props.navigation.navigate('Tutorial1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
               <Text style={styles.howToButtonText} numberOfLines={1}>
                 zum Tutorial
               </Text>
-          </TouchableHighlight>
+            </TouchableHighlight>
+          </View>
         </View>
       );
     }

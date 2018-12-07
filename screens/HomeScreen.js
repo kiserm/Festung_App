@@ -11,7 +11,7 @@ export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'HomeScreen', // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     header: null, // do not show the navigation header bar because of design reasons
-  };
+  };  
 
   render() {
     return (      
@@ -46,5 +46,6 @@ export default class HomeScreen extends React.Component {
 
       </View>
     );
+    
   }
 }
