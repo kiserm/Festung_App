@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Festung-App-301118",
-    "description": "A very interesting project.",
-    "slug": "Festung-App",
+    "name": "Nidwaldner Museum Quiz",
+    "description": "Dieses App ist ein Quiz für die Dauerausstellung der Festung Fürigen. ",
+    "slug": "Nidwaldner Museum Quiz",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": [
