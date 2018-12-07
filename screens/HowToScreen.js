@@ -86,8 +86,8 @@ export default class HowToScreen extends React.Component {
                   <Text style={styles.howToTextFormat}>
                       Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst
                       hast, kannst Du am Ende bei der Kasse einen Preis abholen. Falls Dir ein paar Fehler unterlaufen 
-                      sollten, musst Du nicht traurig sein. Denn es gibt für jeden, der sich in das Abenteuer 
-                      gestürzt hat, eine kleine Belohnung.
+                      sollten, musst Du nicht traurig sein. Denn es gibt für alle, die sich in das Abenteuer 
+                      gestürzt haben, eine kleine Belohnung.
                   </Text>
               </ScrollView>
           </View>
@@ -116,8 +116,8 @@ export default class HowToScreen extends React.Component {
 
                 "Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst "+
                 "hast, kannst Du am Ende bei der Kasse einen Preis abholen. Falls Dir ein paar Fehler unterlaufen "+
-                "sollten, musst Du nicht traurig sein. Denn es gibt für jeden, der sich in das Abenteuer "+
-                "gestürzt hat, eine kleine Belohnung."+
+                "sollten, musst Du nicht traurig sein. Denn es gibt für alle, die sich in das Abenteuer "+
+                "gestürzt haben, eine kleine Belohnung."+
 
                 "</p></html>"}} 
                 style={styles.howToTextFormatAndroid}
@@ -155,7 +155,7 @@ export default class HowToScreen extends React.Component {
           </View>
           {/* show the navigation button to station 1 since the tutorialFlag is true*/}
           <View style={styles.howToNextScreenContainer}>
-            <TouchableHighlight onPress={() => {this.props.navigation.navigate('Tutorial1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+            <TouchableHighlight onPress={() => {this.stopFunction();this.props.navigation.navigate('Tutorial1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
               <Text style={styles.howToButtonText} numberOfLines={1}>
                 zur Station 1 
               </Text>
@@ -181,7 +181,7 @@ export default class HowToScreen extends React.Component {
           </View>
           {/* show the navigation button to tutorial1 since the tutorialFlag is false */}
           <View style={styles.howToNextScreenContainer}>
-            <TouchableHighlight onPress={() => {this.props.navigation.navigate('Tutorial1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+            <TouchableHighlight onPress={() => {this.stopFunction();this.props.navigation.navigate('Tutorial1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
               <Text style={styles.howToButtonText} numberOfLines={1}>
                 zum Tutorial 
               </Text>
