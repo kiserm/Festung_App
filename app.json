@@ -24,7 +24,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.NidwaldnerMuseum.Nidwaldner_Museum_Quiz"
+    },
+    "android": {
+      "package": "com.NidwaldnerMuseum.Nidwaldner_Museum_Quiz"
     }
   }
 }
