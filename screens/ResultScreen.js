@@ -33,7 +33,7 @@ export default class ResultScreen extends React.Component {
         {/*Set the title of the Screen*/}        
         <View style={styles.resultTitleTextContainer}>
           <Text style={styles.resultTitleTextFormat}>
-            Deine Resultate
+            Auswertung
           </Text>
         </View>   
 
