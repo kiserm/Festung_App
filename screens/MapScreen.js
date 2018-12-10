@@ -15,7 +15,6 @@ export default class MapScreen extends React.Component {
   };
 
   render() {
-    do not use the scrollview on ios since you get a very bad quality while zooming...
     // differ between iOS and Android since on Android the scrollview is not implemented and we need to make a workaround on the webview
     if(Platform.OS === 'ios') {
       return (      
@@ -83,6 +82,6 @@ export default class MapScreen extends React.Component {
   
         </View>
       );
-    //}
+    }
   }
 }
