@@ -15,14 +15,25 @@ export default class ResultScreen extends React.Component {
     header: null, // do not show the header due to the design and the functionalities are no more used at this stage of the quiz
   };
 
+  /**
+   * IDEA:
+   * if the user goes back without an app navigation button, but with native elements like the navigation bar on the bottom on 
+   * android or by swiping to the left and right on ios, we need to be sure that the user can no more modify his given answers
+   * by setting the QuizDone flag to true
+   */
+  componentWillMount(){
+    AnswerSheet.setQuizDoneFlag('true');    
+  }
+
   render() {
+    AnswerSheet.setQuizDoneFlag('true');
     return (      
       <View style={styles.anyWholeScreen}>
         
         {/*Set the title of the Screen*/}        
         <View style={styles.resultTitleTextContainer}>
           <Text style={styles.resultTitleTextFormat}>
-            Resultatblatt
+            Deine Resultate
           </Text>
         </View>   
 

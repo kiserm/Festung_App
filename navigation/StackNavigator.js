@@ -104,6 +104,7 @@ const NavigationStack = createStackNavigator(
           backgroundColor: '#fff',
           height: hp("7%"),
         },
+        gesturesEnabled: false, // this makes it impossible to swipe back on ios!!!
         headerTintColor: 'rgba(96,100,109, 1)', 
         headerTitleStyle: {
         fontWeight: 'normal',

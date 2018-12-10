@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,BackHandler} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -18,10 +18,21 @@ export default class Station1Screen extends React.Component {
   // read out the given answer of the answersheet file to be able to show the chosen button in another design
   constructor(props) {
     super(props);
-    this.state = { chosenAnswerStation1: AnswerSheet.getAnswer(1) };
-  };
-    
+    this.state = { 
+      chosenAnswerStation1: AnswerSheet.getAnswer(1),
+      QuizDoneFlag: AnswerSheet.getQuizDoneFlag(),
+    };
+  };    
+
+  showSubmitScreen(){
+    this.props.navigation.navigate('SubmittedStation1');
+  }
+
+
   render() {
+    if(AnswerSheet.getQuizDoneFlag()==='true'){
+      showSubmitScreen();
+    }
     return (      
       <View style={styles.anyWholeScreen}>
         

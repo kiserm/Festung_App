@@ -28,6 +28,25 @@ export default class HowToScreen extends React.Component {
   };
 
   /**
+   * IDEA:
+   * make that the sound is also playing on ios even if the phone is on silent mode
+   * this is done by setting the playsInSilentModeIOS to true, for more information look in the 
+   * definition of the modes. IMPORTANT: all modes have to be set, otherwise you get an error.
+  */
+  async prepareSound(){
+    // 
+    await Expo.Audio.setIsEnabledAsync(true);
+    await Expo.Audio.setAudioModeAsync({
+      playsInSilentModeIOS: true,
+      allowsRecordingIOS: false,
+      interruptionModeIOS: Expo.Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
+      shouldDuckAndroid: false,
+      interruptionModeAndroid: Expo.Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+      playThroughEarpieceAndroid: false,
+    });
+  }
+
+  /**
    * IDEA: 
    * if the component will mount, load the audio file into the sound object
    */
@@ -42,10 +61,12 @@ export default class HowToScreen extends React.Component {
    */
   async playFunction(){ 
     if(this.state.audioIsPaused){
+      this.prepareSound();
       this.setState({audioIsPaused:false});
       await this.howToTextSound.playAsync();
     }   
     else{
+      this.prepareSound();
       await this.howToTextSound.replayAsync();
     }
   };
@@ -155,7 +176,7 @@ export default class HowToScreen extends React.Component {
           </View>
           {/* show the navigation button to station 1 since the tutorialFlag is true*/}
           <View style={styles.howToNextScreenContainer}>
-            <TouchableHighlight onPress={() => {this.stopFunction();this.props.navigation.navigate('Tutorial1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+            <TouchableHighlight onPress={() => {this.stopFunction();this.props.navigation.navigate('Station1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
               <Text style={styles.howToButtonText} numberOfLines={1}>
                 zur Station 1 
               </Text>
