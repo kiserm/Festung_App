@@ -13,10 +13,9 @@ export default class HintScreen extends React.Component {
                     // know from which screen we are coming hence we would have the wrong hint rendered
   };
 
-  // use the state to read out the name of the screen which was the origin of the navigation, such that we can show the right hint later
   constructor(props) {
     super(props);
-    this.state = { originScreenName: this.props.navigation.getParam('originScreenName') };
+    this.state = { originScreenName: this.props.navigation.getParam('originScreenName') }; // use the state to read out the name of the screen which was the origin of the navigation, such that we can show the right hint later
   };
 
   render() {

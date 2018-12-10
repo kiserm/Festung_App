@@ -178,20 +178,10 @@ export default class OverviewScreen extends React.Component {
      * IDEA: 
      * If not all questions has been answered, make an alert and do not go to the submit screen until all answers
      * are given. To highlight this behavior show the submit button in another color, such that one could assume that
-     * this button is not ready to touch unless you did all the quizzes. if we have already seen our results, we need to 
-     * change the text on the button to 'to the result', since we have already submitted our answers
+     * this button is not ready to touch unless you did all the quizzes. 
      */
     showSubmitButton(){
-        if(this.testAllTasksDone() && AnswerSheet.getQuizDoneFlag()==='true'){
-            return (           
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                    <Text style={styles.overviewButtonText} numberOfLines={1}>
-                        zum Resultat
-                    </Text>
-                </TouchableHighlight>
-            );
-        }
-        else if (this.testAllTasksDone() && AnswerSheet.getQuizDoneFlag()!='true'){
+        if (this.testAllTasksDone()){
             return (           
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                     <Text style={styles.overviewButtonText} numberOfLines={1}>
