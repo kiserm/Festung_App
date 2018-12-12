@@ -19,7 +19,7 @@ export default class HomeScreen extends React.Component {
         
         {/* Set the Logo of the App and add the link to the website when pressing on the image*/}        
         <View style={styles.homeImageContainer}>
-          <TouchableHighlight onPress={()=>{ this.props.navigation.navigate('Map',{tutorialFlag:'false'}) }} underlayColor='rgba(255,255,255,0.5)'>
+          <TouchableHighlight onPress={()=>{ this.props.navigation.navigate('Station1Question',{tutorialFlag:'false'}) }} underlayColor='rgba(255,255,255,0.5)'>
             <Image
               source={require('../assets/images/icon.png')}
               style={styles.homeImageStyle}

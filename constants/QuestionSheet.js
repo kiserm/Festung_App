@@ -9,20 +9,37 @@ export class QuestionSheetClass extends React.Component{
 
     /**
      * IDEA:
+     * this variable holds all the informations to the stations
+     */
+    Infos = {
+        Station1: 'Die Festung war während 50 Jahren – von 1941 bis 1991 – streng geheim damit niemand einen Angriff auf diese planen konnte. Inzwischen weiss man, dass viele Bewohner der Region und sogar manche Touristen darüber Bescheid wussten oder zumindest die Präsenz «von etwas Militärischem» vermuteten. Es sagte aber Niemand etwas, weil sie nichts über die Verteidigungsstrategie der Schweiz verraten wollten. Um die Festung möglichst geheim zu behalten, hat die Armee die Scharten, die ansonsten von der Strasse aus ersichtlich sind, verdeckt und beim Eingang der Festung ein Tarnhaus angebracht.',
+        Station2: '',
+        Station3: '',
+        Station4: '',
+        Station5: '',
+        Station6: '',
+        Station7: '',
+        Station8: '',
+        Station9: '',
+        Station10: '',
+    };
+
+    /**
+     * IDEA:
      * this variable holds all questions set by the administrator. They can be modified here and it get
      * automatically adjusted in the StationScreens and SubmittedStationScreens
      */
     Questions = {
-                Station1: 'Wie viel Einwohner hat die Stadt Luzern? (Stand 2017) ',
-                Station2: 'Wie hiess die erste Bundesrätin der Schweiz zum Nachnamen? ',
-                Station3: 'Was ist die Hauptstadt von Indonesien? ',
-                Station4: 'Wie viel Centimeter sind ein Zoll? ',
-                Station5: 'Was ergibt \n(5+2)*2-9*2+32/8-(5-11)? ',
-                Station6: 'Bei welcher Sportart gibt es eine "spanische Eröffnung"? ',
-                Station7: 'Wann wurde der erste Gotthard Eisenbahntunnel eröffnet? ',
-                Station8: 'Wie gross war / ist der grösste Mensch aller Zeiten gewachsen? ',
-                Station9: 'Wie viel Germanys Next Topmodel Staffeln gab es bis im Dezember 2018?',
-                Station10: 'Wie viel Teslas wurden im Jahr 2017 verkauft? ',
+                Station1: 'Aus welchem Grund war es besonders schwer den Standort der Festung während des Zweiten Weltkriegs geheim zu behalten? Weil...',
+                Station2: '',
+                Station3: '',
+                Station4: '',
+                Station5: '',
+                Station6: '',
+                Station7: '',
+                Station8: '',
+                Station9: '',
+                Station10: '',
     };
     
     /**
@@ -30,7 +47,7 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for A
      */
     AnswersA = {
-        Station1: "81'592",
+        Station1: "sich ein Hotelbetrieb und ein Seebad in der Nähe befanden.",
         Station2: 'Kopp',
         Station3: 'Bangkok',
         Station4: '1.43cm',
@@ -47,7 +64,7 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for B
      */
     AnswersB = {
-        Station1: "56'250",
+        Station1: "sich viele Ausländer in der Region aufhielten.",
         Station2: 'Calmy-Rey',
         Station3: 'Taipeh',
         Station4: '1.65cm',
@@ -64,7 +81,7 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for C
      */
     AnswersC = {
-        Station1: "103'207",
+        Station1: "ein englischer Spion die Festung entdeckt hatte.",
         Station2: 'Dreifuss',
         Station3: 'Jakarta',
         Station4: '2.54cm',
@@ -81,7 +98,7 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for D
      */
     AnswersD = {
-        Station1: "152'729",
+        Station1: "die Festung direkt an einer Strasse liegt.",
         Station2: 'Metzler',
         Station3: 'Kingston',
         Station4: '6.37cm',
@@ -253,8 +270,38 @@ export class QuestionSheetClass extends React.Component{
                 return 'This stationnumber does not exist!'
         }
     };
-    
-    
+
+    /**
+     * IDEA: 
+     * this function is here to be able reading out the info texts everytime and from everywhere in the app
+     * @param {stationNumber is a integer between 1 and the number of Stations in the quiz} StationNumber 
+     */
+    getInfo(StationNumber){
+        switch(StationNumber){
+            case 1:
+                return this.Infos.Station1;
+            case 2:
+                return this.Infos.Station2;
+            case 3:
+                return this.Infos.Station3;
+            case 4:
+                return this.Infos.Station4;
+            case 5:
+                return this.Infos.Station5;
+            case 6:
+                return this.Infos.Station6;
+            case 7:
+                return this.Infos.Station7;
+            case 8:
+                return this.Infos.Station8;
+            case 9:
+                return this.Infos.Station9;
+            case 10:
+                return this.Infos.Station10;
+            default:
+                return 'This stationnumber does not exist!'
+        }
+    };
 }
 
 /**

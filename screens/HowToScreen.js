@@ -4,6 +4,7 @@ import styles from '../constants/Styles'; // for design purpose, import the styl
 import { ScrollView } from 'react-native-gesture-handler';
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Audio} from 'expo';
+import AudioFile from '../constants/AudioFile';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from  this website: https://www.npmjs.com/package/react-native-responsive-screen
 
 /**
@@ -97,7 +98,7 @@ export default class HowToScreen extends React.Component {
           {/*Set the title of the Screen*/}        
           <View style={styles.howToTitleTextContainer}>
             <Text style={styles.howToTitleTextFormat}>
-              So geht's! 
+              Willkommen! 
             </Text>
           </View>  
 
@@ -105,10 +106,24 @@ export default class HowToScreen extends React.Component {
           <View style={styles.howToTextContainer}>
               <ScrollView showsVerticalScrollIndicator={true}>
                   <Text style={styles.howToTextFormat}>
-                      Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst
-                      hast, kannst Du am Ende bei der Kasse einen Preis abholen. Falls Dir ein paar Fehler unterlaufen 
-                      sollten, musst Du nicht traurig sein. Denn es gibt für alle, die sich in das Abenteuer 
-                      gestürzt haben, eine kleine Belohnung.
+                    Die Festung Fürigen ist ein unterirdischer Bunker, der 1941 – während des Zweiten Weltkrieges – 
+                    für die militärische Verteidigung der Schweiz gebaut wurde. Dieser Krieg wütete zwischen den 
+                    Jahren 1939 und 1945. Es waren alle Nachbarländer der Schweiz am Krieg beteiligt. Die Schweiz 
+                    war wie eine kleine neutrale Insel inmitten Europas. 
+                    {"\n"}{"\n"}
+                    Obwohl die Schweiz nicht am Krieg beteiligt war, musste sie sich vor allfälligen Angriffen 
+                    schützen. Aus diesem Grund wurden in den Schweizer Alpen viele Festungen gebaut. In der Festung 
+                    Fürigen wohnten regelmässig Soldaten, um sich für den Ernstfall vorzubereiten. 
+                    {"\n"}{"\n"}
+                    Früher war die Festung streng geheim: Niemand, der davon wusste, durfte darüber reden. Heute 
+                    gehört die Festung nicht mehr der Armee, sondern dient nur noch als Museum.   
+                    {"\n"}{"\n"}
+                    Inzwischen haben es sich die Füchsin Finja und der Dachs Dario in der Festung gemütlich gemacht. 
+                    Sie werden euch beim Rundgang in der Festung begleiten. So werdet ihr gemeinsam die 
+                    wichtigsten Sachen über den Alltag der Soldaten entdecken, die hier früher ihren Militärdienst 
+                    geleistet haben.
+                    {"\n"}{"\n"}
+                    Viel Spass!
                   </Text>
               </ScrollView>
           </View>
@@ -126,7 +141,7 @@ export default class HowToScreen extends React.Component {
           {/*Set the title of the Screen*/}        
           <View style={styles.howToTitleTextContainer}>
             <Text style={styles.howToTitleTextFormat}>
-              So geht's!
+              Willkommen!
             </Text>
           </View>  
                       
@@ -135,10 +150,24 @@ export default class HowToScreen extends React.Component {
                 {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}
                 <WebView source={{ html: "<html><p style='text-align: justify; color:rgba(96,100,109, 1); font-size:6vw;'>"+
 
-                "Bei jeder Station gilt es etwas herauszufinden. Wenn Du alle Rätsel richtig gelöst "+
-                "hast, kannst Du am Ende bei der Kasse einen Preis abholen. Falls Dir ein paar Fehler unterlaufen "+
-                "sollten, musst Du nicht traurig sein. Denn es gibt für alle, die sich in das Abenteuer "+
-                "gestürzt haben, eine kleine Belohnung."+
+                  "Die Festung Fürigen ist ein unterirdischer Bunker, der 1941 – während des Zweiten Weltkrieges – "+
+                  "für die militärische Verteidigung der Schweiz gebaut wurde. "+
+                  "Dieser Krieg wütete zwischen den Jahren 1939 und 1945. Es waren alle Nachbarländer "+
+                  "der Schweiz am Krieg beteiligt. Die Schweiz war wie eine kleine neutrale Insel inmitten Europas. "+
+                  "<br>"+"<br>"+
+                  "Obwohl die Schweiz nicht am Krieg beteiligt war, musste sie sich vor allfälligen Angriffen "+
+                  "schützen. Aus diesem Grund wurden in den Schweizer Alpen viele Festungen gebaut. In der Festung "+
+                  "Fürigen wohnten regelmässig Soldaten, um sich für den Ernstfall vorzubereiten. "+
+                  "<br>"+"<br>"+
+                  "Früher war die Festung streng geheim: Niemand, der davon wusste, durfte darüber reden. Heute "+
+                  "gehört die Festung nicht mehr der Armee, sondern dient nur noch als Museum. "+
+                  "<br>"+"<br>"+
+                  "Inzwischen haben es sich die Füchsin Finja und der Dachs Dario in der Festung gemütlich gemacht. "+
+                  "Sie werden euch beim Rundgang in der Festung begleiten. So werdet ihr gemeinsam die "+
+                  "wichtigsten Sachen über den Alltag der Soldaten entdecken, die hier früher ihren Militärdienst "+
+                  "geleistet haben."+
+                  "<br>"+"<br>"+
+                  "Viel Spass!"+
 
                 "</p></html>"}} 
                 style={styles.howToTextFormatAndroid}
@@ -164,19 +193,19 @@ export default class HowToScreen extends React.Component {
         <View style={styles.howToBottomContainer}>
           {/* show three buttons for the audio file: play, pause and stop*/}
           <View style={styles.howToAudioContainer}>
-            <TouchableHighlight onPress={() => {this.playFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','play')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {this.pauseFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {this.stopFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
           </View>
           {/* show the navigation button to station 1 since the tutorialFlag is true*/}
           <View style={styles.howToNextScreenContainer}>
-            <TouchableHighlight onPress={() => {this.stopFunction();this.props.navigation.navigate('Station1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop');this.props.navigation.navigate('Station1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
               <Text style={styles.howToButtonText} numberOfLines={1}>
                 zur Station 1 
               </Text>

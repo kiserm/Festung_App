@@ -106,12 +106,12 @@ const styles = StyleSheet.create({
    //HowToScreenStyles
    // -----------------------------------------------------------------------------------------------------------------
    howToTitleTextContainer:{
-     flex: 3,
-     marginTop: hp("7%"),
+     flex: 1.5,
+     marginTop: hp("6%"),
      justifyContent: 'flex-start',
    },
    howToTextContainer:{
-    flex: 6,
+    flex: 7,
     marginVertical: hp("3%"),
     alignItems:'center',
     justifyContent:'center',
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("4%"),
     fontWeight: 'normal',
-    textAlign: 'justify',
+    textAlign: 'left',
     marginBottom: hp("4%"),
     marginHorizontal: wp("7%"),
    },
@@ -710,9 +710,9 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   stationChosenButtonText:{
-    fontSize: hp("3%"),
+    fontSize: hp("2.5%"),
     color: 'rgba(96,100,109, 1)',
-    lineHeight: hp("4%"),
+    lineHeight: hp("2.75%"),
     fontWeight: 'normal',
     textAlign: 'right',
     justifyContent:'center',
@@ -729,31 +729,35 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp("1%"),
   },
   stationTitleTextContainer:{
-    flex: 1.5,
+    flex: 2,
     alignItems: 'flex-start',
     justifyContent: 'center',
     paddingHorizontal: wp("9.5%"),
+    backgroundColor:'green',
   },
   stationTitleTextFormat:{
-    fontSize: Platform.OS === 'ios' ? hp("6.4%") : hp("7%"),
+    fontSize: Platform.OS === 'ios' ? hp("5.4%") : hp("6%"),
     color: 'rgba(96,100,109, 1)',
     lineHeight: hp("8%"),
     textAlign: 'center',
     fontWeight: 'bold',
     marginHorizontal: wp("7%"),
-    marginTop: hp("3%"),
+    marginTop: Platform.OS === 'ios' ? hp("1%") : hp("3%")
   },
   stationTextContainer:{
-    flex: 6,
+    flex: 4,
     alignSelf: 'center',
+    justifyContent:'center',
     flexDirection: 'row',
     flexWrap:'wrap',
+    marginBottom: hp("2%"),
+    backgroundColor:'blue',
   },
   stationAnswerContainer:{
     flex: 3
   },
   stationAnswerVerticalContainer:{
-    flex:0.7,
+    flex:3,
     flexDirection: 'row',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
@@ -767,14 +771,14 @@ const styles = StyleSheet.create({
     marginBottom: hp("0.5%"),
   },
   stationUnchosenButtonText:{
-    fontSize: hp("3%"),
+    fontSize: hp("2.5%"),
     color: 'white',
-    lineHeight: hp("4%"),
+    lineHeight: hp("2.75%"),
     fontWeight: 'normal',
     textAlign: 'right',
     justifyContent:'center',
     alignSelf:'center',
-    flex:4,
+    flex:5,
     paddingHorizontal: wp("1%")
   },
   stationUnchosenButtonLetter:{
@@ -796,10 +800,11 @@ const styles = StyleSheet.create({
     marginBottom: hp("1%"),
   },
   stationBottomNextContainer:{
-    flex:0.7,
+    flex:1,
     flexDirection: 'row',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
+    backgroundColor:'red',
   },
   station10NotSubmittableButtonStyle:{
     backgroundColor: 'rgb(211, 211, 211)',

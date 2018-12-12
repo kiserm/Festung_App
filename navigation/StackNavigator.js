@@ -1,7 +1,7 @@
 // import the StackNavigator to be able to switch between screens by putting the 
 // screens on to the stack and if you go back, then the last screen pops from the stack
 import { createStackNavigator } from 'react-navigation';
-import {View,TouchableHighlight,NativeModules} from 'react-native';
+import {View,TouchableHighlight,NativeModules,Text} from 'react-native';
 import React from 'react';
 
 // for the navigation bar: here you can find the whole directory https://oblador.github.io/react-native-vector-icons/
@@ -27,6 +27,16 @@ import Station7Screen from '../screens/Station7Screen';
 import Station8Screen from '../screens/Station8Screen';
 import Station9Screen from '../screens/Station9Screen';
 import Station10Screen from '../screens/Station10Screen';
+import Station1QuestionScreen from '../screens/Station1Question';
+import Station2QuestionScreen from '../screens/Station2Question';
+import Station3QuestionScreen from '../screens/Station3Question';
+import Station4QuestionScreen from '../screens/Station4Question';
+import Station5QuestionScreen from '../screens/Station5Question';
+import Station6QuestionScreen from '../screens/Station6Question';
+import Station7QuestionScreen from '../screens/Station7Question';
+import Station8QuestionScreen from '../screens/Station8Question';
+import Station9QuestionScreen from '../screens/Station9Question';
+import Station10QuestionScreen from '../screens/Station10Question';
 import ResultScreen from '../screens/ResultScreen';
 import CertificateScreen from '../screens/CertificateScreen';
 import OverviewScreen from '../screens/OverviewScreen';
@@ -81,6 +91,16 @@ const NavigationStack = createStackNavigator(
     Station8: Station8Screen, 
     Station9: Station9Screen, 
     Station10: Station10Screen, 
+    Station1Question: Station1QuestionScreen,
+    Station2Question: Station2QuestionScreen,
+    Station3Question: Station3QuestionScreen,
+    Station4Question: Station4QuestionScreen,
+    Station5Question: Station5QuestionScreen,
+    Station6Question: Station6QuestionScreen,
+    Station7Question: Station7QuestionScreen,
+    Station8Question: Station8QuestionScreen,
+    Station9Question: Station9QuestionScreen,
+    Station10Question: Station10QuestionScreen,
     Result: ResultScreen,
     Certificate: CertificateScreen,
     SubmittedStation1: SubmittedStation1Screen,
@@ -129,7 +149,7 @@ const NavigationStack = createStackNavigator(
                             <IconEntypo name="map" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                           </TouchableHighlight>          
                         </View>
-                      ),
+        ),
         // put the overview icon in the left header. onpress we get to the overview screen
         headerLeft: (<View style={styles.headerButtonContainer}>
                           <TouchableHighlight onPress={() => {
@@ -139,10 +159,11 @@ const NavigationStack = createStackNavigator(
                               <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("5%")} color="rgba(96,100,109, 1)"/>
                             </TouchableHighlight>
                       </View>
-                    ), 
+        ), 
         headerBackTitle: null,  // if the title is more than 4 letters, the fallbacktitle will be by default
                                 // 'back' but i do not want this so i set it to null such that the label is 
-                                // no longer shown on android as well as on iOS         
+                                // no longer shown on android as well as on iOS   
+        headerMiddle: (<Text>Hi</Text>),      
       }
     }
   }
