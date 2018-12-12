@@ -20,6 +20,8 @@ export class AudioFile extends React.Component{
       this.Station8InfoSound = new Audio.Sound();
       this.Station9InfoSound = new Audio.Sound();
       this.Station10InfoSound = new Audio.Sound();
+      this.isPaused = false;
+      this.howToTextIsLoaded = false;
       this.state = {
         // if the flag is true, the play method should be invoked, else the replay method
         audioIsPaused : false, 
@@ -51,11 +53,14 @@ export class AudioFile extends React.Component{
       switch(target) {
         case 'HowTo':
         {
-          await this.howToTextSound.loadAsync(require('../assets/sounds/abc.mp3'));
           if(mode==='play'){
-            if(this.state.audioIsPaused){
+            if(this.howToTextIsLoaded===false){
+              await this.howToTextSound.loadAsync(require('../assets/sounds/abc.mp3'));
+              this.howToTextIsLoaded=true;
+            }            
+            if(this.isPaused===true){
               this.prepareSound();
-              this.setState({audioIsPaused:false});
+              this.isPaused=false;
               await this.howToTextSound.playAsync();
             }   
             else{
@@ -65,7 +70,7 @@ export class AudioFile extends React.Component{
           }
           else if (mode==='pause'){
             await this.howToTextSound.pauseAsync();
-            this.setState({audioIsPaused:true});
+            this.isPaused=true;
           }
           else if (mode==='stop'){
             await this.howToTextSound.stopAsync();

@@ -33,7 +33,7 @@ export default class HowToScreen extends React.Component {
    * make that the sound is also playing on ios even if the phone is on silent mode
    * this is done by setting the playsInSilentModeIOS to true, for more information look in the 
    * definition of the modes. IMPORTANT: all modes have to be set, otherwise you get an error.
-  */
+  *//*
   async prepareSound(){
     // 
     await Expo.Audio.setIsEnabledAsync(true);
@@ -50,7 +50,7 @@ export default class HowToScreen extends React.Component {
   /**
    * IDEA: 
    * if the component will mount, load the audio file into the sound object
-   */
+   *//*
   async componentWillMount(){
     await this.howToTextSound.loadAsync(require('../assets/sounds/abc.mp3'));
   };
@@ -59,7 +59,7 @@ export default class HowToScreen extends React.Component {
    * IDEA:
    * this method should continue to play the audio if the is paused flag is true, else
    * it should restart playing the audio from the beginning
-   */
+   *//*
   async playFunction(){ 
     if(this.state.audioIsPaused){
       this.prepareSound();
@@ -75,7 +75,7 @@ export default class HowToScreen extends React.Component {
   /**
    * IDEA:
    * this method pause the audio
-   */
+   *//*
   async pauseFunction(){
     await this.howToTextSound.pauseAsync();
     this.setState({audioIsPaused:true});
@@ -84,11 +84,11 @@ export default class HowToScreen extends React.Component {
   /**
    * IDEA: 
    * this method stops the audio
-   */
+   *//*
   async stopFunction(){
     await this.howToTextSound.stopAsync();
   };
-
+*/
   render() {
     // differ between iOS and Android since on Android the textAlign:justify is only available through the workaround over a webview
     if(Platform.OS === 'ios') {
@@ -193,13 +193,13 @@ export default class HowToScreen extends React.Component {
         <View style={styles.howToBottomContainer}>
           {/* show three buttons for the audio file: play, pause and stop*/}
           <View style={styles.howToAudioContainer}>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','play')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','play',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause',true)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
           </View>
@@ -219,13 +219,13 @@ export default class HowToScreen extends React.Component {
         <View style={styles.howToBottomContainer}>
           {/* show three buttons for the audio file: play, pause and stop*/}
           <View style={styles.howToAudioContainer}>
-            <TouchableHighlight onPress={() => {this.playFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','play')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {this.pauseFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {this.stopFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
           </View>
