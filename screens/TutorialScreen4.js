@@ -1,9 +1,10 @@
 import React from 'react';
-import {Text,View,TouchableHighlight,TouchableWithoutFeedback} from 'react-native';
+import {Text,View,TouchableHighlight,TouchableWithoutFeedback,Alert} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
+import AnswerSheet from '../constants/AnswerSheet';
 
 /**
  * IDEA:
@@ -21,7 +22,7 @@ export default class TutorialScreen4 extends React.Component {
                         <IconEntypo name="light-bulb" size={hp("7%")} color="white"/>
                       </TouchableWithoutFeedback>
                       {/* This is the second button when looking from the left.*/}
-                      <TouchableWithoutFeedback onPress={() => {navigation.navigate('Map')}} style={styles.navigationBarIcons}>
+                      <TouchableWithoutFeedback onPress={() => {navigation.navigate('Map',{originScreenName:'Tutorial4'})}} style={styles.navigationBarIcons}>
                         <IconEntypo name="map" size={hp("7%")} color="#C92732"/>
                       </TouchableWithoutFeedback>          
                     </View>
@@ -66,16 +67,41 @@ export default class TutorialScreen4 extends React.Component {
                 <Text style={styles.tutorialButtonText}> 4 / 5 </Text>
             </TouchableHighlight>
           </View>
-          <View style={styles.tutorialRowBottomContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial5')} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
-                  <Text style={styles.tutorialButtonText}> Weiter </Text>
-            </TouchableHighlight>
-          </View>
+          {this.showAlertOrKeepGoing()}
         </View>
 
         <IconMaterialCommunityIcons name='arrow-up-bold' size={hp('10%')} color='#C92732' style={styles.tutorialMapArrowStyle}/>
 
       </View>
     );
-  }          
+  }     
+  
+  /**
+   * IDEA:
+   * if the user does not open the icon from the tutorial, he can not go to the next screen.
+   */
+  showAlertOrKeepGoing(){
+    if(!this.props.navigation.getParam('iconPressed') && AnswerSheet.getMapSeen()===false){
+      return(
+        <View style={styles.tutorialRowBottomContainer}>
+          <TouchableHighlight onPress={() => {Alert.alert('Achtung',"Klicke oben auf das rote Kartensymbol!");}}
+            underlayColor="rgb(211, 211, 211)" style={styles.tutorialNotYetNextButtonStyle}>
+                <Text style={styles.tutorialButtonText}> Weiter </Text>
+          </TouchableHighlight>
+        </View>
+      );
+    }
+    else{
+      AnswerSheet.setMapSeen(true);
+      return(
+        <View style={styles.tutorialRowBottomContainer}>
+          <TouchableHighlight onPress={() => {this.props.navigation.navigate('Tutorial5');}}
+            underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
+                <Text style={styles.tutorialButtonText}> Weiter </Text>
+          </TouchableHighlight>
+        </View>
+      );
+    }
+  }
+
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import {Text,View,TouchableHighlight,TouchableWithoutFeedback} from 'react-native';
+import {Text,View,TouchableHighlight,TouchableWithoutFeedback,Alert} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from  this website: https://www.npmjs.com/package/react-native-responsive-screen
+import AnswerSheet from '../constants/AnswerSheet';
 
 /**
  * IDEA:
@@ -23,6 +24,13 @@ export default class TutorialScreen2 extends React.Component {
     headerStyle:{height:hp("9%")},
   });
     
+  constructor(props) {
+    super(props);
+    this.state = { 
+      iconPressed : this.props.navigation.getParam('iconPressed'),
+    }
+  };
+
   render() {
     return (      
       <View style={styles.anyWholeScreen}>
@@ -60,16 +68,40 @@ export default class TutorialScreen2 extends React.Component {
                 <Text style={styles.tutorialButtonText}> 2 / 5 </Text> 
             </TouchableHighlight>
           </View>
-          <View style={styles.tutorialRowBottomContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial3')} underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
-                  <Text style={styles.tutorialButtonText}> Weiter </Text>
-            </TouchableHighlight>
-          </View>
+          {this.showAlertOrKeepGoing()}
         </View>
       
         <IconMaterialCommunityIcons name='arrow-up-bold' size={hp('10%')} color='#C92732' style={styles.tutorialOverviewArrowStyle}/>
 
       </View>
     );
-  }          
+  }   
+  
+  /**
+   * IDEA:
+   * if the user does not open the icon from the tutorial, he can not go to the next screen.
+   */
+  showAlertOrKeepGoing(){
+    if(!this.props.navigation.getParam('iconPressed') && AnswerSheet.getOverviewSeen()===false){
+      return(
+        <View style={styles.tutorialRowBottomContainer}>
+          <TouchableHighlight onPress={() => {Alert.alert('Achtung',"Klicke oben auf das rote Listensymbol!");}}
+            underlayColor="rgb(211, 211, 211)" style={styles.tutorialNotYetNextButtonStyle}>
+                <Text style={styles.tutorialButtonText}> Weiter </Text>
+          </TouchableHighlight>
+        </View>
+      );
+    }
+    else{
+      AnswerSheet.setOverviewSeen(true);
+      return(
+        <View style={styles.tutorialRowBottomContainer}>
+          <TouchableHighlight onPress={() => {this.props.navigation.navigate('Tutorial3',{iconPressed:false});}}
+            underlayColor="rgba(96,100,109, 1)" style={styles.tutorialButtonStyle}>
+                <Text style={styles.tutorialButtonText}> Weiter </Text>
+          </TouchableHighlight>
+        </View>
+      );
+    }
+  }
 }

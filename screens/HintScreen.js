@@ -51,13 +51,8 @@ export default class HintScreen extends React.Component {
           </View>
         </View>
 
-        {/*give the back navigation since we do not have a header*/}     
-        <View style={styles.hintBottomContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.hintButtonStyle}>
-              <Text style={styles.hintButtonText} numberOfLines={1}> Zurück </Text>
-          </TouchableHighlight>
-        </View>
-
+        {/*give the back button to not have a dead end*/}     
+        {this.showRightBackButton()}
       </View>
     );     
   }
@@ -134,5 +129,32 @@ export default class HintScreen extends React.Component {
       default:
         return null;
     };
+  }
+
+  /**
+   * IDEA:
+   * the back button coming from the tutorialscreen should carry the iconPressed navigation parameter, hence we need 
+   * a function to render the same button but with another functionality in the background
+   */
+  showRightBackButton(){
+    if(this.state.originScreenName==='Tutorial3'){
+      return (
+        <View style={styles.hintBottomContainer}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial3',{iconPressed:true})} underlayColor="rgba(96,100,109, 1)" style={styles.hintButtonStyle}>
+              <Text style={styles.hintButtonText} numberOfLines={1}> Zurück </Text>
+          </TouchableHighlight>
+        </View>
+
+      );
+    }
+    else {
+      return (
+        <View style={styles.hintBottomContainer}>
+          <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.hintButtonStyle}>
+              <Text style={styles.hintButtonText} numberOfLines={1}> Zurück </Text>
+          </TouchableHighlight>
+        </View>
+      );
+    }
   }
 }

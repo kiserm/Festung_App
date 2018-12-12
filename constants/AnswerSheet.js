@@ -169,23 +169,40 @@ class AnswerSheetClass{
         return this.numberOfRightAnswers;
     };
 
-   /**
-   * IDEA:
-   * if the user goes back without an app navigation button, but with native elements like the navigation bar on the bottom on 
-   * android or by swiping to the left and right on ios, we need to be sure that the user can no more modify his given answers
-   * by setting the QuizDone flag to true. the flag is set to true if the user is the first time on the result screen.
-   * if so, then the links on the overview screen should point to the submittedStationScreens, and every other screen should
-   * navigate to the submittedstation screen
-   */
-    QuizDoneFlag = 'false';
-    
-    getQuizDoneFlag(){
-        return this.QuizDoneFlag;
-    }
 
-    setQuizDoneFlag(newFlag){
-        this.QuizDoneFlag = newFlag;
-    }
+    /**
+     * IDEA:
+     * if the user makes the tutorial and has already seen the icons and pressed on it, but then he want to go back one screen,
+     * if so he is no more obliged to press the icon again. these flags make that this idea will work on. used only in tutorialscreens
+     * the get and set functions are implemented in the follwing
+     */
+    OverviewSeen = false;
+    HintSeen= false;
+    MapSeen= false;
+
+    getOverviewSeen(){
+        return this.OverviewSeen;
+    };
+
+    getHintSeen(){
+        return this.HintSeen;
+    };
+
+    getMapSeen(){
+        return this.MapSeen;
+    };
+
+    setOverviewSeen(flag){
+        this.OverviewSeen = flag;
+    };
+
+    setHintSeen(flag){
+        this.HintSeen = flag;
+    };
+
+    setMapSeen(flag){
+        this.MapSeen = flag;
+    };
 }
 
 /**

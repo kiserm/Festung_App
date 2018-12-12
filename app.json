@@ -2,7 +2,7 @@
   "expo": {
     "name": "NidwaldnerMuseumQuiz",
     "description": "Dieses App ist ein Quiz für die Dauerausstellung der Festung Fürigen. ",
-    "slug": "nidwaldner-museum-quiz",
+    "slug": "nidwaldner-museum-quiz-h",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": [
@@ -13,7 +13,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/images/planFestung.png",
+      "image": "./assets/images/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

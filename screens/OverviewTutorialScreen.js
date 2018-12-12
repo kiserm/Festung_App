@@ -156,7 +156,7 @@ export default class OverviewScreenTutorial extends React.Component {
                 {/* show at the bottom two buttons, one to get back and one to submit your answers if and only if all quizzes has ben solved. */}        
                 <View style={styles.overviewBottomContainer}>
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial2',{iconPressed:true})} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 zurück
                             </Text>

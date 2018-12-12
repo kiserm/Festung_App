@@ -425,10 +425,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   mapWebViewStyle:{
-    alignSelf: 'center',
-    justifyContent: 'center',
     width: wp("100%"),
     height: hp("70%"),
+    flex:1,
   },
   mapButtonStyle:{
     backgroundColor: 'rgba(96,100,109, 1)',
@@ -989,6 +988,17 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     textAlign: 'center',
     justifyContent:'center',
+  },
+  tutorialNotYetNextButtonStyle:{
+    backgroundColor: 'rgb(211, 211, 211)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgb(211, 211, 211)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("1%"),
+    flex:1,
+    alignItems:'center',
   },
 
   // submitStation styles
