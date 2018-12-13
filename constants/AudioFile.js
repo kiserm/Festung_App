@@ -22,16 +22,16 @@ export class AudioFile extends React.Component{
       this.Station10InfoSound = new Audio.Sound();
       // variables to handle pause and play
       this.isPausedHowTo = true;
-      this.isPausedStation1Info = false;
-      this.isPausedStation2Info = false;
-      this.isPausedStation3Info = false;
-      this.isPausedStation4Info = false;
-      this.isPausedStation5Info = false;
-      this.isPausedStation6Info = false;
-      this.isPausedStation7Info = false;
-      this.isPausedStation8Info = false;
-      this.isPausedStation9Info = false;
-      this.isPausedStation10Info = false;
+      this.isPausedStation1Info = true;
+      this.isPausedStation2Info = true;
+      this.isPausedStation3Info = true;
+      this.isPausedStation4Info = true;
+      this.isPausedStation5Info = true;
+      this.isPausedStation6Info = true;
+      this.isPausedStation7Info = true;
+      this.isPausedStation8Info = true;
+      this.isPausedStation9Info = true;
+      this.isPausedStation10Info = true;
       // variables to handle not multiple loading of the audio files
       this.howToTextIsLoaded = false;
       this.station1InfoTextIsLoaded = false;
@@ -55,7 +55,26 @@ export class AudioFile extends React.Component{
       switch(target){
         case 'HowTo':
           return !this.isPausedHowTo;
-      }
+        case 'Station1Info':
+          return !this.isPausedStation1Info;
+        case 'Station2Info':
+          return !this.isPausedStation2Info;
+        case 'Station3Info':
+          return !this.isPausedStation3Info;
+        case 'Station4Info':
+          return !this.isPausedStation4Info;
+        case 'Station5Info':
+          return !this.isPausedStation5Info;
+        case 'Station6Info':
+          return !this.isPausedStation6Info;
+        case 'Station7Info':
+          return !this.isPausedStation7Info;
+        case 'Station8Info':
+          return !this.isPausedStation8Info;
+        case 'Station9Info':
+          return !this.isPausedStation9Info;
+        case 'Station10Info':
+          return !this.isPausedStation10Info;      }
     }
 
     /**
@@ -121,10 +140,12 @@ export class AudioFile extends React.Component{
               this.station1InfoTextIsLoaded=true;
             }            
             if(this.isPausedStation1Info===true){
+              this.prepareSound();
               this.isPausedStation1Info=false;
               await this.Station1InfoSound.playAsync();
             }   
             else{
+              this.prepareSound();
               await this.Station1InfoSound.replayAsync();
             }
           }
