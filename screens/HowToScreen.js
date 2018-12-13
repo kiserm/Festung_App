@@ -146,7 +146,7 @@ export default class HowToScreen extends React.Component {
             underlayColor="rgba(96,100,109, 1)" 
             style={styles.howToButtonStyle}>
               <Text style={styles.howToButtonText} numberOfLines={1}>
-                zum Tutorial 
+                Los gehts! 
               </Text>
             </TouchableHighlight>
           </View>
