@@ -149,11 +149,11 @@ export class AudioFile extends React.Component{
               await this.Station1InfoSound.replayAsync();
             }
           }
-          else if (mode==='pause'){
+          else if (mode==='pause' && this.station1InfoTextIsLoaded===true){
             await this.Station1InfoSound.pauseAsync();
             this.isPausedStation1Info=true;
           }
-          else if (mode==='stop'){
+          else if (mode==='stop' && this.station1InfoTextIsLoaded===true){
             await this.Station1InfoSound.stopAsync();
           }
           else{
@@ -179,11 +179,11 @@ export class AudioFile extends React.Component{
                 await this.Station2InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station2InfoTextIsLoaded===true){
               await this.Station2InfoSound.pauseAsync();
               this.isPausedStation2Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop' && this.station2InfoTextIsLoaded===true){
               await this.Station2InfoSound.stopAsync();
             }
             else{
@@ -210,11 +210,11 @@ export class AudioFile extends React.Component{
                 await this.Station3InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station3InfoTextIsLoaded===true){
               await this.Station3InfoSound.pauseAsync();
               this.isPausedStation3Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop' && this.station3InfoTextIsLoaded===true){
               await this.Station3InfoSound.stopAsync();
             }
             else{
@@ -244,11 +244,11 @@ export class AudioFile extends React.Component{
                 await this.Station4InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station4InfoTextIsLoaded===true){
               await this.Station4InfoSound.pauseAsync();
               this.isPausedStation4Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop' && this.station4InfoTextIsLoaded===true){
               await this.Station4InfoSound.stopAsync();
             }
             else{
@@ -275,11 +275,11 @@ export class AudioFile extends React.Component{
                 await this.Station5InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station5InfoTextIsLoaded===true){
               await this.Station5InfoSound.pauseAsync();
               this.isPausedStation5Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop' && this.station5InfoTextIsLoaded===true){
               await this.Station5InfoSound.stopAsync();
             }
             else{
@@ -306,11 +306,11 @@ export class AudioFile extends React.Component{
                 await this.Station6InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station6InfoTextIsLoaded===true){
               await this.Station6InfoSound.pauseAsync();
               this.isPausedStation6Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop' && this.station6InfoTextIsLoaded===true){
               await this.Station6InfoSound.stopAsync();
             }
             else{
@@ -337,11 +337,11 @@ export class AudioFile extends React.Component{
                 await this.Station7InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station7InfoTextIsLoaded===true){
               await this.Station7InfoSound.pauseAsync();
               this.isPausedStation7Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop' && this.station7InfoTextIsLoaded===true){
               await this.Station7InfoSound.stopAsync();
             }
             else{
@@ -368,11 +368,11 @@ export class AudioFile extends React.Component{
                 await this.Station8InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station8InfoTextIsLoaded===true){
               await this.Station8InfoSound.pauseAsync();
               this.isPausedStation8Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop' && this.station8InfoTextIsLoaded===true){
               await this.Station8InfoSound.stopAsync();
             }
             else{
@@ -399,11 +399,11 @@ export class AudioFile extends React.Component{
                 await this.Station9InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station9InfoTextIsLoaded===true){
               await this.Station9InfoSound.pauseAsync();
               this.isPausedStation9Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop' && this.station9InfoTextIsLoaded===true){
               await this.Station9InfoSound.stopAsync();
             }
             else{
@@ -430,11 +430,11 @@ export class AudioFile extends React.Component{
                 await this.Station10InfoSound.replayAsync();
               }
             }
-            else if (mode==='pause'){
+            else if (mode==='pause' && this.station10InfoTextIsLoaded===true){
               await this.Station10InfoSound.pauseAsync();
               this.isPausedStation10Info=true;
             }
-            else if (mode==='stop'){
+            else if (mode==='stop'  && this.station10InfoTextIsLoaded===true){
               await this.Station10InfoSound.stopAsync();
             }
             else{
