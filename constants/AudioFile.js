@@ -120,11 +120,11 @@ export class AudioFile extends React.Component{
               await this.howToTextSound.replayAsync();
             }
           }
-          else if (mode==='pause'){
+          else if (mode==='pause' && this.howToTextIsLoaded===true){
             await this.howToTextSound.pauseAsync();
             this.isPausedHowTo=true;
           }
-          else if (mode==='stop'){
+          else if (mode==='stop' && this.howToTextIsLoaded===true){
             await this.howToTextSound.stopAsync();
           }
           else{

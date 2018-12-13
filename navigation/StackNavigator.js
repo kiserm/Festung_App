@@ -134,7 +134,7 @@ const NavigationStack = createStackNavigator(
         },
         // put two icons in the right header: mapIcon onpress to the mapScreen and hintIcon onpress to the hintScreen
         headerRight: ( <View style={styles.headerButtonContainer}>
-                          {/* This is the first button when looking from the left.*/}
+                          {/* This is the first button when looking from the left.*//*}
                           <TouchableHighlight onPress={() => {
                                                               navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
                                                             }

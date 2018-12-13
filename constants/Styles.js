@@ -729,8 +729,9 @@ const styles = StyleSheet.create({
     borderWidth: hp("1%"),
     alignSelf: 'stretch',
     justifyContent: 'center',
-    marginHorizontal: wp("3%"),
+    marginHorizontal: wp("5%"),
     alignItems:'center',
+    width: wp("40%"),
   },
   stationInfoNextButtonText:{
     fontSize: hp("3%"),
@@ -740,10 +741,12 @@ const styles = StyleSheet.create({
     alignSelf:'center',
   },
   stationInfoBottomNextContainer:{
-    flex:1.8,
-    alignSelf:'stretch',
+    flex:1,
+    alignSelf:'center',
     alignItems: 'center',
-    justifyContent:'center',
+    justifyContent:'space-evenly',
+    flexDirection: 'row',
+    marginVertical: hp("1.5%"),
   },
 
   // stations style
@@ -1175,9 +1178,9 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   submittedStationChosenButtonText:{
-    fontSize: hp("3%"),
+    fontSize: hp("2.5%"),
     color: 'rgb(211, 211, 211)',
-    lineHeight: hp("4%"),
+    lineHeight: hp("2.75%"),
     fontWeight: 'normal',
     textAlign: 'right',
     justifyContent:'center',
