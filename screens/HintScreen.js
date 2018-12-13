@@ -31,7 +31,7 @@ export default class HintScreen extends React.Component {
           </View> 
           {/*Put the image of the clever fox in the right upper corner*/}
           <View style={styles.hintImageContainer}>
-            <Image source={require('../assets/images/foxGivesHint.png')} style={styles.hintImageStyle}/>
+            {/*<Image source={require('../assets/images/foxGivesHint.png')} style={styles.hintImageStyle}/>*/}
           </View>
         </View>
 

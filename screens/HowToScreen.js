@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
+import {Text,View,TouchableHighlight,Platform,WebView,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import { ScrollView } from 'react-native-gesture-handler';
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -42,6 +42,10 @@ export default class HowToScreen extends React.Component {
 
           {/* show the right button depending if we still need to do the tutorial or not*/}   
           {this.toStationOrToTutorialButton()}
+
+          <View style={styles.howToBadgersContainer}>
+            <Image source={require('../assets/images/badgerHowTo.png')} style={styles.howToBadgerImageStyle}/>
+          </View>
   
         </View>
       );
@@ -69,6 +73,10 @@ export default class HowToScreen extends React.Component {
 
           {/* show the right button depending if we still need to do the tutorial or not*/}   
           {this.toStationOrToTutorialButton()}
+
+          <View style={styles.howToBadgersContainer}>
+            <Image source={require('../assets/images/badgerHowTo.png')} style={styles.howToBadgerImageStyle}/>
+          </View>
     
         </View>
       );

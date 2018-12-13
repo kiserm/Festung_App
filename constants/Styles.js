@@ -182,6 +182,24 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     marginBottom: hp("2%"),
    },
+   howToBadgersContainer:{
+     position: 'absolute',
+     top: -hp("3%"),
+     right: 0,
+     left: wp("76%"),
+     bottom:0,
+     zIndex:100,
+     width: wp("50%"),
+     height: hp("50%"),
+     backgroundColor: 'rgba(255,255,255,0)',
+   },
+   howToBadgerImageStyle:{
+    width: wp("40%"),
+    height: hp("30%"),
+    alignSelf: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.2)',
+   },
    
    // navigationBarIcons style
    // -----------------------------------------------------------------------------------------------------------------

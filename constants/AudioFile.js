@@ -167,7 +167,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station2InfoTextIsLoaded===false){
                 this.station2InfoTextIsLoaded=true;
-                await this.Station2InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station2InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }            
               if(this.isPausedStation2Info===true){
                 this.prepareSound();
@@ -198,7 +198,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station3InfoTextIsLoaded===false){
                 this.station3InfoTextIsLoaded=true;
-                await this.Station3InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station3InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }            
               if(this.isPausedStation3Info===true){
                 this.prepareSound();
@@ -229,7 +229,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station4InfoTextIsLoaded===false){
                 this.station4InfoTextIsLoaded=true;
-                await this.Station4InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station4InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }
               else {
                 // do here something if the audio is loading and the user wants to listen to the audio!
@@ -263,7 +263,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station5InfoTextIsLoaded===false){
                 this.station5InfoTextIsLoaded=true;
-                await this.Station5InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station5InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }            
               if(this.isPausedStation5Info===true){
                 this.prepareSound();
@@ -294,7 +294,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station6InfoTextIsLoaded===false){
                 this.station6InfoTextIsLoaded=true;
-                await this.Station6InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station6InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }            
               if(this.isPausedStation6Info===true){
                 this.prepareSound();
@@ -325,7 +325,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station7InfoTextIsLoaded===false){
                 this.station7InfoTextIsLoaded=true;
-                await this.Station7InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station7InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }            
               if(this.isPausedStation7Info===true){
                 this.prepareSound();
@@ -356,7 +356,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station8InfoTextIsLoaded===false){
                 this.station8InfoTextIsLoaded=true;
-                await this.Station8InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station8InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }            
               if(this.isPausedStation8Info===true){
                 this.prepareSound();
@@ -387,7 +387,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station9InfoTextIsLoaded===false){
                 this.station9InfoTextIsLoaded=true;
-                await this.Station9InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station9InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }            
               if(this.isPausedStation9Info===true){
                 this.prepareSound();
@@ -418,7 +418,7 @@ export class AudioFile extends React.Component{
             if(mode==='play'){
               if(this.station10InfoTextIsLoaded===false){
                 this.station10InfoTextIsLoaded=true;
-                await this.Station10InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                await this.Station10InfoSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               }            
               if(this.isPausedStation10Info===true){
                 this.prepareSound();
