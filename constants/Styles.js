@@ -834,11 +834,25 @@ const styles = StyleSheet.create({
     flexWrap:'wrap',
     marginBottom: hp("2%"),
   },
+  stationTextContainerSlimFit:{
+    flex: 8,
+    alignSelf: 'center',
+    justifyContent:'center',
+    flexDirection: 'row',
+    flexWrap:'wrap',
+    marginBottom: hp("2%"),
+  },
   stationAnswerContainer:{
     flex: 3
   },
   stationAnswerVerticalContainer:{
     flex:3,
+    flexDirection: 'row',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
+  stationAnswerVerticalContainerSlimFit:{
+    flex:1.5,
     flexDirection: 'row',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),

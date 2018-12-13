@@ -33,7 +33,7 @@ export default class Station10QuestionScreen extends React.Component {
         </View>     
         
         {/* write your question text here*/}        
-        <View style={styles.stationTextContainer}>
+        <View style={styles.stationTextContainerSlimFit}>
           <ScrollView>
             <Text style={styles.stationTextFormat}>
               {QuestionSheet.getQuestion(10)}
@@ -42,15 +42,15 @@ export default class Station10QuestionScreen extends React.Component {
         </View>
 
         {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
-              A: ...         B: ...
-              C: ...         D: ...
+              A ...         B ...
+              C ...         D ...
         */}   
-        <View style={styles.stationAnswerVerticalContainer}>
+        <View style={styles.stationAnswerVerticalContainerSlimFit}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(10,'A'), this.setState({chosenAnswerStation10: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation10==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation10==='A' && styles.stationChosenButtonLetter]}>
-                  A:
+                  A
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation10==='A' && styles.stationChosenButtonText]}>
                   {QuestionSheet.getAnswerA(10)}
@@ -62,7 +62,7 @@ export default class Station10QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(10,'B'), this.setState({chosenAnswerStation10: 'B'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation10==='B' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation10==='B' && styles.stationChosenButtonLetter]} >
-                  B:
+                  B
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation10==='B' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerB(10)}
@@ -71,12 +71,12 @@ export default class Station10QuestionScreen extends React.Component {
             </TouchableHighlight>
           </View>
         </View>
-        <View style={styles.stationAnswerVerticalContainer}>
+        <View style={styles.stationAnswerVerticalContainerSlimFit}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(10,'C'), this.setState({chosenAnswerStation10: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation10==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation10==='C' && styles.stationChosenButtonLetter]} >
-                  C:
+                  C
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation10==='C' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerC(10)}
@@ -88,7 +88,7 @@ export default class Station10QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(10,'D'), this.setState({chosenAnswerStation10: 'D'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation10==='D' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation10==='D' && styles.stationChosenButtonLetter]} >
-                  D:
+                  D
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation10==='D' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerD(10)}

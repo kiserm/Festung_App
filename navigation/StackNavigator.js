@@ -124,7 +124,7 @@ const NavigationStack = createStackNavigator(
           backgroundColor: '#fff',
           height: hp("7%"),
         },
-        gesturesEnabled: false, // this makes it impossible to swipe back on ios!!!
+        gesturesEnabled: true, // this makes it impossible to swipe back on ios!!!if the value is false
         headerTintColor: 'rgba(96,100,109, 1)', 
         headerTitleStyle: {
         fontWeight: 'normal',
@@ -163,7 +163,6 @@ const NavigationStack = createStackNavigator(
         headerBackTitle: null,  // if the title is more than 4 letters, the fallbacktitle will be by default
                                 // 'back' but i do not want this so i set it to null such that the label is 
                                 // no longer shown on android as well as on iOS   
-        headerMiddle: (<Text>Hi</Text>),      
       }
     }
   }

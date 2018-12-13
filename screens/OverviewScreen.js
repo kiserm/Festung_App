@@ -186,7 +186,7 @@ export default class OverviewScreen extends React.Component {
      * this button is not ready to touch unless you did all the quizzes. 
      */
     showSubmitButton(){
-        if (this.testAllTasksDone()){
+        if (!this.testAllTasksDone()){
             return (           
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                     <Text style={styles.overviewButtonText} numberOfLines={1}>

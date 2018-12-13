@@ -107,7 +107,7 @@ export class AudioFile extends React.Component{
         {
           if(mode==='play'){
             if(this.howToTextIsLoaded===false){
-              await this.howToTextSound.loadAsync(require('../assets/sounds/abc.mp3'));
+              await this.howToTextSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));
               this.howToTextIsLoaded=true;
             }            
             if(this.isPausedHowTo===true){
@@ -163,48 +163,282 @@ export class AudioFile extends React.Component{
         }
         case 'Station2Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station2InfoTextIsLoaded===false){
+                await this.Station2InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station2InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation2Info===true){
+                this.prepareSound();
+                this.isPausedStation2Info=false;
+                await this.Station2InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station2InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station2InfoSound.pauseAsync();
+              this.isPausedStation2Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station2InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
         case 'Station3Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station3InfoTextIsLoaded===false){
+                await this.Station3InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station3InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation3Info===true){
+                this.prepareSound();
+                this.isPausedStation3Info=false;
+                await this.Station3InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station3InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station3InfoSound.pauseAsync();
+              this.isPausedStation3Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station3InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
         case 'Station4Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station4InfoTextIsLoaded===false){
+                await this.Station4InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station4InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation4Info===true){
+                this.prepareSound();
+                this.isPausedStation4Info=false;
+                await this.Station4InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station4InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station4InfoSound.pauseAsync();
+              this.isPausedStation4Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station4InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
         case 'Station5Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station5InfoTextIsLoaded===false){
+                await this.Station5InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station5InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation5Info===true){
+                this.prepareSound();
+                this.isPausedStation5Info=false;
+                await this.Station5InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station5InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station5InfoSound.pauseAsync();
+              this.isPausedStation5Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station5InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
         case 'Station6Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station6InfoTextIsLoaded===false){
+                await this.Station6InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station6InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation6Info===true){
+                this.prepareSound();
+                this.isPausedStation6Info=false;
+                await this.Station6InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station6InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station6InfoSound.pauseAsync();
+              this.isPausedStation6Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station6InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
         case 'Station7Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station7InfoTextIsLoaded===false){
+                await this.Station7InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station7InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation7Info===true){
+                this.prepareSound();
+                this.isPausedStation7Info=false;
+                await this.Station7InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station7InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station7InfoSound.pauseAsync();
+              this.isPausedStation7Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station7InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
         case 'Station8Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station8InfoTextIsLoaded===false){
+                await this.Station8InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station8InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation8Info===true){
+                this.prepareSound();
+                this.isPausedStation8Info=false;
+                await this.Station8InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station8InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station8InfoSound.pauseAsync();
+              this.isPausedStation8Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station8InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
         case 'Station9Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station9InfoTextIsLoaded===false){
+                await this.Station9InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station9InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation9Info===true){
+                this.prepareSound();
+                this.isPausedStation9Info=false;
+                await this.Station9InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station9InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station9InfoSound.pauseAsync();
+              this.isPausedStation9Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station9InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
         case 'Station10Info':
         {
-          
-          break;
+          {
+            if(mode==='play'){
+              if(this.station10InfoTextIsLoaded===false){
+                await this.Station10InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+                this.station10InfoTextIsLoaded=true;
+              }            
+              if(this.isPausedStation10Info===true){
+                this.prepareSound();
+                this.isPausedStation10Info=false;
+                await this.Station10InfoSound.playAsync();
+              }   
+              else{
+                this.prepareSound();
+                await this.Station10InfoSound.replayAsync();
+              }
+            }
+            else if (mode==='pause'){
+              await this.Station10InfoSound.pauseAsync();
+              this.isPausedStation10Info=true;
+            }
+            else if (mode==='stop'){
+              await this.Station10InfoSound.stopAsync();
+            }
+            else{
+              // error this mode does not exist
+            }          
+            break;
+          }
         }
       };
     };
