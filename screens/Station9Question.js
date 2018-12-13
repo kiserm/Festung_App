@@ -50,7 +50,7 @@ export default class Station9QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(9,'A'), this.setState({chosenAnswerStation9: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation9==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation9==='A' && styles.stationChosenButtonLetter]}>
-                  A:
+                  A
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation9==='A' && styles.stationChosenButtonText]}>
                   {QuestionSheet.getAnswerA(9)}
@@ -62,7 +62,7 @@ export default class Station9QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(9,'B'), this.setState({chosenAnswerStation9: 'B'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation9==='B' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation9==='B' && styles.stationChosenButtonLetter]} >
-                  B:
+                  B
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation9==='B' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerB(9)}
@@ -76,7 +76,7 @@ export default class Station9QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(9,'C'), this.setState({chosenAnswerStation9: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation9==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation9==='C' && styles.stationChosenButtonLetter]} >
-                  C:
+                  C
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation9==='C' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerC(9)}
@@ -88,7 +88,7 @@ export default class Station9QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(9,'D'), this.setState({chosenAnswerStation9: 'D'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation9==='D' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation9==='D' && styles.stationChosenButtonLetter]} >
-                  D:
+                  D
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation9==='D' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerD(9)}

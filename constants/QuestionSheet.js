@@ -12,6 +12,7 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all the informations to the stations
      */
     Infos = {
+        HowTo: 'Die Festung Fürigen ist ein unterirdischer Bunker, der für die militärische Verteidigung der Schweiz 1941 – während des Zweiten Weltkrieges – gebaut wurde. Dieser Krieg wütete zwischen den Jahren 1939 und 1945. Es waren alle Nachbarländer der Schweiz am Krieg beteiligt. Die Schweiz war wie eine kleine neutrale Insel inmitten Europas. Obwohl die Schweiz nicht am Krieg beteiligt war, musste sie sich vor allfälligen Angriffen schützen. Aus diesem Grund wurden in den Schweizer Alpen viele Festungen gebaut. In der Festung Fürigen wohnten regelmässig Soldaten, um sich für den Ernstfall vorzubereiten. Früher war die Festung streng geheim: Niemand, der davon wusste, durfte darüber reden. Heute gehört die Festung nicht mehr der Armee und dient nur noch als Museum. Inzwischen haben es sich die Füchsin Finja und der Dachs Dario in der Festung gemütlich gemacht. Sie werden euch auf einem Rundgang durch die Festung begleiten. So werdet ihr gemeinsam die wichtigsten Sachen über den Alltag der Soldaten, die hier früher ihren Militärdienst gemacht haben, erfahren. Viel Spass!',
         Station1: 'Die Festung war während 50 Jahren – von 1941 bis 1991 – streng geheim damit niemand einen Angriff auf diese planen konnte. Inzwischen weiss man, dass viele Bewohner der Region und sogar manche Touristen darüber Bescheid wussten oder zumindest die Präsenz «von etwas Militärischem» vermuteten. Es sagte aber Niemand etwas, weil sie nichts über die Verteidigungsstrategie der Schweiz verraten wollten. Um die Festung möglichst geheim zu behalten, hat die Armee die Scharten, die ansonsten von der Strasse aus ersichtlich sind, verdeckt und beim Eingang der Festung ein Tarnhaus angebracht.',
         Station2: '',
         Station3: '',
@@ -20,8 +21,8 @@ export class QuestionSheetClass extends React.Component{
         Station6: '',
         Station7: '',
         Station8: '',
-        Station9: '',
-        Station10: '',
+        Station9: 'Um die Wasserversorgung innerhalb der Festung jederzeit zu gewährleisten, wurde ein Wasserreservoir eingebaut, welches sich oberhalb des Vorratraums befindet. Das Becken, das du auf dem Foto siehst kann bis zu 50’000 Liter Wasser fassen.',
+        Station10: 'Auf diesem Stock haben die Soldaten und ihre Vorgesetzten geschlafen. Wusstet ihr, dass jeder Soldat seinen Schlafplatz mit einem seiner Kollegen teilen musste? Die Soldaten arbeiteten nämlich im Schichtbetrieb. Das heisst, dass jeweils ein Drittel der Soldaten auf Arbeit war, ein Drittel in Reserve und ein Drittel auf Ruhezeit. Um Platz zu sparen, wurden nur 52 Mannschaftsbetten eingebaut, sodass nur die Mannschaft schlafen konnte, die gerade auf Ruhezeit war.',
     };
 
     /**
@@ -38,8 +39,8 @@ export class QuestionSheetClass extends React.Component{
                 Station6: '',
                 Station7: '',
                 Station8: '',
-                Station9: '',
-                Station10: '',
+                Station9: 'Woher stammte das Wasser für das Reservoir der Festung Fürigen?',
+                Station10: 'Wie viele Betten gibt es insgesamt auf diesem Stock?',
     };
     
     /**
@@ -55,8 +56,8 @@ export class QuestionSheetClass extends React.Component{
         Station6: 'Golf',
         Station7: '1903',
         Station8: '252cm',
-        Station9: '10',
-        Station10: "35'899",
+        Station9: 'Es ist Regenwasser, das gesammelt wird.',
+        Station10: "52",
     };
 
     /**
@@ -72,8 +73,8 @@ export class QuestionSheetClass extends React.Component{
         Station6: 'Cricket',
         Station7: '1882',
         Station8: '272cm',
-        Station9: '7',
-        Station10: "721'985",
+        Station9: 'Es stammt von einer Quelle, welche sich oberhalb der Festung befindet.',
+        Station10: "61",
     };
 
     /**
@@ -89,8 +90,8 @@ export class QuestionSheetClass extends React.Component{
         Station6: 'Polo',
         Station7: '1913',
         Station8: '247cm',
-        Station9: '13',
-        Station10: "1'001'582",
+        Station9: 'Vom Kondenswasser, das gesammelt wird.',
+        Station10: "60",
     };
 
     /**
@@ -106,8 +107,8 @@ export class QuestionSheetClass extends React.Component{
         Station6: 'Schach',
         Station7: '1856',
         Station8: '280cm',
-        Station9: '20',
-        Station10: "101'312",
+        Station9: 'Es ist Wasser aus dem Vierwaldstättersee.',
+        Station10: "75",
     };
 
     /**
@@ -278,6 +279,8 @@ export class QuestionSheetClass extends React.Component{
      */
     getInfo(StationNumber){
         switch(StationNumber){
+            case 0:
+                return this.Infos.HowTo;
             case 1:
                 return this.Infos.Station1;
             case 2:

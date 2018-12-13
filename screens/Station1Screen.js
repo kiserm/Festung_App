@@ -93,8 +93,18 @@ export default class Station1Screen extends React.Component {
 
         {/* back and forward button to navigate to the previous respectively to the next question*/}    
         <View style={styles.stationInfoBottomNextContainer}>
-          <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','pause',true),this.props.navigation.navigate('Station1Question')}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoNextButtonStyle}>
-              <Text style={styles.stationInfoNextButtonText}>zur Frage </Text>
+        <TouchableHighlight onPress={() => {
+                if(AudioFile.getAudioStatus('Station1Info')){
+                  AudioFile.audioFunction('Station1Info','pause');
+                  this.props.navigation.navigate('Station1Question');
+                }
+                else{
+                  this.props.navigation.navigate('Station1Question');
+                } 
+              }} 
+              underlayColor="rgba(96,100,109, 1)" 
+              style={styles.stationInfoNextButtonStyle}> 
+             <Text style={styles.stationInfoNextButtonText}>zur Frage </Text>
           </TouchableHighlight>
         </View>
       </View>

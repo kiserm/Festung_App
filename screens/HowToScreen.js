@@ -6,6 +6,7 @@ import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommun
 import {Audio} from 'expo';
 import AudioFile from '../constants/AudioFile';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from  this website: https://www.npmjs.com/package/react-native-responsive-screen
+import QuestionSheet from '../constants/QuestionSheet';
 
 /**
  * IDEA:
@@ -34,24 +35,7 @@ export default class HowToScreen extends React.Component {
           <View style={styles.howToTextContainer}>
               <ScrollView showsVerticalScrollIndicator={true}>
                   <Text style={styles.howToTextFormat}>
-                    Die Festung Fürigen ist ein unterirdischer Bunker, der 1941 – während des Zweiten Weltkrieges – 
-                    für die militärische Verteidigung der Schweiz gebaut wurde. Dieser Krieg wütete zwischen den 
-                    Jahren 1939 und 1945. Es waren alle Nachbarländer der Schweiz am Krieg beteiligt. Die Schweiz 
-                    war wie eine kleine neutrale Insel inmitten Europas. 
-                    {"\n"}{"\n"}
-                    Obwohl die Schweiz nicht am Krieg beteiligt war, musste sie sich vor allfälligen Angriffen 
-                    schützen. Aus diesem Grund wurden in den Schweizer Alpen viele Festungen gebaut. In der Festung 
-                    Fürigen wohnten regelmässig Soldaten, um sich für den Ernstfall vorzubereiten. 
-                    {"\n"}{"\n"}
-                    Früher war die Festung streng geheim: Niemand, der davon wusste, durfte darüber reden. Heute 
-                    gehört die Festung nicht mehr der Armee, sondern dient nur noch als Museum.   
-                    {"\n"}{"\n"}
-                    Inzwischen haben es sich die Füchsin Finja und der Dachs Dario in der Festung gemütlich gemacht. 
-                    Sie werden euch beim Rundgang in der Festung begleiten. So werdet ihr gemeinsam die 
-                    wichtigsten Sachen über den Alltag der Soldaten entdecken, die hier früher ihren Militärdienst 
-                    geleistet haben.
-                    {"\n"}{"\n"}
-                    Viel Spass!
+                    {QuestionSheet.getInfo(0)}
                   </Text>
               </ScrollView>
           </View>
@@ -77,26 +61,7 @@ export default class HowToScreen extends React.Component {
           <View style={styles.howToTextContainer}>
                 {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}
                 <WebView source={{ html: "<html><p style='text-align: justify; color:rgba(96,100,109, 1); font-size:6vw;'>"+
-
-                  "Die Festung Fürigen ist ein unterirdischer Bunker, der 1941 – während des Zweiten Weltkrieges – "+
-                  "für die militärische Verteidigung der Schweiz gebaut wurde. "+
-                  "Dieser Krieg wütete zwischen den Jahren 1939 und 1945. Es waren alle Nachbarländer "+
-                  "der Schweiz am Krieg beteiligt. Die Schweiz war wie eine kleine neutrale Insel inmitten Europas. "+
-                  "<br>"+"<br>"+
-                  "Obwohl die Schweiz nicht am Krieg beteiligt war, musste sie sich vor allfälligen Angriffen "+
-                  "schützen. Aus diesem Grund wurden in den Schweizer Alpen viele Festungen gebaut. In der Festung "+
-                  "Fürigen wohnten regelmässig Soldaten, um sich für den Ernstfall vorzubereiten. "+
-                  "<br>"+"<br>"+
-                  "Früher war die Festung streng geheim: Niemand, der davon wusste, durfte darüber reden. Heute "+
-                  "gehört die Festung nicht mehr der Armee, sondern dient nur noch als Museum. "+
-                  "<br>"+"<br>"+
-                  "Inzwischen haben es sich die Füchsin Finja und der Dachs Dario in der Festung gemütlich gemacht. "+
-                  "Sie werden euch beim Rundgang in der Festung begleiten. So werdet ihr gemeinsam die "+
-                  "wichtigsten Sachen über den Alltag der Soldaten entdecken, die hier früher ihren Militärdienst "+
-                  "geleistet haben."+
-                  "<br>"+"<br>"+
-                  "Viel Spass!"+
-
+                  QuestionSheet.getInfo(0) +
                 "</p></html>"}} 
                 style={styles.howToTextFormatAndroid}
                 />

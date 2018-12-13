@@ -37,8 +37,8 @@ class AnswerSheetClass{
         Station6: 'D',
         Station7: 'B',
         Station8: 'B',
-        Station9: 'C',
-        Station10: 'D',
+        Station9: 'D',
+        Station10: 'C',
     };
 
     /**

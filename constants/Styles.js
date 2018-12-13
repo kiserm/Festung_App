@@ -241,6 +241,17 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     width: wp("40%")
   },
+  overviewButtonHowToStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    justifyContent: 'center',
+    paddingHorizontal: wp("2%"),
+    marginVertical: hp("1%"),
+    marginHorizontal: wp("2%"),
+    width: wp("84%")
+  },
   overviewButtonStyleDone:{
     backgroundColor: 'white',
     borderRadius: hp("1%"),
@@ -789,6 +800,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     justifyContent:'center',
     paddingHorizontal: wp("1%"),
+    flex:7
   },
   stationChosenButtonLetter:{
     fontSize: hp("3%"),
@@ -847,8 +859,8 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     justifyContent:'center',
     alignSelf:'center',
-    flex:5,
-    paddingHorizontal: wp("1%")
+    flex:7,
+    paddingHorizontal: wp("1%"),
   },
   stationUnchosenButtonLetter:{
     fontSize: hp("3%"),
