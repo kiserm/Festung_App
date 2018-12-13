@@ -142,7 +142,7 @@ export default class OverviewScreen extends React.Component {
     showDoneOrTodoButton(stationNumber){
         if(AnswerSheet.getAnswer(stationNumber) === ''){
             return (
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                     <Text style={styles.overviewButtonText}>
                         zur Frage
                     </Text>
@@ -151,7 +151,7 @@ export default class OverviewScreen extends React.Component {
         }
         else{
             return(
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber)} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
                     <Text style={styles.overviewChosenButtonText}>
                         {AnswerSheet.getAnswer(stationNumber)}
                     </Text>

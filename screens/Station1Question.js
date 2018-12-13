@@ -29,7 +29,7 @@ export default class Station1QuestionScreen extends React.Component {
         
         {/*Set the title of the Screen*/}        
         <View style={styles.stationTitleTextContainer}>
-          <Text style={styles.stationTitleTextFormat}>Frage 1 </Text>
+          <Text style={styles.stationTitleTextFormat}>Station 1 - Frage </Text>
         </View>     
         
         {/* write your question text here*/}        

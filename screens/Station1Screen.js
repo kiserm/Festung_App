@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
-import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
-import IconEntypo from 'react-native-vector-icons/Entypo';
 import { ScrollView } from 'react-native-gesture-handler';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
+import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AudioFile from '../constants/AudioFile';
 
 /**
  * IDEA:
@@ -17,46 +17,87 @@ export default class Station1Screen extends React.Component {
   };   
 
   render() {
-    return (      
-      <View style={styles.anyWholeScreen}>
-        
-        {/*Set the title of the Screen*/}        
-        <View style={styles.stationInfoTitleTextContainer}>
-          <Text style={styles.stationInfoTitleTextFormat}>
-            Station 1
-          </Text>
-        </View>     
-        
-        {/*Do a scrollview for the infotext in iOS*/}   
-          <View style={styles.howToTextContainer}>
-              <ScrollView showsVerticalScrollIndicator={true}>
-                  <Text style={styles.howToTextFormat}>
-                    {QuestionSheet.getInfo(1)}
-                  </Text>
-              </ScrollView>
+    if(Platform.OS === 'ios'){
+      return (      
+        <View style={styles.anyWholeScreen}>
+          
+          {/*Set the title of the Screen*/}        
+          <View style={styles.stationInfoTitleTextContainer}>
+            <Text style={styles.stationInfoTitleTextFormat}>
+              Station 1 - Info
+            </Text>
+          </View>     
+          
+          {/*Do a scrollview for the infotext in iOS*/}   
+            <View style={styles.stationInfoTextContainer}>
+                <ScrollView showsVerticalScrollIndicator={true}>
+                    <Text style={styles.stationInfoTextIOS}>
+                      {QuestionSheet.getInfo(1)}
+                    </Text>
+                </ScrollView>
+            </View>
+
+            {this.showAudioAndNextButton()}
+
+        </View>
+      );
+    }
+    else {
+      return(
+        <View style={styles.anyWholeScreen}>
+            
+          {/*Set the title of the Screen*/}        
+          <View style={styles.stationInfoTitleTextContainer}>
+            <Text style={styles.stationInfoTitleTextFormat}>
+              Station 1 - Info
+            </Text>
+          </View>  
+                      
+          {/*Do a scrollview for the text in android*/}   
+          <View style={styles.stationInfoTextContainer}>
+                {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}
+                <WebView source={{ html: "<html><p style='text-align: justify; color:rgba(96,100,109, 1); font-size:6vw;'>"+
+                                          QuestionSheet.getInfo(1)+
+                                          "</p></html>"
+                                  }} 
+                style={styles.stationInfoTextAndroid}
+                />
           </View>
-        
+
+          {this.showAudioAndNextButton()}
+    
+        </View>
+      );
+    }
+  } 
+  
+  /**
+   * IDEA:
+   * write this function for code reuse and if we alter something, do it only here and not in the ios AND android section
+   */
+  showAudioAndNextButton(){
+    return(
+      <View style={styles.stationInfoBottomContainer}>
         {/* show three buttons for the audio file: play, pause and stop*/}
-        <View style={styles.StationAudioContainer}>
-            <TouchableHighlight onPress={() => {this.playFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+        <View style={styles.stationInfoAudioContainer}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','play',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
               <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {this.pauseFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','pause',true)}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
               <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {this.stopFunction()}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','stop',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
               <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
         </View>
 
-        {/* back and forward button to navigate to the previous respectively to the next question*/}        
+        {/* back and forward button to navigate to the previous respectively to the next question*/}    
         <View style={styles.stationInfoBottomNextContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Station1Question')} underlayColor="rgba(96,100,109, 1)" style={styles.homeButtonStyle}>
-              <Text style={styles.homeButtonText}>zur Frage 1 </Text>
+          <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','pause',true),this.props.navigation.navigate('Station1Question')}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoNextButtonStyle}>
+              <Text style={styles.stationInfoNextButtonText}>zur Frage </Text>
           </TouchableHighlight>
         </View>
-
       </View>
     );
-  }          
+  }
 }

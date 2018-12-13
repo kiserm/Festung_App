@@ -663,6 +663,78 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  // stationsInfo style
+  // -----------------------------------------------------------------------------------------------------------------
+  stationInfoTitleTextContainer:{
+    flex:0.8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: Platform.OS === 'ios' ? hp("1%") : hp("3%")
+  },
+  stationInfoTitleTextFormat:{
+    fontSize: Platform.OS === 'ios' ? hp("5.4%") : hp("6%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("6.5%"),
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginHorizontal: wp("5%"),
+  },
+  stationInfoTextContainer:{
+    flex:4,
+    marginVertical: hp("3%"),
+  },
+  stationInfoTextIOS:{
+    fontSize: hp("3%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    textAlign: 'left',
+    marginBottom: hp("4%"),
+    marginHorizontal: wp("7%"),
+  },
+  stationInfoTextAndroid:{
+    width: wp("89%"),
+    height: hp("60%"),
+    alignSelf: 'center',
+  },
+  stationInfoBottomContainer:{
+    flex: 1.6,
+  },
+  stationInfoAudioContainer:{
+    flex:2,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  stationInfoButtonAudioStyle:{
+    backgroundColor: 'white',
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+  },
+  stationInfoNextButtonStyle:{
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginHorizontal: wp("3%"),
+    alignItems:'center',
+  },
+  stationInfoNextButtonText:{
+    fontSize: hp("3%"),
+    color: 'white',
+    lineHeight: hp("4%"),
+    fontWeight: 'normal',
+    alignSelf:'center',
+  },
+  stationInfoBottomNextContainer:{
+    flex:1.8,
+    alignSelf:'stretch',
+    alignItems: 'center',
+    justifyContent:'center',
+  },
+
   // stations style
   // -----------------------------------------------------------------------------------------------------------------
   stationChosenButtonStyle:{
@@ -730,10 +802,8 @@ const styles = StyleSheet.create({
   },
   stationTitleTextContainer:{
     flex: 2,
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: wp("9.5%"),
-    backgroundColor:'green',
   },
   stationTitleTextFormat:{
     fontSize: Platform.OS === 'ios' ? hp("5.4%") : hp("6%"),
@@ -751,7 +821,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap:'wrap',
     marginBottom: hp("2%"),
-    backgroundColor:'blue',
   },
   stationAnswerContainer:{
     flex: 3
@@ -804,7 +873,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
-    backgroundColor:'red',
   },
   station10NotSubmittableButtonStyle:{
     backgroundColor: 'rgb(211, 211, 211)',

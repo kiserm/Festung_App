@@ -20,13 +20,43 @@ export class AudioFile extends React.Component{
       this.Station8InfoSound = new Audio.Sound();
       this.Station9InfoSound = new Audio.Sound();
       this.Station10InfoSound = new Audio.Sound();
-      this.isPaused = false;
+      // variables to handle pause and play
+      this.isPausedHowTo = true;
+      this.isPausedStation1Info = false;
+      this.isPausedStation2Info = false;
+      this.isPausedStation3Info = false;
+      this.isPausedStation4Info = false;
+      this.isPausedStation5Info = false;
+      this.isPausedStation6Info = false;
+      this.isPausedStation7Info = false;
+      this.isPausedStation8Info = false;
+      this.isPausedStation9Info = false;
+      this.isPausedStation10Info = false;
+      // variables to handle not multiple loading of the audio files
       this.howToTextIsLoaded = false;
-      this.state = {
-        // if the flag is true, the play method should be invoked, else the replay method
-        audioIsPaused : false, 
-      }
+      this.station1InfoTextIsLoaded = false;
+      this.station2nfoTextIsLoaded = false;
+      this.station3InfoTextIsLoaded = false;
+      this.station4InfoTextIsLoaded = false;
+      this.station5InfoTextIsLoaded = false;
+      this.station6InfoTextIsLoaded = false;
+      this.station7InfoTextIsLoaded = false;
+      this.station8InfoTextIsLoaded = false;
+      this.station9InfoTextIsLoaded = false;
+      this.station10InfoTextIsLoaded = false;      
     };
+
+    /**
+     * IDEA:
+     * this method returns true if the audio on the asked target is playing, else false
+     * @param {type:string, the location where the audiofile is played,e.g. 'HowTo' if you want to know the status of the audio file from the HowToScreen} target 
+     */
+    getAudioStatus(target){
+      switch(target){
+        case 'HowTo':
+          return !this.isPausedHowTo;
+      }
+    }
 
     /**
      * IDEA:
@@ -47,7 +77,10 @@ export class AudioFile extends React.Component{
     }
 
     /**
-     * 
+     * IDEA:
+     * play audio file from library in assets/sounds.
+     * target: screen where the audio should be played
+     * mode: how the audio should act -> play, pause, stop
      */
     async audioFunction(target,mode){
       switch(target) {
@@ -58,9 +91,9 @@ export class AudioFile extends React.Component{
               await this.howToTextSound.loadAsync(require('../assets/sounds/abc.mp3'));
               this.howToTextIsLoaded=true;
             }            
-            if(this.isPaused===true){
+            if(this.isPausedHowTo===true){
               this.prepareSound();
-              this.isPaused=false;
+              this.isPausedHowTo=false;
               await this.howToTextSound.playAsync();
             }   
             else{
@@ -70,20 +103,41 @@ export class AudioFile extends React.Component{
           }
           else if (mode==='pause'){
             await this.howToTextSound.pauseAsync();
-            this.isPaused=true;
+            this.isPausedHowTo=true;
           }
           else if (mode==='stop'){
             await this.howToTextSound.stopAsync();
           }
           else{
-            // error
-          }
-          
+            // error this mode does not exist
+          }          
           break;
         }
         case 'Station1Info':
         {
-          
+          if(mode==='play'){
+            if(this.station1InfoTextIsLoaded===false){
+              await this.Station1InfoSound.loadAsync(require('../assets/sounds/abcd.mp3'));
+              this.station1InfoTextIsLoaded=true;
+            }            
+            if(this.isPausedStation1Info===true){
+              this.isPausedStation1Info=false;
+              await this.Station1InfoSound.playAsync();
+            }   
+            else{
+              await this.Station1InfoSound.replayAsync();
+            }
+          }
+          else if (mode==='pause'){
+            await this.Station1InfoSound.pauseAsync();
+            this.isPausedStation1Info=true;
+          }
+          else if (mode==='stop'){
+            await this.Station1InfoSound.stopAsync();
+          }
+          else{
+            // error this mode does not exist
+          }          
           break;
         }
         case 'Station2Info':

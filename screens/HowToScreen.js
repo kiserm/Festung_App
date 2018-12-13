@@ -17,7 +17,6 @@ export default class HowToScreen extends React.Component {
     title: "HowToScreen",    // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
     header: null, // do not show the navigation header, because the functions should not be available yet
   };
-
   render() {
     // differ between iOS and Android since on Android the textAlign:justify is only available through the workaround over a webview
     if(Platform.OS === 'ios') {
@@ -122,7 +121,7 @@ export default class HowToScreen extends React.Component {
         <View style={styles.howToBottomContainer}>
           {/* show three buttons for the audio file: play, pause and stop*/}
           <View style={styles.howToAudioContainer}>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','play',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.loadAudioFile('HowTo'),AudioFile.audioFunction('HowTo','play',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
               <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause',true)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
@@ -134,7 +133,17 @@ export default class HowToScreen extends React.Component {
           </View>
           {/* show the navigation button to station 1 since the tutorialFlag is true*/}
           <View style={styles.howToNextScreenContainer}>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause');this.props.navigation.navigate('Station1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+            <TouchableHighlight onPress={() => {
+                if(AudioFile.getAudioStatus('HowTo')){
+                  AudioFile.audioFunction('HowTo','pause');
+                  this.props.navigation.navigate('Station1');
+                }
+                else{
+                  this.props.navigation.navigate('Station1');
+                } 
+              }} 
+              underlayColor="rgba(96,100,109, 1)" 
+              style={styles.howToButtonStyle}>
               <Text style={styles.howToButtonText} numberOfLines={1}>
                 zur Station 1 
               </Text>
@@ -160,7 +169,17 @@ export default class HowToScreen extends React.Component {
           </View>
           {/* show the navigation button to tutorial1 since the tutorialFlag is false */}
           <View style={styles.howToNextScreenContainer}>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause');this.props.navigation.navigate('Tutorial1')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonStyle}>
+            <TouchableHighlight onPress={() => {
+              if(AudioFile.getAudioStatus('HowTo')){
+                AudioFile.audioFunction('HowTo','pause');
+                this.props.navigation.navigate('Station1');
+              }
+              else{
+                this.props.navigation.navigate('Station1');
+              } 
+            }} 
+            underlayColor="rgba(96,100,109, 1)" 
+            style={styles.howToButtonStyle}>
               <Text style={styles.howToButtonText} numberOfLines={1}>
                 zum Tutorial 
               </Text>
