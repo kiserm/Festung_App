@@ -9,7 +9,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /**
  * IDEA:
- * this screen shows the first task of the quiz
+ * this screen shows the second question of the quiz
  */
 export default class Station6QuestionScreen extends React.Component {
   static navigationOptions = {
@@ -29,7 +29,7 @@ export default class Station6QuestionScreen extends React.Component {
         
         {/*Set the title of the Screen*/}        
         <View style={styles.stationTitleTextContainer}>
-          <Text style={styles.stationTitleTextFormat}>Frage 6 </Text>
+          <Text style={styles.stationTitleTextFormat}>Station 6 - Frage </Text>
         </View>     
         
         {/* write your question text here*/}        
@@ -50,7 +50,7 @@ export default class Station6QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'A'), this.setState({chosenAnswerStation6: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation6==='A' && styles.stationChosenButtonLetter]}>
-                  A:
+                  A
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation6==='A' && styles.stationChosenButtonText]}>
                   {QuestionSheet.getAnswerA(6)}
@@ -62,7 +62,7 @@ export default class Station6QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'B'), this.setState({chosenAnswerStation6: 'B'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='B' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation6==='B' && styles.stationChosenButtonLetter]} >
-                  B:
+                  B
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation6==='B' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerB(6)}
@@ -76,7 +76,7 @@ export default class Station6QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'C'), this.setState({chosenAnswerStation6: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation6==='C' && styles.stationChosenButtonLetter]} >
-                  C:
+                  C
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation6==='C' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerC(6)}
@@ -88,7 +88,7 @@ export default class Station6QuestionScreen extends React.Component {
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'D'), this.setState({chosenAnswerStation6: 'D'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='D' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation6==='D' && styles.stationChosenButtonLetter]} >
-                  D:
+                  D
                 </Text>
                 <Text style={[styles.stationUnchosenButtonText, this.state.chosenAnswerStation6==='D' && styles.stationChosenButtonText]} >
                 {QuestionSheet.getAnswerD(6)}
@@ -112,7 +112,7 @@ export default class Station6QuestionScreen extends React.Component {
                 <IconEntypo name="arrow-long-right" size={hp("4%")} color="white"/>
             </TouchableHighlight>
           </View>
-        </View>
+        </View>      
 
       </View>
     );

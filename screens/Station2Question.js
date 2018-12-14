@@ -112,9 +112,7 @@ export default class Station2QuestionScreen extends React.Component {
                 <IconEntypo name="arrow-long-right" size={hp("4%")} color="white"/>
             </TouchableHighlight>
           </View>
-        </View>
-
-      
+        </View>      
 
       </View>
     );

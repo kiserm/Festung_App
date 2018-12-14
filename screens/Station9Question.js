@@ -9,7 +9,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /**
  * IDEA:
- * this screen shows the first task of the quiz
+ * this screen shows the second question of the quiz
  */
 export default class Station9QuestionScreen extends React.Component {
   static navigationOptions = {
@@ -29,7 +29,7 @@ export default class Station9QuestionScreen extends React.Component {
         
         {/*Set the title of the Screen*/}        
         <View style={styles.stationTitleTextContainer}>
-          <Text style={styles.stationTitleTextFormat}>Frage 9 </Text>
+          <Text style={styles.stationTitleTextFormat}>Station 9 - Frage </Text>
         </View>     
         
         {/* write your question text here*/}        
@@ -112,7 +112,7 @@ export default class Station9QuestionScreen extends React.Component {
                 <IconEntypo name="arrow-long-right" size={hp("4%")} color="white"/>
             </TouchableHighlight>
           </View>
-        </View>
+        </View>      
 
       </View>
     );

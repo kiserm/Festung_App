@@ -9,7 +9,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /**
  * IDEA:
- * this screen shows the first task of the quiz
+ * this screen shows the second question of the quiz
  */
 export default class Station10QuestionScreen extends React.Component {
   static navigationOptions = {
@@ -29,11 +29,11 @@ export default class Station10QuestionScreen extends React.Component {
         
         {/*Set the title of the Screen*/}        
         <View style={styles.stationTitleTextContainer}>
-          <Text style={styles.stationTitleTextFormat}>Frage 10 </Text>
+          <Text style={styles.stationTitleTextFormat}>Station 10 - Frage </Text>
         </View>     
         
         {/* write your question text here*/}        
-        <View style={styles.stationTextContainerSlimFit}>
+        <View style={styles.stationTextContainer}>
           <ScrollView>
             <Text style={styles.stationTextFormat}>
               {QuestionSheet.getQuestion(10)}
@@ -42,10 +42,10 @@ export default class Station10QuestionScreen extends React.Component {
         </View>
 
         {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
-              A ...         B ...
-              C ...         D ...
+              A: ...         B: ...
+              C: ...         D: ...
         */}   
-        <View style={styles.stationAnswerVerticalContainerSlimFit}>
+        <View style={styles.stationAnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(10,'A'), this.setState({chosenAnswerStation10: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation10==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -71,7 +71,7 @@ export default class Station10QuestionScreen extends React.Component {
             </TouchableHighlight>
           </View>
         </View>
-        <View style={styles.stationAnswerVerticalContainerSlimFit}>
+        <View style={styles.stationAnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(10,'C'), this.setState({chosenAnswerStation10: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation10==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -101,7 +101,7 @@ export default class Station10QuestionScreen extends React.Component {
         {/* back and forward button to navigate to the previous respectively to the next question*/}        
         <View style={styles.stationBottomNextContainer}>
           <View style={styles.stationRowContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station10',{tutorialFlag: 'true'})} underlayColor="rgba(96,100,109, 1)" style={styles.stationUnchosenButtonStyle}>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Station10')} underlayColor="rgba(96,100,109, 1)" style={styles.stationUnchosenButtonStyle}>
                   <IconEntypo name="arrow-long-left" size={hp("4%")} color="white"/>
             </TouchableHighlight>
           </View>
@@ -112,7 +112,7 @@ export default class Station10QuestionScreen extends React.Component {
                 <IconEntypo name="arrow-long-right" size={hp("4%")} color="white"/>
             </TouchableHighlight>
           </View>
-        </View>
+        </View>      
 
       </View>
     );
