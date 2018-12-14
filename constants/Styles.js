@@ -792,6 +792,12 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
+  station3AnswerVerticalContainer:{
+    flex:8,
+    flexDirection: 'column',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
   stationAnswerVerticalContainerSlimFit:{
     flex:1.5,
     flexDirection: 'row',
@@ -886,6 +892,16 @@ const styles = StyleSheet.create({
     zIndex:100,
     width: wp("20%"),
     height: wp("20%"),
+    backgroundColor: 'rgba(255,255,255,0)',
+  },
+  station3FoxImageStyle:{
+    alignSelf: 'flex-end',
+    marginHorizontal: wp("7%"),
+    marginVertical: -hp("1%"),
+    justifyContent: 'center',
+    width: wp("25%"),
+    height: wp("25%"),
+    zIndex:100,
     backgroundColor: 'rgba(255,255,255,0)',
   },
   
