@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -33,7 +33,7 @@ export default class Station10QuestionScreen extends React.Component {
         </View>     
         
         {/* write your question text here*/}        
-        <View style={styles.stationTextContainer}>
+        <View style={styles.stationTextContainer} style={{flex:6}}>
           <ScrollView>
             <Text style={styles.stationTextFormat}>
               {QuestionSheet.getQuestion(10)}
@@ -45,7 +45,8 @@ export default class Station10QuestionScreen extends React.Component {
               A: ...         B: ...
               C: ...         D: ...
         */}   
-        <View style={styles.station1AnswerVerticalContainer}>
+        <View style={styles.station10AnswerVerticalContainer}>
+          <Image source={require('../assets/images/foxAndBadget.png')} style={styles.station10ImageStyle}/>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(10,'A'), this.setState({chosenAnswerStation10: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation10==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -70,8 +71,6 @@ export default class Station10QuestionScreen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-        </View>
-        <View style={styles.station1AnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(10,'C'), this.setState({chosenAnswerStation10: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation10==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>

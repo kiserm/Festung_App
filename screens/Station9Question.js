@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -113,6 +113,9 @@ export default class Station9QuestionScreen extends React.Component {
             </TouchableHighlight>
           </View>
         </View>      
+
+        <Image source={require('../assets/images/badgerQuestion6.png')} style={styles.station6InfoBadgerImageStyle}/>
+        <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station6InfoFoxImageStyle}/>
 
       </View>
     );

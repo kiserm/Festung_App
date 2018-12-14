@@ -823,6 +823,14 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
+
+  station10AnswerVerticalContainer:{
+    flex:8,
+    flexDirection: 'column',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
+
   stationRowContainer:{
     flex:1,
     flexDirection: 'row',
@@ -978,6 +986,15 @@ const styles = StyleSheet.create({
     zIndex:100,
     backgroundColor: 'rgba(255,255,255,0)',
     transform: [{rotate: '-180deg'}],
+  },
+  station10ImageStyle:{
+    alignSelf: 'flex-end',
+    marginHorizontal: wp("7%"),
+    marginVertical: -hp("0.55%"),
+    width: wp("70%"),
+    height: wp("25%"),
+    zIndex:100,
+    backgroundColor: 'rgba(255,255,255,0)',
   },
 
   // submitStation styles
