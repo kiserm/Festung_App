@@ -810,9 +810,10 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
-  stationAnswerVerticalContainerSlimFit:{
-    flex:1.5,
-    flexDirection: 'row',
+
+  station8AnswerVerticalContainer:{
+    flex:6.5,
+    flexDirection: 'column',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
@@ -942,7 +943,16 @@ const styles = StyleSheet.create({
     zIndex:100,
     backgroundColor: 'rgba(255,255,255,0)',
   },
-
+  
+  station8FoxImageStyle:{
+    marginHorizontal: wp("4%"),
+    marginTop: Platform.OS === 'ios' ? -hp("2.5%") : -hp("1.6%"),
+    width: wp("15%"),
+    height: wp("15%"),
+    zIndex:100,
+    backgroundColor: 'rgba(255,255,255,0)',
+    transform: [{rotate: '-180deg'}],
+  },
 
   // submitStation styles
   // --------------------------------------------------------------------------------------------------------------------------

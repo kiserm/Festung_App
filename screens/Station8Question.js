@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -45,7 +45,7 @@ export default class Station8QuestionScreen extends React.Component {
               A: ...         B: ...
               C: ...         D: ...
         */}   
-        <View style={styles.stationAnswerVerticalContainer}>
+        <View style={styles.station8AnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(8,'A'), this.setState({chosenAnswerStation8: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation8==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -70,8 +70,6 @@ export default class Station8QuestionScreen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-        </View>
-        <View style={styles.stationAnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(8,'C'), this.setState({chosenAnswerStation8: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation8==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -105,7 +103,9 @@ export default class Station8QuestionScreen extends React.Component {
                   <IconEntypo name="arrow-long-left" size={hp("4%")} color="white"/>
             </TouchableHighlight>
           </View>
-          <View style={styles.stationRowContainer}/>
+          <View style={styles.stationRowContainer}>
+            <Image source={require('../assets/images/foxQuestion2.png')} style={styles.station8FoxImageStyle}/>
+          </View>
           <View style={styles.stationRowContainer}/>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate('Station9')} underlayColor="rgba(96,100,109, 1)" style={styles.stationUnchosenButtonStyle}>
