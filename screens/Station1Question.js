@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -42,10 +42,14 @@ export default class Station1QuestionScreen extends React.Component {
         </View>
 
         {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
-              A: ...         B: ...
-              C: ...         D: ...
+                  BadgerImage
+              A: ...
+              B: ...
+              C: ...         
+              D: ...
         */}   
-        <View style={styles.stationAnswerVerticalContainer}>
+        <View style={styles.station1AnswerVerticalContainer}>
+          <Image source={require('../assets/images/badgerQuestion1.png')} style={styles.station1BadgerImageStyle}/>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'A'), this.setState({chosenAnswerStation1: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation1==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -70,8 +74,6 @@ export default class Station1QuestionScreen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-        </View>
-        <View style={styles.stationAnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(1,'C'), this.setState({chosenAnswerStation1: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation1==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -113,8 +115,6 @@ export default class Station1QuestionScreen extends React.Component {
             </TouchableHighlight>
           </View>
         </View>
-
-      
 
       </View>
     );

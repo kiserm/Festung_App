@@ -780,9 +780,9 @@ const styles = StyleSheet.create({
   stationAnswerContainer:{
     flex: 3
   },
-  stationAnswerVerticalContainer:{
-    flex:3,
-    flexDirection: 'row',
+  station1AnswerVerticalContainer:{
+    flex:8,
+    flexDirection: 'column',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
@@ -830,7 +830,7 @@ const styles = StyleSheet.create({
     marginBottom: hp("1%"),
   },
   stationBottomNextContainer:{
-    flex:1,
+    flex:1.2,
     flexDirection: 'row',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
@@ -858,6 +858,14 @@ const styles = StyleSheet.create({
     flex:1,
     flexWrap:'wrap',
     justifyContent:'center',
+  },
+  station1BadgerImageStyle:{
+    width: wp("20%"),
+    height: wp("15%"),
+    alignSelf: 'flex-start',
+    marginHorizontal: wp("7%"),
+    zIndex:100,
+    backgroundColor: 'rgba(255,255,255,0)',
   },
   
   // submitStation styles

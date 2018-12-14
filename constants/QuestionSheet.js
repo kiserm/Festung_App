@@ -99,7 +99,7 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for D
      */
     AnswersD = {
-        Station1: 'Die Festung liegt sehr nah am Vierwaldstättersee',
+        Station1: 'Die Festung liegt sehr nah am Vierwaldstättersee.',
         Station2: 'Weil das Funksignal sonst nicht das Innere der Festung erreicht hätte.',
         Station3: 'Kehrsiten und Bürgenstock',
         Station4: 'wegen einer Rattenplage',
