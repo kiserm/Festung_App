@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight,Platform,WebView} from 'react-native';
+import {Text,View,TouchableHighlight,Platform,WebView,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import QuestionSheet from '../constants/QuestionSheet';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -39,6 +39,10 @@ export default class Station1Screen extends React.Component {
 
             {this.showAudioAndNextButton()}
 
+          <View style={styles.station1InfoFoxContainer}>
+            <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station1InfoFoxImageStyle}/>
+          </View>
+
         </View>
       );
     }
@@ -65,6 +69,10 @@ export default class Station1Screen extends React.Component {
           </View>
 
           {this.showAudioAndNextButton()}
+
+          <View style={styles.station1InfoFoxContainer}>
+            <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station1InfoFoxImageStyle}/>
+          </View>
     
         </View>
       );

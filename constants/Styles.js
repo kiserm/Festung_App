@@ -1346,7 +1346,27 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     alignSelf: 'center',
+  },
 
+  // images in the app
+  // -----------------------------------------------------------------------------------------------------
+  station1InfoFoxContainer:{
+    position: 'absolute',
+    top: hp("2%"),
+    right: 0,
+    left: -wp("1.3%"),
+    bottom:0,
+    zIndex:100,
+    width: wp("20%"),
+    height: wp("23%"),
+    backgroundColor: 'rgba(255,255,3,0)',
+  },
+  station1InfoFoxImageStyle:{
+    width: wp("20%"),
+    height: wp("23%"),
+    alignSelf: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0)',
   },
 });
 
