@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Platform,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -45,8 +45,8 @@ export default class Station6QuestionScreen extends React.Component {
               A: ...         B: ...
               C: ...         D: ...
         */}   
-        <View style={styles.stationAnswerVerticalContainer}>
-          <View style={styles.stationRowContainer}>
+        <View style={styles.station6AnswerVerticalContainer}>
+          <View style={styles.stationRowContainer} style={{flex:Platform.OS=='ios'?1.5:1,marginVertical:hp("0.5%")}}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'A'), this.setState({chosenAnswerStation6: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation6==='A' && styles.stationChosenButtonLetter]}>
@@ -58,7 +58,7 @@ export default class Station6QuestionScreen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-          <View style={styles.stationRowContainer}>
+          <View style={styles.stationRowContainer} style={{flex:1,marginVertical:hp("0.5%")}}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'B'), this.setState({chosenAnswerStation6: 'B'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='B' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation6==='B' && styles.stationChosenButtonLetter]} >
@@ -70,9 +70,7 @@ export default class Station6QuestionScreen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-        </View>
-        <View style={styles.stationAnswerVerticalContainer}>
-          <View style={styles.stationRowContainer}>
+          <View style={styles.stationRowContainer} style={{flex:1,marginVertical:hp("0.5%")}}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'C'), this.setState({chosenAnswerStation6: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation6==='C' && styles.stationChosenButtonLetter]} >
@@ -84,7 +82,7 @@ export default class Station6QuestionScreen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-          <View style={styles.stationRowContainer}>
+          <View style={styles.stationRowContainer} style={{flex:Platform.OS=='ios'?2:1.5,marginVertical:hp("0.5%")}}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'D'), this.setState({chosenAnswerStation6: 'D'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='D' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
                 <Text style={[styles.stationUnchosenButtonLetter, this.state.chosenAnswerStation6==='D' && styles.stationChosenButtonLetter]} >
@@ -113,6 +111,9 @@ export default class Station6QuestionScreen extends React.Component {
             </TouchableHighlight>
           </View>
         </View>      
+
+        <Image source={require('../assets/images/badgerQuestion6.png')} style={styles.station6InfoBadgerImageStyle}/>
+        <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station6InfoFoxImageStyle}/>
 
       </View>
     );

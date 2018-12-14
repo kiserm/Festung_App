@@ -810,6 +810,12 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
+  station6AnswerVerticalContainer:{
+    flex:8,
+    flexDirection: 'column',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
 
   station8AnswerVerticalContainer:{
     flex:6.5,
@@ -942,8 +948,28 @@ const styles = StyleSheet.create({
     height: wp("10%"),
     zIndex:100,
     backgroundColor: 'rgba(255,255,255,0)',
+    transform: [{rotate: '-180deg'}],
   },
-  
+  station6InfoFoxImageStyle:{
+    position: 'absolute',
+    left: wp("30%"),
+    bottom: -hp("0.5%"),
+    width: wp("15%"),
+    height: wp("15%"),
+    zIndex:100,
+    backgroundColor: 'rgba(255,255,255,0)',
+    transform: [{rotate: '-90deg'}],
+  },
+  station6InfoBadgerImageStyle:{
+    position: 'absolute',
+    right: wp("30%"),
+    bottom: -hp("0.5%"),
+    width: wp("18%"),
+    height: wp("15%"),
+    zIndex:100,
+    backgroundColor: 'rgba(255,255,255,0)',
+  },
+
   station8FoxImageStyle:{
     marginHorizontal: wp("4%"),
     marginTop: Platform.OS === 'ios' ? -hp("2.5%") : -hp("1.6%"),
