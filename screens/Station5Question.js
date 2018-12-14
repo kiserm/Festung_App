@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -45,7 +45,7 @@ export default class Station5QuestionScreen extends React.Component {
               A: ...         B: ...
               C: ...         D: ...
         */}   
-        <View style={styles.stationAnswerVerticalContainer}>
+        <View style={styles.station5AnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(5,'A'), this.setState({chosenAnswerStation5: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation5==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -70,8 +70,6 @@ export default class Station5QuestionScreen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-        </View>
-        <View style={styles.stationAnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(5,'C'), this.setState({chosenAnswerStation5: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation5==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -113,6 +111,10 @@ export default class Station5QuestionScreen extends React.Component {
             </TouchableHighlight>
           </View>
         </View>      
+
+        <View style={styles.station5QuestionFoxContainer}>
+          <Image source={require('../assets/images/foxQuestion2.png')} style={styles.station5FoxImageStyle}/>
+        </View>
 
       </View>
     );

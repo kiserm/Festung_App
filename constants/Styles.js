@@ -804,6 +804,12 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
+  station5AnswerVerticalContainer:{
+    flex:7.5,
+    flexDirection: 'column',
+    marginHorizontal: wp("2%"),
+    marginBottom: hp("1%"),
+  },
   stationAnswerVerticalContainerSlimFit:{
     flex:1.5,
     flexDirection: 'row',
@@ -920,7 +926,24 @@ const styles = StyleSheet.create({
     zIndex:100,
     backgroundColor: 'rgba(255,255,255,0)',
   },
-  
+  station5QuestionFoxContainer:{
+    position: 'absolute',
+    right: wp("2%"),
+    top: -wp("0.75%"),
+    zIndex:100,
+    width: wp("10%"),
+    height: wp("10%"),
+    backgroundColor: 'rgba(255,255,255,0)',
+    transform: [{rotate: '-180deg'}],
+  },
+  station5FoxImageStyle:{
+    width: wp("10%"),
+    height: wp("10%"),
+    zIndex:100,
+    backgroundColor: 'rgba(255,255,255,0)',
+  },
+
+
   // submitStation styles
   // --------------------------------------------------------------------------------------------------------------------------
   SubmitStationBackButtonStyle:{
