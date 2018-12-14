@@ -45,7 +45,7 @@ export default class Station9QuestionScreen extends React.Component {
               A: ...         B: ...
               C: ...         D: ...
         */}   
-        <View style={styles.stationAnswerVerticalContainer}>
+        <View style={styles.station9AnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(9,'A'), this.setState({chosenAnswerStation9: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation9==='A' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -70,8 +70,6 @@ export default class Station9QuestionScreen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-        </View>
-        <View style={styles.stationAnswerVerticalContainer}>
           <View style={styles.stationRowContainer}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(9,'C'), this.setState({chosenAnswerStation9: 'C'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation9==='C' && styles.stationChosenButtonStyle]}>
               <View style={{flex:1,flexDirection:'row'}}>
@@ -114,8 +112,8 @@ export default class Station9QuestionScreen extends React.Component {
           </View>
         </View>      
 
-        <Image source={require('../assets/images/badgerQuestion6.png')} style={styles.station6InfoBadgerImageStyle}/>
-        <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station6InfoFoxImageStyle}/>
+        <Image source={require('../assets/images/badgerQuestion6.png')} style={styles.station9InfoBadgerImageStyle}/>
+        <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station9InfoFoxImageStyle}/>
 
       </View>
     );
