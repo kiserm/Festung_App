@@ -50,7 +50,6 @@ import SubmittedStation8Screen from '../screens/SubmittedStation8Screen';
 import SubmittedStation9Screen from '../screens/SubmittedStation9Screen';
 import SubmittedStation10Screen from '../screens/SubmittedStation10Screen';
 
-
 // used to custom the tab navigation bar
 import styles from '../constants/Styles';
 

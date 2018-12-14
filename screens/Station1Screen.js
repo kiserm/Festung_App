@@ -6,6 +6,8 @@ import { ScrollView } from 'react-native-gesture-handler';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AudioFile from '../constants/AudioFile';
+import OwnElement from '../constants/OwnElements';
+
 
 /**
  * IDEA:
@@ -21,12 +23,7 @@ export default class Station1Screen extends React.Component {
       return (      
         <View style={styles.anyWholeScreen}>
           
-          {/*Set the title of the Screen*/}        
-          <View style={styles.stationInfoTitleTextContainer}>
-            <Text style={styles.stationInfoTitleTextFormat}>
-              Station 1 - Info
-            </Text>
-          </View>     
+          {OwnElement.showStationInfoTitle(1)}
           
           {/*Do a scrollview for the infotext in iOS*/}   
             <View style={styles.stationInfoTextContainer}>
@@ -50,12 +47,7 @@ export default class Station1Screen extends React.Component {
       return(
         <View style={styles.anyWholeScreen}>
             
-          {/*Set the title of the Screen*/}        
-          <View style={styles.stationInfoTitleTextContainer}>
-            <Text style={styles.stationInfoTitleTextFormat}>
-              Station 1 - Info
-            </Text>
-          </View>  
+          {OwnElement.showStationInfoTitle(1)}
                       
           {/*Do a scrollview for the text in android*/}   
           <View style={styles.stationInfoTextContainer}>

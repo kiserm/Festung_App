@@ -13,16 +13,16 @@ export class QuestionSheetClass extends React.Component{
      */
     Infos = {
         HowTo: 'Die Festung Fürigen ist ein unterirdischer Bunker, der für die militärische Verteidigung der Schweiz 1941 – während des Zweiten Weltkrieges – gebaut wurde. Dieser Krieg wütete zwischen den Jahren 1939 und 1945. Es waren alle Nachbarländer der Schweiz am Krieg beteiligt. Die Schweiz war wie eine kleine neutrale Insel inmitten Europas. Obwohl die Schweiz nicht am Krieg beteiligt war, musste sie sich vor allfälligen Angriffen schützen. Aus diesem Grund wurden in den Schweizer Alpen viele Festungen gebaut. In der Festung Fürigen wohnten regelmässig Soldaten, um sich für den Ernstfall vorzubereiten. Früher war die Festung streng geheim: Niemand, der davon wusste, durfte darüber reden. Heute gehört die Festung nicht mehr der Armee und dient nur noch als Museum. Inzwischen haben es sich die Füchsin Finja und der Dachs Dario in der Festung gemütlich gemacht. Sie werden euch auf einem Rundgang durch die Festung begleiten. So werdet ihr gemeinsam die wichtigsten Sachen über den Alltag der Soldaten, die hier früher ihren Militärdienst gemacht haben, erfahren. Viel Spass!',
-        Station1: 'Die Festung war während 50 Jahren – von 1941 bis 1991 – streng geheim damit niemand einen Angriff auf diese planen konnte. Inzwischen weiss man, dass viele Bewohner der Region und sogar manche Touristen darüber Bescheid wussten oder zumindest die Präsenz «von etwas Militärischem» vermuteten. Es sagte aber Niemand etwas, weil sie nichts über die Verteidigungsstrategie der Schweiz verraten wollten. Um die Festung möglichst geheim zu behalten, hat die Armee die Scharten, die ansonsten von der Strasse aus ersichtlich sind, verdeckt und beim Eingang der Festung ein Tarnhaus angebracht.',
-        Station2: '',
-        Station3: '',
-        Station4: '',
-        Station5: '',
-        Station6: '',
-        Station7: '',
-        Station8: '',
-        Station9: 'Um die Wasserversorgung innerhalb der Festung jederzeit zu gewährleisten, wurde ein Wasserreservoir eingebaut, welches sich oberhalb des Vorratraums befindet. Das Becken, das du auf dem Foto siehst kann bis zu 50’000 Liter Wasser fassen.',
-        Station10: 'Auf diesem Stock haben die Soldaten und ihre Vorgesetzten geschlafen. Wusstet ihr, dass jeder Soldat seinen Schlafplatz mit einem seiner Kollegen teilen musste? Die Soldaten arbeiteten nämlich im Schichtbetrieb. Das heisst, dass jeweils ein Drittel der Soldaten auf Arbeit war, ein Drittel in Reserve und ein Drittel auf Ruhezeit. Um Platz zu sparen, wurden nur 52 Mannschaftsbetten eingebaut, sodass nur die Mannschaft schlafen konnte, die gerade auf Ruhezeit war.',
+        Station1: 'Die Festung war 50 Jahre lang streng geheim, damit niemand einen Angriff auf diese planen konnte. Inzwischen weiss man, dass viele Bewohner der Region die Anwesenheit von «etwas Militärischem» vermuteten. Es sagte aber niemand etwas, weil sie nichts über die Verteidigungsstrategie der Schweiz verraten wollten. Um die Festung möglichst geheim zu behalten, hat die Armee die Scharten, die ansonsten von der Strasse aus ersichtlich sind, verdeckt. Beim Eingang der Festung hat man ein Tarnhaus gebaut. Auch Finja und Dario schützen den Eingang ihres Baus – zum Beispiel mit Laub.',
+        Station2: 'Hier seht ihr den Funkraum der Festung. Dieser diente zur Kommunikation zwischen der Festung und der Aussenwelt. Der Soldat, der hier arbeitete, leitete die von Aussen per Funk erhaltenen Informationen und Befehle an die Telefonzentrale bei der Truppenunterkunft weiter. Von der Telefonzentrale aus konnten wiederum diverse Räume der Festung erreicht werden. Für Dario und Finja ist die Kommunikation mit der Aussenwelt nicht so einfach. Wenn sie mit jemandem spielen wollen, müssen sie nach draussen gehen.',
+        Station3: 'In dieser Festung gibt es zwei Kanonen. Genauer gesagt handelt es sich um Befestigungskanonen aus dem Jahr 1939, die bis zu 12 km weit schiessen konnten. Das Geschosskaliber beträgt 7,5 cm. Es konnten bis zu 14 Schüsse pro Minute gefeuert werden. Die Aufgabe der Kanonen bestand darin, die Region zwischen dem Engnis von Stansstad bis zum Loppergrat zu bewachen und bei einem feindlichen Überfall zu verteidigen. Weil auf den Bergen immer mehr Leute wanderten, wurde der letzte Übungsschuss bereits 1947 – also vor über 70 Jahren – gefeuert. Finja und Dario kennen sich mit Kanonen nicht aus. Wenn sie sich verteidigen müssen, kämpfen nur mit ihren Zähnen und Krallen. ',
+        Station4: 'Hier befindet ihr euch im ehemaligen Munitionsmagazin, das heute als Ausstellungsraum dient. Hier wurden alle Formen von Munition gelagert, die innerhalb der Festung benötigt wurden – von der Pistolenpatrone zum Kanonengeschoss. Die Munition wurde zu den Kampfständen mit Munitionskarren transportiert.',
+        Station5: 'Die grösste Herausforderung für das Leben innerhalb der Festung ist die Luftfeuchtigkeit, welche vor allem im Sommer sehr hoch ist. Feuchte Luft ist weder für die Soldaten noch für das Material innerhalb der Festung gut. Die Zufuhr von frischer Luft erfolgt über diesen Frischluftstollen. Im Hauptstollen der Festung befinden sich zahlreiche Wasserbecken. In diesen wird das Wasser, das durch die Luftfeuchtigkeit entsteht, eingesammelt und danach hinausgeführt. Finja und Dario macht die feuchte Luft nichts.',
+        Station6: 'Neben den zwei Kanonen verfügte die Festung über drei Maschinengewehrstände, welche der Nahverteidigung dienten. Die Maschinengewehre sind innerhalb der Festung so platziert, dass sie den Stollen vor Angriffen von der Strasse oder vom See aus schützen konnten. Das Militär baute Maschinengewehre aus dem Jahr 1911 eingebaut, die bis zu 600 Schüsse pro Minute abfeuern konnten. Sie mussten mit Wasser gekühlt werden.',
+        Station7: 'Wenn ihr hinauf schaut, seht ihr einen Schacht, der zugleich als Notausgang und als auch als Zugang zum dritten Maschinengewehr sowie zu einem Scheinwerfer diente. Der sogenannte Steigstollen ist 30 Meter lang. Drei Leitern führen nach oben. Der Scheinwerfer diente zur Nachtbeleuchtung von Zielen der Kanonen. Dario und Finja brauchen keine Beleuchtung. Denn sie können in der Nacht auch ohne Licht sehen.',
+        Station8: 'Hier befindet ihr euch im Herzen der Festung. In diesem Raum befinden sich der Luftentfeuchter und ein Filter, um die Luft von Kampfgas zu reinigen. Es gibt hier ebenfalls eine Werkstatt für kleine Reparaturen. Weiterhin seht ihr zwei sogenannte Notstromgruppen, die im Fall eines Stromausfalls zum Einsatz gekommen wären. Bei jeder Gruppe gibt es einen Dieselmotor, der den Strom erzeuge. Auch Generatoren stehen hier. Sie speicherten den Strom bis zum Gebrauch. Dario und Finja meiden den Maschinenrau. Sie vertragen den Krach nicht.',
+        Station9: 'Um die Wasserversorgung innerhalb der Festung jederzeit zu gewährleisten, wurde ein Wasserreservoir eingebaut, das sich oberhalb des Vorratsraumes befindet. Das Becken, das ihr auf dem Foto seht, kann bis zu 50’000 Liter Wasser beinhalten. Finja und Daria verwenden dieses als ihren privaten Pool.',
+        Station10: 'Auf diesem Stock haben die Soldaten und ihre Vorgesetzten geschlafen. Wusstet ihr, dass jeder Soldat seinen Schlafplatz mit einem seiner Kollegen teilen musste? Die Soldaten arbeiteten nämlich im Schichtbetrieb. Das heisst, dass jeweils ein Drittel der Soldaten auf Arbeit war, ein Drittel in Reserve und ein Drittel auf Ruhezeit. Um Platz zu sparen, wurden nur 52 Mannschaftsbetten eingebaut, sodass nur die Mannschaft schlafen konnte, die gerade auf Ruhezeit war. Dario und Finja schlafen am liebsten im Truppenraum. Dort können sie sich aneinander schmiegen, um sich gegenseitig warm zu geben.',
     };
 
     /**
@@ -31,14 +31,14 @@ export class QuestionSheetClass extends React.Component{
      * automatically adjusted in the StationScreens and SubmittedStationScreens
      */
     Questions = {
-                Station1: 'Aus welchem Grund war es besonders schwer den Standort der Festung während des Zweiten Weltkriegs geheim zu behalten? Weil...',
-                Station2: '',
-                Station3: '',
-                Station4: '',
-                Station5: '',
-                Station6: '',
-                Station7: '',
-                Station8: '',
+                Station1: 'Aus welchem Grund war es besonders schwer, den Standort der Festung während des Zweiten Weltkriegs geheim zu behalten? ',
+                Station2: 'Wieso befindet sich der Funkraum so nah am Eingang der Festung?',
+                Station3: 'Welche Standorte befinden sich im Zielgebiet dieser Kanone?',
+                Station4: 'Wieso wurde eine Druckschleuse zwischen dem Munitionsmagazin und der Truppenunterkunft gebaut?',
+                Station5: 'Vor euch befindet sich ein Grobstaubfilter, der um 1960 – während des Kalten Krieges – eingebaut wurde. Wozu sollte dieser dienen?',
+                Station6: 'Wieso wurde die Festung, die 1941 gebaut wurde, mit Maschinengewehren ausgerüstet, die zu diesem Zeitpunkt bereits 30 Jahre alt waren?',
+                Station7: 'Wieso brauchte es zwangsläufig einen Notausgang?',
+                Station8: 'Wozu dienen die Maschinen, die ihr in diesem Raum hört?',
                 Station9: 'Woher stammte das Wasser für das Reservoir der Festung Fürigen?',
                 Station10: 'Wie viele Betten gibt es insgesamt auf diesem Stock?',
     };
@@ -48,16 +48,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for A
      */
     AnswersA = {
-        Station1: "sich ein Hotelbetrieb und ein Seebad in der Nähe befanden.",
-        Station2: 'Kopp',
-        Station3: 'Bangkok',
-        Station4: '1.43cm',
-        Station5: '20',
-        Station6: 'Golf',
-        Station7: '1903',
-        Station8: '252cm',
-        Station9: 'Es ist Regenwasser, das gesammelt wird.',
-        Station10: "52",
+        Station1: 'Ein Hotelbetrieb und ein Seebad befanden sich in der Nähe.',
+        Station2: 'Weil hier ebenfalls die Ein- und Austritte der Soldaten kontrolliert wurden. ',
+        Station3: 'Weggis und Rigi',
+        Station4: 'wegen der Explosionsgefahr ',
+        Station5: 'Um die Feuchtigkeit vom Berg aus der Frischluft herauszufiltern. ',
+        Station6: 'Weil sich dieses Modell während des Ersten Weltkrieges besonders gut bewährt hatte. ',
+        Station7: 'Für die Flucht im Fall eines Feuers oder Angriffes.',
+        Station8: 'Sie generieren Strom für die Festung.',
+        Station9: 'Vom Regenwasser, das eingesammelt wird. ',
+        Station10: '52',
     };
 
     /**
@@ -65,16 +65,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for B
      */
     AnswersB = {
-        Station1: "sich viele Ausländer in der Region aufhielten.",
-        Station2: 'Calmy-Rey',
-        Station3: 'Taipeh',
-        Station4: '1.65cm',
-        Station5: '8',
-        Station6: 'Cricket',
-        Station7: '1882',
-        Station8: '272cm',
-        Station9: 'Es stammt von einer Quelle, welche sich oberhalb der Festung befindet.',
-        Station10: "61",
+        Station1: 'Viele Ausländer hielten sich in der Region auf. ',
+        Station2: 'Damit die Soldaten im Fall eines Innenbrandes weiterhin mit der Aussenwelt kommunizieren konnten.',
+        Station3: 'Horw und Kastanienbaum',
+        Station4: 'wegen der Überschwemmungsgefahr',
+        Station5: 'Um allfällige Atompartikel aus der Frischluft herauszufiltern. ',
+        Station6: 'Weil die Festungstruppen nur für dieses Modell geschult waren.',
+        Station7: 'Als zweiten Eingang für die Besatzung.',
+        Station8: 'Sie verteilen die Luft in die drei Bereiche der Festung.',
+        Station9: 'Von einer Quelle, die sich oberhalb der Festung befindet. ',
+        Station10: '100',
     };
 
     /**
@@ -82,16 +82,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for C
      */
     AnswersC = {
-        Station1: "ein englischer Spion die Festung entdeckt hatte.",
-        Station2: 'Dreifuss',
-        Station3: 'Jakarta',
-        Station4: '2.54cm',
-        Station5: '11.25',
-        Station6: 'Polo',
-        Station7: '1913',
-        Station8: '247cm',
-        Station9: 'Vom Kondenswasser, das gesammelt wird.',
-        Station10: "60",
+        Station1: 'Ein deutscher Spion hatte die Festung zufälligerweise entdeckt.',
+        Station2: 'Damit der Funkraum im Ernstfall als erstes evakuiert werden konnte. ',
+        Station3: 'Hergiswil und Pilatus',
+        Station4: 'wegen der Luftfeuchtigkeit  ',
+        Station5: 'Um den Zigarettenrauch innerhalb der Festung zu filtern. ',
+        Station6: 'Weil dieses Modell für Festungen besonders gut geeignet war.',
+        Station7: 'Für das Evakuieren von Verletzten.',
+        Station8: 'Sie betreiben den Herd in der Küche.',
+        Station9: 'Vom Kondenswasser, das durch die Luftfeuchtigkeit entsteht.',
+        Station10: '66 ',
     };
 
     /**
@@ -99,16 +99,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for D
      */
     AnswersD = {
-        Station1: "die Festung direkt an einer Strasse liegt.",
-        Station2: 'Metzler',
-        Station3: 'Kingston',
-        Station4: '6.37cm',
-        Station5: '6',
-        Station6: 'Schach',
-        Station7: '1856',
-        Station8: '280cm',
-        Station9: 'Es ist Wasser aus dem Vierwaldstättersee.',
-        Station10: "75",
+        Station1: 'Die Festung liegt sehr nah am Vierwaldstättersee',
+        Station2: 'Weil das Funksignal sonst nicht das Innere der Festung erreicht hätte.',
+        Station3: 'Kehrsiten und Bürgenstock',
+        Station4: 'wegen einer Rattenplage',
+        Station5: 'Um den Geruch von Essen innerhalb der Festung zu filtern.',
+        Station6: 'Weil die Schweizer Armee vom Zweiten Weltkrieg überrascht wurde und über kein moderneres Modell verfügte.',
+        Station7: 'Wegen einer Überschwemmungsgefahr durch den Vierwaldstättersee.',
+        Station8: 'Sie leiten das Abwasser in den Vierwaldstättersee.',
+        Station9: 'Vom Vierwaldstättersee',
+        Station10: '75',
     };
 
     /**

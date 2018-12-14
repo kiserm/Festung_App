@@ -30,12 +30,12 @@ class AnswerSheetClass{
      */
     RightAnswers = {
         Station1: 'A',
-        Station2: 'A',
+        Station2: 'D',
         Station3: 'C',
-        Station4: 'C',
-        Station5: 'D',
+        Station4: 'A',
+        Station5: 'B',
         Station6: 'D',
-        Station7: 'B',
+        Station7: 'A',
         Station8: 'B',
         Station9: 'D',
         Station10: 'C',
