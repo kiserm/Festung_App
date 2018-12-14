@@ -15,7 +15,6 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 // import all screens in the order in which they appear in the app
 import HomeScreen from '../screens/HomeScreen';
 import HowToScreen from '../screens/HowToScreen';
-import HintScreen from '../screens/HintScreen';
 import MapScreen from '../screens/MapScreen';
 import Station1Screen from '../screens/Station1Screen';
 import Station2Screen from '../screens/Station2Screen';
@@ -40,12 +39,6 @@ import Station10QuestionScreen from '../screens/Station10Question';
 import ResultScreen from '../screens/ResultScreen';
 import CertificateScreen from '../screens/CertificateScreen';
 import OverviewScreen from '../screens/OverviewScreen';
-import OverviewTutorialScreen from '../screens/OverviewTutorialScreen';
-import TutorialScreen1 from '../screens/TutorialScreen1';
-import TutorialScreen2 from '../screens/TutorialScreen2';
-import TutorialScreen3 from '../screens/TutorialScreen3';
-import TutorialScreen4 from '../screens/TutorialScreen4';
-import TutorialScreen5 from '../screens/TutorialScreen5';
 import SubmittedStation1Screen from '../screens/SubmittedStation1Screen';
 import SubmittedStation2Screen from '../screens/SubmittedStation2Screen';
 import SubmittedStation3Screen from '../screens/SubmittedStation3Screen';
@@ -72,15 +65,8 @@ const NavigationStack = createStackNavigator(
   {
     Home:  HomeScreen,
     HowTo: HowToScreen,
-    Tutorial1: TutorialScreen1,
-    Tutorial2: TutorialScreen2,
-    Tutorial3: TutorialScreen3,
-    Tutorial4: TutorialScreen4,
-    Tutorial5: TutorialScreen5,
-    Hint: HintScreen,
     Map: MapScreen,
     Overview: OverviewScreen,
-    OverviewTutorial: OverviewTutorialScreen,
     Station1: Station1Screen, 
     Station2: Station2Screen, 
     Station3: Station3Screen, 
@@ -132,16 +118,8 @@ const NavigationStack = createStackNavigator(
         flex:1,
         color: '#fff', // such that we do not see the title of the current page 
         },
-        // put two icons in the right header: mapIcon onpress to the mapScreen and hintIcon onpress to the hintScreen
+        // put one icon in the right header: mapIcon onpress to the mapScreen 
         headerRight: ( <View style={styles.headerButtonContainer}>
-                          {/* This is the first button when looking from the left.*//*}
-                          <TouchableHighlight onPress={() => {
-                                                              navigation.navigate('Hint',{originScreenName: navigation.state.routeName})
-                                                            }
-                                                    } style={styles.headerBarIcons}>
-                            <IconEntypo name="light-bulb" size={hp("5%")} color="rgba(96,100,109, 1)"/>
-                          </TouchableHighlight>
-                          {/* This is the second button when looking from the left.*/}
                           <TouchableHighlight onPress={() => {
                                                               navigation.navigate('Map',{originScreenName: navigation.state.routeName})
                                                             }

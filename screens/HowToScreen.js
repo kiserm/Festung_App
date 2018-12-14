@@ -41,7 +41,7 @@ export default class HowToScreen extends React.Component {
           </View>
 
           {/* show the right button depending if we still need to do the tutorial or not*/}   
-          {this.toStationOrToTutorialButton()}
+          {this.toStationAndAudioButtons()}
 
           <View style={styles.howToBadgersContainer}>
             <Image source={require('../assets/images/badgerHowTo.png')} style={styles.howToBadgerImageStyle}/>
@@ -72,7 +72,7 @@ export default class HowToScreen extends React.Component {
           </View>
 
           {/* show the right button depending if we still need to do the tutorial or not*/}   
-          {this.toStationOrToTutorialButton()}
+          {this.toStationAndAudioButtons()}
 
           <View style={styles.howToBadgersContainer}>
             <Image source={require('../assets/images/badgerHowTo.png')} style={styles.howToBadgerImageStyle}/>
@@ -85,64 +85,27 @@ export default class HowToScreen extends React.Component {
 
   /**
    * IDEA:
-   * if the tutorialDone flag is true, the tutorial was already made and we navigate to the station 1 directly,
-   * else we go through the tutorial
+   * show start button and the three audio buttons. method here to have it written once and not twice once for 
+   * android and once for ios
    */
-  toStationOrToTutorialButton(){
-    if(this.props.navigation.getParam('tutorialFlag') === 'true'){
-      return (
-        <View style={styles.howToBottomContainer}>
-          {/* show three buttons for the audio file: play, pause and stop*/}
-          <View style={styles.howToAudioContainer}>
-            <TouchableHighlight onPress={() => {AudioFile.loadAudioFile('HowTo'),AudioFile.audioFunction('HowTo','play',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
-              <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause',true)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
-              <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
-              <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
-            </TouchableHighlight>
-          </View>
-          {/* show the navigation button to station 1 since the tutorialFlag is true*/}
-          <View style={styles.howToNextScreenContainer}>
-            <TouchableHighlight onPress={() => {
-                if(AudioFile.getAudioStatus('HowTo')){
-                  AudioFile.audioFunction('HowTo','pause');
-                  this.props.navigation.navigate('Station1');
-                }
-                else{
-                  this.props.navigation.navigate('Station1');
-                } 
-              }} 
-              underlayColor="rgba(96,100,109, 1)" 
-              style={styles.howToButtonStyle}>
-              <Text style={styles.howToButtonText} numberOfLines={1}>
-                zur Station 1 
-              </Text>
-            </TouchableHighlight>
-          </View>
+  toStationAndAudioButtons(){
+    return (
+      <View style={styles.howToBottomContainer}>
+        {/* show three buttons for the audio file: play, pause and stop*/}
+        <View style={styles.howToAudioContainer}>
+          <TouchableHighlight onPress={() => {AudioFile.loadAudioFile('HowTo'),AudioFile.audioFunction('HowTo','play',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause',true)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+            <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
+          </TouchableHighlight>
         </View>
-      );
-    }
-    else{
-      return(
-        <View style={styles.howToBottomContainer}>
-          {/* show three buttons for the audio file: play, pause and stop*/}
-          <View style={styles.howToAudioContainer}>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','play')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
-              <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
-              <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
-              <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
-            </TouchableHighlight>
-          </View>
-          {/* show the navigation button to tutorial1 since the tutorialFlag is false */}
-          <View style={styles.howToNextScreenContainer}>
-            <TouchableHighlight onPress={() => {
+        {/* show the navigation button to station 1 since the tutorialFlag is true*/}
+        <View style={styles.howToNextScreenContainer}>
+          <TouchableHighlight onPress={() => {
               if(AudioFile.getAudioStatus('HowTo')){
                 AudioFile.audioFunction('HowTo','pause');
                 this.props.navigation.navigate('Station1');
@@ -153,13 +116,12 @@ export default class HowToScreen extends React.Component {
             }} 
             underlayColor="rgba(96,100,109, 1)" 
             style={styles.howToButtonStyle}>
-              <Text style={styles.howToButtonText} numberOfLines={1}>
-                Los gehts! 
-              </Text>
-            </TouchableHighlight>
-          </View>
+            <Text style={styles.howToButtonText} numberOfLines={1}>
+              Los gehts! 
+            </Text>
+          </TouchableHighlight>
         </View>
-      );
-    }
+      </View>
+    );
   }
 }

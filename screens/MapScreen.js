@@ -44,13 +44,9 @@ export default class MapScreen extends React.Component {
           </View>
 
           {/*Set the navigation to go back since no header in Map*/}    
-          {this.showRightBackButton()}
+          {this.showBackButton()}
   
         </View>
-
-
-
-
       );
       /*
     }
@@ -91,32 +87,17 @@ export default class MapScreen extends React.Component {
 
   /**
    * IDEA:
-   * the back button coming from the tutorialscreen should carry the iconPressed navigation parameter, hence we need 
-   * a function to render the same button but with another functionality in the background
+   * the back button to write it once and not twice once for android and once for ios
    */
-  showRightBackButton(){
-    if(this.props.navigation.getParam('originScreenName')==='Tutorial4'){
-      return (
-        <View style={styles.mapBottomContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorial4',{iconPressed:true})} underlayColor="rgba(96,100,109, 1)" style={styles.mapButtonStyle}>
-                <Text style={styles.mapButtonText} numberOfLines={1}>
-                  Zurück
-                </Text>
-            </TouchableHighlight>
-          </View>
-
-      );
-    }
-    else {
-      return (
-        <View style={styles.mapBottomContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.mapButtonStyle}>
-                <Text style={styles.mapButtonText} numberOfLines={1}>
-                  Zurück
-                </Text>
-            </TouchableHighlight>
-          </View>
-      );
-    }
+  showBackButton(){
+    return (
+      <View style={styles.mapBottomContainer}>
+          <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.mapButtonStyle}>
+              <Text style={styles.mapButtonText} numberOfLines={1}>
+                Zurück
+              </Text>
+          </TouchableHighlight>
+        </View>
+    );
   }
 }
