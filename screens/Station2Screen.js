@@ -37,6 +37,8 @@ export default class Station2Screen extends React.Component {
 
           {this.showStationInfoAudioAndNextButton()}
 
+          <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station2InfoBadgerImageStyle}/>
+
         </View>
       );
     }
@@ -58,6 +60,8 @@ export default class Station2Screen extends React.Component {
           </View>
 
           {this.showStationInfoAudioAndNextButton()}
+
+          <Image source={require('../assets/images/badgerQuestion7.png')} style={styles.station2InfoBadgerImageStyle}/>
 
         </View>
       );
