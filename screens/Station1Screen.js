@@ -80,13 +80,13 @@ export default class Station1Screen extends React.Component {
       <View style={styles.stationInfoBottomContainer}>
         {/* show three buttons for the audio file: play, pause and stop*/}
         <View style={styles.stationInfoAudioContainer}>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','play',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','play')}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
               <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','pause',true)}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','pause')}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
               <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','stop',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
+            <TouchableHighlight onPress={() => {AudioFile.audioFunction('Station1Info','stop')}} underlayColor="rgba(96,100,109, 1)" style={styles.stationInfoButtonAudioStyle}>
               <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
             </TouchableHighlight>
         </View>

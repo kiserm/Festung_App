@@ -93,13 +93,13 @@ export default class HowToScreen extends React.Component {
       <View style={styles.howToBottomContainer}>
         {/* show three buttons for the audio file: play, pause and stop*/}
         <View style={styles.howToAudioContainer}>
-          <TouchableHighlight onPress={() => {AudioFile.loadAudioFile('HowTo'),AudioFile.audioFunction('HowTo','play',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+          <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','play')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
             <IconMaterialCommunityIcons name='play-circle-outline' size={hp('7%')} color='#C92732'/>
           </TouchableHighlight>
-          <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause',true)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+          <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','pause')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
             <IconMaterialCommunityIcons name='pause-circle-outline' size={hp('7%')} color='#C92732'/>
           </TouchableHighlight>
-          <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop',false)}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
+          <TouchableHighlight onPress={() => {AudioFile.audioFunction('HowTo','stop')}} underlayColor="rgba(96,100,109, 1)" style={styles.howToButtonAudioStyle}>
             <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
           </TouchableHighlight>
         </View>
