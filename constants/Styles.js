@@ -1362,14 +1362,23 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0)',
     transform: [{rotate: '-50deg'}],
   },
-  station10InfoImageStyle:{
+  station10InfoImageStyle1:{
     position: 'absolute',
-    top: -hp("2%"),
-    left: wp("55%"),
-    width: wp("13%"),
-    height: wp("12%"),
+    top: hp("7%"),
+    left: wp("1%"),
+    width: wp("10%"),
+    height: wp("9.5%"),
+    zIndex: 100,
     backgroundColor: 'rgba(255,255,255,0)',
-    transform: [{rotate: '180deg'}],
+  },
+  station10InfoImageStyle2:{
+    position: 'absolute',
+    top: hp("7%"),
+    right: wp("1%"),
+    width: wp("10%"),
+    height: wp("9.5%"),
+    zIndex: 100,
+    backgroundColor: 'rgba(255,255,255,0)',
   },
 });
 
