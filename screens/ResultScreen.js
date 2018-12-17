@@ -92,7 +92,7 @@ export default class ResultScreen extends React.Component {
     if(AnswerSheet.getAnswer(stationNumber) === AnswerSheet.getRightAnswer(stationNumber))
       return(
         <View style={styles.resultCompareContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('SubmittedStation' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.resultStationButtonStyle}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + 'Screen',{originScreenName: 'Result'})} underlayColor="rgba(96,100,109, 1)" style={styles.resultStationButtonStyle}>
               <Text style={styles.resultButtonText} numberOfLines={1}>
                   Station {stationNumber}
               </Text>
@@ -115,7 +115,7 @@ export default class ResultScreen extends React.Component {
     else {
       return(
         <View style={styles.resultCompareContainer}>
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('SubmittedStation' + stationNumber)} underlayColor="rgba(96,100,109, 1)" style={styles.resultStationButtonStyle}>
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + 'Screen',{originScreenName: 'Result'})} underlayColor="rgba(96,100,109, 1)" style={styles.resultStationButtonStyle}>
             <Text style={styles.resultButtonText} numberOfLines={1}>
                 Station {stationNumber}
             </Text>

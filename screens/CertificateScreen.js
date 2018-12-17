@@ -44,10 +44,16 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomTextFormat}>Soldat </Text>
+            <Text style={styles.certificateBottomTextFormat}>Verschnupft </Text>
           </View>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine Überraschung. </Text>
+            <Text style={styles.certificateBottomInfoTextFormat}>
+            Vermutlich konntest Du wegen einer verschnupften Nase nicht alle 
+            richtigen Antworten erschnüffeln. 
+            </Text>
+          </View>
+          <View style={styles.certificateBottomTextContainer}>
+            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine kleine Überraschung. </Text>
           </View>
         </View>
       );
@@ -57,10 +63,16 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomTextFormat}>Wachtmeister </Text>
+            <Text style={styles.certificateBottomTextFormat}>Stumpfnase </Text>
           </View>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine Überraschung. </Text>
+            <Text style={styles.certificateBottomInfoTextFormat}>
+            Du hast eine gute Nase, doch sie konnte Dir nicht helfen ganz alle Antworten zu erschnüffeln. Trotzdem hast Du
+            {AnswerSheet.getNumberOfRightAnswers()} von 10 Aufgaben richtig gelöst. Bravo! 
+            </Text>
+          </View>
+          <View style={styles.certificateBottomTextContainer}>
+            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine kleine Überraschung. </Text>
           </View>
         </View>
       );
@@ -70,10 +82,16 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomTextFormat}>Hauptfeldweibel </Text>
+            <Text style={styles.certificateBottomTextFormat}>Spürnase </Text>
           </View>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine Überraschung. </Text>
+            <Text style={styles.certificateBottomInfoTextFormat}>
+            Mit deiner Spürnase findest Du fast jede Antwort heraus. Wunderbare {AnswerSheet.getNumberOfRightAnswers()} von 10
+            Aufgaben hast Du richtig gelöst. Exzellent!
+            </Text>
+          </View>
+          <View style={styles.certificateBottomTextContainer}>
+            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine kleine Überraschung. </Text>
           </View>
         </View>            
       );
@@ -83,10 +101,15 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomTextFormat}>Oberstleutnant </Text>
+            <Text style={styles.certificateBottomTextFormat}>Super - Spürnase </Text>
           </View>
           <View style={styles.certificateBottomTextContainer}>
-            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine Überraschung. </Text>
+            <Text style={styles.certificateBottomInfoTextFormat}>
+            Du hast eine Nase wie Finja und Dario! Grandios, Du hast alle Aufgaben korrekt beantwortet! 
+            </Text>
+          </View>
+          <View style={styles.certificateBottomTextContainer}>
+            <Text style={styles.certificateBottomInfoTextFormat}>Zeige dies an der Kasse und Du erhälst eine kleine Überraschung. </Text>
           </View>
 
         </View>
