@@ -117,7 +117,7 @@ export default class Station3Screen extends React.Component {
                   if(AudioFile.getAudioStatus('Station1Info')){
                     AudioFile.audioFunction('Station1Info','pause');
                     if(this.props.navigation.getParam('originScreenName')==='Result'){
-                      this.props.navigation.navigate('SubmittedStation3',{mode:'result'},{mode:'result'});
+                      this.props.navigation.navigate('SubmittedStation3');
                     }
                     else{
                       this.props.navigation.navigate('Station3Question');
@@ -125,7 +125,7 @@ export default class Station3Screen extends React.Component {
                   }
                   else{
                     if(this.props.navigation.getParam('originScreenName')==='Result'){
-                      this.props.navigation.navigate('SubmittedStation3',{mode:'result'},{mode:'result'});
+                      this.props.navigation.navigate('SubmittedStation3');
                     }
                     else{
                       this.props.navigation.navigate('Station3Question');

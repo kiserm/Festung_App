@@ -120,7 +120,7 @@ export default class Station1Screen extends React.Component {
                   if(AudioFile.getAudioStatus('Station1Info')){
                     AudioFile.audioFunction('Station1Info','pause');
                     if(this.props.navigation.getParam('originScreenName')==='Result'){
-                      this.props.navigation.navigate('SubmittedStation1',{mode:'result'});
+                      this.props.navigation.navigate('SubmittedStation1');
                     }
                     else{
                       this.props.navigation.navigate('Station1Question');
@@ -128,7 +128,7 @@ export default class Station1Screen extends React.Component {
                   }
                   else{
                     if(this.props.navigation.getParam('originScreenName')==='Result'){
-                      this.props.navigation.navigate('SubmittedStation1',{mode:'result'});
+                      this.props.navigation.navigate('SubmittedStation1');
                     }
                     else{
                       this.props.navigation.navigate('Station1Question');
