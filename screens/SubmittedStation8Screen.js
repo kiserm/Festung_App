@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -40,6 +40,8 @@ export default class SubmittedStation8Screen extends React.Component {
             <Text style={styles.submittedStationTextFormat}>
             {QuestionSheet.getQuestion(8)}
             </Text>
+            <Image source={require('../assets/images/badgerQuestion1.png')} style={styles.submittedStationImageStyle1}/>
+            <Image source={require('../assets/images/foxQuestion2.png')} style={styles.submittedStationImageStyle2}/>
         </View>
 
         {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
@@ -61,7 +63,7 @@ export default class SubmittedStation8Screen extends React.Component {
                                 (this.state.chosenAnswerStation8!=this.state.rightAnswerStation8 && this.state.chosenAnswerStation8==='A') && styles.submittedStationChosenButtonLetter,
                                 (this.state.chosenAnswerStation8!=this.state.rightAnswerStation8 && this.state.rightAnswerStation8==='A') && styles.submittedStationUnchosenButtonLetter,
                             ]}>
-                  A:
+                  A
                 </Text>
                 <Text style={[styles.submittedStationUnchosenButtonText, 
                             (this.state.chosenAnswerStation8===this.state.rightAnswerStation8 && this.state.chosenAnswerStation8==='A') && styles.submittedStationChosenButtonText,
@@ -87,7 +89,7 @@ export default class SubmittedStation8Screen extends React.Component {
                                 (this.state.chosenAnswerStation8!=this.state.rightAnswerStation8 && this.state.chosenAnswerStation8==='B') && styles.submittedStationChosenButtonLetter,
                                 (this.state.chosenAnswerStation8!=this.state.rightAnswerStation8 && this.state.rightAnswerStation8==='B') && styles.submittedStationUnchosenButtonLetter,
                             ]}>
-                  B:
+                  B
                 </Text>
                 <Text style={[styles.submittedStationUnchosenButtonText, 
                             (this.state.chosenAnswerStation8===this.state.rightAnswerStation8 && this.state.chosenAnswerStation8==='B') && styles.submittedStationChosenButtonText,
@@ -99,8 +101,6 @@ export default class SubmittedStation8Screen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-        </View>
-        <View style={styles.submittedStationAnswerVerticalContainer}>
           <View style={styles.submittedStationRowContainer}>
           <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
@@ -115,7 +115,7 @@ export default class SubmittedStation8Screen extends React.Component {
                                 (this.state.chosenAnswerStation8!=this.state.rightAnswerStation8 && this.state.chosenAnswerStation8==='C') && styles.submittedStationChosenButtonLetter,
                                 (this.state.chosenAnswerStation8!=this.state.rightAnswerStation8 && this.state.rightAnswerStation8==='C') && styles.submittedStationUnchosenButtonLetter,
                             ]} >
-                  C:
+                  C
                 </Text>
                 <Text style={[styles.submittedStationUnchosenButtonText, 
                             (this.state.chosenAnswerStation8===this.state.rightAnswerStation8 && this.state.chosenAnswerStation8==='C') && styles.submittedStationChosenButtonText,
@@ -141,7 +141,7 @@ export default class SubmittedStation8Screen extends React.Component {
                                 (this.state.chosenAnswerStation8!=this.state.rightAnswerStation8 && this.state.chosenAnswerStation8==='D') && styles.submittedStationChosenButtonLetter,
                                 (this.state.chosenAnswerStation8!=this.state.rightAnswerStation8 && this.state.rightAnswerStation8==='D') && styles.submittedStationUnchosenButtonLetter,
                             ]} >
-                  D:
+                  D
                 </Text>
                 <Text style={[styles.submittedStationUnchosenButtonText, 
                             (this.state.chosenAnswerStation8===this.state.rightAnswerStation8 && this.state.chosenAnswerStation8==='D') && styles.submittedStationChosenButtonText,

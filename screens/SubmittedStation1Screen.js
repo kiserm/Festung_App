@@ -63,7 +63,7 @@ export default class SubmittedStation1Screen extends React.Component {
                                 (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.submittedStationChosenButtonLetter,
                                 (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='A') && styles.submittedStationUnchosenButtonLetter,
                             ]}>
-                  A:
+                  A
                 </Text>
                 <Text style={[styles.submittedStationUnchosenButtonText, 
                             (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='A') && styles.submittedStationChosenButtonText,
@@ -89,7 +89,7 @@ export default class SubmittedStation1Screen extends React.Component {
                                 (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.submittedStationChosenButtonLetter,
                                 (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='B') && styles.submittedStationUnchosenButtonLetter,
                             ]}>
-                  B:
+                  B
                 </Text>
                 <Text style={[styles.submittedStationUnchosenButtonText, 
                             (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='B') && styles.submittedStationChosenButtonText,
@@ -115,7 +115,7 @@ export default class SubmittedStation1Screen extends React.Component {
                                 (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.submittedStationChosenButtonLetter,
                                 (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='C') && styles.submittedStationUnchosenButtonLetter,
                             ]} >
-                  C:
+                  C
                 </Text>
                 <Text style={[styles.submittedStationUnchosenButtonText, 
                             (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='C') && styles.submittedStationChosenButtonText,
@@ -141,7 +141,7 @@ export default class SubmittedStation1Screen extends React.Component {
                                 (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.submittedStationChosenButtonLetter,
                                 (this.state.chosenAnswerStation1!=this.state.rightAnswerStation1 && this.state.rightAnswerStation1==='D') && styles.submittedStationUnchosenButtonLetter,
                             ]} >
-                  D:
+                  D
                 </Text>
                 <Text style={[styles.submittedStationUnchosenButtonText, 
                             (this.state.chosenAnswerStation1===this.state.rightAnswerStation1 && this.state.chosenAnswerStation1==='D') && styles.submittedStationChosenButtonText,

@@ -1125,6 +1125,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     justifyContent:'center',
     paddingHorizontal: wp("1%"),
+    flex:9
   },
   submittedStationChosenButtonLetter:{
     fontSize: hp("3%"),
@@ -1181,7 +1182,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     justifyContent:'center',
     alignSelf:'center',
-    flex:4,
+    flex:9,
     paddingHorizontal: wp("1%")
   },
   submittedStationUnchosenButtonLetter:{
