@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight} from 'react-native';
+import {Text,View,TouchableHighlight,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
@@ -40,6 +40,8 @@ export default class SubmittedStation1Screen extends React.Component {
             <Text style={styles.submittedStationTextFormat}>
             {QuestionSheet.getQuestion(1)}
             </Text>
+            <Image source={require('../assets/images/badgerQuestion1.png')} style={styles.submittedStationImageStyle1}/>
+            <Image source={require('../assets/images/foxQuestion2.png')} style={styles.submittedStationImageStyle2}/>
         </View>
 
         {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
@@ -99,8 +101,6 @@ export default class SubmittedStation1Screen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-        </View>
-        <View style={styles.submittedStationAnswerVerticalContainer}>
           <View style={styles.submittedStationRowContainer}>
           <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 

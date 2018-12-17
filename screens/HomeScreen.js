@@ -19,7 +19,7 @@ export default class HomeScreen extends React.Component {
         
         {/* Set the Logo of the App and add the link to the website when pressing on the image*/}        
         <View style={styles.homeImageContainer}>
-          <TouchableHighlight onPress={()=>{ this.props.navigation.navigate('Station1Question',{tutorialFlag:'false'}) }} underlayColor='rgba(255,255,255,0.5)'>
+          <TouchableHighlight onPress={()=>{ this.props.navigation.navigate('HowTo',{tutorialFlag:'false'}) }} underlayColor='rgba(255,255,255,0.5)'>
             <Image
               source={require('../assets/images/iconBadgerFox.png')}
               style={styles.homeImageStyle}
@@ -34,9 +34,9 @@ export default class HomeScreen extends React.Component {
           </Text>
         </View>     
         
-        {/* Set a button to get to the next page where you can find the quiz.*/}
+        {/* Set a button to get to the next page where you can find the quiz.*/} 
         <View style={styles.homeButtonContainer}>
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo',{tutorialFlag:'false'})} underlayColor="rgba(96,100,109, 1)" style={styles.homeButtonStyle}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Result',{tutorialFlag:'false'})} underlayColor="rgba(96,100,109, 1)" style={styles.homeButtonStyle}>
               {/*use NumberOfLines to say how much lines the text inside the button should have*/}
               <Text style={styles.homeButtonText} numberOfLines={1}>
                 Starte dein Abenteuer!

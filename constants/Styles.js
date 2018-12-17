@@ -1137,7 +1137,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp("1%"),
   },
   submittedStationTitleTextContainer:{
-    flex: 2.5,
+    flex: 3,
     alignItems: 'flex-start',
     justifyContent: 'center',
     marginHorizontal: wp("5%"),
@@ -1152,7 +1152,7 @@ const styles = StyleSheet.create({
     marginTop: hp("3%"),
   },
   submittedStationTextContainer:{
-    flex: 4,
+    flex: 5,
     alignItems: 'flex-start',
     justifyContent: 'center',
   },
@@ -1160,8 +1160,8 @@ const styles = StyleSheet.create({
     flex: 3
   },
   submittedStationAnswerVerticalContainer:{
-    flex:3,
-    flexDirection: 'row',
+    flex:8,
+    flexDirection: 'column',
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
@@ -1268,6 +1268,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     alignSelf: 'center',
+  },
+  submittedStationImageStyle1:{
+    position: 'absolute',
+    top: hp("0%"),
+    left: wp("2%"),
+    width: wp("10%"),
+    height: wp("9.5%"),
+    zIndex: 100,
+    backgroundColor: 'rgba(255,255,255,0)',
+  },
+  submittedStationImageStyle2:{
+    position: 'absolute',
+    bottom: hp("0%"),
+    right: wp("2%"),
+    width: wp("10%"),
+    height: wp("9.5%"),
+    zIndex: 100,
+    backgroundColor: 'rgba(255,255,255,0)',
   },
 
   // images in the app
