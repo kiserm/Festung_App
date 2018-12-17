@@ -37,7 +37,8 @@ export default class Station5Screen extends React.Component {
 
           {this.showStationInfoAudioAndNextButton()}
 
-          <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station5InfoImageStyle}/>
+          <Image source={require('../assets/images/badgerQuestion1.png')} style={styles.station5InfoImageStyle1}/>
+          <Image source={require('../assets/images/foxQuestion2.png')} style={styles.station5InfoImageStyle2}/>
 
         </View>
       );
@@ -61,7 +62,8 @@ export default class Station5Screen extends React.Component {
 
           {this.showStationInfoAudioAndNextButton()}
 
-          <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station5InfoImageStyle}/>
+          <Image source={require('../assets/images/badgerQuestion1.png')} style={styles.station5InfoImageStyle1}/>
+          <Image source={require('../assets/images/foxQuestion2.png')} style={styles.station5InfoImageStyle2}/>
 
         </View>
       );
