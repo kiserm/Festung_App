@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight,ScrollView} from 'react-native';
+import {Text,View,TouchableHighlight,ScrollView,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constanst/Styles.js
 import AnswerSheet from '../constants/AnswerSheet';
 import IconEntypo from 'react-native-vector-icons/Entypo';
@@ -24,6 +24,8 @@ export default class ResultScreen extends React.Component {
           <Text style={styles.resultTitleTextFormat}>
             Auswertung
           </Text>
+          <Image source={require('../assets/images/badgerQuestion1.png')} style={styles.resultImageStyle1}/>
+          <Image source={require('../assets/images/foxQuestion2.png')} style={styles.resultImageStyle2}/>
         </View>   
 
         {/* show a list of all questions, the given answers and the right answers. if a given answers was right, make 

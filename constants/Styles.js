@@ -560,6 +560,24 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent:'center'
   },
+  resultImageStyle1:{
+    position: 'absolute',
+    bottom: Platform.OS==='ios'?wp("17%"):wp("15%"),
+    right: wp("15%"),
+    width: wp("10%"),
+    height: wp("9.5%"),
+    zIndex: 100,
+    backgroundColor: 'rgba(255,255,255,0)',
+  },
+  resultImageStyle2:{
+    position: 'absolute',
+    bottom: hp("7%"),
+    right: wp("2%"),
+    width: wp("10%"),
+    height: wp("9.5%"),
+    zIndex: 100,
+    backgroundColor: 'rgba(255,255,255,0)',
+  },
 
   //certificateScreen styles
   // -----------------------------------------------------------------------------------------------------------------
