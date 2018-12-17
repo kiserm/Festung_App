@@ -44,10 +44,10 @@ export default class CertificateScreen extends React.Component {
         <View style={styles.certificateBottomContainer}>
           <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTitleContainer}>
-            <Text style={styles.certificateBottomTextFormat}>Verschnupft </Text>
+            <Text style={styles.certificateBottomTextFormat}>Verschnupft?! </Text>
           </View>
           <View style={styles.certificateBottomSubtitleContainer}>
-            <Text style={styles.certificateBottomInfoTextFormat}>
+            <Text style={styles.certificateBottomSubtitleTextFormat}>
             Vermutlich konntest Du wegen einer verschnupften Nase nicht alle 
             richtigen Antworten erschnüffeln. 
             </Text>

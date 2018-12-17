@@ -595,21 +595,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: hp("1%"),
     justifyContent: 'center',
-    backgroundColor: 'red',
   },
   certificateBottomSubtitleContainer:{
     flex: 3,
     alignItems: 'center',
     marginBottom: hp("1%"),
     justifyContent: 'flex-start',
-    backgroundColor: 'green',
   },
   certificateBottomCashDeskContainer:{
     flex: 2,
     alignItems: 'center',
     marginBottom: hp("2%"),
     justifyContent: 'flex-end',
-    backgroundColor: 'red',
   },
   certificateBottomTextFormat:{
     fontSize: hp("5%"),
@@ -619,10 +616,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginHorizontal: wp("7%"),
   },
-  certificateBottomInfoTextFormat:{
+  certificateBottomSubtitleTextFormat:{
     fontSize: hp("3%"),
     color: 'rgba(96,100,109, 1)',
-    lineHeight: hp("3.5%"),
+    lineHeight: hp("3.25%"),
+    fontWeight: 'normal',
+    textAlign: 'center',
+    marginHorizontal: wp("7%"),
+  },
+  certificateBottomInfoTextFormat:{
+    fontSize: hp("2.5%"),
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: hp("2.75%"),
     fontWeight: 'normal',
     textAlign: 'center',
     marginBottom: hp("2%"),
@@ -649,7 +654,8 @@ const styles = StyleSheet.create({
     height: wp("52%"),
     zIndex: 100,
     backgroundColor: 'rgba(255,255,255,0)',
-    flex:4,
+    flex:7,
+    marginBottom:hp("4%")
   },
 
   // stationsInfo style
