@@ -96,10 +96,20 @@ export default class Station1Screen extends React.Component {
           <TouchableHighlight onPress={() => {
                 if(AudioFile.getAudioStatus('Station1Info')){
                   AudioFile.audioFunction('Station1Info','pause');
+                  if(this.props.navigation.getParam('originScreenName')==='Result'){
+                    this.props.navigation.navigate('Result');
+                  }
+                  else{
                   this.props.navigation.navigate('HowTo');
+                  }
                 }
                 else{
+                  if(this.props.navigation.getParam('originScreenName')==='Result'){
+                    this.props.navigation.navigate('Result');
+                  }
+                  else{
                   this.props.navigation.navigate('HowTo');
+                  }
                 } 
               }} 
               underlayColor="rgba(96,100,109, 1)" 
@@ -109,10 +119,20 @@ export default class Station1Screen extends React.Component {
           <TouchableHighlight onPress={() => {
                   if(AudioFile.getAudioStatus('Station1Info')){
                     AudioFile.audioFunction('Station1Info','pause');
-                    this.props.navigation.navigate('Station1Question');
+                    if(this.props.navigation.getParam('originScreenName')==='Result'){
+                      this.props.navigation.navigate('SubmittedStation1',{mode:'result'});
+                    }
+                    else{
+                      this.props.navigation.navigate('Station1Question');
+                    }
                   }
                   else{
-                    this.props.navigation.navigate('Station1Question');
+                    if(this.props.navigation.getParam('originScreenName')==='Result'){
+                      this.props.navigation.navigate('SubmittedStation1',{mode:'result'});
+                    }
+                    else{
+                      this.props.navigation.navigate('Station1Question');
+                    }
                   } 
                 }} 
                 underlayColor="rgba(96,100,109, 1)" 

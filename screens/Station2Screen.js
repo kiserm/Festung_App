@@ -90,13 +90,23 @@ export default class Station2Screen extends React.Component {
 
         {/* back and forward button to navigate to the previous respectively to the next question*/}    
         <View style={styles.stationInfoBottomNextContainer}>
-          <TouchableHighlight onPress={() => {
-                if(AudioFile.getAudioStatus('Station2Info')){
-                  AudioFile.audioFunction('Station2Info','pause');
+        <TouchableHighlight onPress={() => {
+                if(AudioFile.getAudioStatus('Station1Info')){
+                  AudioFile.audioFunction('Station1Info','pause');
+                  if(this.props.navigation.getParam('originScreenName')==='Result'){
+                    this.props.navigation.navigate('Result');
+                  }
+                  else{
                   this.props.navigation.navigate('Station1Question');
+                  }
                 }
                 else{
+                  if(this.props.navigation.getParam('originScreenName')==='Result'){
+                    this.props.navigation.navigate('Result');
+                  }
+                  else{
                   this.props.navigation.navigate('Station1Question');
+                  }
                 } 
               }} 
               underlayColor="rgba(96,100,109, 1)" 
@@ -104,12 +114,22 @@ export default class Station2Screen extends React.Component {
             <Text style={styles.stationInfoNextButtonText}>Zurück </Text>
           </TouchableHighlight>
           <TouchableHighlight onPress={() => {
-                  if(AudioFile.getAudioStatus('Station2Info')){
-                    AudioFile.audioFunction('Station2Info','pause');
-                    this.props.navigation.navigate('Station2Question');
+                  if(AudioFile.getAudioStatus('Station1Info')){
+                    AudioFile.audioFunction('Station1Info','pause');
+                    if(this.props.navigation.getParam('originScreenName')==='Result'){
+                      this.props.navigation.navigate('SubmittedStation2',{mode:'result'});
+                    }
+                    else{
+                      this.props.navigation.navigate('Station2Question');
+                    }
                   }
                   else{
-                    this.props.navigation.navigate('Station2Question');
+                    if(this.props.navigation.getParam('originScreenName')==='Result'){
+                      this.props.navigation.navigate('SubmittedStation2',{mode:'result'});
+                    }
+                    else{
+                      this.props.navigation.navigate('Station2Question');
+                    }
                   } 
                 }} 
                 underlayColor="rgba(96,100,109, 1)" 
