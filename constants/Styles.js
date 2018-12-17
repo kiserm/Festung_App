@@ -1301,12 +1301,12 @@ const styles = StyleSheet.create({
   },
   station4InfoImageStyle:{
     position: 'absolute',
-    top: -hp("2%"),
-    left: wp("55%"),
-    width: wp("13%"),
-    height: wp("12%"),
+    bottom: -hp("0.5%"),
+    left: wp("45.5%"),
+    width: wp("8.5%"),
+    height: wp("9%"),
     backgroundColor: 'rgba(255,255,255,0)',
-    transform: [{rotate: '180deg'}],
+    transform: [{rotate: '-90deg'}],
   },
   station5InfoImageStyle:{
     position: 'absolute',
