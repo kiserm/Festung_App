@@ -49,7 +49,7 @@ export default class SubmittedStation6Screen extends React.Component {
               C: ...         D: ...
         */}   
         <View style={styles.submittedStationAnswerVerticalContainer}>
-          <View style={styles.submittedStationRowContainer}>
+          <View style={styles.submittedStationA6RowContainer}>
           <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
                 style={[styles.submittedStationUnchosenButtonStyle, 
@@ -75,7 +75,7 @@ export default class SubmittedStation6Screen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-          <View style={styles.submittedStationRowContainer}>
+          <View style={styles.submittedStationB6RowContainer}>
           <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
                 style={[styles.submittedStationUnchosenButtonStyle, 
@@ -101,7 +101,7 @@ export default class SubmittedStation6Screen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-          <View style={styles.submittedStationRowContainer}>
+          <View style={styles.submittedStationC6RowContainer}>
           <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
                 style={[styles.submittedStationUnchosenButtonStyle, 
@@ -127,7 +127,7 @@ export default class SubmittedStation6Screen extends React.Component {
               </View>
             </TouchableHighlight>
           </View>
-          <View style={styles.submittedStationRowContainer}>
+          <View style={styles.submittedStationD6RowContainer}>
             <TouchableHighlight 
                 onPress={() => {}} underlayColor="rgba(96,100,109, 1)" 
                 style={[styles.submittedStationUnchosenButtonStyle, 
