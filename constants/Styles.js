@@ -327,6 +327,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent:'center',
   },
+  overviewImageStyle:{
+    position: 'absolute',
+    top: hp("7%"),
+    right: wp("0%"),
+    width: wp("35%"),
+    height: wp("28%"),
+    zIndex: 100,
+    backgroundColor: 'rgba(255,255,255,0)',
+  },
 
   // MapScreen styles
   // -----------------------------------------------------------------------------------------------------------------

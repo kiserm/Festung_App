@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,TouchableHighlight,ScrollView,Alert} from 'react-native';
+import {Text,View,TouchableHighlight,ScrollView,Alert,Image} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import AnswerSheet from '../constants/AnswerSheet';  // to get access to the users given answers
 
@@ -132,6 +132,10 @@ export default class OverviewScreen extends React.Component {
                         {this.showSubmitButton()}
                     </View>
                 </View>
+
+                
+                <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.overviewImageStyle}/>
+
 
             </View>
         );
