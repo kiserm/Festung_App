@@ -31,7 +31,7 @@ export default class SubmittedStation7Screen extends React.Component {
         {/*Set the title of the Screen*/}        
         <View style={styles.submittedStationTitleTextContainer}>
           <Text style={styles.submittedStationTitleTextFormat}>
-            Station 7
+          Station 7{"\n"}Resultat
           </Text>
         </View>     
         
