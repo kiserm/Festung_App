@@ -67,7 +67,7 @@ export default class CertificateScreen extends React.Component {
           </View>
           <View style={styles.certificateBottomSubtitleContainer}>
             <Text style={styles.certificateBottomInfoTextFormat}>
-            Du hast eine gute Nase, doch sie konnte Dir nicht helfen ganz alle Antworten zu erschnüffeln. Trotzdem hast Du
+            Du hast eine gute Nase, doch sie konnte Dir nicht helfen ganz alle Antworten zu erschnüffeln. Trotzdem hast Du 
             {AnswerSheet.getNumberOfRightAnswers()} von 10 Aufgaben richtig gelöst. Bravo! 
             </Text>
           </View>
