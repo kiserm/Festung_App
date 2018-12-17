@@ -1284,7 +1284,7 @@ const styles = StyleSheet.create({
   station2InfoBadgerImageStyle:{
     position: 'absolute',
     top: -hp("2%"),
-    left: wp("55%"),
+    right: wp("7%"),
     width: wp("13%"),
     height: wp("12%"),
     backgroundColor: 'rgba(255,255,255,0)',
@@ -1355,12 +1355,12 @@ const styles = StyleSheet.create({
   },
   station9InfoImageStyle:{
     position: 'absolute',
-    top: -hp("2%"),
-    left: wp("55%"),
-    width: wp("13%"),
-    height: wp("12%"),
+    bottom: hp("20%"),
+    right: -wp("8%"),
+    width: wp("21%"),
+    height: wp("20%"),
     backgroundColor: 'rgba(255,255,255,0)',
-    transform: [{rotate: '180deg'}],
+    transform: [{rotate: '-50deg'}],
   },
   station10InfoImageStyle:{
     position: 'absolute',
