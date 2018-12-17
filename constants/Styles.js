@@ -329,10 +329,10 @@ const styles = StyleSheet.create({
   },
   overviewImageStyle:{
     position: 'absolute',
-    top: hp("7%"),
+    top: Platform.OS==='ios'?hp("10%"):hp("7%"),
     right: wp("0%"),
     width: wp("35%"),
-    height: wp("28%"),
+    height: wp("18%"),
     zIndex: 100,
     backgroundColor: 'rgba(255,255,255,0)',
   },
@@ -582,16 +582,11 @@ const styles = StyleSheet.create({
   //certificateScreen styles
   // -----------------------------------------------------------------------------------------------------------------
   certificateTitleTextContainer:{
-    flex:2,
+    flex:1.5,
     marginTop: hp("5%"),
   },
   certificateBottomContainer:{
     flex:6,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  certificateImageContainer:{
-    flex:2,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -631,6 +626,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     justifyContent: 'center',
+  },
+  certificateImageStyle:{
+    alignSelf: 'stretch',
+    justifyContent: 'flex-start',
+    width: wp("100%"),
+    height: wp("52%"),
+    zIndex: 100,
+    backgroundColor: 'rgba(255,255,255,0)',
+    flex:2,
   },
 
   // stationsInfo style

@@ -23,7 +23,7 @@ export default class CertificateScreen extends React.Component {
         {/*Set the title of the Screen*/}        
         <View style={styles.certificateTitleTextContainer}>
           <Text style={styles.certificateTitleTextFormat} numberOfLines={2}>
-            Dein Festung{"\n"}Fürigen Grad
+            Gratulation!
           </Text>
         </View>     
 
@@ -42,11 +42,7 @@ export default class CertificateScreen extends React.Component {
     if(AnswerSheet.getNumberOfRightAnswers() >= 0 && AnswerSheet.getNumberOfRightAnswers() <= 3){
       return (
         <View style={styles.certificateBottomContainer}>
-          <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.certificateIconStyle} underlayColor='red'>
-            <IconMaterialCommunityIcons name="certificate" size={hp("33%")} color="rgb(0, 153, 0)"/>         
-            </TouchableHighlight>
-          </View>
+          <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>Soldat </Text>
           </View>
@@ -59,11 +55,7 @@ export default class CertificateScreen extends React.Component {
     else if(AnswerSheet.getNumberOfRightAnswers() >= 4 && AnswerSheet.getNumberOfRightAnswers() <= 6){
       return (
         <View style={styles.certificateBottomContainer}>
-          <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconMaterialCommunityIcons name="certificate" size={hp("33%")} color="rgb(165, 113, 100)"/>
-            </TouchableHighlight>
-          </View>
+          <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>Wachtmeister </Text>
           </View>
@@ -76,11 +68,7 @@ export default class CertificateScreen extends React.Component {
     else if(AnswerSheet.getNumberOfRightAnswers() >= 7 && AnswerSheet.getNumberOfRightAnswers() <= 9){
       return (
         <View style={styles.certificateBottomContainer}>
-          <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconMaterialCommunityIcons name="certificate" size={hp("33%")} color="silver"/>
-            </TouchableHighlight>
-          </View>
+          <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>Hauptfeldweibel </Text>
           </View>
@@ -93,11 +81,7 @@ export default class CertificateScreen extends React.Component {
     else if(AnswerSheet.getNumberOfRightAnswers() === 10){
       return (
         <View style={styles.certificateBottomContainer}>
-          <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconMaterialCommunityIcons name="certificate" size={hp("33%")} color="goldenrod"/>
-            </TouchableHighlight>
-          </View>
+          <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>Oberstleutnant </Text>
           </View>
@@ -111,11 +95,7 @@ export default class CertificateScreen extends React.Component {
     else{
       return(
         <View style={styles.certificateBottomContainer}>
-          <View style={styles.certificateImageContainer}>
-            <TouchableHighlight style={styles.certificateIconStyle}>
-                <IconMaterialCommunityIcons name="award" size={hp("33%")} color="rgba(96,100,109, 1)"/>
-            </TouchableHighlight>
-          </View>
+          <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTextContainer}>
             <Text style={styles.certificateBottomTextFormat}>
                 Error
