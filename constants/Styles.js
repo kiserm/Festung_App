@@ -365,9 +365,8 @@ const styles = StyleSheet.create({
     marginTop: hp("2%"),
   },
   mapImageStyle:{
-    width: wp("100%"),
-    height: hp("70%"),
-    resizeMode: 'contain',
+    width: Platform.OS==='ios'?wp("300%"):wp('150%'),
+    height: Platform.OS==='ios'?wp("210%"):wp('105%'),
     alignSelf: 'center',
     justifyContent: 'center',
   },

@@ -2,9 +2,8 @@ import React from 'react';
 import {Text,View,TouchableHighlight,Image, Platform,Modal} from 'react-native';
 import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
 import { ScrollView } from 'react-native-gesture-handler';
-import {Asset} from 'expo';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
-import ImageViewer from 'react-native-image-zoom-viewer';
+import PinchZoomView from 'react-native-pinch-zoom-view';
 
 /**
  * IDEA:
@@ -19,8 +18,6 @@ export default class MapScreen extends React.Component {
   
 
   render() {
-    // differ between iOS and Android since on Android the scrollview is not implemented and we need to make a workaround on the webview
-    //if(Platform.OS === 'ios') {
       return (      
         <View style={styles.anyWholeScreen}>
           
@@ -33,14 +30,11 @@ export default class MapScreen extends React.Component {
 
           {/*Set the map image with zoom capabilities in here*/}                    
           <View style={styles.mapMiddleContainer}>
-            <ScrollView scrollEnabled={true}
-                        centerContent={true} 
-                        maximumZoomScale={8}
-                        minimumZoomScale={0.7} 
-                        automaticallyAdjustContentInsets={true}
-                        contentContainerStyle={styles.mapScrollViewStyle}>
+
+            <PinchZoomView maxScale={5} minScale={0.25}>
               <Image source={require('../assets/images/planFestung.png')} style={styles.mapImageStyle}/>
-            </ScrollView>
+            </PinchZoomView>
+
           </View>
 
           {/*Set the navigation to go back since no header in Map*/}    
@@ -48,42 +42,7 @@ export default class MapScreen extends React.Component {
   
         </View>
       );
-      /*
     }
-    else { 
-      return (      
-        <View style={styles.anyWholeScreen}>
-          
-          {/*Set the title of the Screen*//*}        
-          <View style={styles.mapTitleTextContainer}>
-            <Text style={styles.mapTitleTextFormat} numberOfLines={2}>
-              Plan der{"\n"}Festung
-            </Text>
-          </View>     
-
-          {/*Set the map image with zoom capabilities in here, use a package where you can find here: https://www.npmjs.com/package/react-native-image-pan-zoom *//*}                    
-          <View style={styles.mapMiddleContainer}>
-
-<html><body><div style='width: 100%;height: 100%;vertical-align: middle;display: flex;justify-content: center;'><img src='../assets/images/planFestung.png' style=' display: table-cell; width: 100%;margin: auto auto;'></div></body></html>
-<WebView source={{ html: "<html><body><div style='width: 100%;height: 100%;vertical-align: middle;display: flex;justify-content: center;'><img src='../assets/images/planFestung.png' style=' display: table-cell; width: 100%;margin: auto auto;'></div></body></html>" }}
-                        originWhitelist={['*']}
-                        scalesPageToFit={true} 
-                        style={styles.mapWebViewStyle}
-                        automaticallyAdjustContentInsets={true}
-                        />
-
-          </View>
-
-
-
-          {/*Set the navigation to go back since no header in Map*//*}    
-          {this.showRightBackButton()}
-  
-        </View>
-      );
-    }
-    */
-  }
 
   /**
    * IDEA:

@@ -93,8 +93,8 @@ export default class Station10Screen extends React.Component {
         {/* back and forward button to navigate to the previous respectively to the next question*/}    
         <View style={styles.stationInfoBottomNextContainer}>
         <TouchableHighlight onPress={() => {
-                if(AudioFile.getAudioStatus('Station1Info')){
-                  AudioFile.audioFunction('Station1Info','pause');
+                if(AudioFile.getAudioStatus('Station10Info')){
+                  AudioFile.audioFunction('Station10Info','pause');
                   if(this.props.navigation.getParam('originScreenName')==='Result'){
                     this.props.navigation.navigate('Result');
                   }
@@ -116,8 +116,8 @@ export default class Station10Screen extends React.Component {
             <Text style={styles.stationInfoNextButtonText}>Zurück </Text>
           </TouchableHighlight>
           <TouchableHighlight onPress={() => {
-                  if(AudioFile.getAudioStatus('Station1Info')){
-                    AudioFile.audioFunction('Station1Info','pause');
+                  if(AudioFile.getAudioStatus('Station10Info')){
+                    AudioFile.audioFunction('Station10Info','pause');
                     if(this.props.navigation.getParam('originScreenName')==='Result'){
                       this.props.navigation.navigate('SubmittedStation10');
                     }
