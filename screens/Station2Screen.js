@@ -1,16 +1,16 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,Platform,WebView,Image} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import styles from '../constants/Styles';
 import QuestionSheet from '../constants/QuestionSheet';
 import { ScrollView } from 'react-native-gesture-handler';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AudioFile from '../constants/AudioFile';
 import OwnElement from '../constants/OwnElements';
 
 /**
  * IDEA:
- * this screen shows the first info text of the quiz
+ * this screen shows the second info text of the quiz
  */
 export default class Station2Screen extends React.Component {
   static navigationOptions = {
@@ -37,6 +37,7 @@ export default class Station2Screen extends React.Component {
 
           {this.showStationInfoAudioAndNextButton()}
 
+          {/* show somewhere on the screen either finja the fox, dario the badger or both, only for design purpose*/} 
           <Image source={require('../assets/images/badgerQuestion7.png')} style={styles.station2InfoBadgerImageStyle}/>
 
         </View>
@@ -61,6 +62,7 @@ export default class Station2Screen extends React.Component {
 
           {this.showStationInfoAudioAndNextButton()}
 
+          {/* show somewhere on the screen either finja the fox, dario the badger or both, only for design purpose*/} 
           <Image source={require('../assets/images/badgerQuestion7.png')} style={styles.station2InfoBadgerImageStyle}/>
 
         </View>
@@ -88,8 +90,12 @@ export default class Station2Screen extends React.Component {
             </TouchableHighlight>
         </View>
 
-        {/* back and forward button to navigate to the previous respectively to the next question*/}    
-        <View style={styles.stationInfoBottomNextContainer}>
+        {/* back and forward button to navigate to the previous respectively to the next question
+            if the audio is playing when the user wants to leave the screen, then the audio should be paused
+            if the user comes from the result screen, he should navigate to the submittedStation and no more to the question
+            if the user comes from the result screen, he should navigate BACK to the result screen and not to the previous question 
+        */}   
+      <View style={styles.stationInfoBottomNextContainer}>
         <TouchableHighlight onPress={() => {
                 if(AudioFile.getAudioStatus('Station2Info')){
                   AudioFile.audioFunction('Station2Info','pause');
@@ -140,5 +146,4 @@ export default class Station2Screen extends React.Component {
       </View>
     );
   }
-
 }
