@@ -1,21 +1,19 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,ScrollView,Alert,Image} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
-import AnswerSheet from '../constants/AnswerSheet';  // to get access to the users given answers
-
+import styles from '../constants/Styles'; 
+import AnswerSheet from '../constants/AnswerSheet'; 
 
 /**
  * IDEA:
  * This screen should help the users to get around in the quiz world. Firstly, they should get an overview of all
- * quizzes, secondly they should be able to see which stations they already did and which they still have to do.
+ * quiz questions, secondly they should be able to see which stations they already did and which they still have to do.
  * Thirdly, if two or more users solve the quizzes, they have a short way to compare their answers with the help of 
  * this overview screen.
  */
 export default class OverviewScreen extends React.Component {
     static navigationOptions = {
     title: "OverviewScreen", // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
-    header: null, // do not show the header, else there is a problem for the hint screen because then we do not
-                    // know from which screen we are coming hence we would have the wrong hint rendered
+    header: null, // do not show the header for design purpose
     };
     
     render() {
@@ -133,9 +131,8 @@ export default class OverviewScreen extends React.Component {
                     </View>
                 </View>
 
-                
+                {/* show somewhere on the screen either finja the fox, dario the badger or both, only for design purpose*/}  
                 <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.overviewImageStyle}/>
-
 
             </View>
         );
@@ -171,7 +168,7 @@ export default class OverviewScreen extends React.Component {
 
     /**
      * IDEA:
-     * This function tests if all quizzes has been solved, if so then this function returns true, if not, this function
+     * This method tests if all quizzes has been solved, if so then this function returns true, if not, this function
      * returns false.
      */
     testAllTasksDone(){
@@ -207,7 +204,6 @@ export default class OverviewScreen extends React.Component {
                     </Text>
                 </TouchableHighlight>
             );
-
         }
     }
 }
