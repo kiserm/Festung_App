@@ -12,7 +12,8 @@ export class OwnElements extends React.Component{
 
     /**
      * IDEA:
-     * write once the title, use it twice on android and ios
+     * write once the title for the info screens, use it twice on android and ios
+     * @param {integer from 1 to 10 to indicate the stationNumber} StationNumber 
      */
     showStationInfoTitle(StationNumber){
         return(
