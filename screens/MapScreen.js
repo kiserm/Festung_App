@@ -37,7 +37,7 @@ export default class MapScreen extends React.Component {
 
           </View>
 
-          {/*Set the navigation to go back since no header in Map*/}    
+          {/*Set the navigation to go back*/}    
           {this.showBackButton()}
   
         </View>

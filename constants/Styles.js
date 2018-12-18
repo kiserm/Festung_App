@@ -1,6 +1,7 @@
 import {StyleSheet, Platform, NativeModules} from 'react-native'; 
 
-// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
+// to be able to have a proper design on every platform, I downloaded this package from 
+// this website: https://www.npmjs.com/package/react-native-responsive-screen
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 

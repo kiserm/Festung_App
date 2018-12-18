@@ -1,18 +1,17 @@
+import {View,TouchableHighlight} from 'react-native';
+import React from 'react';
+import styles from '../constants/Styles';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 // import the StackNavigator to be able to switch between screens by putting the 
 // screens on to the stack and if you go back, then the last screen pops from the stack
 import { createStackNavigator } from 'react-navigation';
-import {View,TouchableHighlight,NativeModules,Text} from 'react-native';
-import React from 'react';
 
-// for the navigation bar: here you can find the whole directory https://oblador.github.io/react-native-vector-icons/
+// for the navigation bar: here you can find the whole directory of the icons https://oblador.github.io/react-native-vector-icons/
 import IconEntypo from 'react-native-vector-icons/Entypo'; 
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-// to be able to have a proper design on every platform, I downloaded this package from 
-// this website: https://www.npmjs.com/package/react-native-responsive-screen
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-
-// import all screens in the order in which they appear in the app
+// import all screens of the app
 import HomeScreen from '../screens/HomeScreen';
 import HowToScreen from '../screens/HowToScreen';
 import MapScreen from '../screens/MapScreen';
@@ -50,13 +49,12 @@ import SubmittedStation8Screen from '../screens/SubmittedStation8Screen';
 import SubmittedStation9Screen from '../screens/SubmittedStation9Screen';
 import SubmittedStation10Screen from '../screens/SubmittedStation10Screen';
 
-// used to custom the tab navigation bar
-import styles from '../constants/Styles';
 
 /**
  * IDEA:
  * here we create the StackNavigator. Every screen we want to Navigate to, needs to be
- * in this definition, else the screen is not accessible
+ * in this definition, else the screen is not accessible. Further we define the default
+ * navigation bar at the top of the screen!
  */
 const NavigationStack = createStackNavigator(
   // the convention is that we navigate to the screens, but the screen names are without the suffix 'screen'. for example
@@ -100,16 +98,17 @@ const NavigationStack = createStackNavigator(
     SubmittedStation10: SubmittedStation10Screen,
   },
   {
-    // here we say on which screen the app should start
+    // say on which screen the app should start
     initialRouteName: 'Home',
-    // here we can design the Navigation Tab Bar at the top for all screens. however we could overwrite it in the screen files if we want to
+    // here we can design the Navigation Tab Bar at the top for all screens. however we could overwrite it 
+    // in the screen files if we want to
     navigationOptions: ({ navigation }) => {
       return {
         headerStyle: {
           backgroundColor: '#fff',
           height: hp("7%"),
         },
-        gesturesEnabled: false, // this makes it impossible to swipe back on ios!!!if the value is false
+        gesturesEnabled: false, // this makes it impossible to swipe back on ios as well as on android, if the value is false
         headerTintColor: 'rgba(96,100,109, 1)', 
         headerTitleStyle: {
         fontWeight: 'normal',
@@ -117,10 +116,10 @@ const NavigationStack = createStackNavigator(
         flex:1,
         color: '#fff', // such that we do not see the title of the current page 
         },
-        // put one icon in the right header: mapIcon onpress to the mapScreen 
+        // put one icon in the right header: mapIcon onpress navigate to the mapScreen 
         headerRight: ( <View style={styles.headerButtonContainer}>
                           <TouchableHighlight onPress={() => {
-                                                              navigation.navigate('Map',{originScreenName: navigation.state.routeName})
+                                                              navigation.navigate('Map')
                                                             }
                                                     } style={styles.headerBarIcons}>
                             <IconEntypo name="map" size={hp("5%")} color="rgba(96,100,109, 1)"/>
@@ -130,7 +129,7 @@ const NavigationStack = createStackNavigator(
         // put the overview icon in the left header. onpress we get to the overview screen
         headerLeft: (<View style={styles.headerButtonContainer}>
                           <TouchableHighlight onPress={() => {
-                                                                navigation.navigate('Overview',{originScreenName: navigation.state.routeName})
+                                                                navigation.navigate('Overview')
                                                               }
                                                       } style={styles.headerBarIcons}>
                               <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("5%")} color="rgba(96,100,109, 1)"/>
