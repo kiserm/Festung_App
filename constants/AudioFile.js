@@ -116,17 +116,15 @@ export class AudioFile extends React.Component{
             } 
             // if the audio is already loaded, differ the cases if the audio file is playing or paused at the moment.
             // if paused -> then the file should play at the point where the user has paused
-            // else play the audio file from the start
-            else {          
-              if(this.isPausedHowTo===true){
-                this.prepareSound(); // such that the sound is also playing on ios even the phone is on silent mode
-                this.isPausedHowTo=false;
-                await this.howToTextSound.playAsync();
-              }   
-              else{
-                this.prepareSound(); // such that the sound is also playing on ios even the phone is on silent mode
-                await this.howToTextSound.replayAsync();
-              }
+            // else play the audio file from the start          
+            if(this.isPausedHowTo===true){
+              this.prepareSound(); // such that the sound is also playing on ios even the phone is on silent mode
+              this.isPausedHowTo=false;
+              await this.howToTextSound.playAsync();
+            }   
+            else{
+              this.prepareSound(); // such that the sound is also playing on ios even the phone is on silent mode
+              await this.howToTextSound.replayAsync();
             }
           }
           // mode: pause AND the audio file was already loaded -> only pause the audio and set the flag isPaused to true

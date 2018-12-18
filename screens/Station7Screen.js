@@ -6,6 +6,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AudioFile from '../constants/AudioFile';
 import OwnElement from '../constants/OwnElements';
+import QuestionSheet from '../constants/QuestionSheet';
 
 /**
  * IDEA:
