@@ -1,15 +1,15 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,Image} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import styles from '../constants/Styles';
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import { ScrollView } from 'react-native-gesture-handler';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 /**
  * IDEA:
- * this screen shows the second question of the quiz
+ * this screen shows the 4th question of the quiz
  */
 export default class Station4QuestionScreen extends React.Component {
   static navigationOptions = {
@@ -42,8 +42,13 @@ export default class Station4QuestionScreen extends React.Component {
         </View>
 
         {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
-              A: ...         B: ...
-              C: ...         D: ...
+              BadgerImage
+          A: ...
+          B: ...
+          C: ...         
+          D: ...
+          if the user chooses an answer the design of the button should change, such that the user knows that his 
+          answer was accepted...
         */}   
         <View style={styles.station4AnswerVerticalContainer}>
           <Image source={require('../assets/images/badgerQuestion4.png')} style={styles.station4BadgerImageStyle}/>
