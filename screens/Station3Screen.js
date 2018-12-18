@@ -1,16 +1,16 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,Platform,WebView,Image} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import styles from '../constants/Styles';
 import QuestionSheet from '../constants/QuestionSheet';
 import { ScrollView } from 'react-native-gesture-handler';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AudioFile from '../constants/AudioFile';
 import OwnElement from '../constants/OwnElements';
 
 /**
  * IDEA:
- * this screen shows the first info text of the quiz
+ * this screen shows the third info text of the quiz
  */
 export default class Station3Screen extends React.Component {
   static navigationOptions = {
@@ -146,5 +146,4 @@ export default class Station3Screen extends React.Component {
       </View>
     );
   }
-
 }
