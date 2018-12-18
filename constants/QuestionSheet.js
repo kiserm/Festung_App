@@ -3,13 +3,13 @@ import React from 'react';
 /**
  * IDEA:
  * This class carries all the questions and alll multiple choices. Furthermore you can 
- * get the questions and the  multiple choices with get methods.
+ * get the questions and the multiple choices with get methods.
  */
 export class QuestionSheetClass extends React.Component{
 
     /**
      * IDEA:
-     * this variable holds all the informations to the stations
+     * this variable holds all the information texts to the stations
      */
     Infos = {
         HowTo: 'Die Festung Fürigen ist ein unterirdischer Bunker, der für die militärische Verteidigung der Schweiz 1941 – während des Zweiten Weltkrieges – gebaut wurde. Dieser Krieg wütete zwischen den Jahren 1939 und 1945. Es waren alle Nachbarländer der Schweiz am Krieg beteiligt. Die Schweiz war wie eine kleine neutrale Insel inmitten Europas. Obwohl die Schweiz nicht am Krieg beteiligt war, musste sie sich vor allfälligen Angriffen schützen. Aus diesem Grund wurden in den Schweizer Alpen viele Festungen gebaut. In der Festung Fürigen wohnten regelmässig Soldaten, um sich für den Ernstfall vorzubereiten. Heute gehört die Festung nicht mehr der Armee und dient nur noch als Museum. Inzwischen haben sich die Füchsin Finja und der Dachs Dario in der Festung gemütlich gemacht. Sie werden euch auf einen Rundgang in der Festung begleiten. So werdet ihr gemeinsam die wichtigsten Sachen über den Alltag der Soldaten entdecken, die hier früher ihren Militärdienst gemacht haben. \n Viel Spass!',
@@ -207,7 +207,6 @@ export class QuestionSheetClass extends React.Component{
         }
     };
 
-
      /**
      * IDEA: 
      * this function is here to be able reading out the multiple Choice of D everytime and from everywhere in the app
@@ -309,7 +308,8 @@ export class QuestionSheetClass extends React.Component{
 
 /**
  * IDEA:
- * Make an instance of this class such that we can export this for an easier access from all screens without creating always an instance to get access to the methods and values
+ * Make an instance of this class such that we can export this for an easier access from all screens 
+ * without creating always an instance to get access to the methods and values
  */
 const QuestionSheet = new QuestionSheetClass();
 
