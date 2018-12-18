@@ -1,19 +1,18 @@
 import React from 'react';
-import {Text,View,TouchableHighlight,Image} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import {Text,View,Image} from 'react-native';
+import styles from '../constants/Styles';
 import AnswerSheet from '../constants/AnswerSheet';
-import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 /**
  * IDEA:
- * this screen show the certificate according to the reached score. the user should show this at the cash desk to get a reward for solving the quiz
+ * this screen show the certificate according to the reached score. the user should show this at the cash desk 
+ * to get a reward for solving the quiz.
  */
 export default class CertificateScreen extends React.Component {
       
   static navigationOptions = {
     title: "CertificateScreen", // set a title for the navigation bar at the top and the design is in the file ../navigation/StackNavigator.js
-    header: null 
+    header: null // do not show the header since there is no use for it on the certificate screen
   };
 
   render() {
@@ -36,7 +35,9 @@ export default class CertificateScreen extends React.Component {
 
   /**
    * IDEA:
-   * this function returns the view of the right certificarte according to the reached score
+   * this function returns the view of the right certificarte according to the reached score. Differ between the cases
+   * 0-3 // 4-6 // 7-9 // 10 out of 10 correctly solved questions. For every category show a little title and subtitle
+   * which describes the effort of the user
    */
   showParticularCertificate(){
     if(AnswerSheet.getNumberOfRightAnswers() >= 0 && AnswerSheet.getNumberOfRightAnswers() <= 3){
@@ -121,7 +122,7 @@ export default class CertificateScreen extends React.Component {
           <Image source={require('../assets/images/foxANDBadgerOverview.png')} style={styles.certificateImageStyle}/>
           <View style={styles.certificateBottomTitleContainer}>
             <Text style={styles.certificateBottomTextFormat}>
-                Error
+                Error - Wrong NumberOfRightAnswers!
             </Text>
           </View>
         </View>
