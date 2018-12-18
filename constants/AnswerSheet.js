@@ -2,14 +2,14 @@
 /**
  * IDEA:
  * This class carries all the answers the user has given. Furthermore you can 
- * get and set the answers with two functions.
+ * get and set the answers with the set and get methods.
  */
 class AnswerSheetClass{
 
     /**
      * IDEA:
      * this variable holds all answers given by the user. They can be modified with the 
-     * setAnswer() function and can be read with the getAnswer() function
+     * setAnswer() method and can be read with the getAnswer() method
      */
     Answers = {
                 Station1: '',
@@ -43,7 +43,7 @@ class AnswerSheetClass{
 
     /**
      * IDEA: 
-     * this function is here to be able reading out the answer everytime and from everywhere in the app
+     * this method is here to be able reading out the answer everytime and from everywhere in the app
      * @param {stationNumber is a integer between 1 and the number of Stations in the quiz} StationNumber 
      */
     getAnswer(StationNumber){
@@ -75,7 +75,7 @@ class AnswerSheetClass{
     
     /**
      * IDEA:
-     * this function is here to be able settin the answers everytime and from everywhere in the app 
+     * this method is here to be able setting the answers everytime and from everywhere in the app 
      */
     setAnswer(StationNumber,Answer){
         switch(StationNumber){
@@ -116,7 +116,7 @@ class AnswerSheetClass{
 
     /**
      * IDEA: 
-     * this function is here to be able reading out the right answer everytime and from everywhere in the app
+     * this method is here to be able reading out the right answer everytime and from everywhere in the app
      * @param {stationNumber is a integer between 1 and the number of Stations in the quiz} StationNumber 
      */
     getRightAnswer(StationNumber){
@@ -168,46 +168,12 @@ class AnswerSheetClass{
     getNumberOfRightAnswers(){
         return this.numberOfRightAnswers;
     };
-
-
-    /**
-     * IDEA:
-     * if the user makes the tutorial and has already seen the icons and pressed on it, but then he want to go back one screen,
-     * if so he is no more obliged to press the icon again. these flags make that this idea will work on. used only in tutorialscreens
-     * the get and set functions are implemented in the follwing
-     */
-    OverviewSeen = false;
-    HintSeen= false;
-    MapSeen= false;
-
-    getOverviewSeen(){
-        return this.OverviewSeen;
-    };
-
-    getHintSeen(){
-        return this.HintSeen;
-    };
-
-    getMapSeen(){
-        return this.MapSeen;
-    };
-
-    setOverviewSeen(flag){
-        this.OverviewSeen = flag;
-    };
-
-    setHintSeen(flag){
-        this.HintSeen = flag;
-    };
-
-    setMapSeen(flag){
-        this.MapSeen = flag;
-    };
 }
 
 /**
  * IDEA:
- * Make an instance of this class such that we can export this for an easier access from all screens without creating always an instance to get access to the methods and values
+ * Make an instance of this class such that we can export this for an easier access 
+ * from all screens without creating always an instance to get access to the methods and values
  */
 const AnswerSheet = new AnswerSheetClass();
 
