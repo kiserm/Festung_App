@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image,Text,View,TouchableHighlight} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
+import styles from '../constants/Styles'; 
 
 /**
  * IDEA:
@@ -17,7 +17,7 @@ export default class HomeScreen extends React.Component {
     return (      
       <View style={styles.anyWholeScreen}>
         
-        {/* Set the Logo of the App and add the link to the website when pressing on the image*/}        
+        {/* Set the Logo of the App and add the navigation to the first screen when pressing on the image*/}        
         <View style={styles.homeImageContainer}>
           <TouchableHighlight onPress={()=>{ this.props.navigation.navigate('HowTo') }} underlayColor='rgba(255,255,255,0.5)'>
             <Image
@@ -37,7 +37,6 @@ export default class HomeScreen extends React.Component {
         {/* Set a button to get to the next page where you can find the quiz.*/} 
         <View style={styles.homeButtonContainer}>
           <TouchableHighlight onPress={() => this.props.navigation.navigate('HowTo')} underlayColor="rgba(96,100,109, 1)" style={styles.homeButtonStyle}>
-              {/*use NumberOfLines to say how much lines the text inside the button should have*/}
               <Text style={styles.homeButtonText} numberOfLines={1}>
                 Starte dein Abenteuer!
               </Text>
@@ -45,7 +44,6 @@ export default class HomeScreen extends React.Component {
         </View>
 
       </View>
-    );
-    
+    );    
   }
 }
