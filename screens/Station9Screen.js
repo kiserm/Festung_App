@@ -10,7 +10,7 @@ import OwnElement from '../constants/OwnElements';
 
 /**
  * IDEA:
- * this screen shows the first info text of the quiz
+ * this screen shows the 9th info text of the quiz
  */
 export default class Station9Screen extends React.Component {
   static navigationOptions = {
@@ -146,5 +146,4 @@ export default class Station9Screen extends React.Component {
       </View>
     );
   }
-
 }
