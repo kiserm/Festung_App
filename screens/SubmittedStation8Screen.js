@@ -4,7 +4,6 @@ import styles from '../constants/Styles';
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
 
-
 /**
  * IDEA:
  * this screen shows the 8th task of the quiz with solution
