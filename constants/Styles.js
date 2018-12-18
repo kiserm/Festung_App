@@ -1,20 +1,21 @@
-import {StyleSheet, Platform, NativeModules} from 'react-native'; // we need this for using CSS like design patterns 
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
+import {StyleSheet, Platform, NativeModules} from 'react-native'; 
 
-// workaround to have the arrows stopping in front of the header
-const {StatusBarManager} = NativeModules;
-const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? hp("1%") : StatusBarManager.HEIGHT - hp("3.3%");
-const NAVIGATIONHEADER_HEIGHT = -hp("2%"); // from ../navigation/StackNavigator/headerstyle.height
-const DISTANCETOTHETOP = NAVIGATIONHEADER_HEIGHT + STATUSBAR_HEIGHT;
+// to be able to have a proper design on every platform, I downloaded this package from this website: https://www.npmjs.com/package/react-native-responsive-screen
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 
 /**
  * IDEA:
- * the complete styles list for the whole app, this is only done for a good organisation
+ * the complete styles list for the whole app, this is only done for a good organisation such that all styles 
+ * are at one place and easy to find. I used the convention to name the styles like
+ * screennameSTYLENAME
+ * such that even if this file would be a bit messi, one can find the styles in use and in which screen they are in use
+ * Remark: there are some styles which are not in use in the final version of the app, but most are.
  */
 const styles = StyleSheet.create({
   
-    //anyStyles for reusability
-    // -----------------------------------------------------------------------------------------------------------------
+  //anyStyles for reusability over several screens
+  // ###########################################################################################################################################################
     anyWholeScreen: {
       backgroundColor: '#fff',
       width: wp("100%"),
@@ -50,8 +51,8 @@ const styles = StyleSheet.create({
       marginTop: hp("3%"),
     },
 
-    // HomeScreenStyles    
-    // -----------------------------------------------------------------------------------------------------------------
+  // HomeScreenStyles    
+  // ###########################################################################################################################################################
     homeImageContainer: {
       flex: 4,
     },
@@ -103,9 +104,9 @@ const styles = StyleSheet.create({
       justifyContent:'center',
     },
 
-   //HowToScreenStyles
-   // -----------------------------------------------------------------------------------------------------------------
-   howToTitleTextContainer:{
+  //HowToScreenStyles
+  // ###########################################################################################################################################################
+    howToTitleTextContainer:{
      flex: 1.5,
      marginTop: hp("6%"),
      justifyContent: 'flex-start',
@@ -201,8 +202,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.2)',
    },
    
-   // navigationBarIcons style
-   // -----------------------------------------------------------------------------------------------------------------
+  // navigationBarIcons style
+  // ###########################################################################################################################################################
    headerButtonContainer:{
     flex: 1, 
     flexDirection: 'row', // makes that we have two icons horizontally listed
@@ -213,8 +214,8 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
    },
 
-   //overviewScreen styles
-   // -----------------------------------------------------------------------------------------------------------------
+  //overviewScreen styles
+  // ###########################################################################################################################################################
    overviewTopContainer: {
     flex:4,
     justifyContent: 'center',
@@ -337,8 +338,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0)',
   },
 
-  // MapScreen styles
-  // -----------------------------------------------------------------------------------------------------------------
+// MapScreen styles
+// ###########################################################################################################################################################
   mapTitleTextContainer:{
     flex:2.3,
     marginTop: hp("3%"),
@@ -399,8 +400,8 @@ const styles = StyleSheet.create({
     justifyContent:'center'
   },
 
-  // resultScreen styles 
-  // -----------------------------------------------------------------------------------------------------------------
+// resultScreen styles 
+// ###########################################################################################################################################################
   resultTitleTextContainer:{
     flex:1.5,
     alignItems: 'center',
@@ -578,8 +579,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0)',
   },
 
-  //certificateScreen styles
-  // -----------------------------------------------------------------------------------------------------------------
+//certificateScreen styles
+// ###########################################################################################################################################################
   certificateTitleTextContainer:{
     flex:1.5,
     marginTop: hp("5%"),
@@ -657,8 +658,8 @@ const styles = StyleSheet.create({
     marginBottom:hp("4%")
   },
 
-  // stationsInfo style
-  // -----------------------------------------------------------------------------------------------------------------
+// stationsInfo style
+// ###########################################################################################################################################################
   stationInfoTitleTextContainer:{
     flex:0.8,
     alignItems: 'center',
@@ -732,8 +733,8 @@ const styles = StyleSheet.create({
     marginVertical: hp("1.5%"),
   },
 
-  // stations style
-  // -----------------------------------------------------------------------------------------------------------------
+// stations style
+// ###########################################################################################################################################################
   stationChosenButtonStyle:{
     backgroundColor: 'white',
     borderRadius: hp("1%"),
@@ -891,7 +892,6 @@ const styles = StyleSheet.create({
     marginHorizontal: wp("2%"),
     marginBottom: hp("1%"),
   },
-
   stationRowContainer:{
     flex:1,
     flexDirection: 'row',
@@ -1046,7 +1046,6 @@ const styles = StyleSheet.create({
     zIndex:100,
     backgroundColor: 'rgba(255,255,255,0)',
   },
-
   station8FoxImageStyle:{
     marginHorizontal: wp("4%"),
     marginTop: Platform.OS === 'ios' ? -hp("2.5%") : -hp("1.6%"),
@@ -1085,8 +1084,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0)',
   },
 
-  // submitStation styles
-  // --------------------------------------------------------------------------------------------------------------------------
+// submitStation styles
+// ###########################################################################################################################################################---------
   SubmitStationBackButtonStyle:{
     backgroundColor: 'rgba(96,100,109, 1)',
     borderRadius: hp("1%"),
@@ -1363,8 +1362,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0)',
   },
 
-  // images in the app
-  // -----------------------------------------------------------------------------------------------------
+// images in the app
+// ###########################################################################################################################################################
   station1InfoFoxContainer:{
     position: 'absolute',
     top: hp("2%"),
