@@ -9,7 +9,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /**
  * IDEA:
- * this screen shows the second question of the quiz
+ * this screen shows the third question of the quiz
  */
 export default class Station3QuestionScreen extends React.Component {
   static navigationOptions = {
@@ -32,7 +32,7 @@ export default class Station3QuestionScreen extends React.Component {
           <Text style={styles.stationTitleTextFormat}>Station 3 - Frage </Text>
         </View>     
         
-        {/* write your question text here*/}        
+        {/* show your question text here*/}        
         <View style={styles.stationTextContainer}>
           <ScrollView>
             <Text style={styles.stationTextFormat}>
@@ -42,8 +42,13 @@ export default class Station3QuestionScreen extends React.Component {
         </View>
 
         {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
-              A: ...         B: ...
-              C: ...         D: ...
+                  foxImage
+              A: ...
+              B: ...
+              C: ...         
+              D: ...
+              if the user chooses an answer the design of the button should change, such that the user knows that his 
+              answer was accepted...
         */}   
         <View style={styles.station3AnswerVerticalContainer}>
           <Image source={require('../assets/images/foxQuestion2.png')} style={styles.station3FoxImageStyle}/>
