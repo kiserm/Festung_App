@@ -3,7 +3,7 @@ import {Audio} from 'expo';
 
 /**
  * IDEA:
- * This class carries all the audio files in it and all the function to play them.
+ * This class carries all the audio files in it and all the methods to play them.
  */
 export class AudioFile extends React.Component{
   constructor(props) {
@@ -74,14 +74,16 @@ export class AudioFile extends React.Component{
         case 'Station9Info':
           return !this.isPausedStation9Info;
         case 'Station10Info':
-          return !this.isPausedStation10Info;      }
+          return !this.isPausedStation10Info;      
+      }
     }
 
     /**
      * IDEA:
      * make that the sound is also playing on ios even if the phone is on silent mode
-     * this is done by setting the playsInSilentModeIOS to true, for more information look in the 
-     * definition of the modes. IMPORTANT: all modes have to be set, otherwise you get an error.
+     * this is done by setting the playsInSilentModeIOS to true. for android this is default set to 
+     * true. for more information look in the definition of the modes. IMPORTANT: all modes have to 
+     * be set, otherwise you get an error.
     */
     async prepareSound(){
       await Expo.Audio.setIsEnabledAsync(true);
@@ -98,40 +100,53 @@ export class AudioFile extends React.Component{
     /**
      * IDEA:
      * play audio file from library in assets/sounds.
-     * target: screen where the audio should be played
-     * mode: how the audio should act -> play, pause, stop
+     * target: name of the screen where the audio should be played
+     * mode: how the audio should act -> play, pause, stop by invoking this method
      */
     async audioFunction(target,mode){
       switch(target) {
         case 'HowTo':
         {
+          // mode: play
           if(mode==='play'){
+            // if the audio is played the first time, we have to load the audio file first
             if(this.howToTextIsLoaded===false){
               this.howToTextIsLoaded=true;
               await this.howToTextSound.loadAsync(require('../assets/sounds/howToSoundM.mp3'));              
-            }            
-            if(this.isPausedHowTo===true){
-              this.prepareSound();
-              this.isPausedHowTo=false;
-              await this.howToTextSound.playAsync();
-            }   
-            else{
-              this.prepareSound();
-              await this.howToTextSound.replayAsync();
+            } 
+            // if the audio is already loaded, differ the cases if the audio file is playing or paused at the moment.
+            // if paused -> then the file should play at the point where the user has paused
+            // else play the audio file from the start
+            else {          
+              if(this.isPausedHowTo===true){
+                this.prepareSound(); // such that the sound is also playing on ios even the phone is on silent mode
+                this.isPausedHowTo=false;
+                await this.howToTextSound.playAsync();
+              }   
+              else{
+                this.prepareSound(); // such that the sound is also playing on ios even the phone is on silent mode
+                await this.howToTextSound.replayAsync();
+              }
             }
           }
+          // mode: pause AND the audio file was already loaded -> only pause the audio and set the flag isPaused to true
+          //       if the audio file was not already loaded -> do nothing since pausing an audio which has never played OR
+          //       is not playing makes no sense.
           else if (mode==='pause' && this.howToTextIsLoaded===true){
             await this.howToTextSound.pauseAsync();
             this.isPausedHowTo=true;
           }
+          // mode: stop AND audio file was already loaded -> only stop an audio which is playing at the moment. if the audio
+          //       is not playing we can still stop the file and nothing happens.
           else if (mode==='stop' && this.howToTextIsLoaded===true){
             await this.howToTextSound.stopAsync();
           }
           else{
-            // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
           }          
           break;
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station1Info':
         {
           if(mode==='play'){
@@ -157,10 +172,11 @@ export class AudioFile extends React.Component{
             await this.Station1InfoSound.stopAsync();
           }
           else{
-            // error this mode does not exist
-          }          
+            // error: this mode does not exist! Wrong Argument!
+            }          
           break;
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station2Info':
         {
           if(mode==='play'){
@@ -186,10 +202,11 @@ export class AudioFile extends React.Component{
             await this.Station2InfoSound.stopAsync();
           }
           else{
-            // error this mode does not exist
-          }          
+            // error: this mode does not exist! Wrong Argument!
+            }          
           break;
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station3Info':
         {
           {
@@ -216,11 +233,12 @@ export class AudioFile extends React.Component{
               await this.Station3InfoSound.stopAsync();
             }
             else{
-              // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
             }          
             break;
           }
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station4Info':
         {
           {
@@ -250,11 +268,12 @@ export class AudioFile extends React.Component{
               await this.Station4InfoSound.stopAsync();
             }
             else{
-              // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
             }          
             break;
           }
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station5Info':
         {
           {
@@ -281,11 +300,12 @@ export class AudioFile extends React.Component{
               await this.Station5InfoSound.stopAsync();
             }
             else{
-              // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
             }          
             break;
           }
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station6Info':
         {
           {
@@ -312,11 +332,12 @@ export class AudioFile extends React.Component{
               await this.Station6InfoSound.stopAsync();
             }
             else{
-              // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
             }          
             break;
           }
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station7Info':
         {
           {
@@ -343,11 +364,12 @@ export class AudioFile extends React.Component{
               await this.Station7InfoSound.stopAsync();
             }
             else{
-              // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
             }          
             break;
           }
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station8Info':
         {
           {
@@ -374,11 +396,12 @@ export class AudioFile extends React.Component{
               await this.Station8InfoSound.stopAsync();
             }
             else{
-              // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
             }          
             break;
           }
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station9Info':
         {
           {
@@ -405,11 +428,12 @@ export class AudioFile extends React.Component{
               await this.Station9InfoSound.stopAsync();
             }
             else{
-              // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
             }          
             break;
           }
         }
+        // for comments about the idea behind these if else statements look at the case 'HowTo' for the details
         case 'Station10Info':
         {
           {
@@ -436,7 +460,7 @@ export class AudioFile extends React.Component{
               await this.Station10InfoSound.stopAsync();
             }
             else{
-              // error this mode does not exist
+            // error: this mode does not exist! Wrong Argument!
             }          
             break;
           }
@@ -445,6 +469,12 @@ export class AudioFile extends React.Component{
     };
   }
 
+  /**
+   * IDEA:
+   * Make an instance of this class such that we can export this for an easier access 
+   * from all screens without creating always an instance to get access to the methods and values
+ */
   AudioFile = new AudioFile();
-
+  
+  // export this instance to reuse the methods from other classes and files
   export default AudioFile;
