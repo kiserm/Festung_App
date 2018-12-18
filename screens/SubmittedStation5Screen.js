@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,Image} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document
+import styles from '../constants/Styles';
 import AnswerSheet from '../constants/AnswerSheet';
 import QuestionSheet from '../constants/QuestionSheet';
 
@@ -35,19 +35,30 @@ export default class SubmittedStation5Screen extends React.Component {
           </Text>
         </View>     
         
-        {/* write your question text here*/}        
+        {/* show your question text here*/}        
         <View style={styles.submittedStationTextContainer}>
+
             <Text style={styles.submittedStationTextFormat}>
             {QuestionSheet.getQuestion(5)}
             </Text>
+            
+            {/* show somewhere on the screen either finja the fox, dario the badger or both, only for design purpose*/} 
             <Image source={require('../assets/images/badgerQuestion1.png')} style={styles.submittedStationImageStyle1}/>
             <Image source={require('../assets/images/foxQuestion2.png')} style={styles.submittedStationImageStyle2}/>
+            
         </View>
-
-        {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
-              A: ...         B: ...
-              C: ...         D: ...
-        */}   
+        
+        {/* write here your multiple choice answers, A to D, 4 possibilites. they are allocated as follows
+              A: ...
+              B: ...
+              C: ...         
+              D: ...
+              we have four cases for the design of an answer button:
+                1) chosen and right   -> chosen style and green border (grey text, white background, green border)
+                2) chosen and wrong   -> chosen style (grey border and text, white background)
+                3) unchosen and wrong -> unchosen style (grey background and border, white text)
+                4) unchosen and right -> unchosen style and green border (grey background, white text, green border)
+        */}    
         <View style={styles.submittedStationAnswerVerticalContainer}>
           <View style={styles.submittedStationRowContainer}>
           <TouchableHighlight 
