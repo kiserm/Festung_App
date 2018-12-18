@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
    },
    howToBottomContainer:{
-    flex: 3,
+    flex: 2.83333,
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
