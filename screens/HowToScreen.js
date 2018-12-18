@@ -106,6 +106,19 @@ export default class HowToScreen extends React.Component {
         </View>
         {/* show the navigation button to station 1 to start the quiz */}
         <View style={styles.howToNextScreenContainer}>
+        <TouchableHighlight onPress={() => {
+                if(AudioFile.getAudioStatus('HowTo')){
+                  AudioFile.audioFunction('HowTo','pause');
+                  this.props.navigation.navigate('Home');
+                }
+                else{
+                  this.props.navigation.navigate('Home');
+                } 
+              }} 
+              underlayColor="rgba(96,100,109, 1)" 
+              style={styles.howToBackButtonStyle}> 
+            <Text style={styles.howToBackButtonText}>Zurück </Text>
+          </TouchableHighlight>
           <TouchableHighlight onPress={() => {
               if(AudioFile.getAudioStatus('HowTo')){
                 AudioFile.audioFunction('HowTo','pause');
