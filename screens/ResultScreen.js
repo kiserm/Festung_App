@@ -7,7 +7,8 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /**
  * IDEA:
- * this screen should inform the user what his score is
+ * this screen should inform the user what his score is and should have buttons on which the user can click on to
+ * see what she or he did right and wrong.
  */
 export default class ResultScreen extends React.Component {  
   static navigationOptions = {
@@ -19,13 +20,17 @@ export default class ResultScreen extends React.Component {
     return (      
       <View style={styles.anyWholeScreen}>
         
-        {/*Set the title of the Screen*/}        
+        {/*Set the title of the Screen and show the finja and dario images*/}        
         <View style={styles.resultTitleTextContainer}>
+
           <Text style={styles.resultTitleTextFormat}>
             Auswertung
           </Text>
+
+          {/* show somewhere on the screen either finja the fox, dario the badger or both, only for design purpose*/}  
           <Image source={require('../assets/images/badgerQuestion1.png')} style={styles.resultImageStyle1}/>
           <Image source={require('../assets/images/foxQuestion2.png')} style={styles.resultImageStyle2}/>
+
         </View>   
 
         {/* show a list of all questions, the given answers and the right answers. if a given answers was right, make 
@@ -50,7 +55,7 @@ export default class ResultScreen extends React.Component {
           </View>
         </View>
 
-        {/* show a button which lead the users to the certificate which is the end of the quiz */}
+        {/* show a button which lead the users to the certificate which then is the end of the quiz */}
         <View style={styles.resultBottomContainer}>
           <View style={styles.resultRowButtonContainer}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate('Certificate')} underlayColor="rgba(96,100,109, 1)" style={styles.resultButtonStyle}>
@@ -67,7 +72,8 @@ export default class ResultScreen extends React.Component {
 
   /**
    * IDEA:
-   * this method evaluates the number of right answers given by the user during solving the quiz
+   * this method evaluates the number of right answers given by the user during solving the quiz and saves this 
+   * number in the AnswerSheet file
    */
   numberOfRightAnswers(){
     rightAnswers = 0;
@@ -80,16 +86,16 @@ export default class ResultScreen extends React.Component {
     return rightAnswers;
   };
 
-
-    /**
+  /**
    * IDEA:
    * for each question list the given answer and the right answer but only the letter. if you wanna see the question
-   * then there is also an arrow button (or click on the station text) to go to the question again where you can no 
-   * more change the given answer
+   * then there is also an arrow button (or click on the station text where you will end up at the stationInfoScreen)
+   * to go to the question again where you can no more change the given answer
    * @param {the stationNumber is an integer between 1 and the number of stations the app has} stationNumber 
    */
   showResultButton(stationNumber){
-    if(AnswerSheet.getAnswer(stationNumber) === AnswerSheet.getRightAnswer(stationNumber))
+    // the given answer by the user was correct
+    if(AnswerSheet.getAnswer(stationNumber) === AnswerSheet.getRightAnswer(stationNumber)){
       return(
         <View style={styles.resultCompareContainer}>
           <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber,{originScreenName: 'Result'})} underlayColor="rgba(96,100,109, 1)" style={styles.resultStationButtonStyle}>
@@ -112,6 +118,8 @@ export default class ResultScreen extends React.Component {
           </TouchableHighlight> 
         </View>               
       );
+    }
+    // the given answer by the user was wrong
     else {
       return(
         <View style={styles.resultCompareContainer}>
