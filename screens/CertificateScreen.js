@@ -1,7 +1,9 @@
 import React from 'react';
-import {Text,View,Image} from 'react-native';
+import {Text,View,Image,TouchableHighlight} from 'react-native';
 import styles from '../constants/Styles';
 import AnswerSheet from '../constants/AnswerSheet';
+import IconEntypo from 'react-native-vector-icons/Entypo';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 /**
  * IDEA:
@@ -28,6 +30,11 @@ export default class CertificateScreen extends React.Component {
 
         {/* show the certificate according to the reached score */}
         {this.showParticularCertificate()}
+
+        {/* show a small back button to give the user the ability to go back to the result screen */}
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Result')} underlayColor="rgba(96,100,109, 1)" style={styles.certificateBackButtonStyle}>
+          <IconEntypo name="arrow-long-left" size={wp("5%")} color="white"/>
+        </TouchableHighlight>
 
       </View>
     );

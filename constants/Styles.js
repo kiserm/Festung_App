@@ -658,6 +658,19 @@ const styles = StyleSheet.create({
     flex:7,
     marginBottom:hp("4%")
   },
+  certificateBackButtonStyle:{
+    position:'absolute',
+    bottom:wp("1%"),
+    left:wp("1%"),
+    width: wp("15%"),
+    height: Platform.OS==='ios'?wp("8%"):wp("7%"),
+    backgroundColor: 'rgba(96,100,109, 1)',
+    borderRadius: hp("1%"),
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: hp("1%"),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 
 // stationsInfo style
 // ###########################################################################################################################################################
