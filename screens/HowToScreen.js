@@ -1,17 +1,15 @@
 import React from 'react';
 import {Text,View,TouchableHighlight,Platform,WebView,Image} from 'react-native';
-import styles from '../constants/Styles'; // for design purpose, import the styles from the self-made Style-Document in /constants/Styles.js
+import styles from '../constants/Styles'; 
 import { ScrollView } from 'react-native-gesture-handler';
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Audio} from 'expo';
 import AudioFile from '../constants/AudioFile';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; // to be able to have a proper design on every platform, I downloaded this package from  this website: https://www.npmjs.com/package/react-native-responsive-screen
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'; 
 import QuestionSheet from '../constants/QuestionSheet';
 
 /**
  * IDEA:
- * This screen should inform the user what the quiz is all about, how the whole process work and what 
- * he or she has to do to get a reward at the end of the quiz.
+ * This screen should introduce the user into the exhibition with this app.
  */
 export default class HowToScreen extends React.Component {
     static navigationOptions = {
@@ -40,9 +38,10 @@ export default class HowToScreen extends React.Component {
               </ScrollView>
           </View>
 
-          {/* show the right button depending if we still need to do the tutorial or not*/}   
+          {/* show the next button and three audio buttons: play, pause, stop*/}   
           {this.toStationAndAudioButtons()}
 
+          {/* show somewhere on the screen either finja the fox, dario the badger or both, only for design purpose*/}   
           <View style={styles.howToBadgersContainer}>
             <Image source={require('../assets/images/badgerHowTo.png')} style={styles.howToBadgerImageStyle}/>
           </View>
@@ -51,6 +50,7 @@ export default class HowToScreen extends React.Component {
       );
     } 
     else {
+      // Platform.OS==='android'
       return (      
         <View style={styles.anyWholeScreen}>
             
@@ -71,9 +71,10 @@ export default class HowToScreen extends React.Component {
                 />
           </View>
 
-          {/* show the right button depending if we still need to do the tutorial or not*/}   
+          {/* show the next button and three audio buttons: play, pause, stop*/}   
           {this.toStationAndAudioButtons()}
 
+          {/* show somewhere on the screen either finja the fox, dario the badger or both, only for design purpose*/}   
           <View style={styles.howToBadgersContainer}>
             <Image source={require('../assets/images/badgerHowTo.png')} style={styles.howToBadgerImageStyle}/>
           </View>
@@ -103,7 +104,7 @@ export default class HowToScreen extends React.Component {
             <IconMaterialCommunityIcons name='stop-circle-outline' size={hp('7%')} color='#C92732'/>
           </TouchableHighlight>
         </View>
-        {/* show the navigation button to station 1 since the tutorialFlag is true*/}
+        {/* show the navigation button to station 1 to start the quiz */}
         <View style={styles.howToNextScreenContainer}>
           <TouchableHighlight onPress={() => {
               if(AudioFile.getAudioStatus('HowTo')){
