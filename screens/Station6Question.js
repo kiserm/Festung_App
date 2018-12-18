@@ -9,7 +9,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 /**
  * IDEA:
- * this screen shows the second question of the quiz
+ * this screen shows the 6th question of the quiz
  */
 export default class Station6QuestionScreen extends React.Component {
   static navigationOptions = {
@@ -32,7 +32,7 @@ export default class Station6QuestionScreen extends React.Component {
           <Text style={styles.stationTitleTextFormat}>Station 6 - Frage </Text>
         </View>     
         
-        {/* write your question text here*/}        
+        {/* show your question text here*/}        
         <View style={styles.stationTextContainer}>
           <ScrollView>
             <Text style={styles.stationTextFormat}>
@@ -42,9 +42,13 @@ export default class Station6QuestionScreen extends React.Component {
         </View>
 
         {/* write here your multiple choice answers, A to D, 4 possibilites. they are ordered as follows
-              A: ...         B: ...
-              C: ...         D: ...
-        */}   
+              A: ...
+              B: ...
+              C: ...         
+              D: ...
+              if the user chooses an answer the design of the button should change, such that the user knows that his 
+              answer was accepted...
+        */}    
         <View style={styles.station6AnswerVerticalContainer}>
           <View style={styles.stationRowContainer} style={{flex:Platform.OS=='ios'?1.5:1,marginVertical:hp("0.5%")}}>
             <TouchableHighlight onPress={() => {AnswerSheet.setAnswer(6,'A'), this.setState({chosenAnswerStation6: 'A'})}} underlayColor="rgba(96,100,109, 1)" style={[styles.stationUnchosenButtonStyle, this.state.chosenAnswerStation6==='A' && styles.stationChosenButtonStyle]}>
@@ -112,6 +116,7 @@ export default class Station6QuestionScreen extends React.Component {
           </View>
         </View>      
 
+        {/* show somewhere on the screen either finja the fox, dario the badger or both, only for design purpose*/}   
         <Image source={require('../assets/images/badgerQuestion6.png')} style={styles.station6InfoBadgerImageStyle}/>
         <Image source={require('../assets/images/foxStation1Info.png')} style={styles.station6InfoFoxImageStyle}/>
 
