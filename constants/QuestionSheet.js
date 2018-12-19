@@ -31,16 +31,16 @@ export class QuestionSheetClass extends React.Component{
      * automatically adjusted in the StationScreens and SubmittedStationScreens
      */
     Questions = {
-                Station1: 'Aus welchem Grund war es besonders schwer, den Standort der Festung während des Zweiten Weltkriegs geheim zu behalten? ',
-                Station2: 'Wieso befindet sich der Funkraum so nah am Eingang der Festung?',
-                Station3: 'Welche Standorte befinden sich im Zielgebiet dieser Kanone?',
-                Station4: 'Wieso wurde eine Druckschleuse zwischen dem Munitionsmagazin und der Truppenunterkunft gebaut?',
-                Station5: 'Vor euch befindet sich ein Grobstaubfilter, der um 1960 – während des Kalten Krieges – eingebaut wurde. Wozu sollte dieser dienen?',
-                Station6: 'Wieso wurde die Festung, die 1941 gebaut wurde, mit Maschinengewehren ausgerüstet, die zu diesem Zeitpunkt bereits 30 Jahre alt waren?',
-                Station7: 'Wieso brauchte es zwangsläufig einen Notausgang?',
-                Station8: 'Wozu dienen die Maschinen, die ihr in diesem Raum hört?',
-                Station9: 'Woher stammte das Wasser für das Reservoir der Festung Fürigen?',
-                Station10: 'Wie viele Betten gibt es insgesamt auf diesem Stock?',
+        Station1: 'Aus welchem Grund war es besonders schwer, den Standort der Festung während des Zweiten Weltkriegs geheim zu halten? ',
+        Station2: 'Wieso befindet sich der Funkraum so nah am Eingang der Festung? ',
+        Station3: 'Welche Standorte befinden sich im Zielgebiet dieser Kanone? ',
+        Station4: 'Wieso wurde eine Druckschleuse zwischen dem Munitionsmagazin und der Truppenunterkunft gebaut? ',
+        Station5: 'Vor euch befindet sich ein Grobstaubfilter, der um 1960 – während des Kalten Krieges – eingebaut wurde. Wozu sollte dieser dienen? ',
+        Station6: 'Wieso wurde die Festung, die 1941 gebaut wurde, mit Maschinengewehren ausgerüstet, die zu diesem Zeitpunkt bereits 30 Jahre alt waren? ',
+        Station7: 'Wieso brauchte es zwangsläufig einen Notausgang? ',
+        Station8: 'Wozu dienen die Maschinen, die ihr in diesem Raum hört? ',
+        Station9: 'Woher stammt das Wasser für das Reservoir der Festung? ',
+        Station10: 'Wie viele Betten gibt es insgesamt auf diesem Stock? ',
     };
     
     /**
@@ -48,14 +48,14 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for A
      */
     AnswersA = {
-        Station1: 'Ein Hotelbetrieb und ein Seebad befanden sich in der Nähe.',
+        Station1: 'Ein Hotelbetrieb und ein Seebad befanden sich in der Nähe. ',
         Station2: 'Weil hier ebenfalls die Ein- und Austritte der Soldaten kontrolliert wurden. ',
-        Station3: 'Weggis und Rigi',
+        Station3: 'Weggis und Rigi ',
         Station4: 'wegen der Explosionsgefahr ',
         Station5: 'Um die Feuchtigkeit vom Berg aus der Frischluft herauszufiltern. ',
         Station6: 'Weil sich dieses Modell während des Ersten Weltkrieges besonders gut bewährt hatte. ',
-        Station7: 'Für die Flucht im Fall eines Feuers oder Angriffes.',
-        Station8: 'Sie generieren Strom für die Festung.',
+        Station7: 'Für die Flucht im Fall eines Feuers oder Angriffes. ',
+        Station8: 'Sie generieren Strom für die Festung. ',
         Station9: 'Vom Regenwasser, das eingesammelt wird. ',
         Station10: '52',
     };
@@ -66,13 +66,13 @@ export class QuestionSheetClass extends React.Component{
      */
     AnswersB = {
         Station1: 'Viele Ausländer hielten sich in der Region auf. ',
-        Station2: 'Damit die Soldaten im Fall eines Innenbrandes weiterhin mit der Aussenwelt kommunizieren konnten.',
-        Station3: 'Horw und Kastanienbaum',
-        Station4: 'wegen der Überschwemmungsgefahr',
+        Station2: 'Damit die Soldaten im Fall eines Innenbrandes weiterhin mit der Aussenwelt kommunizieren konnten. ',
+        Station3: 'Horw und Kastanienbaum ',
+        Station4: 'wegen der Überschwemmungsgefahr ',
         Station5: 'Um allfällige Atompartikel aus der Frischluft herauszufiltern. ',
-        Station6: 'Weil die Festungstruppen nur für dieses Modell geschult waren.',
-        Station7: 'Als zweiten Eingang für die Besatzung.',
-        Station8: 'Sie verteilen die Luft in die drei Bereiche der Festung.',
+        Station6: 'Weil die Festungstruppen nur für dieses Modell geschult waren. ',
+        Station7: 'Als zweiten Eingang für die Besatzung. ',
+        Station8: 'Sie verteilen die Luft in die drei Bereiche der Festung. ',
         Station9: 'Von einer Quelle, die sich oberhalb der Festung befindet. ',
         Station10: '100',
     };
@@ -82,16 +82,16 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for C
      */
     AnswersC = {
-        Station1: 'Ein deutscher Spion hatte die Festung zufälligerweise entdeckt.',
+        Station1: 'Ein deutscher Spion hatte die Festung zufälligerweise entdeckt. ',
         Station2: 'Damit der Funkraum im Ernstfall als erstes evakuiert werden konnte. ',
-        Station3: 'Hergiswil und Pilatus',
-        Station4: 'wegen der Luftfeuchtigkeit  ',
+        Station3: 'Hergiswil und Pilatus ',
+        Station4: 'wegen der Luftfeuchtigkeit ',
         Station5: 'Um den Zigarettenrauch innerhalb der Festung zu filtern. ',
-        Station6: 'Weil dieses Modell für Festungen besonders gut geeignet war.',
-        Station7: 'Für das Evakuieren von Verletzten.',
-        Station8: 'Sie betreiben den Herd in der Küche.',
-        Station9: 'Vom Kondenswasser, das durch die Luftfeuchtigkeit entsteht.',
-        Station10: '66 ',
+        Station6: 'Weil dieses Modell für Festungen besonders gut geeignet war. ',
+        Station7: 'Für das Evakuieren von Verletzten. ',
+        Station8: 'Sie betreiben den Herd in der Küche. ',
+        Station9: 'Vom Kondenswasser, das durch die Luftfeuchtigkeit entsteht. ',
+        Station10: '66',
     };
 
     /**
@@ -99,15 +99,15 @@ export class QuestionSheetClass extends React.Component{
      * this variable holds all solutions multiple choices for D
      */
     AnswersD = {
-        Station1: 'Die Festung liegt sehr nah am Vierwaldstättersee.',
-        Station2: 'Weil das Funksignal sonst nicht das Innere der Festung erreicht hätte.',
-        Station3: 'Kehrsiten und Bürgenstock',
-        Station4: 'wegen einer Rattenplage',
-        Station5: 'Um den Geruch von Essen innerhalb der Festung zu filtern.',
-        Station6: 'Weil die Schweizer Armee vom Zweiten Weltkrieg überrascht wurde und über kein moderneres Modell verfügte.',
-        Station7: 'Wegen einer Überschwemmungsgefahr durch den Vierwaldstättersee.',
-        Station8: 'Sie leiten das Abwasser in den Vierwaldstättersee.',
-        Station9: 'Vom Vierwaldstättersee',
+        Station1: 'Die Festung liegt sehr nah am Vierwaldstättersee. ',
+        Station2: 'Weil das Funksignal sonst nicht das Innere der Festung erreicht hätte. ',
+        Station3: 'Kehrsiten und Bürgenstock ',
+        Station4: 'wegen einer Rattenplage ',
+        Station5: 'Um den Geruch von Essen innerhalb der Festung zu filtern. ',
+        Station6: 'Weil die Schweizer Armee vom Zweiten Weltkrieg überrascht wurde und über kein moderneres Modell verfügte. ',
+        Station7: 'Wegen einer Überschwemmungsgefahr durch den Vierwaldstättersee. ',
+        Station8: 'Sie leiten das Abwasser in den Vierwaldstättersee. ',
+        Station9: 'Vom Vierwaldstättersee. ',
         Station10: '75',
     };
 
