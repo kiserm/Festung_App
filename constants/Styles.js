@@ -363,18 +363,23 @@ const styles = StyleSheet.create({
   mapTitleTextContainer:{
     flex:2.3,
     marginTop: hp("3%"),
+    zIndex:100,
+    backgroundColor:'#fff',
   },
   mapMiddleContainer: {
     flex: 8,
     alignItems: 'center',
     justifyContent: 'center',
     width: wp("100%"),
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    zIndex: 10,
   },
   mapBottomContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    zIndex: 100,
+    backgroundColor:'#fff',
   },
   mapTitleTextFormat:{
     fontSize: hp("7%"),

@@ -7,6 +7,8 @@ import IconEntypo from 'react-native-vector-icons/Entypo';
 import { ScrollView } from 'react-native-gesture-handler';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
+import OverviewScreen from './OverviewScreen';
+
 /**
  * IDEA:
  * this screen shows the second question of the quiz
@@ -22,6 +24,7 @@ export default class Station2QuestionScreen extends React.Component {
       chosenAnswerStation2: AnswerSheet.getAnswer(2), // read out the given answer of the answersheet file to be able to show the chosen button in another design
     };
   };    
+
 
   render() {
     return (      

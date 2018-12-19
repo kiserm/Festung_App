@@ -3,6 +3,8 @@ import {Text,View,TouchableHighlight,ScrollView,Alert,Image} from 'react-native'
 import styles from '../constants/Styles'; 
 import AnswerSheet from '../constants/AnswerSheet'; 
 
+import { NavigationActions } from 'react-navigation';
+
 /**
  * IDEA:
  * This screen should help the users to get around in the quiz world. Firstly, they should get an overview of all
@@ -23,7 +25,7 @@ export default class OverviewScreen extends React.Component {
                 {/*Set the title of the Screen*/}        
                 <View style={styles.overviewTopContainer}>
                     <Text style={styles.overviewTitleTextFormat}>
-                        Übersicht
+                        Übersicht {this.chosenAnswerStation2}
                     </Text>
                 </View>     
 
@@ -122,7 +124,7 @@ export default class OverviewScreen extends React.Component {
                 {/* show at the bottom two buttons, one to get back and one to submit your answers if and only if all quizzes has ben solved. */}        
                 <View style={styles.overviewBottomContainer}>
                     <View style={styles.overviewRowButtonContainer}>
-                        <TouchableHighlight onPress={() => this.props.navigation.goBack()} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate(this.props.navigation.getParam('originScreenName'))} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
                             <Text style={styles.overviewButtonText} numberOfLines={1}>
                                 Zurück
                             </Text>
@@ -146,26 +148,220 @@ export default class OverviewScreen extends React.Component {
      * @param {the stationNumber is an integer between 1 and the number of stations the app has} stationNumber 
      */
     showDoneOrTodoButton(stationNumber){
-        if(AnswerSheet.getAnswer(stationNumber) === ''){
-            return (
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
-                    <Text style={styles.overviewButtonText}>
-                        zur Frage
-                    </Text>
-                </TouchableHighlight>
-            );
+        switch(stationNumber){
+            case 1:
+            {
+                if(this.props.navigation.getParam('answer1') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer1')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                }        
+            }
+            case 2:
+            {
+                if(this.props.navigation.getParam('answer2') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer2')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
+            case 3:
+            {
+                if(this.props.navigation.getParam('answer3') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer3')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
+            case 4:
+            {
+                if(this.props.navigation.getParam('answer4') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer4')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
+            case 5:
+            {
+                if(this.props.navigation.getParam('answer5') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer5')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
+            case 6:
+            {
+                if(this.props.navigation.getParam('answer6') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer6')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
+            case 7:
+            {
+                if(this.props.navigation.getParam('answer7') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer7')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
+            case 8:
+            {
+                if(this.props.navigation.getParam('answer8') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer8')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
+            case 9:
+            {
+                if(this.props.navigation.getParam('answer9') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer9')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
+            case 10:
+            {
+                if(this.props.navigation.getParam('answer10') === ''){
+                    return (
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber + "Question")} underlayColor="rgba(96,100,109, 1)" style={styles.overviewButtonStyle}>
+                            <Text style={styles.overviewButtonText}>
+                                zur Frage
+                            </Text>
+                        </TouchableHighlight>
+                    );
+                }
+                else{
+                    return(
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
+                            <Text style={styles.overviewChosenButtonText}>
+                                {this.props.navigation.getParam('answer10')}
+                            </Text>
+                        </TouchableHighlight>                
+                    );
+                } 
+            }
         }
-        else{
-            return(
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('Station' + stationNumber  + "Question")} underlayColor="white" style={styles.overviewButtonStyleDone}>
-                    <Text style={styles.overviewChosenButtonText}>
-                        {AnswerSheet.getAnswer(stationNumber)}
-                    </Text>
-                </TouchableHighlight>                
-            );
-        }        
     }
-
+    
     /**
      * IDEA:
      * This method tests if all quizzes has been solved, if so then this function returns true, if not, this function

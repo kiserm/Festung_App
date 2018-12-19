@@ -48,6 +48,7 @@ import SubmittedStation7Screen from '../screens/SubmittedStation7Screen';
 import SubmittedStation8Screen from '../screens/SubmittedStation8Screen';
 import SubmittedStation9Screen from '../screens/SubmittedStation9Screen';
 import SubmittedStation10Screen from '../screens/SubmittedStation10Screen';
+import AnswerSheet from '../constants/AnswerSheet';
 
 
 /**
@@ -129,7 +130,19 @@ const NavigationStack = createStackNavigator(
         // put the overview icon in the left header. onpress we get to the overview screen
         headerLeft: (<View style={styles.headerButtonContainer}>
                           <TouchableHighlight onPress={() => {
-                                                                navigation.navigate('Overview')
+                                                                navigation.navigate('Overview',{
+                                                                  answer1:AnswerSheet.getAnswer(1),
+                                                                  answer2:AnswerSheet.getAnswer(2),
+                                                                  answer3:AnswerSheet.getAnswer(3),
+                                                                  answer4:AnswerSheet.getAnswer(4),
+                                                                  answer5:AnswerSheet.getAnswer(5),
+                                                                  answer6:AnswerSheet.getAnswer(6),
+                                                                  answer7:AnswerSheet.getAnswer(7),
+                                                                  answer8:AnswerSheet.getAnswer(8),
+                                                                  answer9:AnswerSheet.getAnswer(9),
+                                                                  answer10:AnswerSheet.getAnswer(10),
+                                                                  originScreenName:navigation.state.routeName
+                                                                })
                                                               }
                                                       } style={styles.headerBarIcons}>
                               <IconMaterialCommunityIcons name="format-list-bulleted" size={hp("5%")} color="rgba(96,100,109, 1)"/>
