@@ -3,8 +3,6 @@ import {Text,View,TouchableHighlight,ScrollView,Alert,Image} from 'react-native'
 import styles from '../constants/Styles'; 
 import AnswerSheet from '../constants/AnswerSheet'; 
 
-import { NavigationActions } from 'react-navigation';
-
 /**
  * IDEA:
  * This screen should help the users to get around in the quiz world. Firstly, they should get an overview of all
@@ -25,7 +23,7 @@ export default class OverviewScreen extends React.Component {
                 {/*Set the title of the Screen*/}        
                 <View style={styles.overviewTopContainer}>
                     <Text style={styles.overviewTitleTextFormat}>
-                        Übersicht {this.chosenAnswerStation2}
+                        Übersicht
                     </Text>
                 </View>     
 
@@ -144,7 +142,11 @@ export default class OverviewScreen extends React.Component {
      * IDEA:
      * If the particular quiz has been solved, show the answer which was given
      * else show a ToDo statement, such that the user knows which quiz he still has
-     * to solve.
+     * to solve. done with the navigation options since the release with the states did 
+     * not work as excpected. there was too often a delay while updating the questions
+     * which were have been solved. we have two cases:
+     *      1) question answered -> button shows letter of the answer and has white background, grey text and grey border
+     *      2) question unanswered -> button shows white text 'zur Frage' with grey background and border
      * @param {the stationNumber is an integer between 1 and the number of stations the app has} stationNumber 
      */
     showDoneOrTodoButton(stationNumber){

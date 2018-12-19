@@ -1,6 +1,7 @@
 import {View,TouchableHighlight} from 'react-native';
 import React from 'react';
 import styles from '../constants/Styles';
+import AnswerSheet from '../constants/AnswerSheet';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 // import the StackNavigator to be able to switch between screens by putting the 
@@ -48,8 +49,6 @@ import SubmittedStation7Screen from '../screens/SubmittedStation7Screen';
 import SubmittedStation8Screen from '../screens/SubmittedStation8Screen';
 import SubmittedStation9Screen from '../screens/SubmittedStation9Screen';
 import SubmittedStation10Screen from '../screens/SubmittedStation10Screen';
-import AnswerSheet from '../constants/AnswerSheet';
-
 
 /**
  * IDEA:
@@ -128,6 +127,9 @@ const NavigationStack = createStackNavigator(
                         </View>
         ),
         // put the overview icon in the left header. onpress we get to the overview screen
+        // give the answers of the questions with the navigation parameters such that there is 
+        // almost no delay in showing the buttons done/toDo correctly as well as the current screen
+        // name such that the back button on the overview screen can be implemented correctly
         headerLeft: (<View style={styles.headerButtonContainer}>
                           <TouchableHighlight onPress={() => {
                                                                 navigation.navigate('Overview',{

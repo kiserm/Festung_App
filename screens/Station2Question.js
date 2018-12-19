@@ -25,7 +25,6 @@ export default class Station2QuestionScreen extends React.Component {
     };
   };    
 
-
   render() {
     return (      
       <View style={styles.anyWholeScreen}>
