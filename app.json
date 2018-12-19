@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "NidwaldnerMuseumQuiz",
-    "description": "Dieses App ist ein Quiz für die Dauerausstellung der Festung Fürigen. ",
-    "slug": "nidwaldner-museum-quiz-j",
+    "name": "NM Quiz",
+    "description": "Dieses App ist ein Quiz für die Dauerausstellung der Festung Fürigen vom Nidwaldner Museum. ",
+    "slug": "Nidwaldner-Museum-Quiz",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": [
