@@ -15,6 +15,7 @@ export default class MapScreen extends React.Component {
   };
   
   render() {
+
     return (      
       <View style={styles.anyWholeScreen}>
         
@@ -27,9 +28,10 @@ export default class MapScreen extends React.Component {
 
         {/*Set the map image with zoom capabilities in here*/}                    
         <View style={styles.mapMiddleContainer}>
-          <PinchZoomView maxScale={5} minScale={0.25}>
-            <Image source={require('../assets/images/planFestung.png')} style={styles.mapImageStyle}/>
-          </PinchZoomView>
+          {/* works fine for iOS */}
+          <PinchZoomView maxScale={10} minScale={0.25}>
+            <Image source={require('../assets/images/planFestungz.png')} style={styles.mapImageStyle}/>
+          </PinchZoomView> 
         </View>
 
         {/*Set the navigation to go back*/}    

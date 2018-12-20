@@ -368,11 +368,10 @@ const styles = StyleSheet.create({
   },
   mapMiddleContainer: {
     flex: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: wp("100%"),
     backgroundColor: '#fff',
-    zIndex: 10,
+    justifyContent:'center',
+    alignItems:'center',
+    flexDirection:'row',
   },
   mapBottomContainer: {
     flex: 1,
@@ -391,10 +390,13 @@ const styles = StyleSheet.create({
     marginTop: hp("2%"),
   },
   mapImageStyle:{
-    width: Platform.OS==='ios'?wp("300%"):wp('150%'),
-    height: Platform.OS==='ios'?wp("210%"):wp('105%'),
+    width: Platform.OS==='ios'?wp("350%"):wp('100%'),
+    height: Platform.OS==='ios'?wp("240%"):wp('65%'),
     alignSelf: 'center',
     justifyContent: 'center',
+    resizeMode: 'center',
+    borderColor: 'rgba(96,100,109, 1)',
+    borderWidth: wp("1%"),
   },
   mapScrollViewStyle:{
     flex:1,
