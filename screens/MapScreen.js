@@ -30,7 +30,7 @@ export default class MapScreen extends React.Component {
         <View style={styles.mapMiddleContainer}>
           {/* works fine for iOS */}
           <PinchZoomView maxScale={10} minScale={0.25}>
-            <Image source={require('../assets/images/planFestungz.png')} style={styles.mapImageStyle}/>
+            <Image source={require('../assets/images/planFestung.png')} style={styles.mapImageStyle}/>
           </PinchZoomView> 
         </View>
 
