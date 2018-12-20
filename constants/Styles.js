@@ -704,7 +704,8 @@ const styles = StyleSheet.create({
     flex:0.8,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: Platform.OS === 'ios' ? hp("1%") : hp("3%")
+    marginTop: Platform.OS === 'ios' ? hp("1%") : hp("3%"),
+    zIndex:1000,
   },
   stationInfoTitleTextFormat:{
     fontSize: Platform.OS === 'ios' ? hp("5.4%") : hp("6%"),

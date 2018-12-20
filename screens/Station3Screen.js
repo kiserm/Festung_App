@@ -25,10 +25,8 @@ export default class Station3Screen extends React.Component {
           
           {/*show the station title*/}
           <View style={styles.stationInfoTitleTextContainer}>
-            <Text style={styles.stationInfoTitleTextFormat}>
-                Station 3 - Info 
-            </Text>
-          </View>    
+            <Text style={styles.stationInfoTitleTextFormat}>Station 3 - Info </Text>
+          </View>
                 
           {/*Do a scrollview for the infotext in iOS*/}   
           <View style={styles.stationInfoTextContainer}>
@@ -53,10 +51,9 @@ export default class Station3Screen extends React.Component {
             
           {/*show the station title*/}
           <View style={styles.stationInfoTitleTextContainer}>
-            <Text style={styles.stationInfoTitleTextFormat}>
-                Station 3 - Info 
-            </Text>
-          </View>                      
+            <Text style={styles.stationInfoTitleTextFormat}>Station 3 - Info </Text>
+          </View>
+                              
           {/*Do a scrollview for the text in android with the help of a webview*/}   
           <View style={styles.stationInfoTextContainer}>
             {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}

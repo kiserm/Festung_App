@@ -25,10 +25,8 @@ export default class Station9Screen extends React.Component {
           
           {/*show the station title*/}
           <View style={styles.stationInfoTitleTextContainer}>
-            <Text style={styles.stationInfoTitleTextFormat}>
-                Station 9 - Info 
-            </Text>
-          </View>     
+            <Text style={styles.stationInfoTitleTextFormat}>Station 9 - Info </Text>
+          </View>  
                
           {/*Do a scrollview for the infotext in iOS*/}   
           <View style={styles.stationInfoTextContainer}>
@@ -53,10 +51,8 @@ export default class Station9Screen extends React.Component {
             
           {/*show the station title*/}
           <View style={styles.stationInfoTitleTextContainer}>
-            <Text style={styles.stationInfoTitleTextFormat}>
-                Station 9 - Info 
-            </Text>
-          </View>  
+            <Text style={styles.stationInfoTitleTextFormat}>Station 9 - Info </Text>
+          </View>
                               
           {/*Do a scrollview for the text in android with the help of a webview*/}   
           <View style={styles.stationInfoTextContainer}>
