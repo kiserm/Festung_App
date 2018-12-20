@@ -6,7 +6,6 @@ import { ScrollView } from 'react-native-gesture-handler';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AudioFile from '../constants/AudioFile';
-import OwnElement from '../constants/OwnElements';
 
 /**
  * IDEA:
@@ -24,8 +23,13 @@ export default class Station3Screen extends React.Component {
       return (      
         <View style={styles.anyWholeScreen}>
           
-          {OwnElement.showStationInfoTitle(3)}
-          
+          {/*show the station title*/}
+          <View style={styles.stationInfoTitleTextContainer}>
+            <Text style={styles.stationInfoTitleTextFormat}>
+                Station 3- Info 
+            </Text>
+          </View>    
+                
           {/*Do a scrollview for the infotext in iOS*/}   
           <View style={styles.stationInfoTextContainer}>
               <ScrollView showsVerticalScrollIndicator={true}>
