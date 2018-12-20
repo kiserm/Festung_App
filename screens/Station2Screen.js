@@ -26,7 +26,7 @@ export default class Station2Screen extends React.Component {
           {/*show the station title*/}
           <View style={styles.stationInfoTitleTextContainer}>
             <Text style={styles.stationInfoTitleTextFormat}>
-                Station 2- Info 
+                Station 2 - Info 
             </Text>
           </View>
 
@@ -51,8 +51,12 @@ export default class Station2Screen extends React.Component {
       return(
         <View style={styles.anyWholeScreen}>
             
-          {OwnElement.showStationInfoTitle(2)}
-                      
+          {/*show the station title*/}
+          <View style={styles.stationInfoTitleTextContainer}>
+            <Text style={styles.stationInfoTitleTextFormat}>
+                Station 2 - Info 
+            </Text>
+          </View>                      
           {/*Do a scrollview for the text in android with the help of a webview*/}   
           <View style={styles.stationInfoTextContainer}>
             {/*fontsize in css for right size according to the screenheight use: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */}

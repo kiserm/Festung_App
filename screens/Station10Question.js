@@ -112,7 +112,21 @@ export default class Station10QuestionScreen extends React.Component {
           <View style={styles.stationRowContainer}/>
           <View style={styles.stationRowContainer}/>
           <View style={styles.stationRowContainer}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Overview')} underlayColor="rgba(96,100,109, 1)" style={styles.stationUnchosenButtonStyle}>
+            <TouchableHighlight onPress={() => 
+                                                this.props.navigation.navigate('Overview',{
+                                                  answer1:AnswerSheet.getAnswer(1),
+                                                  answer2:AnswerSheet.getAnswer(2),
+                                                  answer3:AnswerSheet.getAnswer(3),
+                                                  answer4:AnswerSheet.getAnswer(4),
+                                                  answer5:AnswerSheet.getAnswer(5),
+                                                  answer6:AnswerSheet.getAnswer(6),
+                                                  answer7:AnswerSheet.getAnswer(7),
+                                                  answer8:AnswerSheet.getAnswer(8),
+                                                  answer9:AnswerSheet.getAnswer(9),
+                                                  answer10:AnswerSheet.getAnswer(10),
+                                                  originScreenName:this.props.navigation.state.routeName
+                                                })
+                                          } underlayColor="rgba(96,100,109, 1)" style={styles.stationUnchosenButtonStyle}>
                 <IconEntypo name="arrow-long-right" size={hp("4%")} color="white"/>
             </TouchableHighlight>
           </View>
