@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
      flex: 1.5,
      marginTop: hp("6%"),
      justifyContent: 'flex-start',
+     zIndex:1000,
    },
    howToTextContainer:{
     flex: 7,
